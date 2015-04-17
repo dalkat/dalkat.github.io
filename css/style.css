@@ -1324,6 +1324,18 @@ section#contact .text-danger { color: #fec503 }
 /**************************
 ** Home Video Background **
 **************************/
+.pagination > .active > a, 
+.pagination > .active > span, 
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+z-index: 2;
+color: #fff;
+cursor: default;
+background-color: #E3B106;
+border-color: #E3B106;
+}
 .header-text-overlay {
     position: absolute;
     z-index: 10;
