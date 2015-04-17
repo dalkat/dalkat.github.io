@@ -884,7 +884,7 @@ figure.effect-portfolio:hover img {
     .grid figure figcaption { font-size: 120% }
 }
 @media screen and (max-width: 41.5em) { 
-    .grid figure { width: 100%; }
+    .grid figure { width: 100%; background-position: static; text-align: center; }
 }
 
 .nivo-lightbox-theme-default .nivo-lightbox-title {
