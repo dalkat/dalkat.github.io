@@ -25,6 +25,10 @@ clients:
   - img: img/logos/doblin.png
     url: ""
   - img: img/logos/ibm.png
+    url: "" 
+  - img: img/logos/ubs.png
+    url: ""
+  - img: img/logos/US.png
     url: ""
   - img: img/logos/princeton.png
     url: ""
