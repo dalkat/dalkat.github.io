@@ -19,9 +19,9 @@ team:
           url: 'http://instagram.com/dalkatan'
         - icon: fa fa-envelope
           url: 'mailto:dkatan77@gmail.com'
+  btn: Let's collaborate
 
 clients:
-    btn: Let's collaborate
   - img: img/logos/deloitte.png
     url: ""
   - img: img/logos/doblin.png
