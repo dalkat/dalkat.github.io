@@ -45,8 +45,6 @@ portfolio:
   heading: Portfolio
   subheading: Lorem ipsum dolor sit amet consectetur.
 
-
-
 clients:
   - img: img/logos/envato.jpg
     url: "#"
