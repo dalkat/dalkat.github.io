@@ -33,6 +33,7 @@ clients:
     url: ""
   - img: img/logos/princeton.png
     url: ""
+  btn: Let's collaborate
 
 services:
   heading: How can I help?
