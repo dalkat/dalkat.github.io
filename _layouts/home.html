@@ -18,6 +18,90 @@ layout: default
       <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     </header>
 
+   <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              {%- for time in site.data.home.about.timeline -%}
+              {% assign ws = '' %}
+              <li{% cycle '', ' class="timeline-inverted"' %}>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="{{ assets_path }}{{ time.image }}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>{{ time.date }}</h4>
+                    <h4 class="subheading">{{ time.title }}</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">{{ time.text  }}</p>
+                  </div>
+                </div>
+              </li>
+              {%- endfor -%}
+              {% assign ws = '' %}
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>{{ site.data.home.about.end1 }}
+                    <br>{{ site.data.home.about.end2 }}
+                    <br>{{ site.data.home.about.end3 }}</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">{{ site.data.home.team.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.home.team.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          {%- for member in site.data.home.team.members -%}
+          {% assign ws = '' %}
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt="">
+              <h4>{{ member.name }}</h4>
+              <p class="text-muted">{{ member.role }}</p>
+              <ul class="list-inline social-buttons">
+                {%- for sm in member.social-buttons -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ sm.url }}">
+                    <i class="{{ sm.icon }}"></i>
+                  </a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+            </div>
+          </div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">{{ site.data.home.team.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services -->
     <section id="services">
       <div class="container">
@@ -76,89 +160,7 @@ layout: default
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              {%- for time in site.data.home.about.timeline -%}
-              {% assign ws = '' %}
-              <li{% cycle '', ' class="timeline-inverted"' %}>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="{{ assets_path }}{{ time.image }}" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>{{ time.date }}</h4>
-                    <h4 class="subheading">{{ time.title }}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">{{ time.text  }}</p>
-                  </div>
-                </div>
-              </li>
-              {%- endfor -%}
-              {% assign ws = '' %}
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>{{ site.data.home.about.end1 }}
-                    <br>{{ site.data.home.about.end2 }}
-                    <br>{{ site.data.home.about.end3 }}</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Team -->
-    <section class="bg-light" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.team.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.team.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          {%- for member in site.data.home.team.members -%}
-          {% assign ws = '' %}
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt="">
-              <h4>{{ member.name }}</h4>
-              <p class="text-muted">{{ member.role }}</p>
-              <ul class="list-inline social-buttons">
-                {%- for sm in member.social-buttons -%}
-                {% assign ws = '' %}
-                <li class="list-inline-item">
-                  <a href="{{ sm.url }}">
-                    <i class="{{ sm.icon }}"></i>
-                  </a>
-                </li>
-                {%- endfor -%}
-              {% assign ws = '' %}
-              </ul>
-            </div>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">{{ site.data.home.team.text }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Clients -->
     <section class="py-5">
