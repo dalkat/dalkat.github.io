@@ -17,11 +17,10 @@ layout: default
       </div>
     </header>
 
-   <!-- About -->
+   <!-- About & Team-->
     <section id="about">
       <div class="container">
         <div class="row">
-  <!-- Team -->
           {%- for member in site.data.home.team.members -%}
           {% assign ws = '' %}
           <div class="col-sm-4">
@@ -46,7 +45,7 @@ layout: default
         {% assign ws = '' %}
           <div class="col-sm-8 text-left">
             <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
+            <h3 class="section-subheading text-muted" style="font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</h3>
           </div>
         </div>
 
