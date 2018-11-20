@@ -50,6 +50,20 @@ layout: default
             <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
           </div>
         </div>
+
+
+    <!-- Clients -->
+    <section class="py-5">
+          {%- for client in site.data.home.clients -%}
+          {% assign ws = '' %}
+          <div class="col-md-3 col-sm-6">
+            <a href="{{ client.url }}">
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="">
+            </a>
+          </div>
+          {%-  endfor -%}
+        {% assign ws = '' %}
+        </div>
       </div>
     </section>
 
@@ -71,7 +85,7 @@ layout: default
               <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">{{ service.heading }}</h4>
-            <p class="text-muted">{{ service.text }}</p>
+            <p class="text-muted" style="font-size:14px;">{{ service.text }}</p>
           </div>
           {%- endfor -%}
         {% assign ws = '' %}
@@ -113,22 +127,6 @@ layout: default
 
 
 
-    <!-- Clients -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          {%- for client in site.data.home.clients -%}
-          {% assign ws = '' %}
-          <div class="col-md-3 col-sm-6">
-            <a href="{{ client.url }}">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="">
-            </a>
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-      </div>
-    </section>
 
     <!-- Contact -->
     <section id="contact">
