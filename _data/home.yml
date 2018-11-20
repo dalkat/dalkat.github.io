@@ -21,6 +21,7 @@ team:
           url: 'mailto:dkatan77@gmail.com'
 
 clients:
+    btn: Let's collaborate
   - img: img/logos/deloitte.png
     url: ""
   - img: img/logos/doblin.png
@@ -35,7 +36,6 @@ clients:
     url: ""
   - img: img/logos/princeton.png
     url: ""
-  btn: Let's collaborate
 
 services:
   heading: How can I help?
