@@ -22,9 +22,9 @@ social-buttons:
     url: 'http://instragram.com/dalkatan'
 
 quicklinks:
-  - title: Privacy Policy
+  - title:  
     url: '#'
-  - title: Terms of Use
+  - title:  
     url: '#'
 
 modal:
