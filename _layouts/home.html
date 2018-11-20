@@ -27,43 +27,9 @@ layout: default
             <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              {%- for time in site.data.home.about.timeline -%}
-              {% assign ws = '' %}
-              <li{% cycle '', ' class="timeline-inverted"' %}>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="{{ assets_path }}{{ time.image }}" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>{{ time.date }}</h4>
-                    <h4 class="subheading">{{ time.title }}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">{{ time.text  }}</p>
-                  </div>
-                </div>
-              </li>
-              {%- endfor -%}
-              {% assign ws = '' %}
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>{{ site.data.home.about.end1 }}
-                    <br>{{ site.data.home.about.end2 }}
-                    <br>{{ site.data.home.about.end3 }}</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
   <!-- Team -->
-    <section class="bg-light" id="team">
-      <div class="container">
+
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">{{ site.data.home.team.heading }}</h2>
