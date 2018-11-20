@@ -18,14 +18,23 @@ team:
           url: 'http://linkedin.com/in/daliakatan'
         - icon: fa fa-instagram
           url: 'http://instagram.com/dalkatan'
-        
+
+clients:
+  - img: img/logos/deloitte.png
+    url: ""
+  - img: img/logos/doblin.png
+    url: ""
+  - img: img/logos/princeton.png
+    url: ""
+
+
 services:
-  heading: Services
-  subheading: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. I hav experience using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy, and have supported over 20 partners in the last four years. I'd love to be your sounding board - how can I help? 
+  heading: How can I help?
+  subheading: 
   service:
     - icon: fa fa-laptop
       heading: Innovation & Growth Strategy
-      text: I am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
+      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. I have experience using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy, and have supported over 20 partners in the last four years. I'd love to be your sounding board - how can I help? 
     - icon: fa fa-home
       heading: Diversity & Inclusion
       text: Bridging gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace, and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
@@ -36,16 +45,6 @@ services:
 portfolio:
   heading: Portfolio
   subheading: Lorem ipsum dolor sit amet consectetur.
-
-clients:
-  - img: img/logos/envato.jpg
-    url: "#"
-  - img: img/logos/designmodo.jpg
-    url: "#"
-  - img: img/logos/themeforest.jpg
-    url: "#"
-  - img: img/logos/creative-market.jpg   
-    url: "#"
 
 contact:
   heading: Get in touch
