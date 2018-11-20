@@ -1,7 +1,7 @@
 intro:
-  lead-in: "Welcome To Our Studio!"
+  lead-in: "Welcome!"
   heading: It's Nice To Meet You
-  btn: Tell Me More
+  btn: Who is Dalia
 
 about:
   heading: About
@@ -24,27 +24,27 @@ about:
       title: Phase Two Expansion
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
 
-  end1: Be Part
-  end2: Of Our
-  end3: Story!
+  end1: Let's
+  end2: Collaborate!
+  end3: 
 
   services:
   heading: Services
-  subheading: Lorem ipsum dolor sit amet consectetur.
+  subheading: I am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
   service:
     - icon: fa fa-shopping-cart
-      heading: E-Commerce
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+      heading: Innovation & Growth StrategyI am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
     - icon: fa fa-laptop
-      heading: Responsive Design
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+      heading: Diversity & Inclusion
+      text: Bridging gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace, and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
     - icon: fa fa-lock
-      heading: Web Security
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+      heading: Future of Work
+      text: How technology will change the way we work in the future - including spaces, tools, and systems
 
 portfolio:
   heading: Portfolio
   subheading: Lorem ipsum dolor sit amet consectetur.
+
 
 
 clients:
