@@ -52,10 +52,10 @@ layout: default
         </div>
 
     <!-- Clients -->
-        <div class="row" style="height:40px;">
+        <div class="row">
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
-          <div class="col-md-2 col-sm-3">
+          <div class="col-md-2 col-sm-3" style="height:40px;"">
             <a href="{{ client.url }}">
               <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="">
             </a>
