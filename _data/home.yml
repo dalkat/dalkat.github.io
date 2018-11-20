@@ -63,7 +63,7 @@ contact:
   message-required: Please enter a message.
   btn: Send Message
 
-  js-url: 'dkatan77@gmail.com'
+  js-url: '././mail/contact_me.php'
   js-success: 'Thanks " +firstName + ", your message has been sent. '
   js-error: 'Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!'
   js-error-min: 'Sorry "+i+", it seems that my mail server is not responding. Please try again later!'
