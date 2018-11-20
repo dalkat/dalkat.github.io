@@ -32,12 +32,13 @@ services:
   heading: Services
   subheading: I am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
   service:
-    - icon: fa fa-shopping-cart
-      heading: Innovation & Growth StrategyI am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
     - icon: fa fa-laptop
+      heading: Innovation & Growth Strategy
+      text: I am a strategist and former designer whose professional interests center on using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy. I'd love to be your sounding board - how can I help? 
+    - icon: fa fa-home
       heading: Diversity & Inclusion
       text: Bridging gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace, and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
-    - icon: fa fa-lock
+    - icon: fa fa-building
       heading: Future of Work
       text: How technology will change the way we work in the future - including spaces, tools, and systems
 
