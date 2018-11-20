@@ -49,7 +49,7 @@ services:
 
 portfolio:
   heading: Portfolio
-  subheading: Lorem ipsum dolor sit amet consectetur.
+  subheading: Under construction
 
 contact:
   heading: Get in touch
