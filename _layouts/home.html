@@ -20,7 +20,7 @@ layout: default
    <!-- About & Team-->
     <section id="about">
       <div class="container">
-        <div class="row" style="text-align:center;display:inline-block;">
+        <div class="row" style="text-align:center;display:inline;">
           <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2></div>
         <div class="row">
           {%- for member in site.data.home.team.members -%}
@@ -54,7 +54,7 @@ layout: default
         <div class="row">
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
-          <div class="col-md-2 col-sm-3 col-xs-4" style="height:40px; display:inline-block;">
+          <div class="col-md-2 col-sm-3 col-xs-4" style="height:40px;">
               <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
           </div>
           {%-  endfor -%}
