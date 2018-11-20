@@ -24,9 +24,10 @@ clients:
     url: ""
   - img: img/logos/doblin.png
     url: ""
+  - img: img/logos/ibm.png
+    url: ""
   - img: img/logos/princeton.png
     url: ""
-
 
 services:
   heading: How can I help?
