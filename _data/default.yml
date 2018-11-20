@@ -10,8 +10,6 @@ nav:
     url: '#services'
   - title: Portfolio
     url: '#portfolio'
-  - title: Team
-    url: '#team'
   - title: Contact
     url: '#contact'
 

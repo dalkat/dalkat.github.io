@@ -3,24 +3,6 @@ intro:
   heading: It's Nice To Meet You
   btn: Tell Me More
 
-services:
-  heading: Services
-  subheading: Lorem ipsum dolor sit amet consectetur.
-  service:
-    - icon: fa fa-shopping-cart
-      heading: E-Commerce
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    - icon: fa fa-laptop
-      heading: Responsive Design
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    - icon: fa fa-lock
-      heading: Web Security
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-
-portfolio:
-  heading: Portfolio
-  subheading: Lorem ipsum dolor sit amet consectetur.
-
 about:
   heading: About
   subheading: Lorem ipsum dolor sit amet consectetur.
@@ -46,44 +28,24 @@ about:
   end2: Of Our
   end3: Story!
 
-team:
-  heading: Our Amazing Team
+  services:
+  heading: Services
   subheading: Lorem ipsum dolor sit amet consectetur.
-  members:
-    - name: Kay Garland
-      role: Lead Designer
-      img: img/team/1.jpg
-      social-buttons:
-        - icon: fa fa-twitter
-          url: "#" 
-        - icon: fa fa-facebook
-          url: "#"
-        - icon: fa fa-linkedin
-          url: "#"
-        
-    - name: Larry Parker
-      role: Lead Marketer
-      img: img/team/2.jpg
-      social-buttons:
-        - icon: fa fa-twitter
-          url: "#"
-        - icon: fa fa-facebook
-          url: "#"
-        - icon: fa fa-linkedin
-          url: "#"
+  service:
+    - icon: fa fa-shopping-cart
+      heading: E-Commerce
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+    - icon: fa fa-laptop
+      heading: Responsive Design
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+    - icon: fa fa-lock
+      heading: Web Security
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 
-    - name: Diana Pertersen
-      role: Lead Developer
-      img: img/team/3.jpg
-      social-buttons:
-        - icon: fa fa-twitter
-          url: "#"
-        - icon: fa fa-facebook
-          url: "#"
-        - icon: fa fa-linkedin
-          url: "#"
+portfolio:
+  heading: Portfolio
+  subheading: Lorem ipsum dolor sit amet consectetur.
 
-  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
 
 clients:
   - img: img/logos/envato.jpg
@@ -96,8 +58,8 @@ clients:
     url: "#"
 
 contact:
-  heading: Contact Us
-  subheading: Lorem ipsum dolor sit amet consectetur.
+  heading: Get in touch
+  subheading: Let's brainstorm over tea
   name: Your Name *
   name-required: Please enter your name.
   email: Your Email *
