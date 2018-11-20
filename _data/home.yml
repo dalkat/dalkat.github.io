@@ -17,6 +17,8 @@ team:
           url: 'http://linkedin.com/in/daliakatan'
         - icon: fa fa-instagram
           url: 'http://instagram.com/dalkatan'
+        - icon: fa fa-envelope
+          url: 'mailto:dkatan77@gmail.com'
 
 clients:
   - img: img/logos/deloitte.png
