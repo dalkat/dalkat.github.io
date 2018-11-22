@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 
 
@@ -10,6 +10,3 @@ layout: default
 	</section>
 </header>
 
----
-layout:home 
----
