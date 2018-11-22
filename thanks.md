@@ -1,18 +1,4 @@
 ---
-layout: default
+layout: home
 ---
-
-{%- assign assets_path = "assets/" -%}
-{%- if site.assets_path -%}
-  {%- assign assets_path = site.assets_path -%}
-{%- endif -%}
-    {% assign ws = '' %}
-
-<header class="masthead">
-  <div class="container">
-    <div class="intro-text">
-      <div class="intro-heading text-uppercase">Thanks for your note!</div>
-      <div class="intro-lead-in">I'll be in touch shortly.</div>
-    </div>
-  </div>
-</header>	
+<div style="z-index: 1; position: absolute; right: 0px; top: 0px; background-color: #000000; width: 100%; height: 10px; padding: 0px; color: white; ">I'll be in touch soon!</div>
