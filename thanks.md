@@ -1,4 +1,4 @@
 ---
 layout: default
 ---
-<div>thanks</div>
+<div style="background-color:000000;">thanks</div>
