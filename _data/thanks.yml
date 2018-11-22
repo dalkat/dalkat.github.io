@@ -1,0 +1,60 @@
+intro:
+  lead-in: "Under construction"
+  heading: Welcome!
+  btn: Who is Dalia
+
+about:
+  heading: About Dalia
+  subheading: Dalia is a strategist and former designer that partners with business leaders to solve their stickiest problems through human-centered design. She is currently a freelance consultant, helping clients design growth, brand, and innovation strategies.  <br><BR>Dalia was previously a management consultant with Doblin Innovation and Deloitte, where she worked with senior executives at over a dozen Fortune-500 companies, delivering work ranging from defining new business ambitions to concept development, brand and marketing strategy, and business model and monetization strategy. Dalia spearheaded Doblin Innovation's expansion to the West Coast, building and training a community of over 30 practitioners. She was also selected for an innovation fellowship with Deloitte's Center for the Edge. Prior to Deloitte, Dalia worked at several e-commerce and media technology startups spearheading digital and marketing strategy and user experience, as well as held internships at IBM and UBS. She also ran her own graphic and web design business for four years, averaging 4M unique annual visitors. <br><br>Dalia's passion projects center on human connection. Dalia co-founded of Deloitte's Refugee Community of Interest and secured a $400K grant from leadership to launch an offering around the integration of refugees in the workplace, in partnership with the Tent Partnership for Refugees. She is also working on an initiative that connects elderly and millennials through art and storytelling (theartisanarchive.com), and is involved in several initiatives supporting Jewish-Arab connection. Dalia previously interned at the U.S. House of Representatives, where she worked closely with congressional staff to improve community conditions in New York City. <br><BR>Dalia received her BA in International Affairs from Princeton University, where she also studied entrepreneurship and human-centered design, and founded Princeton’s marketing and filmmaking organizations. 
+
+team:
+  members:
+    - name: Dalia Katan
+      role: Designer & Strategist
+      img: img/team/1.jpg
+      social-buttons:
+        - icon: fa fa-linkedin
+          url: 'http://linkedin.com/in/daliakatan'
+        - icon: fa fa-instagram
+          url: 'http://instagram.com/dalkatan'
+        - icon: fa fa-envelope
+          url: '#contact'
+  btn: Let's collaborate
+
+clients:
+  - img: img/logos/deloitte.png
+    url: ""
+  - img: img/logos/doblin.png
+    url: ""
+  - img: img/logos/ibm.png
+    url: "" 
+  - img: img/logos/ubs.png
+    url: ""
+  - img: img/logos/US.png
+    url: ""
+  - img: img/logos/c4e.png
+    url: ""
+  - img: img/logos/princeton.png
+    url: ""
+
+services:
+  heading: How can I help?
+  subheading: 
+  service:
+    - icon: fa fa-laptop
+      heading: Innovation & Growth Strategy
+      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. I have experience using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy, and have supported over 20 partners in the last four years. I'd love to be your sounding board - how can I help? 
+    - icon: fa fa-home
+      heading: Diversity & Inclusion
+      text: Bridging gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace, and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
+    - icon: fa fa-building
+      heading: Future of Work
+      text: How technology will change the way we work in the future - including spaces, tools, and systems
+
+portfolio:
+  heading: Portfolio
+  subheading: Under construction
+
+contact:
+  heading: Get in touch
+  subheading: Let's brainstorm over tea
