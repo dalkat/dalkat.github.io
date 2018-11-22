@@ -1,3 +1,4 @@
 ---
-layout: thanks
+layout: default
 ---
+<div>thanks</div>
