@@ -1,6 +1,3 @@
 ---
-layout: home
+layout: thanks
 ---
-
-
-@import "_thanks.scss";
