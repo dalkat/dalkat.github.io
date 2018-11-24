@@ -38,7 +38,7 @@ clients:
     url: ""
 
 services:
-  heading: How can I help?
+  heading: Let's Collaborate
   subheading: 
   service:
     - icon: fa fa-laptop
