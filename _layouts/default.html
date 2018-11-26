@@ -31,6 +31,11 @@
   </head>
 
   <body id="page-top">
+    {% assign ws = '' %}
+    {%- if page.layout == 'thanks' -%}
+     <div class="text-muted" style="z-index: 99; background-color: #fff4cf; width: 100%; height: 26px; padding: 3px; vertical-align: middle; color: white; text-align:center; font-size:12px; border-top:1px #ffdc3b solid; border-bottom: 1px #ffdc3b solid; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal;"><i class="fa fa-check-circle-o" aria-hidden="true"></i> &nbsp; &nbsp; test Thanks for your message, I'll be in touch shortly!</div>
+
+    {%- endif -%}
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -150,11 +155,6 @@
     <script src="{{ assets_path }}js/agency.min.js"></script>
 
 
-    {% assign ws = '' %}
-    {%- if page.layout == 'thanks' -%}
-     <div class="text-muted" style="z-index: 99; position: absolute; right: 0; top: 0; background-color: #fff4cf; width: 100%; height: 26px; padding: 3px; vertical-align: middle; color: white; text-align:center; font-size:12px; border-top:1px #ffdc3b solid; border-bottom: 1px #ffdc3b solid; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</div>
-
-    {%- endif -%}
 
   </body>
 
