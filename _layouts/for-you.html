@@ -16,9 +16,9 @@ layout: default-sub
     <section id="contentarea">
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
-          <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2></div>
+          <h2 class="section-heading text-uppercase">{{ site.data.for-you.about.heading }}</h2></div>
         <div class="row">
-          {%- for member in site.data.home.team.members -%}
+          {%- for member in site.data.for-you.team.members -%}
           {% assign ws = '' %}
           <div class="col-sm-4">
             <div class="team-member">
@@ -41,13 +41,13 @@ layout: default-sub
           {%- endfor -%}
         {% assign ws = '' %}
           <div class="col-sm-8 text-left">
-            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</h3>
+            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.about.subheading  }}</h3>
           </div>
         </div>
 
     <!-- Clients -->
         <div class="row">
-          {%- for client in site.data.home.clients -%}
+          {%- for client in site.data.for-you.clients -%}
           {% assign ws = '' %}
           <div class="col-md-2 col-sm-3 col-xs-4" style="height:40px; padding:3px;">
               <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
@@ -55,7 +55,7 @@ layout: default-sub
           {%-  endfor -%}
         {% assign ws = '' %}
         </div>
-          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.home.team.btn }}</a></div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.for-you.team.btn }}</a></div>
       </div>
     </section>
 
@@ -64,12 +64,12 @@ layout: default-sub
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
+            <h2 class="section-heading text-uppercase">{{ site.data.for-you.services.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.services.subheading }}</h3>
           </div>
         </div>
         <div class="row text-center">
-          {%- for service in site.data.home.services.service -%}
+          {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -92,8 +92,8 @@ layout: default-sub
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.contact.subheading }}</h3>
+            <h2 class="section-heading text-uppercase">{{ site.data.for-you.contact.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.contact.subheading }}</h3>
           </div>
         </div>
         <div class="row" style="display:block; text-align:center;">
