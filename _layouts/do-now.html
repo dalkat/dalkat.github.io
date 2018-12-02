@@ -1,15 +1,41 @@
-<!Doctype html>
-<html>
-<head>
-	<title>Test</title>
-</head>
+---
+layout: default-sub
+---
+{%- assign assets_path = "assets/" -%}
+{%- if site.assets_path -%}
+  {%- assign assets_path = site.assets_path -%}
+{%- endif -%}
+    {% assign ws = '' %}
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+        	<div class="intro-lead-in">What might I do now?</div>
+        	<!--
+          <div class="intro-lead-in">{{ site.data.for-you.intro.lead-in }}</div>
+      -->
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Resources -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">WHAT SHOULD I DO RIGHT NOW?</h2>
+				<div id="quotesDisplay">
+				<!-- Quotes will display here -->
+				</div>
+				<button onclick="newQuote()">Try Something Else</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 <body>
-	<h1>test title</h1>
-	<div id="quotesDisplay">
-		<!-- Quotes will display here -->
-	</div>
-	<button onclick="newQuote()">Try Again</button>
-	
+
 	<script src="/js/DoNow.js"></script>
 </body>
-</html>

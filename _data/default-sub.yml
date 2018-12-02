@@ -4,10 +4,8 @@ menu-string: Menu
 
 nav:
 
-  - title: Home
+  - title: Return Home
     url: 'https://daliakatan.com/'
-  - title: For You
-    url: 'https://daliakatan.com/foryou'
 
 copyright: Copyright &copy; Dalia Katan 2018
 
