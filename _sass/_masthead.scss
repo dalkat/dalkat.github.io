@@ -52,7 +52,7 @@ header.masthead {
 
 
 
-header.do-now {
+header.donowbg {
   text-align: center;
   color: white;
   background-image: url('../img/header-bg2.jpg');
@@ -67,7 +67,7 @@ header.do-now {
       font-size: 22px;
       font-style: italic;
       line-height: 22px;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
       @include serif-font;
     }
     .intro-heading {
@@ -79,17 +79,16 @@ header.do-now {
     }
   }
 }
-
 @media(min-width:768px) {
-  header.do-now {
+  header.donowbg {
     .intro-text {
-      padding-top: 200px;
+      padding-top: 300px;
       padding-bottom: 200px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
         line-height: 40px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
         @include serif-font;
       }
       .intro-heading {
