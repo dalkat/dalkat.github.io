@@ -19,13 +19,14 @@ layout: default-sub
     <section id="contentarea">
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
-          <h2 class="section-heading text-uppercase">{{ site.data.for-you.contentarea.heading }}</h2></div>
-        {% assign ws = '' %}
+          <h2 class="section-heading text-uppercase">{{ site.data.for-you.contentarea.heading }}</h2>
+        </div>
+        <div class="row">
+          {% assign ws = '' %}
           <div class="col-sm-8 text-left">
             <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
           </div>
         
-        <div class="row">
           {%- for member in site.data.for-you.resources.members -%}
           {% assign ws = '' %}
           <div class="col-sm-4">
