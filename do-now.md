@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>test title</h1>
+	<div id="quoteDisplay">
+		<!-- Quotes will display here -->
+	</div>
+	<button onclick="newQuote()">Try Again</button>
+	<script src="js/DoNow.js"></script>js
+</body>
+</html>
