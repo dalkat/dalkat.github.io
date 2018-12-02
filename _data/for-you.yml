@@ -45,23 +45,12 @@ clients:
     url: ""
 
 services:
-  heading: Let's Collaborate
+  heading: Things to help your productivity
   subheading: 
   service:
-    - icon: fa fa-laptop
-      heading: Innovation & Growth Strategy
-      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. I have experience using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy, and have supported over 20 partners in the last four years. I'd love to be your sounding board - how can I help? 
-    - icon: fa fa-home
-      heading: Diversity & Inclusion
-      text: Bridging gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace, and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
-    - icon: fa fa-building
-      heading: Future of Work
-      text: How technology will change the way we work in the future - including spaces, tools, and systems
-
-portfolio:
-  heading: Portfolio
-  subheading: Under construction
-
-contact:
-  heading: Get in touch
-  subheading: Let's brainstorm over tea
+    - heading: Do Now Generator
+      text: X
+    - heading: B
+      text: X
+    - heading: C
+      text: X

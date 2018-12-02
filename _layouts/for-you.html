@@ -29,10 +29,6 @@ layout: default-sub
           {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
           <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
-            </span>
             <h4 class="service-heading">{{ service.heading }}</h4>
             <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
           </div>
