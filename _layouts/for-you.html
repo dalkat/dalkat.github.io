@@ -15,17 +15,47 @@ layout: default-sub
       </div>
     </header>
 
-   <!-- Content Area-->
-    <section id="contentarea">
+
+    <!-- Resources -->
+    <section id="resources">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">{{ site.data.for-you.services.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.services.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row text-center"> 
+          {%- for service in site.data.for-you.services.service -%}
+          {% assign ws = '' %}
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{ service.heading }}</h4>
+            <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
+          </div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Referrals-->
+    <section class="bg-light" id="contentarea">
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
           <h2 class="section-heading text-uppercase">{{ site.data.for-you.contentarea.heading }}</h2>
         </div>
         <div class="row">
-        
-          {%- for member in site.data.for-you.resources.members -%}
           {% assign ws = '' %}
-          <div class="col-sm-3">
+          <div class="col-sm-12 text-left">
+            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>        
+          {%- for member in site.data.for-you.referrals.members -%}
+          {% assign ws = '' %}
+          <div class="col-sm-2">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt="">
               <h4>{{ member.name }}</h4>
@@ -45,49 +75,7 @@ layout: default-sub
           </div>
           {%- endfor -%}
 
-          {% assign ws = '' %}
-          <div class="col-sm-12 text-left">
-            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
           </div>
-        </div>
-
-    <!-- Clients -->
-        <div class="row">
-          {%- for client in site.data.for-you.clients -%}
-          {% assign ws = '' %}
-          <div class="col-md-2 col-sm-3 col-xs-4" style="height:40px; padding:3px;">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.for-you.resources.btn }}</a></div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="bg-light" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.for-you.services.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.for-you.services.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          {%- for service in site.data.for-you.services.service -%}
-          {% assign ws = '' %}
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">{{ service.heading }}</h4>
-            <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
         </div>
       </div>
     </section>
-

@@ -7,7 +7,7 @@ contentarea:
   heading: Referrals
   subheading: Uber [link] <br> Ibotta <br>Shopyourway <br> Airbnb <br> Amazon  
 
-resources:
+referrals:
   members:
     - name: Uber
       role: 30% Off
