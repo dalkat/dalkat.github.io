@@ -48,7 +48,8 @@ layout: default-sub
         <div class="row">
           {% assign ws = '' %}
           <div class="col-sm-12 text-left">
-            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>        
+            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
+          </div>        
           {%- for member in site.data.for-you.referrals.members -%}
           {% assign ws = '' %}
           <div class="col-sm-2">
@@ -70,8 +71,6 @@ layout: default-sub
             </div>
           </div>
           {%- endfor -%}
-
-          </div>
         </div>
       </div>
     </section>
