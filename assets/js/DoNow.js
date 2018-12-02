@@ -1,5 +1,5 @@
 function newQuote() {
-	var randomNumber = Math.floor(Math.random() * ((quotes.length)+1));
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
 	document.getElementById('quotesDisplay').innerHTML = quotes[randomNumber];
 	}
 
