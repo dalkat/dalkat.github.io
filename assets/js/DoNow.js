@@ -9,6 +9,7 @@ var quotes = [
 	'<b>Floss</b><br>You will be SO glad you did',
 	'<b>Clean up one section of your room</b><br>Why not start with your desk, that pile of laundry on your couch, or your wallet?',
 	'Message 3 friends you have not spoken to in a while',
+	'<b>Take care of your skin</b><br>Make a face mask, exfoliate your body, or lotion up!',
 	'Test 1',
 	'Test 2'
 	]
