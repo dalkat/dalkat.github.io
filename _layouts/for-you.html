@@ -20,8 +20,13 @@ layout: default-sub
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
           <h2 class="section-heading text-uppercase">{{ site.data.for-you.contentarea.heading }}</h2></div>
+        {% assign ws = '' %}
+          <div class="col-sm-8 text-left">
+            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
+          </div>
+        
         <div class="row">
-          {%- for member in site.data.for-you.team.members -%}
+          {%- for member in site.data.for-you.resources.members -%}
           {% assign ws = '' %}
           <div class="col-sm-4">
             <div class="team-member">
@@ -42,10 +47,7 @@ layout: default-sub
             </div>
           </div>
           {%- endfor -%}
-        {% assign ws = '' %}
-          <div class="col-sm-8 text-left">
-            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
-          </div>
+
         </div>
 
     <!-- Clients -->
@@ -58,7 +60,7 @@ layout: default-sub
           {%-  endfor -%}
         {% assign ws = '' %}
         </div>
-          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.for-you.team.btn }}</a></div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.for-you.resources.btn }}</a></div>
       </div>
     </section>
 
