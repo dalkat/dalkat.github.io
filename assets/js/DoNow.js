@@ -8,7 +8,7 @@ var quotes = [
 	'<b>1-minute dance party</b><br>Ready, set, go.',
 	'Floss - you will be SO glad you did',
 	'Clean up one section of your room'.
-	'Message 5 friends you haven\'t spoken to in a while',
+	'Message 5 friends you have not spoken to in a while',
 	'Test 1',
 	'Test 2'
 	]
