@@ -75,11 +75,12 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <ul class="list-inline quicklinks">
+            <ul class="list-inline quicklinks text-muted">
               {%- for ql in site.data.default-sub.quicklinks -%}
               {% assign ws = '' %}
               <li class="list-inline-item">
                 <a href="{{ ql.url }}">{{ ql.title }}</a>
+                <small>As an Amazon Associate I earn from qualifying purchases</small>
               </li>
               {%- endfor -%}
             {% assign ws = '' %}
