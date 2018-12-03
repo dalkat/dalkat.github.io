@@ -4,7 +4,7 @@ function newQuote() {
 	}
 
 var quotes = [
-	'<b>Journal for 10 minutes</b><br>Answer three questions: How am I feeling right now? What brought me absolute delight in the past 24hrs? What are the patterns?',
+	'<b>Journal for 10 minutes</b><br>Answer three questions: How am I feeling right now? What brought me absolute delight today? What patterns emerged throughout the day?<br><Br>You could also try a <a href="https://www.amazon.com/gp/product/0991846206/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0991846206&linkCode=as2&tag=dalkat-20&linkId=b718dfe0d02aa62b914e315fb026ee9f" target="_blank">Five Minute Journal</a>.',
 	'<b>1-minute dance party</b><br>Ready, set, go.',
 	'<b>Floss</b><br>You will be SO glad you did',
 	'<b>Clean up one section of your room</b><br>Why not start with your desk, that pile of laundry on your couch, or your wallet?',
