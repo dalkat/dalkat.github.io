@@ -97,3 +97,31 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+
+input[type="submit"] {
+    background-color: #166a8f;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 50px;
+    border: 1px solid #fff;
+    letter-spacing: 2px;
+    width: 50%;
+  cursor:pointer;
+}
+
+input[type="text"], input[type="password"] {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  background-color:transparent;
+  font-weight: 100;
+  box-sizing:border-box;
+  letter-spacing:3px;
+  border-bottom:1px solid #fff;
+  border-right:0px;
+  border-left:0px;
+  border-top:0px;
+}
