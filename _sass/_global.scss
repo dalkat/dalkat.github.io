@@ -127,8 +127,8 @@ input[type="text"], input[type="email"] {
   margin-bottom:3px;
 }
 
-input[type=button], input[type=submit] {
-  background-color: #4CAF50;
+button[type=submit] {
+  background-color: #fed136;
   border: none;
   color: white;
   padding: 16px 32px;
