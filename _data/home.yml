@@ -1,6 +1,6 @@
 intro:
   lead-in: "Under construction"
-  heading: Welcome!
+  heading:  
   btn: Who is Dalia
 
 about:
@@ -10,7 +10,7 @@ about:
 team:
   members:
     - name: Dalia Katan
-      role: Designer & Strategist
+      role: Strategist & Designer
       img: img/team/1.jpg 
       social-buttons:
         - icon: fa fa-linkedin

@@ -56,11 +56,13 @@ section {
 .btn {
   @include heading-font;
   font-weight: 700;
+  border-radius: 300px;  
 }
 
 .btn-xl {
-  font-size: 18px;
-  padding: 20px 40px;
+
+  font-size: 15px;
+  padding: 15px 40px;
 }
 
 .btn-primary {
