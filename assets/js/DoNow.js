@@ -18,5 +18,7 @@ var quotes = [
 	'<b>Meditate</b><br>A five minute meditation on SimpleHabit or Headspace.',
 	'<b>Werk it out</b><br>Ten pushups, 16 squat steps with bands, ten bird dogs. Repeat.',
 	'<b>Write a short poem in your preferred language of love.</b><br>I mean, you have to practice your French anyway...',
-	'<b>Think of three things you\'re grateful for.</b><Br>If there\'s someone you can thank, message them and make their day!'
+	'<b>Think of three things you\'re grateful for.</b><Br>If there\'s someone you can thank, message them and make their day!',
+	'<b>Send snail mail.</b><br>Yup, old school. Make someone\'s day, send a love note, a life update, a book, etc.',
+	'<b>Take a walk - whether 5 minutes or 45.</b><br>Get some fresh air, clear your head, take a walk around the block - or to the next neighborhood.'
 	]
