@@ -119,7 +119,7 @@ input[type="text"], input[type="email"] {
   color: #fff;
   font-size: 15px;
   outline: none;
-  background-color:transparent;
+  background-color:white;
   font-weight: 100;
   box-sizing:border-box;
   letter-spacing:1px;
@@ -128,10 +128,6 @@ input[type="text"], input[type="email"] {
   margin-bottom:3px;
 }
 
-::placeholder {
-  color: #777777;
-  font-weight: 100;
-}
 
 button[type=submit] {
   background-color: #fed136;
@@ -154,7 +150,7 @@ textarea.contact {
   color: #fff;
   font-size: 15px;
   outline: none;
-  background-color:transparent;
+  background-color:white;
   font-weight: 100;
   box-sizing:border-box;
   letter-spacing:1px;
@@ -170,7 +166,7 @@ select.contact {
   color: #fff;
   font-size: 15px;
   outline: none;
-  background-color:transparent;
+  background-color:white;
   font-weight: 100;
   box-sizing:border-box;
   letter-spacing:1px;

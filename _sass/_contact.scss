@@ -1,9 +1,9 @@
 // Styling for the contact section
 section#contact {
   background-color: $gray-900;
-  background-image: url('../img/map-image.png');
+  background-image: url('../img/contact-bg1.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   .section-heading {
     color: $white;
   }
@@ -25,24 +25,24 @@ section#contact {
     box-shadow: none;
   }
   ::-webkit-input-placeholder {
-    font-weight: 700;
+    font-weight: 100;
     color: $gray-400;
     @include heading-font;
   }
   :-moz-placeholder {
-    font-weight: 700;
+    font-weight: 100;
     color: $gray-400;
     /* Firefox 18- */
     @include heading-font;
   }
   ::-moz-placeholder {
-    font-weight: 700;
+    font-weight: 100;
     color: $gray-400;
     /* Firefox 19+ */
     @include heading-font;
   }
   :-ms-input-placeholder {
-    font-weight: 700;
+    font-weight: 100;
     color: $gray-400;
     @include heading-font;
   }
