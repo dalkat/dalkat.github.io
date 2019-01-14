@@ -129,19 +129,8 @@ input[type="text"], input[type="email"] {
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  width: 100%;
-  padding: 15px;
   color: #777777;
-  font-size: 15px;
-  outline: none;
-  background-color:transparent;
   font-weight: 100;
-  box-sizing:border-box;
-  letter-spacing:1px;
-  border:1px solid #fff;
-  border-radius: 300px;
-  margin-bottom:3px;
 }
 
 button[type=submit] {
