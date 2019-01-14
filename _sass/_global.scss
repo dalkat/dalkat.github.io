@@ -115,7 +115,7 @@ input[type="submit"] {
 input[type="text"], input[type="email"] {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
-  padding: 7px;
+  padding: 15px;
   color: #fff;
   font-size: 15px;
   outline: none;
@@ -123,10 +123,24 @@ input[type="text"], input[type="email"] {
   font-weight: 100;
   box-sizing:border-box;
   letter-spacing:1px;
-  border-bottom:1px solid #fff;
-  border-right:0px;
-  border-left:0px;
-  border-top:0px;
+  border:1px solid #fff;
+  border-radius: 300px;
+  margin-bottom:3px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  padding: 15px;
+  color: #777777;
+  font-size: 15px;
+  outline: none;
+  background-color:transparent;
+  font-weight: 100;
+  box-sizing:border-box;
+  letter-spacing:1px;
+  border:1px solid #fff;
+  border-radius: 300px;
   margin-bottom:3px;
 }
 
@@ -139,31 +153,15 @@ button[type=submit] {
   margin: 4px 2px;
   cursor: pointer;
   width:100%;
+  border:1px solid #fff;
+  border-radius: 300px;
   }
 
 textarea.contact {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
   height:100px;
-  padding: 7px;
-  color: #fff;
-  font-size: 15px;
-  outline: none;
-  background-color:transparent;
-  font-weight: 100;
-  box-sizing:border-box;
-  letter-spacing:1px;
-  border-bottom:1px solid #fff;
-  border-right:0px;
-  border-left:0px;
-  border-top:0px;
-  margin-bottom:3px;
-  }
-
-select.contact {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  width: 100%;
-  padding: 7px;
+  padding: 15px;
   color: #fff;
   font-size: 15px;
   outline: none;
@@ -172,6 +170,23 @@ select.contact {
   box-sizing:border-box;
   letter-spacing:1px;
   border:1px solid #fff;
+  border-radius: 300px;
+  margin-bottom:3px;
+  }
+
+select.contact {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  background-color:transparent;
+  font-weight: 100;
+  box-sizing:border-box;
+  letter-spacing:1px;
+  border:1px solid #fff;
+  border-radius: 300px;
   margin-top:10px;
   margin-bottom:3px;
   }
