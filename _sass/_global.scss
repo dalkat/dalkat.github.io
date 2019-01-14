@@ -149,7 +149,7 @@ textarea.contact {
 
 select.contact {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  width: 100%;
+  width: 98%;
   padding: 13px;
   color: #777777;
   font-size: 15px;
@@ -161,20 +161,20 @@ select.contact {
   border:1px solid #fff;
   border-radius: 30px;
   margin-bottom:5px;
+  margin-left:4px;
   }
 
 
 button[type=submit] {
-  background-color: #fed136;
+  background-color: #708090;
   padding: 13px;
-  border: none;
   color: white;
   font-size: 15px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   width:100%;
-  border:1px solid #fff;
+  border: none;
   border-radius: 30px;
   letter-spacing:1px;
   }
