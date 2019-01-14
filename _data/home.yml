@@ -39,7 +39,7 @@ clients:
 
 services:
   heading: Let's Collaborate
-  subheading: I love a good challenge, and have enjoyed supporting over 25 partner clients in the last four years. I'd love to be your sounding board and innovation partner - how can I help? 
+  subheading: I've supported over 25 partner clients in the last four years. <br>I'd love to be your sounding board and innovation partner - how can I help? 
   service:
     - icon: fa fa-laptop
       heading: Innovation & Growth Strategy
