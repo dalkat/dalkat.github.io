@@ -44,13 +44,13 @@ services:
   subheading: I've supported over 25 partner clients in the last four years. <br>I'd love to be your sounding board and innovation partner - how can I help? 
   service:
     - icon: fa fa-laptop
-      heading: Innovation <br>& Growth Strategy
+      heading: Innovation & <br>Growth Strategy
       text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. I have experience using design thinking and behavioral design to solve challenges related to growth, brand, and product innovation strategy.
     - icon: fa fa-home
-      heading: Diversity <br>& Inclusion
+      heading: Diversity & <br>Inclusion
       text: I have studied and designed diversity programs that bridge gaps and resolving tensions between different ethnicities through integration in the workplace, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
     - icon: fa fa-building
-      heading: Brand Design <br>& Storytelling
+      heading: Brand Design & <br>Storytelling
       text: How brands connect with consumers is changing, and understanding those shifts can help you reimagine how you engage with consumers through digital channels. I work with companies to strengthen their brands and storytelling, including web development and marketing services. 
 
 portfolio:
