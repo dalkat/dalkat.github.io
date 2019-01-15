@@ -36,6 +36,8 @@ clients:
     url: ""
   - img: img/logos/princeton.png
     url: ""
+  - img: img/logos/thuzio.png
+    url: ""
 
 services:
   heading: Let's Collaborate
