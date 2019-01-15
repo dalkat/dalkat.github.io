@@ -55,7 +55,7 @@ layout: default
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
           <div class="col-md-2 col-sm-3 col-xs-4" style="height:40px; padding:3px;">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; margin-bottom:5px;">
           </div>
           {%-  endfor -%}
         {% assign ws = '' %}
