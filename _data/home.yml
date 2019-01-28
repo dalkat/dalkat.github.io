@@ -1,5 +1,5 @@
 intro:
-  lead-in: "Under construction"
+  lead-in: '&nbsp;'
   heading:  '&nbsp;'
   btn: Who is Dalia
 
@@ -52,10 +52,12 @@ services:
     - icon: fa fa-building
       heading: Brand Design & <br>Storytelling
       text: How brands connect with consumers is changing, and understanding those shifts can help you reimagine how you engage with consumers through digital channels. I work with companies to strengthen their brands and storytelling, including web development and marketing services. 
+  btn: See past work
 
 portfolio:
   heading: Portfolio
-  subheading: Under construction
+  subheading: Here's a sample of over a decade of experience working in strategy and design.
+  btn: Let's work together
 
 contact:
   heading: Get in touch
