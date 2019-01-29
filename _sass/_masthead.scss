@@ -114,7 +114,7 @@ header.longtext {
   background-position: center top;
   @include background-cover;
   .intro-text {
-    padding-top: 80px;
+    padding-top: 100px;
     padding-bottom: 200px;
     .intro-lead-in {
       font-size: 22px;
@@ -135,8 +135,8 @@ header.longtext {
 @media(min-width:768px) {
   header.longtext {
     .intro-text {
-      padding-top: 150px;
-      padding-bottom: 150px;
+      padding-top: 200px;
+      padding-bottom: 200px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -166,8 +166,8 @@ header.blankbg {
   background-repeat: no-repeat;
   @include background-cover;
   .intro-text {
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 200px;
     .intro-lead-in {
       font-size: 22px;
       font-style: italic;
