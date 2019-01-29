@@ -164,8 +164,6 @@ header.blankbg {
   color: black;
   background-color:white;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
   @include background-cover;
   .intro-text {
     padding-top: 20px;
