@@ -114,7 +114,7 @@ header.longtext {
   background-position: center top;
   @include background-cover;
   .intro-text {
-    padding-top: 180px;
+    padding-top: 80px;
     padding-bottom: 200px;
     .intro-lead-in {
       font-size: 22px;
@@ -135,8 +135,8 @@ header.longtext {
 @media(min-width:768px) {
   header.longtext {
     .intro-text {
-      padding-top: 250px;
-      padding-bottom: 250px;
+      padding-top: 150px;
+      padding-bottom: 150px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -155,6 +155,59 @@ header.longtext {
   }
 }
 
+
+
+
+
+header.blankbg {
+  text-align: center;
+  color: black;
+  background-color:white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  @include background-cover;
+  .intro-text {
+    padding-top: 20px;
+    padding-bottom: 120px;
+    .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include serif-font;
+    }
+    .intro-heading {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 25px;
+      @include heading-font;
+    }
+  }
+}
+@media(min-width:768px) {
+  header.longtext {
+    .intro-text {
+      padding-top: 50px;
+      padding-bottom: 150px;
+      .intro-lead-in {
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include serif-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        margin-bottom: 50px;
+        @include heading-font;
+      }
+    }
+  }
+}
 
 
 
