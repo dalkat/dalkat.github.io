@@ -253,16 +253,16 @@ button[type=submit] {
 }
 /* End carousel */
 
-.item blockquote {
+.carousel-item blockquote {
     border-left: none; 
     margin: 0;
 }
 
-.item blockquote img {
+.carousel-item blockquote img {
     margin-bottom: 10px;
 }
 
-.item blockquote p:before {
+.carousel-item blockquote p:before {
     content: "\f10d";
     font-family: 'Fontawesome';
     float: left;
