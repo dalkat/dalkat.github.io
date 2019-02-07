@@ -230,6 +230,10 @@ button[type=submit] {
     opacity: .5;
 }
 
+#quote-carousel .carousel-control.right {
+    right: 0;
+    left: auto;
+}
 
 #quote-carousel .carousel-indicators {
     position: relative;
