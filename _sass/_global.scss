@@ -239,10 +239,6 @@ button[type=submit] {
     background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
     background-repeat: repeat-x;
-    }
-
-#quote-carousel .carousel-control.left {
-
 }
 
 #quote-carousel .carousel-indicators {
@@ -303,6 +299,8 @@ button[type=submit] {
     perspective: 1000px;
 }
 
+
+
 // adtl carousel
 .carousel {
     position: relative;
@@ -347,7 +345,9 @@ button[type=submit] {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-}.carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
+}
+
+.carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
     display: block;
 }
 .carousel-inner>.active {
@@ -356,18 +356,23 @@ button[type=submit] {
 .carousel-inner>.next, .carousel-inner>.prev {
     position: absolute;
     top: 0;
-    width: 100%}
+    width: 100%;
+    }
 .carousel-inner>.next {
-    left: 100%}
+    left: 100%;
+    }
 .carousel-inner>.prev {
-    left: -100%}
+    left: -100%;
+    }
 .carousel-inner>.next.left, .carousel-inner>.prev.right {
     left: 0;
 }
 .carousel-inner>.active.left {
-    left: -100%}
+    left: -100%;
+    }
 .carousel-inner>.active.right {
-    left: 100%}
+    left: 100%;
+    }
 .carousel-control {
     position: absolute;
     top: 0;
@@ -428,9 +433,11 @@ button[type=submit] {
     line-height: 1;
 }
 .carousel-control .icon-prev:before {
-    content: '\2039'}
+    content: '\2039';
+    }
 .carousel-control .icon-next:before {
-    content: '\203a'}
+    content: '\203a';
+    }
 .carousel-indicators {
     position: absolute;
     bottom: 10px;
@@ -495,4 +502,5 @@ button[type=submit] {
 }
 .carousel-indicators {
     bottom: 20px;
+}
 }
