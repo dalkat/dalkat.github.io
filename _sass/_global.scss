@@ -228,7 +228,7 @@ button[type=submit] {
     opacity: .5;
 }
 
-.carousel-control.right {
+#quote-carousel .carousel-control.right {
     right: 0;
     left: auto;
     background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
@@ -239,7 +239,7 @@ button[type=submit] {
     background-repeat: repeat-x;
     }
 
-.carousel-control.left {
+#quote-carousel .carousel-control.left {
     background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
     background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
     background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
