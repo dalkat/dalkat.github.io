@@ -207,7 +207,7 @@ button[type=submit] {
 
 #quote-carousel {
     padding: 0 10px 30px 10px;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 #quote-carousel .carousel-control {
     background: none;
@@ -222,11 +222,10 @@ button[type=submit] {
     top: auto;
     bottom: 0px;
     margin-top: 20px;
-    margin-right: -19px;
 }
 #quote-carousel .carousel-indicators li {
-    width: 50px;
-    height: 50px;
+    width: 8px;
+    height: 8px;
     cursor: pointer;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -237,8 +236,8 @@ button[type=submit] {
     vertical-align: middle;
 }
 #quote-carousel .carousel-indicators .active {
-    width: 128px;
-    height: 128px;
+    width: 8px;
+    height: 8px;
     opacity: 1;
     transition: all .2s;
 }
