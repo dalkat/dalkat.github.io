@@ -47,13 +47,4 @@
     $(".navbar").removeClass("d-none");
   })
 
-//testimonials
-$(document).ready(function() {
-  //Set the carousel options
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 10000,
-  });
-});
-
 })(jQuery); // End of use strict
