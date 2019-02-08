@@ -41,18 +41,18 @@ clients:
 
 services:
   heading: Let's Collaborate
-  subheading: I've supported over 25 partner clients in the last four years. <br>I'd love to be your sounding board and innovation partner - how can I help? 
+  subheading: I've supported over 25 partners and clients in the last four years, ranging from Fortune-100 executives to startup founders. I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
   service:
     - icon: fa fa-laptop
       heading: Innovation & <br>Growth Strategy
       text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. With my background in design thinking and management consulting, I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops & Concept Development</li><li class="services">Ethnographic Research & Concept Prototyping</li><li class="services">Customer Analysis and Branding Strategy</li></ol>
     - icon: fa fa-home
       heading: Teambuilding & <br>Diversity
-      text: Research shows that diverse teams consistently outperform the market, largely due to greater creativity and productivity and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">teambuilding</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Integration</li><li class="services">Israeli-Palestinian Workplace Integration</li></ul>
+      text: Research shows that diverse teams consistently outperform in the market, largely due to greater creativity, increased productivity, and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">teambuilding</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Integration</li><li class="services">Israeli-Palestinian Workplace Integration</li></ul>
     - icon: fa fa-building
       heading: Brand Design & <br>Storytelling
-      text: How brands connect with consumers is changing, and understanding those shifts can help you reimagine how you engage with consumers through digital channels. I work with companies to strengthen their brands and storytelling, including web development and marketing services. 
-  btn: See past work
+      text: How brands connect with consumers is changing, and understanding those shifts can help you reimagine how you engage with consumers through digital channels. I work with companies to strengthen their brands through the following offerings&colon; <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">Web design</li></ul>
+  btn: Ready to take the next step?
 
 portfolio:
   heading: Portfolio
