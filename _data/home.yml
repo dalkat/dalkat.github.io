@@ -41,7 +41,7 @@ clients:
 
 services:
   heading: Let's Collaborate
-  subheading: I've supported over 25 partners and clients in the last four years, ranging from Fortune-100 executives to startup founders. I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
+  subheading: I've supported over 25 partners and clients in the last four years, ranging from Fortune-100 executives to startup founders. <br>I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
   service:
     - icon: fa fa-lightbulb-o
       heading: Innovation & <br>Growth Strategy
