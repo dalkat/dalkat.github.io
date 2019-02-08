@@ -41,17 +41,18 @@ clients:
 
 services:
   heading: Let's Collaborate
-  subheading: I've supported over 25 partners and clients in the last four years, ranging from Fortune-100 executives to startup founders. <br>I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
+  subheading: I've supported over 25 clients in the last four years, ranging from Fortune-100 executives to startup founders. <br>I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
   service:
     - icon: fa fa-lightbulb-o
       heading: Innovation & <br>Growth Strategy
-      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. With my background in design thinking and management consulting, I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops & Concept Development</li><li class="services">Ethnographic Research & Concept Prototyping</li><li class="services">Customer Analysis and Branding Strategy</li></ol>
-    - icon: fa fa-users
-      heading: Team Building & <br>Diversity
-      text: Research shows that diverse teams consistently outperform in the market, largely due to greater creativity, increased productivity, and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">teambuilding</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Integration</li><li class="services">Israeli-Palestinian Workplace Integration</li></ul>
+      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. With my background in design thinking and management consulting, I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops & Concept Development</li><li class="services">Ethnographic Research & Concept Prototyping</li><li class="services">Startup Advisory</li></ol>
     - icon: fa fa-laptop
       heading: Brand Design & <br>Storytelling
-      text: The ways in which consumers expect to engage with brands is more personal, connected, and experience-driven than ever. Understanding those shifts can help business leaders reimagine how their brands connect with consumers through online and offline channels. With over a decade of experience in brand design, digital strategy, and storytelling I work with companies to strengthen their brands through the following offerings&colon; <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">Web Design & User Experience</li></ul>
+      text: The ways in which consumers expect to engage with brands is more personal, connected, and experience-driven than ever. Understanding those shifts can help business leaders reimagine how their brands connect with consumers through online and offline channels. With over a decade of experience in brand design, digital strategy, and storytelling I work with companies to strengthen their brands through the following offerings&colon; <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
+    - icon: fa fa-users
+      heading: Team Building & <br>Diversity
+      text: Research shows that diverse teams consistently outperform in the market, largely due to greater creativity, increased productivity, and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">teambuilding</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Peacebuilding</li></ul>
+
   btn: Ready to take the next step?
 
 portfolio:
