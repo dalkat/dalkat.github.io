@@ -103,13 +103,13 @@ section {
 
 
 // Lists
-#services ol, ul, li {
+#services li.services {
     font-size: 14px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: left;
     color: #6c757d!important;
     line-height: 1.75;
-}
+}}
 
 // Highlight color customization
 ::-moz-selection {
