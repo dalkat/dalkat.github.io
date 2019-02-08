@@ -49,6 +49,8 @@ services:
     - icon: fa fa-home
       heading: Teams & <br>Diversity
       text: The workplace is one of the most powerful opportunities to build empathy and understanding amongst different groups. As such, an inclusive workplace has both business and societal benefits. I have studied and designed diversity programs that bridge gaps, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
+      heading: Teambuilding & <br>Diversity
+      text: Research shows that diverse teams are more creative, make better decisions, and ultimately lead to greater profit. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">teambuilding</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Integration</li><li class="services">Israeli-Palestinian Workplace Integration</li></ul>
     - icon: fa fa-building
       heading: Brand Design & <br>Storytelling
       text: How brands connect with consumers is changing, and understanding those shifts can help you reimagine how you engage with consumers through digital channels. I work with companies to strengthen their brands and storytelling, including web development and marketing services. 
@@ -66,4 +68,4 @@ testimonials:
 
 contact:
   heading: Get in touch
-  subheading: Let's brainstorm over tea, build something amazing together, or just say hi! <br>Shoot me a message below, or schedule a time for a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;">consultation</a>.
+  subheading: Let's brainstorm over tea, build something amazing together, or just say hi! <br>Shoot me a message below, or schedule a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;" style="color:#ff453c;">consultation</a>.
