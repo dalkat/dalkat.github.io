@@ -47,7 +47,7 @@ services:
       heading: Innovation & <br>Growth Strategy
       text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. With my background in design thinking and management consulting, I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops & Concept Development</li><li class="services">Ethnographic Research & Concept Prototyping</li><li class="services">Customer Analysis and Branding Strategy</li></ol>
     - icon: fa fa-home
-      heading: Diversity & <br>Inclusion
+      heading: Teams & <br>Diversity
       text: The workplace is one of the most powerful opportunities to build empathy and understanding amongst different groups. As such, an inclusive workplace has both business and societal benefits. I have studied and designed diversity programs that bridge gaps, with specific focus on (1) how employers can create environments for refugees and minorities to better integrate and thrive in the workplace and (2) bridging divides in the Middle East through Jewish-Arab integration at work.
     - icon: fa fa-building
       heading: Brand Design & <br>Storytelling
@@ -66,4 +66,4 @@ testimonials:
 
 contact:
   heading: Get in touch
-  subheading: Let's brainstorm over tea, build something amazing together, or just say hi! 
+  subheading: Let's brainstorm over tea, build something amazing together, or just say hi! <br>Shoot me a message below, or schedule a time for a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;">consultation</a>.
