@@ -206,7 +206,8 @@ layout: default
               <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
                 <input type="text" name="name" placeholder="Your full name"required><br>
                 <input type="email" name="_replyto" placeholder="Your email" required><br>
-                <select name="_subject" class="contact"><option>Select a Subject</option><option>Consulting Inquiry</option><option>Something Else</option></select> <br>
+                <div style="width: 100%; padding: 13px 5px; outline: none;background-color: white; box-sizing: border-box; border: 1px solid #fff; border-radius: 30px; margin-bottom: 5px;">
+                  <select name="_subject" class="embedcontact"><option>Select a Subject</option><option>Consulting Inquiry</option><option>Something Else</option></select> <br>
                 <textarea name="message" placeholder="Your message" class="contact" required></textarea><br>
                 <input type="hidden" name="_next" value="https://daliakatan.com/thanks"/>
                 <button type="submit" class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger">Send</button>
