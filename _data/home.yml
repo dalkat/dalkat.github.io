@@ -58,7 +58,7 @@ services:
 portfolio:
   heading: Portfolio
   subheading: Here's a sample of over a decade of experience working in strategy and design.
-  btn: Testimonials
+  btn: 
 
 testimonials:
   heading: Client Testimonials
