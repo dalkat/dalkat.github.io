@@ -85,14 +85,14 @@ section {
 }
 
 .btn-secondary {
-  color: $secondary;
-  background-color: transparent;
+  color: white;
+  background-color: $secondary;
   border-color: $secondary;
   &:active,
   &:focus,
   &:hover {
-    background-color: $secondary !important;
-    border-color: $secondary !important;
+    background-color: $primary !important;
+    border-color: $primary !important;
     color: white;
   }
   &:active,
