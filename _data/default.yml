@@ -1,9 +1,8 @@
 brand:
   name: Dalia Katan
-menu-string: Menu
+menu-string: &nbsp;
 
 nav:
-
   - title: About
     url: '#about'
   - title: Collaborate
