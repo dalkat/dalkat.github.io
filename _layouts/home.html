@@ -54,8 +54,8 @@ layout: default
         <div class="clientcarousel">
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
-          <div>
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
+          <div class="slide">
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="">
           </div>
           {%-  endfor -%}
         {% assign ws = '' %}
