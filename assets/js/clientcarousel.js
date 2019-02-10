@@ -6,7 +6,8 @@
     infinite: true,
     speed: 300,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
@@ -37,5 +38,6 @@
       // settings: "unslick"
       // instead of a settings object
     ]
+        
   });
 });
