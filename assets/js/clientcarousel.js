@@ -2,9 +2,9 @@ $(document).ready(function(){
   $('.clientcarousel').slick({
     dots: false,
     infinite: true,
-    speed: 300,
+    speed: 400,
     slidesToShow: 5,
-    centerMode: true,
+    centerMode: false,
     variableWidth: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -15,7 +15,7 @@ $(document).ready(function(){
           slidesToShow: 5,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
