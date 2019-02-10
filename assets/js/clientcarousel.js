@@ -1,5 +1,4 @@
-  // Client carousel Slick
-  $(document).ready(function(){
+$(document).ready(function(){
   $('.clientcarousel').slick({
     dots: true,
     infinite: true,
