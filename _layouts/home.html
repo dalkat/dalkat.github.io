@@ -51,10 +51,10 @@ layout: default
         </div>
 
     <!-- Clients -->
-        <div class="row">
+        <div class="row clientcarousel">
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
-          <div class="col-md-2 col-sm-3 col-xs-4 col-5" style="height:40px; padding-bottom:10px; box-sizing:content-box!important;">
+          <div>
               <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%;">
           </div>
           {%-  endfor -%}
