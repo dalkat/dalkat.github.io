@@ -1,7 +1,6 @@
   // Client carousel Slick
   $(document).ready(function(){
   $('.clientcarousel').slick({
-    setting-name: setting-value,
     dots: true,
     infinite: true,
     speed: 300,
