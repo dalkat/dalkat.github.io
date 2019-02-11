@@ -53,7 +53,7 @@ services:
       heading: Team Practices & <br>Diversity
       text: Research shows that diverse teams consistently outperform in the market, largely due to greater creativity, increased productivity, and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team practices</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
 
-  btn: Schedule consultation
+  btn: Schedule a consultation
 
 portfolio:
   heading: Portfolio
@@ -63,7 +63,7 @@ portfolio:
 testimonials:
   heading: Client Testimonials
   subheading: 
-  btn: Schedule consultation
+  btn: Schedule a consultation
 
 contact:
   heading: Get in touch
