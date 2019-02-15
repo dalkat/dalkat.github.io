@@ -67,6 +67,12 @@
     <footer>
       <div class="container">
         <div class="row">
+    {% assign ws = '' %}
+    {%- if page.layout == 'thanks' -%}
+     <div class="text-muted" style="z-index: 99; background-color: #fff4cf; width: 100%; height: 28px; padding: 3px; vertical-align: middle; color: #ffffff; text-align:center; font-size:12px; border-top:1px #ffdc3b solid; border-bottom: 1px #ffdc3b solid; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</div>
+
+    {%- endif -%}
+
           <div class="col-md-4">
             <span class="copyright">{{ site.data.default.copyright }}</span>
           </div>
@@ -157,12 +163,6 @@
     <!-- Custom scripts for this template -->
     <script src="{{ assets_path }}js/agency.min.js"></script>
 
-
-    {% assign ws = '' %}
-    {%- if page.layout == 'thanks' -%}
-     <div class="text-muted" style="z-index: 99; position: absolute; right: 0; top: 0; background-color: #fff4cf; width: 100%; opacity: .7; height: 28px; padding: 3px; vertical-align: middle; color: #ffffff; text-align:center; font-size:12px; border-top:1px #ffdc3b solid; border-bottom: 1px #ffdc3b solid; font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</div>
-
-    {%- endif -%}
 
 
     <!--client carousel slick-->
