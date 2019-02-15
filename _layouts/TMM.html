@@ -1,0 +1,33 @@
+---
+layout: default-sub
+---
+{%- assign assets_path = "assets/" -%}
+{%- if site.assets_path -%}
+  {%- assign assets_path = site.assets_path -%}
+{%- endif -%}
+    {% assign ws = '' %}
+    <!-- Header -->
+    <header class="longtext">
+        <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-left">
+            <h2 class="section-heading text-uppercase">Trail Mix Method for Productivity and Time Management</h2>
+            <h3 class="section-subheading" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:white; margin-bottom:50px;">Whoops! It's not ready yet, but enter your email below to be the first to receive it in a few weeks' time.</h3>
+          </div>
+        </div>
+        <div class="row" style="display:block; text-align:left;">
+          <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12"  style="display:inline-block;">
+              <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <input type="text" name="name" placeholder="Your full name"required><br>
+                <input type="email" name="_replyto" placeholder="Your email" required><br>
+                <input type="hidden" name="_subject" value="Trail Mix Early List"/>
+                <button type="submit" class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger">Send</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </header>
