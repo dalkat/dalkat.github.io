@@ -130,29 +130,15 @@ layout: default-sub
             <p><h2>Highlight real</h2></p>
           </div>
 
-        <div class="blogcarousel slider">
-          {%- for client in site.data.blog.feb19 -%}
-          {% assign ws = '' %}
-          <div class="slide">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:350px; padding:5px 20px;"><br><P style="text-align:center; font-size:10px;">{{assets_path}}{{ client.caption }}</P>
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-
-
-          <div class="blogcarousel slider">
-            <div style="height:250px;">
-              <img src="/img/blog/1.jpg" style="height:220px;"><br><small>test text</small>
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/2.jpg" style="height:220px;"><br><small>test text</small>
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/3.jpg" style="height:220px;"><br><small></small>
-            </div>
-          </div>
-
+              <div class="blogcarousel slider">
+                {%- for client in site.data.blog.feb19 -%}
+                {% assign ws = '' %}
+                <div class="slide">
+                    <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:350px; padding:5px 20px;"><br><P style="text-align:center; font-size:10px;">{{assets_path}}{{ client.caption }}</P>
+                </div>
+                {%-  endfor -%}
+              {% assign ws = '' %}
+              </div>
 
           </div>
         </div>
