@@ -12,6 +12,12 @@ p {
   p {
   line-height: 2;
   }
+  a {
+  color: $secondary;
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
 }
 
 b, strong {
