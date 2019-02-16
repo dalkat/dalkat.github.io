@@ -62,8 +62,19 @@ layout: default-sub
             <p><b>P.S.</b> I am so grateful for what the consulting world has taught me - it helped me channel and structure my creativity, gave me an outlet to dedicate my energy and hard work ethic, and presented me amazing people to learn from. Most likely, without it, I wouldn't have been able to come to the decision I've made with my sabbatical, and also wouldn't have had the tools to make it a reality.</p>
             <p><b>P.P.S.</b> Society puts a lot of pressure on people to always think about 'what's your next job' or 'have you started applying yet?' Let's challenge ourselves instead to ask those around us, 'Where is your heart leading you lately? what's your latest adventure? Or, what does your life look like right now?' Remember that "life is a process, not an outcome" (<a href="https://amzn.to/2BCvhmr" target="_blank">Design Your Life</a>).&nbsp;</p><br>
 
-          <div class="blogcarousel slider">
 
+        <div class="clientcarousel slider">
+          {%- for client in site.data.home.clients -%}
+          {% assign ws = '' %}
+          <div class="slide" style="height:50px;">
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
+          </div>
+          {%-  endfor -%}
+        {% assign ws = '' %}
+        </div>
+
+
+          <div class="blogcarousel slider">
             <div class="slide"> 
               <img src="/img/blog/1.jpg"><br><small>Joe and I's first anniversary in October! The gluttons we are, we went to a baking class. </small>
             </div>
@@ -73,7 +84,6 @@ layout: default-sub
             <div class="slide"> 
               <img src="/img/blog/3.jpg"><br><small>My cousin George's big fat Jewish wedding - complete with the huppa, broken glass, 'Next year in Jerusalem', and all.</small>
             </div>
-
           </div>
 
           </div>
@@ -107,7 +117,7 @@ layout: default-sub
             <li>How would you have described yourself 5 years ago? How about today? What's changed?</li>
             </ul></p><BR>
             <p><h5>ON INTUITION</h5></p>
-            <p>Intuition is the ability to understand something instinctively, going beyond conscious reasoning deep into your subconscious mind. Supposedly, it kicks into gear when you're under a time-crunch, in situations of information overload, or in danger. But I think more often than not, many of us have lost our ability to both hear our intuition and distinguish it from other internal voices - especially in a job where your opinion's worth is proportional to your tenure.</p>
+            <p>Intuition is the ability to understand something instinctively, going beyond conscious reasoning deep into your subconscious mind. Supposedly, it kicks into gear when you're under a time-crunch, in situations of information overload, or in danger. But I think more often than not, many of us have lost our ability to both hear our intuition and distinguish it from other internal voices - especially in a job where your opinion's worth is frequently weighted by your tenure.</p>
             <p>My last day of Deloitte was the day I flew out to Italy on a one-way ticket, but two weeks into my trip, I found myself helplessly homesick and even depressed - even with my sister&rsquo;s company. Things in my relationship felt rocky, my friends and family were thousands of miles away, and I felt like I was trying to force myself to relax and enjoy when I just wanted to stay in. While a bad feeling, it reminded me of one of my goals in coming to Europe: get back in touch with my intuition. What this homesickness really came down to for me was a struggle between my head, my heart, and my gut, each of which was giving me a different message - to stay, to leave (Europe or my relationship?), to ignore the pain and keep pushing on, etc. I couldn't figure out, which voice was my intuition, and which was my saboteur or inner critic? Was leaving weakness/failure, or was it strength?</p>
             <p>With all the unstructured time that I have now, and so many projects and ideas fighting for my attention, reconnecting with my intuition has been such an important tool to navigating my decisions.</p>
             <p>I'd love to hear from you:</p>
@@ -118,7 +128,15 @@ layout: default-sub
             </ul></p><br>
 
             <p><h5>ON RITUAL</h5></p>
-            <p>I think the last time I truly had a ritual or routine was in high school, when I knew every day what time I'd be at gymnastics, what time I'd be doing my math homework, and when my weekly Grey's Anatomy binge could consumer my attention. A decade later, the importance of ritual has been in my face a ton. not necessarily time bound, but having routine around certain things I find important. might be yoga on the beach one day, might be calling up a friend once a week, etc.</p>
+            <p>Have you heard of the <a href="https://amzn.to/2BI6zAZ" target=_blank">Miracle Morning</a> or Morning Rituals? People swear by. Unlike routine, which aims to bring order to the chaos of the day-to-day or to create a path toward excellence, ritual is a way to infuse some magic and life into our lives; something we look forward to. Both, as one <a href="https://www.brainpickings.org/2015/02/13/routine-ritual-anne-lamott-stitches/" target="_blank">blogger</a> writes, are necessary to live a full life.</p>
+            <p>I think the last time I truly had a ritual or routine was in high school, and now, a decade later, the importance of ritual has been in my face a ton. not necessarily time bound, but having routine around certain things I find important. might be yoga on the beach one day, might be calling up a friend once a week, etc.</p>
+
+            <p>I'd love to hear from you:</p>
+            <p><ul>
+            <li>What rituals (not routines) do you have in your life?</li>
+            <li>How do you follow through on them - is it discipline? Excitement?</li>
+            <li>What rituals would you like to add to your life?</li>
+            </ul></p><br>
           </div>
           </div>
         </div>
