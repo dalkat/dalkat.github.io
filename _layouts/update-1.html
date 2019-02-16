@@ -121,7 +121,7 @@ layout: default-sub
           {%- for client in site.data.blog.feb19 -%}
           {% assign ws = '' %}
           <div class="slide" style="height:250px;">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:90%; padding:5px 20px;"><br><small> {{assets_path}}{{ client.caption }}</small>
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:90%; padding:5px 20px;"><br><h3> {{assets_path}}{{ client.caption }}</h3>
           </div>
           {%-  endfor -%}
         {% assign ws = '' %}
