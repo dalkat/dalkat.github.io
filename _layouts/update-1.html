@@ -63,56 +63,6 @@ layout: default-sub
             <p><b>P.P.S.</b> Society puts a lot of pressure on people to always think about 'what's your next job' or for those on sabbatical, 'when is your **break** over?' or 'have you started applying yet?' Let's challenge ourselves instead to ask those around us, 'Where is your heart leading you lately? what's your latest adventure? Or, what does your life look like right now?' Remember that "life is a process, not an outcome" (<a href="https://amzn.to/2BCvhmr" target="_blank">Design Your Life</a>).&nbsp;</p><br>
 
 
-        <div class="clientcarousel slider">
-          {%- for client in site.data.home.clients -%}
-          {% assign ws = '' %}
-          <div class="slide" style="height:50px;">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-
-
-        <div class="clientcarousel slider">
-          <div class="slide" style="height:50px;">
-              <img class="img-fluid d-block mx-auto" src="/img/blog/1.jpg" alt="" style="height:100%; padding:5px 20px;">
-          </div>
-          <div class="slide" style="height:50px;">
-              <img class="img-fluid d-block mx-auto" src="/img/blog/2.jpg" alt="" style="height:100%; padding:5px 20px;">
-          </div>
-          <div class="slide" style="height:50px;">
-              <img class="img-fluid d-block mx-auto" src="/img/blog/3.jpg" alt="" style="height:100%; padding:5px 20px;">
-          </div>
-        </div>
-
-
-
-          <div class="blogcarousel slider">
-            <div style="height:250px;"> 
-              <img src="/img/blog/1.jpg" style="height:220px;">
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/2.jpg" style="height:220px;">
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/3.jpg" style="height:220px;">
-            </div>
-          </div>
-
-
-          <div class="blogcarousel slider">
-            <div style="height:250px;"> 
-              <img src="/img/blog/1.jpg" style="height:220px;"><br><small>Joe and I's first anniversary in October! The gluttons we are, we went to a baking class. </small>
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/2.jpg" style="height:220px;"><br><small>My sister Elena and I in Cinque Terre, Italy. We forgot to pack bathing suits that day, but it didn't stop us from jumping in.</small>
-            </div>
-            <div style="height:250px;"> 
-              <img src="/img/blog/3.jpg" style="height:220px;"><br><small>My cousin George's big fat Jewish wedding - complete with the huppa, broken glass, 'Next year in Jerusalem', and all.</small>
-            </div>
-          </div>
-
           </div>
         </div>
       </div>
@@ -165,6 +115,32 @@ layout: default-sub
             <li>What rituals would you like to add to your life?</li>
             </ul></p><br>
           </div>
+
+
+        <div class="blogcarousel slider">
+          {%- for client in site.data.home.clients -%}
+          {% assign ws = '' %}
+          <div class="slide" style="height:50px;">
+              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
+          </div>
+          {%-  endfor -%}
+        {% assign ws = '' %}
+        </div>
+
+
+          <div class="blogcarousel slider">
+            <div style="height:250px;"> 
+              <img src="/img/blog/1.jpg" style="height:220px;"><br><small>Joe and I's first anniversary in October! The gluttons we are, we went to a baking class. </small>
+            </div>
+            <div style="height:250px;"> 
+              <img src="/img/blog/2.jpg" style="height:220px;"><br><small>My sister Elena and I in Cinque Terre, Italy. We forgot to pack bathing suits that day, but it didn't stop us from jumping in.</small>
+            </div>
+            <div style="height:250px;"> 
+              <img src="/img/blog/3.jpg" style="height:220px;"><br><small>My cousin George's big fat Jewish wedding - complete with the huppa, broken glass, 'Next year in Jerusalem', and all.</small>
+            </div>
+          </div>
+
+          
           </div>
         </div>
       </section>
