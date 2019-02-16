@@ -2,13 +2,19 @@
 feb19:
   - img: img/blog/1.jpg
     url: ""
+    caption: test
   - img: img/blog/2.jpg
     url: ""
+    caption: test
   - img: img/blog/3.jpg
     url: ""
+    caption: test
   - img: img/blog/4.jpg
     url: ""
+    caption: test
   - img: img/blog/5.jpg
     url: ""
+    caption: test
   - img: img/blog/6.jpg
     url: ""
+    caption: test
