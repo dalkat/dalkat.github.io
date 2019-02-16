@@ -48,7 +48,6 @@ $(document).ready(function(){
     dots: true,
     infinite: true,
     speed: 500,
-    cssEase: 'linear',
     variableWidth: true,
     adaptiveHeight: true,
     centerMode: true,
