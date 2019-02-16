@@ -8,8 +8,10 @@ p {
   line-height: 1.75;
 }
 
-p.blog {
+.blog {
+  p {
   line-height: 2;
+  }
 }
 
 b, strong {
