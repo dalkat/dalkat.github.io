@@ -16,8 +16,17 @@ p {
   color: $secondary;
   &:hover {
     color: darken($primary, 10%);
+    text-decoration:none;
   }
-}
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height:2;
+  }
 }
 
 b, strong {
