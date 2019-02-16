@@ -50,8 +50,6 @@ $(document).ready(function(){
     speed: 500,
     variableWidth: true,
     adaptiveHeight: true,
-    centerMode: true,
-    centerPadding: '60px',
     slidesToShow: 3,
     responsive: [
       {
