@@ -46,11 +46,11 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.blogcarousel').slick({
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
+    slidesToShow: 1,
     variableWidth: true,
     adaptiveHeight: true,
-    slidesToShow: 3,
   });
 });
 
