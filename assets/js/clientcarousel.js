@@ -47,40 +47,37 @@ $(document).ready(function(){
   $('.blogcarousel').slick({
     dots: true,
     infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    variableWidth: true,
-    adaptiveHeight: true,
-    centerMode: true,
-    centerPadding: '60px',
+    speed: 400,
     slidesToShow: 3,
+    centerMode: false,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
+        
   });
 });
-
-
-
-
-
-
-
