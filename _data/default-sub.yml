@@ -14,6 +14,8 @@ social-buttons:
     url: 'http://linkedin.com/in/daliakatan'
   - icon: fa fa-instagram
     url: 'http://instagram.com/dalkatan'
+  - icon: fa fa-twitter
+    url: 'http://twitter.com/dalkatan'
   - icon: fa fa-envelope
     url: 'http://daliakatan.com/#contact'
 
