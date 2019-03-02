@@ -44,7 +44,3 @@ services:
       text: A fun whimsical generator that helps make the decision for you
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
-    - heading: C
-      text: X
-      img: img/content/do-now_thumb.jpg
-      url: https://daliakatan.com/do-now
