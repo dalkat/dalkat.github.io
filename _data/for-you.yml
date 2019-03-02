@@ -49,7 +49,8 @@ services:
   subheading: 
   service:
     - heading: Do Now Generator
-      text: X
+      text: A fun whimsical generator that helps make the decision for you
+      img: img/logos/ubs.png
     - heading: B
       text: X
     - heading: C

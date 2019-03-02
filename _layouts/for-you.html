@@ -7,7 +7,7 @@ layout: default-sub
 {%- endif -%}
     {% assign ws = '' %}
     <!-- Header -->
-    <header class="masthead">
+    <header class="longtext">
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">{{ site.data.for-you.intro.lead-in }}</div>
@@ -30,6 +30,7 @@ layout: default-sub
           {% assign ws = '' %}
           <div class="col-md-4">
             <h4 class="service-heading">{{ service.heading }}</h4>
+            <img src="{{ service.img }}" style="width:100%; height: auto;">
             <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
           </div>
           {%- endfor -%}
