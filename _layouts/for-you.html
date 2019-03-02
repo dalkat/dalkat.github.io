@@ -59,18 +59,7 @@ layout: default-sub
             <div class="referral">
               <img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt="">
               <h4>{{ member.name }}</h4>
-              <p class="text-muted">{{ member.role }}</p>
-              <ul class="list-inline social-buttons">
-                {%- for sm in member.social-buttons -%}
-                {% assign ws = '' %}
-                <li class="list-inline-item">
-                  <a href="{{ sm.url }}">
-                    <i class="{{ sm.icon }}"></i>
-                  </a>
-                </li>
-                {%- endfor -%}
-              {% assign ws = '' %}
-              </ul>
+              <p class="text-muted" style="font-size: .8rem;">{{ member.role }}</p>
             </div>
           </div>
           {%- endfor -%}
