@@ -7,12 +7,14 @@ layout: default-sub
 {%- endif -%}
     {% assign ws = '' %}
     <!-- Header -->
-    <header class="longtext">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">{{ site.data.for-you.intro.lead-in }}</div>
+    <!-- Header -->
+    <header class="longtexttmm">
+
+      <div class="container" style="padding-top:100px;">
+              <div class="intro-text" style="display:block; text-align:center; padding:40px 0;">
+              <div class="intro-lead-in"><b>Resources for You</b><br><small><small>Tools &middot; Guides  &middot; Referrals</small></small>
+                </div></div>
         </div>
-      </div>
     </header>
 
 
@@ -30,8 +32,8 @@ layout: default-sub
           {% assign ws = '' %}
           <div class="col-md-4">
             <h4 class="service-heading">{{ service.heading }}</h4>
-            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto;"></a>
-            <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
+            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto; padding:20px;"></a>
+            <p class="text-muted" style="font-size:13px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
           </div>
           {%- endfor -%}
         {% assign ws = '' %}
