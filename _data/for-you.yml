@@ -51,8 +51,12 @@ services:
     - heading: Trail Mix Method
       text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline
       img: img/content/TMM_thumb.jpg
+      url: https://daliakatan.com/trailmix
     - heading: Do Now Generator
       text: A fun whimsical generator that helps make the decision for you
       img: img/content/do-now_thumb.jpg
+      url: https://daliakatan.com/do-now
     - heading: C
       text: X
+      img: img/content/do-now_thumb.jpg
+      url: https://daliakatan.com/do-now

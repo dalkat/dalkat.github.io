@@ -30,7 +30,7 @@ layout: default-sub
           {% assign ws = '' %}
           <div class="col-md-4">
             <h4 class="service-heading">{{ service.heading }}</h4>
-            <img src="{{ service.img }}" style="width:100%; height: auto;">
+            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto;"></a>
             <p class="text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
           </div>
           {%- endfor -%}
