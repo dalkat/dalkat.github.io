@@ -31,7 +31,7 @@ layout: default-sub
           {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
           <div class="col-md-4">
-            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto; padding:10px; border: 5px #fed136 solid;"></a>
+            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto; border: 5px #fed136 solid;"></a>
             <h4 class="service-heading">{{ service.heading }}</h4>
             <p class="text-muted" style="font-size:13px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
           </div>
