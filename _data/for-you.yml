@@ -48,10 +48,11 @@ services:
   heading: Things to help your productivity
   subheading: 
   service:
+    - heading: Trail Mix Method
+      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline
+      img: img/content/TMM_thumb.jpg
     - heading: Do Now Generator
       text: A fun whimsical generator that helps make the decision for you
-      img: img/logos/ubs.png
-    - heading: B
-      text: X
+      img: img/content/do-now_thumb.jpg
     - heading: C
       text: X
