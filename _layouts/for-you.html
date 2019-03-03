@@ -50,16 +50,17 @@ layout: default-sub
         </div>
         <div class="row">
           {% assign ws = '' %}
-          <div class="col-sm-12 text-left">
+         <!-- <div class="col-sm-12 text-left">
             <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
-          </div>        
+          </div>        -->
           {%- for member in site.data.for-you.referrals.members -%}
           {% assign ws = '' %}
           <div class="col-lg-2 col md-2 col-sm-4 col-xs-6">
             <div class="referral">
               <a href="{{ member.url }}" target="_blank"><img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt=""></a>
               <h4>{{ member.name }}</h4>
-              <p class="text-muted" style="font-size: .8rem;">{{ member.role }}</p>
+              <p class="text-muted" style="font-size: .8rem;">{{ member.offer }}</p>
+              <p style="line-height:1; font-size:.8rem;" class="text-muted"><small style="line-height: 1.6;">{{ member.text }}</small></p>
             </div>
           </div>
           {%- endfor -%}
