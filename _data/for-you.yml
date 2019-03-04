@@ -42,10 +42,10 @@ services:
   subheading: 
   service:
     - heading: Trail Mix Method
-      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline
+      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done
       img: img/content/TMM_thumb.jpg
       url: https://daliakatan.com/trailmix
     - heading: Do Now Generator
-      text: A fun whimsical generator that helps make the decision for you
+      text: A fun whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
