@@ -1,7 +1,7 @@
 intro:
-  lead-in: Resources for you
-  heading: Welcome!
-  btn: Who is Dalia
+  lead-in: Things for you
+  heading: ''
+  btn: ''
 
 contentarea:
   heading: Gifts for you
@@ -38,7 +38,7 @@ referrals:
 
 
 services:
-  heading: Things to help your productivity
+  heading: Productivity
   subheading: 
   service:
     - heading: Trail Mix Method
@@ -49,3 +49,13 @@ services:
       text: A fun whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
+
+
+recipes:
+  heading: Yummy things
+  subheading: 
+  service:
+    - heading: Challah Bread
+      text: 
+      img: img/content/TMM_thumb.jpg
+      url: https://daliakatan.com/challah

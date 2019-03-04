@@ -8,7 +8,7 @@ layout: default-sub
     {% assign ws = '' %}
     <!-- Header -->
     <!-- Header -->
-    <header class="longtexttmm">
+    <header class="longtext">
 
       <div class="container" style="padding-top:100px;">
               <div class="intro-text" style="display:block; text-align:center; padding:40px 0;">
@@ -42,8 +42,32 @@ layout: default-sub
     </section>
 
 
+    <!-- Recipes -->
+    <section id="resources" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="text-uppercase"><b>{{ site.data.for-you.recipes.heading }}</b></h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.recipes.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row text-center"> 
+          {%- for service in site.data.for-you.recipes.service -%}
+          {% assign ws = '' %}
+          <div class="col-md-4">
+            <a href="{{ service.url }}" target="_blank"><img src="{{ service.img }}" style="width:100%; height: auto; border: 5px #fed136 solid;"></a>
+            <h4 class="service-heading">{{ service.heading }}</h4>
+            <p class="text-muted" style="font-size:13px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
+          </div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+        </div>
+      </div>
+    </section>
+
+
    <!-- Referrals-->
-    <section class="bg-light" id="contentarea">
+    <section id="contentarea">
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
             <h2 class="text-uppercase"><b>{{ site.data.for-you.contentarea.heading }}</b></h2>
