@@ -57,5 +57,5 @@ recipes:
   service:
     - heading: Challah Bread
       text: 
-      img: img/content/TMM_thumb.jpg
+      img: img/content/challah_thumb.jpg
       url: https://daliakatan.com/challah
