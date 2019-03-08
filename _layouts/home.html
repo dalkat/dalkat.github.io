@@ -76,11 +76,7 @@ layout: default
         <div class="row">
           {%- for service in site.data.home.services.service -%}
           {% assign ws = '' %}
-          <div class="col-md-5" style="border-left: 2px solid; padding-left:30px;">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
-            </span>
+          <div class="col-md-5" style="border-left: 2px solid; padding-left:30px; margin-bottom:20px;">
             <h4 class="service-heading">{{ service.heading }}</h4>
             <p class="text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:left;">{{ service.text }}</p>
           </div>
