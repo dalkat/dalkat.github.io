@@ -61,7 +61,7 @@ services:
 speaking:
   heading: Public Speaking
   subheading: 
-  btn: Schedule a consultation
+  btn: Book an engagement
 
 portfolio:
   heading: Portfolio
