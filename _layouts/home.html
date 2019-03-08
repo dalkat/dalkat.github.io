@@ -68,15 +68,15 @@ layout: default
     <section class="bg-light" id="services">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
+          <div class="col-lg-12">
             <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
             <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
           </div>
         </div>
-        <div class="row text-center">
+        <div class="row">
           {%- for service in site.data.home.services.service -%}
           {% assign ws = '' %}
-          <div class="col-md-4">
+          <div class="col-md-5" style="border-left: 2px solid; padding-left:30px;">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
@@ -84,6 +84,8 @@ layout: default
             <h4 class="service-heading">{{ service.heading }}</h4>
             <p class="text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:left;">{{ service.text }}</p>
           </div>
+
+          <div class="col-md-1"></div>
           {%- endfor -%}
         {% assign ws = '' %}
         </div>
@@ -91,8 +93,34 @@ layout: default
       </div>
     </section>
 
+
+    <!-- Speaking -->
+    <section id="speaking">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading text-uppercase">{{ site.data.home.speaking.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.home.speaking.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7" style="border-left: 2px solid; padding-left:30px;">
+            <p><b>Recent speaking engagements & publications include</b></p>
+            <p><ul id="services"><li class="services">Using Workplace Diversity to Bridge Divides (Deloitte)</li>
+            <li class="services">Business Practice Redesign & The Future of Work: Moving From Best to Better and Better (Deloitte)</li>
+            <li class="services">How Companies Can Retain Top Talent Through a Culture of Intrapreneurship (Deloitte)</li>
+            <li class="services">The Key to Viral Growth (Princeton Social Entrepreneurship Conference)</li>
+            <li class="services">Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done (self-published)</li>
+          </div>
+          <div class="col-md-5"><img src="/img/about/speaking.jpg" width="100%">
+          </div>
+        </div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">{{ site.data.home.speaking.btn }}</a></div>
+      </div>
+    </section>
+
     <!-- Portfolio Grid -->
-    <section id="portfolio">
+    <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -124,7 +152,7 @@ layout: default
     </section>
 
     <!-- Testimonials -->
-    <section class="bg-light" id="testimonials">
+    <section id="testimonials">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">

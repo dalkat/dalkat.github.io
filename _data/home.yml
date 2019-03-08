@@ -5,7 +5,7 @@ intro:
 
 about:
   heading: About Dalia
-  subheading: Dalia is a strategist, designer, entrepreneur, and public speaker who uses human-centered design to transform the world around her. In her role as a consultant, she has served over 25 clients in designing growth, brand, and innovation strategies. <br><BR><b>Strategy&colon;</b> Dalia was previously a management consultant with Doblin Innovation and Deloitte where she worked with leadership at Fortune-500 companies to define innovative new business ambitions, concepts, and models, supported by strong brand and consumer strategies. Dalia spearheaded Doblin Innovation's expansion to the West Coast and was also selected for an innovation fellowship with Deloitte's Center for the Edge. Prior to Deloitte, Dalia led marketing strategy and user experience at several e-commerce and media technology startups, and held internships at IBM and UBS. She also ran her own online graphic and web design business for four years, averaging 4M annual users. <br><br><b>Impact&colon;</b> Dalia's passion projects center on human connection and stem from her background in policy. At Deloitte, Dalia co-founded the Refugee Community of Interest and launched an offering on refugee integration in the workplace, backed by a $400K grant from Deloitte leadership to execute the work in partnership with the Tent Partnership for Refugees. Dalia previously interned at the U.S. House of Representatives, focused on improving community conditions in New York City. <br><BR>Dalia received her BA in International Affairs from Princeton University, where she also studied entrepreneurship and human-centered design, and founded Princeton’s marketing and filmmaking organizations. 
+  subheading: Dalia is a strategist, designer, entrepreneur, and public speaker who uses human-centered design to unlock the potential of organizations and humans alike. In her role as a consultant, she has served over 25 clients in designing growth, brand, and innovation strategies. <br><BR><b>Strategy&colon;</b> Dalia was previously a management consultant with Doblin Innovation and Deloitte where she worked with leadership at Fortune-500 companies to define innovative new business ambitions, concepts, and models, supported by strong brand and consumer strategies. Dalia spearheaded Doblin Innovation's expansion to the West Coast and was also selected for an innovation fellowship with Deloitte's Center for the Edge. Prior to Deloitte, Dalia led marketing strategy and user experience at several e-commerce and media technology startups, and held internships at IBM and UBS. She also ran her own online graphic and web design business for four years, averaging 4M annual users. <br><br><b>Impact&colon;</b> Dalia's passion projects center on human connection and stem from her background in policy. At Deloitte, Dalia co-founded the Refugee Community of Interest and launched an offering on refugee integration in the workplace, backed by a $400K grant from Deloitte leadership to execute the work in partnership with the Tent Partnership for Refugees. Dalia previously interned at the U.S. House of Representatives, focused on improving community conditions in New York City. <br><BR>Dalia received her BA in International Affairs from Princeton University, where she also studied entrepreneurship and human-centered design, and founded Princeton’s marketing and filmmaking organizations. 
 
 team:
   members:
@@ -43,17 +43,34 @@ clients:
 
 services:
   heading: Let's Collaborate
-  subheading: I've supported over 25 clients in the last four years, ranging from Fortune-100 executives to startup founders. <br>I'd love to be your creative sounding board and innovation partner - here's some of the ways I can help. 
+  subheading: 
   service:
     - icon: fa fa-lightbulb-o
-      heading: Innovation & <br>Growth Strategy
-      text: As consumer needs and behaviors change at an increasing rate, companies will need to embrace a human-centered approach to strategy to accelerate their innovation and growth. With my background in design thinking and management consulting, I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
+      heading: Innovation & Growth Strategy
+      text: With over four years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include &colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
     - icon: fa fa-laptop
-      heading: Brand Design & <br>Storytelling
-      text: Consumers expect to engage with brands in ways that are more personal, connected, and experience-driven than ever. With over a decade of experience in brand design, digital strategy, and storytelling I work with companies to understand these shifts and strengthen their brands through the following offerings&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
+      heading: Brand Design & Storytelling
+      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
     - icon: fa fa-users
-      heading: Team Practices & <br>Diversity
-      text: Research shows that diverse teams consistently outperform in the market, largely due to greater creativity, increased productivity, and better decisionmaking. Diverse workplaces also present a meaningful opportunity to build empathy and understanding amongst different groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team practices</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
+      heading: Team Practices & Diversity
+      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and better decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
+
+  btn: Schedule a consultation
+
+
+speaking:
+  heading: Public Speaking
+  subheading: 
+  service:
+    - icon: fa fa-lightbulb-o
+      heading: Innovation & Growth Strategy
+      text: With over four years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include &colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
+    - icon: fa fa-laptop
+      heading: Brand Design & Storytelling
+      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
+    - icon: fa fa-users
+      heading: Team Practices & Diversity
+      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and better decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
 
   btn: Schedule a consultation
 
