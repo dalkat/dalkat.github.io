@@ -61,17 +61,6 @@ services:
 speaking:
   heading: Public Speaking
   subheading: 
-  service:
-    - icon: fa fa-lightbulb-o
-      heading: Innovation & Growth Strategy
-      text: With over four years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with you to solve challenges related to growth, brand, and product innovation strategy. Offerings include &colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
-    - icon: fa fa-laptop
-      heading: Brand Design & Storytelling
-      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. <br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
-    - icon: fa fa-users
-      heading: Team Practices & Diversity
-      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and better decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and diversity programs that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
-
   btn: Schedule a consultation
 
 portfolio:
