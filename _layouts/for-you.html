@@ -42,11 +42,11 @@ layout: default-sub
         <div class="row text-center"> 
           {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" href="{{ service.url }}">
+          <div class="col-md-4 col-sm-6">
+            <a href="{{ service.url }}">
               <img class="img-fluid" src="{{ service.img }}" alt="">
             </a>
-            <div class="portfolio-caption">
+            <div>
               <p><h5>{{ service.heading }}</h5></p>
               <p class="text-muted" style="font-size:13px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
             </div>
