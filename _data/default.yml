@@ -5,10 +5,10 @@ menu-string:
 nav:
   - title: About
     url: '#about'
-  - title: Collaborate
+  - title: Consulting
     url: '#services'
-  - title: Portfolio
-    url: '#portfolio'
+  - title: Speaking
+    url: '#speaking'
   - title: Testimonials
     url: '#testimonials'
   - title: Contact
