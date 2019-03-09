@@ -137,6 +137,14 @@ section {
     line-height: 1.75;
 }
 
+#speaking li.speaking {
+    font-size: 15px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: left;
+    color: #6c757d!important;
+    line-height: 1.75;
+}
+
 // Highlight color customization
 ::-moz-selection {
   background: $primary;

@@ -42,7 +42,7 @@ clients:
     url: ""
 
 services:
-  heading: Let's Collaborate
+  heading: Consulting Services
   subheading: 
   service:
     - icon: fa fa-lightbulb-o
