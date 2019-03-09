@@ -43,7 +43,7 @@ layout: default-sub
           {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" href="{{ service.url }}">
+            <a class="portfolio-link" data-toggle="modal" href="{{ service.url }}">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
