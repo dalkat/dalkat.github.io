@@ -10,7 +10,7 @@ layout: default
     <header class="masthead" style="background-position:right;">
       <div class="container">
         <div class="intro-text" style="text-align:left;">
-          <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
+        <!-- <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div> -->
           <div class="intro-heading text-uppercase">{{ site.data.home.intro.heading }}</div>
           <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#about">{{ site.data.home.intro.btn }}</a>
         </div>
@@ -102,12 +102,12 @@ layout: default
         <div class="row">
           <div class="col-md-7">
             <p><h4>Recent speaking engagements & publications</h4></p>
-            <p><ul id="services"><li class="services">Using Workplace Diversity to Bridge Divides (Deloitte)</li>
-            <li class="services">Business Practice Redesign & The Future of Work: Moving From Best to Better and Better (Deloitte)</li>
-            <li class="services">How Companies Can Retain Top Talent Through a Culture of Intrapreneurship (Deloitte)</li>
-            <li class="services">Women in Marketing (Princeton)</li>
-            <li class="services">The Key to Viral Growth (Princeton Social Entrepreneurship Conference)</li>
-            <li class="services">Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done (self-published)</li>
+            <p><ul id="speaking"><li class="speaking">Using Workplace Diversity to Bridge Divides (Deloitte)</li>
+            <li class="speaking">Business Practice Redesign & The Future of Work: Moving From Best to Better and Better (Deloitte)</li>
+            <li class="speaking">How Companies Can Retain Top Talent Through a Culture of Intrapreneurship (Deloitte)</li>
+            <li class="speaking">Women in Marketing (Princeton)</li>
+            <li class="speaking">The Key to Viral Growth (Princeton Social Entrepreneurship Conference)</li>
+            <li class="speaking">Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done (self-published)</li>
           </div>
           <div class="col-md-5"><img src="/img/about/speaking.jpg" width="100%">
           </div>
@@ -138,7 +138,7 @@ layout: default
               <img class="img-fluid" src="{{ assets_path }}{{ project.thumbnail }}" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>{{ project.title }}</h4>
+              <h5>{{ project.title }}</h5>
               <p class="text-muted">{{ project.client }}</p>
             </div>
           </div>

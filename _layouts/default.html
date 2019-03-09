@@ -138,21 +138,28 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
+              <div class="col-lg-11 mx-auto">
+                <div class="modal-body" style="text-align:left;">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">{{ project.title }}</h2>
-                  <p class="item-intro text-muted">{{ project.description }}</p>
-                  <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ project.image }}" alt="">
-                  {% assign ws = '' %}
-                  {{- project.content -}}
-                  {% assign ws = '' %}                  <ul class="list-inline">
-                    <li>{{ site.data.default.modal.client-string }}{{ project.client }}</li>
-                    <li>{{ site.data.default.modal.category-string }}{{ project.category }}</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <h3 class="text-muted">{{ project.title }}</h3>
+                  <p><h5 class="item-intro">{{ project.description }}</h5></p>
+                  <div class="row">   
+                    <div class="col-md-5">  
+                      <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ project.image }}" alt="">
+                    </div>
+
+                    <div class="col-md-7">  
+                      <ul class="list-inline text-muted">
+                        <li><b>{{ site.data.default.modal.client-string }} </b> {{ project.client }}</li>
+                        <li><b>{{ site.data.default.modal.category-string }} </b> {{ project.category }}</li>
+                      </ul>
+                      {% assign ws = '' %}
+                      {{- project.content -}}
+                      {% assign ws = '' %}                  
+                    </div>
+                 <center> <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="{{ site.data.default.modal.close-icon }}"></i>
-                    {{ site.data.default.modal.close-string }}</button>
+                    {{ site.data.default.modal.close-string }}</button></center>
                 </div>
               </div>
             </div>
