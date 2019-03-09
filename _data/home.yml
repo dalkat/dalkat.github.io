@@ -19,7 +19,7 @@ team:
           url: 'http://instagram.com/dalkatan'
         - icon: fa fa-twitter
           url: 'http://twitter.com/dalkatan'
-  btn: See offerings
+  btn: Work with Dalia
 
 clients:
   - img: img/logos/deloitte.png
@@ -59,7 +59,7 @@ services:
 speaking:
   heading: Public Speaking
   subheading: 
-  btn: Book an engagement
+  btn: Invite to speak
 
 portfolio:
   heading: Portfolio
