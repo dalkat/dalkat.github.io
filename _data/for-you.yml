@@ -53,13 +53,7 @@ services:
       text: A fun whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
-
-
-recipes:
-  heading: Yummy things
-  subheading: 
-  service:
-    - heading: Challah Bread
+    - heading: Challah Recipe
       text: 
       img: img/content/challah_thumb.jpg
       url: https://daliakatan.com/challah
