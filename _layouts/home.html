@@ -26,8 +26,8 @@ layout: default
           {% assign ws = '' %}
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto" style="width:100%; height:auto;" src="{{ assets_path }}{{ member.img }}" alt="">
-              <h4>{{ member.name }}</h4>
+              <img class="mx-auto" style="width:100%; height:auto; border:0;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <p><h4>{{ member.name }}</h4></p>
               <!-- <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
               <ul class="list-inline social-buttons">
                 {%- for sm in member.social-buttons -%}
@@ -50,7 +50,7 @@ layout: default
         </div>
 
     <!-- Clients -->
-        <div class="clientcarousel slider">
+        <div class="clientcarousel slider" style="margin-top:40px;>
           {%- for client in site.data.home.clients -%}
           {% assign ws = '' %}
           <div class="slide" style="height:50px;">
