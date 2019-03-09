@@ -72,8 +72,8 @@ layout: default-sub
           </div> 
           {%- for member in site.data.for-you.referrals.members -%}
           {% assign ws = '' %}
-          <div class="col-lg-2 col md-2 col-sm-4 col-xs-6">
-            <div class="referral">
+          <div class="col-lg-3 col md-3 col-sm-4 col-xs-6" style="padding: 5px 20px;">
+            <div class="referral" style="background-color:#eaeaea;  padding: 15px 20px;">
               <a href="{{ member.url }}" target="_blank"><img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt=""></a>
               <h4>{{ member.name }}</h4>
               <p class="text-muted" style="font-size: .8rem;">{{ member.offer }}</p>

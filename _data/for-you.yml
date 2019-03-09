@@ -50,7 +50,7 @@ services:
       img: img/content/TMM_thumb.jpg
       url: https://daliakatan.com/trailmix
     - heading: Do Now Generator
-      text: A fun whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
+      text: A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
     - heading: Challah Recipe
