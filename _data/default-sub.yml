@@ -3,7 +3,8 @@ brand:
 menu-string: Menu
 
 nav:
-
+  - title: More
+    url: 'https://daliakatan.com/for-you'
   - title: Return Home
     url: 'https://daliakatan.com/'
 
