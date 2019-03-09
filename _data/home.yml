@@ -19,8 +19,6 @@ team:
           url: 'http://instagram.com/dalkatan'
         - icon: fa fa-twitter
           url: 'http://twitter.com/dalkatan'
-        - icon: fa fa-envelope
-          url: '#contact'
   btn: See offerings
 
 clients:
