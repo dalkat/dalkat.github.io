@@ -8,10 +8,10 @@ layout: default-sub
     {% assign ws = '' %}
     <!-- Header -->
     <!-- Header -->
-    <header class="longtext" style="background-image:none; background-color:#ff453c;">
+    <header class="longtext" style="background-image:none; background-color:#212529;">
 
       <div class="container" style="padding-top:100px;">
-              <div class="intro-text" style="display:block; text-align:center; padding:40px 0;font-style: normal">
+              <div class="intro-text" style="display:block; text-align:center; padding:40px 0;font-style: normal;">
               <div class="intro-lead-in"><b>Resources for You</b><br><small><small>Tools &middot; Guides  &middot; Referrals</small></small>
                 </div></div>
         </div>
@@ -63,17 +63,15 @@ layout: default-sub
     <section id="contentarea" class="bg-light">
       <div class="container">
         <div class="row" style="text-align:center;display:inline;">
-            <h2 class="text-uppercase"><b>{{ site.data.for-you.contentarea.heading }}</b></h2>
+
+            <h2>{{ site.data.for-you.contentarea.heading }}</h2>
+           <!-- <h3 class="section-subheading text-muted">{{ site.data.for-you.contentarea.subheading  }}</h3> -->
         </div>
         <div class="row">
-          {% assign ws = '' %}
-         <div class="col-sm-12 text-left">
-            <h3 class="section-subheading text-muted" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.for-you.contentarea.subheading  }}</h3>
-          </div> 
           {%- for member in site.data.for-you.referrals.members -%}
           {% assign ws = '' %}
-          <div class="col-lg-3 col md-3 col-sm-4 col-xs-6" style="padding: 5px 20px;">
-            <div class="referral" style="background-color:#eaeaea;  padding: 15px 20px;">
+          <div class="col-lg-3 col md-3 col-sm-4 col-xs-6" style="padding: 5px 20px; height:100%;">
+            <div class="referral" style="background-color:#ffffff;border: 3px #f3f3f3 solid; padding: 15px 20px;">
               <a href="{{ member.url }}" target="_blank"><img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt=""></a>
               <h4>{{ member.name }}</h4>
               <p class="text-muted" style="font-size: .8rem;">{{ member.offer }}</p>
