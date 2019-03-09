@@ -150,10 +150,10 @@
 
                     <div class="col-md-7">  
                       <ul class="list-inline text-muted">
+                        {% assign ws = '' %}
                         <li><b>{{ site.data.default.modal.client-string }} </b> {{ project.client }}</li>
                         <li><b>{{ site.data.default.modal.category-string }} </b> {{ project.category }}</li>
                       </ul>
-                      {% assign ws = '' %}
                       {{- project.content -}}
                       {% assign ws = '' %}                  
                     </div>
