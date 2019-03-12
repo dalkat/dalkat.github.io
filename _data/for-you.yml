@@ -22,10 +22,15 @@ referrals:
       offer: $20 free + $1/Uber ride
       img: https://www.worldofmobileapps.co/wp-content/uploads/2017/03/sho41.png
       url: https://ibotta.com/r/qokeovw
-      text: Ibotta's got some great money-back deals at grocery stores, but the winner is $1 back on all my ubers
+      text: Ibotta's got some great money-back deals at grocery stores (and Instacart), but best of all is $1 back on all my ubers
+    - name: Instacart
+      offer: $10 free
+      img: https://chicagoonthecheap.com/lotc-cms/wp-content/uploads/instacart-logo-wordmark-transparent.png
+      url: https://inst.cr/t/99qxAbqPg
+      text: Instacart doesn't mark up WholeFoods (but it does many other shops) - I use it so I don't spend as much eating out
     - name: Airbnb
       offer: $55 Off
-      img: https://www.doz.com/cms/wp-content/uploads/2015/03/airbnb-logo.png
+      img: https://metropolitan.fi/files/2018-05/air-bonobo.png
       url: https://www.airbnb.com/c/daliak56?currency=USD
       text: If you love to travel as much as I do and aren't yet on Airbnb, this will change how you travel
     - name: Uber
