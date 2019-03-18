@@ -8,16 +8,16 @@ contentarea:
   subheading: ''
 referrals:
   members:
-    - name: Skillshare
-      offer: 2 months free
-      img: https://d1qb2nb5cznatu.cloudfront.net/startups/i/900-0737f07726eed63c303b2107addac8c2-medium_jpg.jpg
-      url: https://skl.sh/2TE2fKn
-      text: These online courses are super affordable and have completely changed the way that I learn!
     - name: Ibotta
       offer: $20 free + $1/Uber ride
       img: https://www.worldofmobileapps.co/wp-content/uploads/2017/03/sho41.png
       url: https://ibotta.com/r/qokeovw
       text: Ibotta's got some great money-back deals at grocery stores (and Instacart), including $1 back on all my Ubers + bonuses 
+    - name: Skillshare
+      offer: 2 months free
+      img: https://d1qb2nb5cznatu.cloudfront.net/startups/i/900-0737f07726eed63c303b2107addac8c2-medium_jpg.jpg
+      url: https://skl.sh/2TE2fKn
+      text: These online courses are super affordable and have completely changed the way that I learn!
     - name: Instacart
       offer: $10 free
       img: https://chicagoonthecheap.com/lotc-cms/wp-content/uploads/instacart-logo-wordmark-transparent.png
