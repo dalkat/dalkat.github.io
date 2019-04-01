@@ -7,58 +7,48 @@ layout: default-sub
 {%- endif -%}
     {% assign ws = '' %}
     <!-- Header -->
-    <header class="longtext">
-      <div class="container">
-        <div class="intro-text" style="display:block; text-align:center;">
-        	<div class="intro-lead-in">Challah Bake
-        	</div>
-      		<br>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"  style="display:inline-block; background: rgba(255, 255, 255, 0.2); vertical-align: top; text-align:left; padding:15px; font-weight: 100; margin:10px; border-radius:20px;">
-            <b>Servings</b>
-            <br>Makes 2 medium challahs, or one large challah<br><br>
-            <b>Kitchen Items</b><Br>
-            <ul>
-              <li>Mixing bowl</li>
-              <li>Wooden spoon</li>
-              <li>Foil-lined baking tray</li>
-              <li>Kitchen towel</li>
-              <li>Pastry <a href="https://amzn.to/2ErYi4X" target="_blank">brush</a></li>
-              <li>Optional: disposal gloves to keep hands dough-free</li>
-            </ul>
-              <Br>
-              <b>Ingredients</b><Br>
-            <ul>
-              <li>1 packet of <a href="https://amzn.to/2ECb2aq" target="_blank">Active Dry Yeast</a></li>
-              <li>1 cup lukewarm water</li>
-              <li>1/4 cup sugar</li>
-              <li>1/3 cup vegetable oil</li>
-              <li>1 whole egg</li>
-              <li>1 egg yolk (for coating/egg wash)</li>
-              <li>1.5 tsp. salt</li>
-              <li>4-6 cups of all-purpose flour (start with 4 cups)</li>
-              <li>Optional: 1.5 cups chocolate chips or raisins</li>
-              <li>Optional: sesame seeds, poppy seeds, or sprinkles</li>
-            </ul>
-            <small><i>Many thanks to Chabad SF for inspiring the recipe!</i></small> 
-      		</div>
+    <!-- Header -->
+    <header class="longtext" style="background-image:none; background-color:#212529;">
 
-          <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"  style="display:inline-block; background: rgba(255, 255, 255, 0.2); vertical-align: left;  text-align:left; padding:15px; font-weight: 100; margin:10px; border-radius:20px;">
-            <b>Instructions</b><Br>
-            <ol>
-            <i>Make the dough</i><br>
-              <li>Combine yeast, sugar, and lukewarm water in mixing bowl. Mix and allow to stand for 5-10 minutes (yeast should bubble or foam). </li> 
-              <li>Beat the egg in a small cup, then mix in egg, oil, and salt with rest of mixture.</li> 
-              <li>Gradually add the flour, 1/2 cup at a time, mixing well after each addition to avoid clumps (you can knead them out later though!). As mixture thickens, begin kneading the dough as you add flour. Knead dough for 5-10 minutes until dough is smooth and soft, continuing to add flour as needed until the dough is no longer too sticky.</li>
-              <li>Optional: If adding chocolate chips or raisins, work into dough as you add the flour in the previous step.  
-              <li>Shape the dough into a ball and leave in the mixing bowl. Cover bowl with slightly damp kitchen towel and let the dough rise for an 1-2 hours, punch it down to remove air, then let it rise again for another 30 minutes to an hour. Do not knead.</li>
-              <br><i>Braid and bake!</i>
-              <li>Once the dough has risen, split the dough into four equal parts for a four-braid challah. Roll into logs on a lightly floured surface or cutting board, and braid.</li>
-              <li>Pre-heat oven to 350 degrees. Line a baking tray with foil and lightly flour or oil the surface. Set the braided challah dough on the tray and set it aside in a warm place for 30-60 minutes to continue rising (option to cover with towel). </li>
-              <li>Brush the challah with egg yolk (could mix with a teaspoon of water to loosen up the  yolk). Optionally sprinkle with sesame/poppy seeds or sprinkles! Bake for 30 minutes or until golden brown. Note that the challah will expand as it bakes, so make sure it has at least 3 inches of space on either side to grow.</li>
-              <li>Enjoy!</li></ol>
-
-            
-          </div>
-	   </div>
-      </div>
+      <div class="container" style="padding-top:100px;">
+              <div class="intro-text" style="display:block; text-align:center; padding:40px 0; font-style: normal;">
+              <!-- <div class="intro-lead-in"> <b>Resources for You</b><br><small><small>Tools &middot; Guides  &middot; Referrals</small></small> -->
+                </div></div>
+        </div>
     </header>
+
+<!--
+   <section class="blog bg-light" style="padding-top:35px;padding-bottom:25px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1 col-md-1" style="line-height: 2;"></div>
+          <div class="col-lg-10 col-md-10 col-sm-12 col-12" style="line-height: 2;">
+            <p><i><SMALL>Below is a collection of random things I've shared over the last few months - I'm just playing so no rhyme or reason just yet :) </SMALL></i></p>
+          </div>
+          </div>
+        </div>
+      </section> 
+-->
+
+   <!-- Referrals-->
+    <section id="contentarea">
+      <div class="container">
+        <div class="row" style="text-align:left;display:inline;">
+
+            <h2>{{ site.data.challah-all.contentarea.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.challah-all.contentarea.subheading  }}</h3> 
+        </div>
+        <div class="row">
+          {%- for member in site.data.challah-all.referrals.members -%}
+          {% assign ws = '' %}
+          <div class="col-lg-4 col md-4 col-sm-4 col-xs-6 col-12" style="padding: 5px 20px; height:100%;">
+            <div class="referral" style="background-color:#ffffff;border: 3px #f3f3f3 solid;">
+              <a href="{{ member.url }}" target="_blank"><img class="img-fluid" src="{{ assets_path }}{{ member.img }}" alt="" style="width:100%;"></a>
+              <h4>{{ member.name }}</h4>
+              <p class="text-muted" style="font-size: .8rem;">{{ member.text }}</p>
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </section>
