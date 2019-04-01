@@ -42,14 +42,11 @@ layout: default-sub
         <div class="row text-center"> 
           {%- for service in site.data.for-you.services.service -%}
           {% assign ws = '' %}
-          <div class="col-md-4 col-sm-6">
-            <a href="{{ service.url }}">
-              <img class="img-fluid" src="{{ service.img }}" alt="">
-            </a>
-            <div>
-              <p><h5>{{ service.heading }}</h5></p>
-              <p class="text-muted" style="font-size:13px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ service.text }}</p>
-            </div>
+          <div class="col-lg-4 col md-4 col-sm-4 col-xs-6 col-12" style="padding: 5px 20px; height:100%;">
+            <div class="referral" style="background-color:#ffffff;border: 3px #f3f3f3 solid;">
+              <a href="{{ service.url }}"><img class="img-fluid" src="{{ service.img }}" alt="" style="width:100%;"></a>
+              <h4>{{ service.heading }}</h4>
+              <p class="text-muted" style="font-size: .8rem;">{{ service.text }}</p>
           </div>
 
           {%- endfor -%}
