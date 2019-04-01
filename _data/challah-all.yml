@@ -1,0 +1,18 @@
+intro:
+  lead-in: Things for you
+  heading: ''
+  btn: ''
+
+contentarea:
+  heading: Challah Baking Resources
+  subheading: ''
+referrals:
+  members:
+    - name: Airbnb Experiences
+      text: Join my Airbnb Experience in SF!
+      img: https://www.worldofmobileapps.co/wp-content/uploads/2017/03/sho41.png
+      url: https://www.airbnb.com/experiences/665697
+    - name: Challah Recipe
+      text: Join my Airbnb Experience in SF!
+      img: img/content/challah_thumb.jpg
+      url: https://daliakatan.com/challah
