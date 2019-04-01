@@ -1,3 +1,3 @@
 ---
-layout: challah
+layout: challah-recipe
 ---

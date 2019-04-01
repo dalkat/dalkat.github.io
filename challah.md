@@ -1,3 +1,3 @@
 ---
-layout: challah-all
+layout: challah
 ---
