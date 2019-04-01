@@ -23,11 +23,11 @@ layout: default-sub
       <div class="container">
         <div class="row" style="text-align:left;display:inline;">
 
-            <h2>{{ site.data.challah-all.contentarea.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.challah-all.contentarea.subheading  }}</h3> 
+            <h2>{{ site.data.challah.contentarea.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.challah.contentarea.subheading  }}</h3> 
         </div>
         <div class="row">
-          {%- for member in site.data.challah-all.referrals.members -%}
+          {%- for member in site.data.challah.referrals.members -%}
           {% assign ws = '' %}
           <div class="col-lg-4 col md-4 col-sm-4 col-xs-6 col-12" style="padding: 5px 20px; height:100%;">
             <div class="referral" style="background-color:#ffffff;border: 3px #f3f3f3 solid;">
