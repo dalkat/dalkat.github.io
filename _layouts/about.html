@@ -31,14 +31,14 @@ layout: default-sub
 -->
 
    <!-- About -->
-        <div class="row">
-          {%- for member in site.data.home.team.members -%}
-          {% assign ws = '' %}
+   <div class="row" style="
+">
+
           <div class="col-sm-4">
-            <div class="team-member" style="padding-right: 0px;">
+             {%- for member in site.data.home.team.members -%}
+             {% assign ws = '' %}
+              <div class="team-member" style="">
               <img class="mx-auto" style="width:100%; height:auto; border:0;" src="{{ assets_path }}{{ member.img }}" alt="">
-              <p><h4>{{ member.name }}</h4></p>
-              <!-- <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
               <ul class="list-inline social-buttons">
                 {%- for sm in member.social-buttons -%}
                 {% assign ws = '' %}
@@ -50,57 +50,60 @@ layout: default-sub
                 {%- endfor -%}
               {% assign ws = '' %}
               </ul>
-            </div>
-          </div>
+              
           {%- endfor -%}
         {% assign ws = '' %}
-          <div class="col-sm-8 text-left">
-            <p class="section-subheading text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+              
+            </div>
+          </div>
+
+
+          <div class="col-sm-8 text-left" style="
+    width: 100%;
+    max-width: 75%;
+    padding-top: 80px;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 80px;
+    ">
+            <h2 class="section-heading text-uppercase" style="
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+">About Dalia Katan</h2>
+<p class="section-subheading text-muted" style="font-size:14px;font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">Dalia is a strategist, designer, entrepreneur, and public speaker who uses human-centered design to unlock the potential of organizations and humans alike.<br><br>Dalia previously consulted with Doblin Innovation and Deloitte where she worked hand-in-hand with management at Fortune-500 companies to design strategies that engage consumers, transform organizations and teams, and drive meaningful growth. Dalia spearheaded Doblin Innovation's expansion to the West Coast and was also selected for an innovation fellowship with the Center for the Edge in 2016. Prior to Deloitte, Dalia led marketing and user experience at several e-commerce and media technology startups, and held internships at IBM and UBS. From 2007-2011, she owned a graphic and web design business that served over 4M annual users. <br><br>Dalia's passion projects center on human connection and bridging divides: Dalia co-founded Deloitte's Refugee Community of Interest and launched an offering on refugee integration in the workplace, backed by a $400K grant from Deloitte leadership. She also interned at the U.S. House of Representatives from 2008-2010. <br><br>Dalia received her BA from Princeton University, where she studied international affairs, entrepreneurship, and human-centered design, and founded Princeton’s marketing and filmmaking organizations.</p>
           </div>
         </div>
 
-    <!-- Resources -->
-    <section id="resources">
+
+
+<!-- Contact -->
+<section id="contact">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <h2>{{ site.data.about.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.about.about.subheading }}</h3>
+          <div class="col-lg-12 text-left">
+            <h2 class="section-heading text-uppercase">Get in touch</h2>
+            <h3 class="section-subheading" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:white; margin-bottom:50px;">Let's brainstorm over tea and create something amazing together! <br>Shoot me a message below, or schedule a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;" style="color:#ff453c;">consultation</a>.</h3>
           </div>
         </div>
-      </div>
-    </section>
 
+        <div class="row" style="display:block; text-align:left;">
+          <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12"  style="display:inline-block;">
+                            {% assign ws = '' %}
+                            {%- if page.layout == 'thanks' -%}
+                             <p style="text-muted" style="padding: 4px 0; text-align:center; font-size:16px; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</p>
 
-   <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row" style="text-align:center;display:inline;"><h2 class="section-heading text-uppercase">{{ site.data.about.about.heading }}</h2></div>
-        <div class="row">
-          {%- for member in site.data.home.team.members -%}
-          {% assign ws = '' %}
-          <div class="col-sm-4">
-            <div class="team-member" style="padding-right: 10px;">
-              <img class="mx-auto" style="width:100%; height:auto; border:0;" src="{{ assets_path }}{{ member.img }}" alt="">
-              <p><h4>{{ member.name }}</h4></p>
-              <!-- <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
-              <ul class="list-inline social-buttons">
-                {%- for sm in member.social-buttons -%}
-                {% assign ws = '' %}
-                <li class="list-inline-item">
-                  <a href="{{ sm.url }}" target="_blank">
-                    <i class="{{ sm.icon }}"></i>
-                  </a>
-                </li>
-                {%- endfor -%}
-              {% assign ws = '' %}
-              </ul>
-            </div>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-          <div class="col-sm-8 text-left">
-            <p class="section-subheading text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+                            {%- endif -%}
+              <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <input type="text" name="name" placeholder="Your full name"required><br>
+                <input type="email" name="_replyto" placeholder="Your email" required><br>
+                <div class="customdropdown">
+                  <select name="_subject" class="embedcontact"><option>Select a Subject</option><option>Consulting Inquiry</option><option>Workshop Inquiry</option><option>Speaking Engagement</option><option>Something Else</option></select></div> 
+                <textarea name="message" placeholder="Your message" class="contact" required></textarea><br>
+                <input type="hidden" name="_next" value="https://daliakatan.com/thanks#contact"/>
+                <button type="submit" class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger">Send</button>
+              </form>
           </div>
         </div>
       </div>
