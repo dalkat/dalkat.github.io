@@ -45,7 +45,26 @@ layout: default
         {% assign ws = '' %}
           <div class="col-sm-7 text-left">    
             <h2 class="section-heading">{{ site.data.home.about.heading }}</h2>
-            <p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+            <p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p><br><Br>
+
+
+          {%- for member in site.data.home.team.members -%}
+          {% assign ws = '' %}
+                          <ul class="list-inline social-buttons">
+                {%- for sm in member.social-buttons -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ sm.url }}" target="_blank">
+                    <i class="{{ sm.icon }}"></i>
+                  </a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+
+          {%- endfor -%}
+        {% assign ws = '' %}
+        
           </div>
         </div>
 
