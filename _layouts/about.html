@@ -1,0 +1,78 @@
+---
+layout: default-sub
+---
+{%- assign assets_path = "assets/" -%}
+{%- if site.assets_path -%}
+  {%- assign assets_path = site.assets_path -%}
+{%- endif -%}
+    {% assign ws = '' %}
+    <!-- Header -->
+    <!-- Header -->
+    <header class="longtext" style="background-image:none; background-color:#212529;">
+
+      <div class="container" style="padding-top:100px;">
+              <div class="intro-text" style="display:block; text-align:center; padding:40px 0; font-style: normal;">
+              <!-- <div class="intro-lead-in"> <b>Resources for You</b><br><small><small>Tools &middot; Guides  &middot; Referrals</small></small> -->
+                </div></div>
+        </div>
+    </header>
+
+<!--
+   <section class="blog bg-light" style="padding-top:35px;padding-bottom:25px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1 col-md-1" style="line-height: 2;"></div>
+          <div class="col-lg-10 col-md-10 col-sm-12 col-12" style="line-height: 2;">
+            <p><i><SMALL>Below is a collection of random things I've shared over the last few months - I'm just playing so no rhyme or reason just yet :) </SMALL></i></p>
+          </div>
+          </div>
+        </div>
+      </section> 
+-->
+
+    <!-- Resources -->
+    <section id="resources">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>{{ site.data.for-you.about.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.about.subheading }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row" style="text-align:center;display:inline;"><h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2></div>
+        <div class="row">
+          {%- for member in site.data.home.team.members -%}
+          {% assign ws = '' %}
+          <div class="col-sm-4">
+            <div class="team-member" style="padding-right: 10px;">
+              <img class="mx-auto" style="width:100%; height:auto; border:0;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <p><h4>{{ member.name }}</h4></p>
+              <!-- <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
+              <ul class="list-inline social-buttons">
+                {%- for sm in member.social-buttons -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ sm.url }}" target="_blank">
+                    <i class="{{ sm.icon }}"></i>
+                  </a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+            </div>
+          </div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+          <div class="col-sm-8 text-left">
+            <p class="section-subheading text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
