@@ -9,7 +9,7 @@ header.masthead {
   background-color: #202429;
   @include background-cover;
   .intro-text {
-    padding-top: 100px;
+    padding-top: 160px;
     padding-bottom: 70px;
     .intro-lead-in {
       font-size: 22px;
@@ -22,7 +22,7 @@ header.masthead {
       font-size: 40px;
       font-weight: 700;
       line-height: 45px;
-      margin-bottom: 135px;
+      margin-bottom: 235px;
       text-shadow: 5px 5px 10px #0e0e0e;
       @include heading-font;
     }
@@ -58,6 +58,37 @@ header.masthead {
   }
 }
 
+@media(max-width:350px) {
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url('../img/header-bg-720.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom center;
+  background-color: #202429;
+  @include background-cover;
+  .intro-text {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include serif-font;
+    }
+    .intro-heading {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 45px;
+      margin-bottom: 135px;
+      text-shadow: 5px 5px 10px #0e0e0e;
+      @include heading-font;
+    }
+  }
+}
+}
 
 
 
