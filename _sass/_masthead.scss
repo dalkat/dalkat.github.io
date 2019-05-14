@@ -9,7 +9,7 @@ header.masthead {
   background-color: #202429;
   @include background-cover;
   .intro-text {
-    padding-top: 80px;
+    padding-top: 100px;
     padding-bottom: 50px;
     .intro-lead-in {
       font-size: 22px;
@@ -22,7 +22,7 @@ header.masthead {
       font-size: 40px;
       font-weight: 700;
       line-height: 45px;
-      margin-bottom: 175px;
+      margin-bottom: 155px;
       text-shadow: 5px 5px 10px #0e0e0e;
       @include heading-font;
     }
