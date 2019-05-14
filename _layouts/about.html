@@ -30,6 +30,35 @@ layout: default-sub
       </section> 
 -->
 
+   <!-- About -->
+        <div class="row">
+          {%- for member in site.data.home.team.members -%}
+          {% assign ws = '' %}
+          <div class="col-sm-4">
+            <div class="team-member" style="padding-right: 0px;">
+              <img class="mx-auto" style="width:100%; height:auto; border:0;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <p><h4>{{ member.name }}</h4></p>
+              <!-- <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
+              <ul class="list-inline social-buttons">
+                {%- for sm in member.social-buttons -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ sm.url }}" target="_blank">
+                    <i class="{{ sm.icon }}"></i>
+                  </a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+            </div>
+          </div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+          <div class="col-sm-8 text-left">
+            <p class="section-subheading text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+          </div>
+        </div>
+
     <!-- Resources -->
     <section id="resources">
       <div class="container">
