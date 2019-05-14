@@ -36,8 +36,8 @@ header.masthead {
   background-position: center center;
   background-color: #202429;
     .intro-text {
-      padding-top: 250px;
-      padding-bottom: 200px;
+      padding-top: 230px;
+      padding-bottom: 160px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -46,10 +46,11 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 68px;
+        font-size: 82px;
         font-weight: 700;
-        line-height: 70px;
-        margin-bottom: 50px;
+        line-height: 90px;
+        letter-spacing: -1px;
+        margin-bottom: 60px;
         text-shadow: 5px 5px 10px #0e0e0e;
         @include heading-font;
       }
