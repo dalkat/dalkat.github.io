@@ -35,8 +35,8 @@ layout: default-sub
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h2>{{ site.data.for-you.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.for-you.about.subheading }}</h3>
+            <h2>{{ site.data.about.about.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.about.about.subheading }}</h3>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ layout: default-sub
    <!-- About -->
     <section id="about">
       <div class="container">
-        <div class="row" style="text-align:center;display:inline;"><h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2></div>
+        <div class="row" style="text-align:center;display:inline;"><h2 class="section-heading text-uppercase">{{ site.data.about.about.heading }}</h2></div>
         <div class="row">
           {%- for member in site.data.home.team.members -%}
           {% assign ws = '' %}
