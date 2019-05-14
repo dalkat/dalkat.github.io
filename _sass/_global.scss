@@ -34,9 +34,9 @@ b, strong {
 }
 
 a {
-  color: $primary;
+  color: darken($primary, 10%) ;
   &:hover {
-    color: darken($primary, 10%);
+    color: darken($primary, 20%);
   }
 }
 
@@ -58,10 +58,11 @@ h6 {
 section {
   padding: 100px 0;
   h2.section-heading {
-    font-size: 40px;
+    font-size: 44px;
     margin-top: 0;
     margin-bottom: 15px;
     font-weight:600;
+    color: #2e3338;
   }
   h3.section-subheading {
     font-size: 15px;
