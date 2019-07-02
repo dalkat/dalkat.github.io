@@ -145,6 +145,57 @@ header.donowbg {
 
 
 
+header.dramatic {
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle at left top,rgb(233,22,140) 9%,rgb(247,82,84) 91%);
+  background-image: radial-gradient(circle at left top, rgb(233, 22, 140) 9%, rgb(247, 82, 84) 91%); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  @include background-cover;
+  .intro-text {
+    padding: 40px 0px;
+    display:block; text-align:center; padding:40px 0; font-style: normal;font-size: 40px; font-weight: 800;
+    .intro-lead-in {
+      font-size: 18px;
+      font-style: normal;
+      line-height: 18px;
+      margin-bottom: 25px;
+      @include serif-font;
+    }
+    .intro-heading {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 25px;
+      @include heading-font;
+    }
+  }
+}
+@media(min-width:768px) {
+  header.dramatic {
+    .intro-text {padding: 40px 0px;
+    display:block; text-align:center; padding:40px 0; font-style: normal;font-size: 40px; font-weight: 800;
+      .intro-lead-in {
+        font-size: 18px;
+        font-style: normal;
+        line-height: 18px;
+        margin-bottom: 25px;
+        @include serif-font;
+      }
+      .intro-heading {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        margin-bottom: 25px;
+        @include heading-font;
+      }
+    }
+  }
+}
+
 
 header.longtext {
   text-align: center;
