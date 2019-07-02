@@ -13,3 +13,6 @@ collections:
 
 plugins:
   - jekyll-redirect-from
+
+plugins:
+  - jekyll-sitemap
