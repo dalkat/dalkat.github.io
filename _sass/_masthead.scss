@@ -159,10 +159,6 @@ header.dramatic {
     padding: 40px 0px;
     display:block; 
     text-align:center; 
-    font-style: normal;
-    font-size: 40px; 
-    font-weight: 800;
-    line-height:40px;
     .intro-lead-in {
       font-size: 18px;
       font-style: normal;
@@ -172,10 +168,12 @@ header.dramatic {
       @include serif-font;
     }
     .intro-heading {
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 50px;
-      margin-bottom: 25px;
+      font-style: normal;
+      font-size: 40px; 
+      font-weight: 800;
+      line-height:40px;
+      text-transform:uppercase;
+      margin-bottom: 15px;
       @include heading-font;
     }
   }
@@ -186,10 +184,6 @@ header.dramatic {
     padding: 40px 0px;
     display:block; 
     text-align:center; 
-    font-style: normal;
-    font-size: 40px; 
-    font-weight: 800; 
-    line-height: 40px;
       .intro-lead-in {
         font-size: 18px;
         font-style: normal;
@@ -199,10 +193,12 @@ header.dramatic {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 50px;
-        margin-bottom: 25px;
+        font-style: normal;
+        font-size: 40px; 
+        font-weight: 800;
+        line-height:40px;
+        text-transform:uppercase;
+        margin-bottom: 15px;
         @include heading-font;
       }
     }
