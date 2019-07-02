@@ -51,9 +51,23 @@ referrals:
 
 
 
-services:
-  heading: Miscellaneous things I've shared
-  subheading: Below is a collection of random tools, guides, and referrals I've shared over the last few months, related to how I've maximized my learning and adventuring during my sabbatical. I'm just playing so no rhyme or reason just yet :) 
+services1:
+  heading: Diversity & Inclusion
+  subheading: ""
+  service:
+    - heading: Refugee Inclusion
+      text: Temp1
+      img: img/content/TMM_thumb.jpg
+      url: https://daliakatan.com/trailmix
+    - heading: Team Dynamics
+      text: Temp2
+      img: img/content/donow_thumb.jpg
+      url: https://daliakatan.com/do-now
+
+
+services2:
+  heading: Sabbaticals, Productivity, and Miscellaneous
+  subheading: " " 
   service:
     - heading: Trail Mix Method
       text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done
