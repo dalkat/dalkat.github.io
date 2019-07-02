@@ -58,11 +58,11 @@ services1:
     - heading: Unlocking Growth through Diversity and Inclusion
       text: Refugee Inclusion in the Workplace - successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
       img: img/content/refugee_thumb.jpg
-      url: https://daliakatan.com/reports-refugee
+      url: https://daliakatan.com/for-you/reports-refugee
     - heading: Team Performance in the Future of Work
       text: How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
       img: img/content/team_thumb.jpg
-      url: https://daliakatan.com/reports-teams
+      url: https://daliakatan.com/for-you/reports-teams
 
 
 services2:
