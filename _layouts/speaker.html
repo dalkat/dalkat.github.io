@@ -52,29 +52,27 @@ layout: default-sub
               As a first-generation American and innovation strategist, I am championing dialogue on how diversity and human connection can unlock untapped growth for companies. </p>
 
               
-            <p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:center; padding:0 10%;">Amongst my advisory work with startups and F500 companies, I founded the Refugee Workplace Integration Program at Deloitte, celebrating inclusion as the single most powerful tool for growth and business empowerment. I am dedicated to empowering organizations to successfully utilize and nurture the talents of minorities and my work at the intersection of inclusion, the future of work, and business growth has been published at Deloitte and Princeton University. 
+            <br><p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:center; padding:0 10%;">Amongst my advisory work with startups and F500 companies, I founded the Refugee Workplace Integration Program at Deloitte, celebrating inclusion as the single most powerful tool for growth and business empowerment. I am dedicated to empowering organizations to successfully utilize and nurture the talents of minorities and my work at the intersection of inclusion, the future of work, and business growth has been published at Deloitte and Princeton University. 
 
               <Br><BR>I believe that organizations have an incredible opportunity to use diversity not only to improve business performance but also to meaningfully bridge divides and am committed to educating employers on creating the workplace environments that can reducing prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. 
-            </p><br>
+            
 
-            <div class="clientcarousel slider">
-          {%- for client in site.data.speaker.clients -%}
-          {% assign ws = '' %}
-          <div class="slide" style="height:50px;">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-
+                    <div class="clientcarousel slider">
+                  {%- for client in site.data.speaker.clients -%}
+                  {% assign ws = '' %}
+                  <div class="slide" style="height:50px;">
+                      <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
+                  </div>
+                  {%-  endfor -%}
+                {% assign ws = '' %}
+                </div>
+          </p><br>
 
           </div>
         
-          <div class="col-md-5"><img src="/img/about/speaking1.jpg" width="100%">
-          </div>
 
 
-          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">Book speaking engagement</a></div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">Invite to speak</a></div>
       </div>
       </div>
     </section>
@@ -82,7 +80,7 @@ layout: default-sub
 
 <!--other categories-->
 
-<div class="col-sm-12 col-lg-6" style="padding: 5%; background-color: #f1f1f1;transition: all 0.3s;">
+<div class="col-sm-12 col-md-6" style="padding: 5%; background-color: #f1f1f1;transition: all 0.3s;">
   <div>
     <h3 class="text-muted"><span style="text-align: center;"><em>Recent & upcoming speaking engagements</em></span></h3>
             <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
@@ -95,7 +93,7 @@ layout: default-sub
   </div>
 </div>
 
-<div class="col-sm-12 col-lg-6" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
+<div class="col-sm-12 col-md-6" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
   <div>
     <h3 class="text-muted"><span style="text-align: center;"><em>Recent publications</em></span></h3>
             <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
@@ -110,12 +108,11 @@ layout: default-sub
 </div>
 
 <!-- Contact -->
-<section id="contact">
+<section id="contact" style="background-image: url(../img/contact-bg4.jpg)!important; background-position:left;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading text-uppercase">Get in touch</h2>
-            <h3 class="section-subheading" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:white; margin-bottom:50px;">Let's brainstorm over tea and create something amazing together! <br>Shoot me a message below, or schedule a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;" style="color:#ff453c;">consultation</a>.</h3>
+            <h2 class="section-heading text-uppercase">Invite to Speak</h2>
           </div>
         </div>
 
