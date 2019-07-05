@@ -6,3 +6,10 @@ intro:
 about:
   heading: ''
   subheading: ''
+
+
+clients:
+- img: img/logos/deloitte.png
+  url: ""
+- img: img/logos/princeton.png
+  url: ""
