@@ -114,13 +114,14 @@ section {
 
 .btn-secondary {
   color: white;
-  background-color: $secondary;
-  border-color: $secondary;
+  background: radial-gradient(circle at left top, #e9168c 9%, #f75254 91%);
+    background-image: radial-gradient(circle at left top, #e9168c 9%, #f75254 91%);
+  border-color: transparent;
   &:active,
   &:focus,
   &:hover {
     background-color: $primary !important;
-    border-color: $primary !important;
+    border-color: transparent!important;
     color: white;
   }
   &:active,
@@ -128,6 +129,8 @@ section {
     box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
   }
 }
+
+
 
 
 // Lists
