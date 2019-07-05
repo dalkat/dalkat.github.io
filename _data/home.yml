@@ -5,7 +5,7 @@ intro:
 
 about:
   heading: About Dalia
-  subheading: What does growth look like in an era of unpredictable change? I am a strategist, designer, entrepreneur, and author-speaker and am passionate about the power of curiosity and human connection to drive meaningful growth for businesses.<br><br>I have spent the better part of the last decade focused on design-led innovation, entre/intrapreneurship, storytelling, and business strategy and have published works on diversity-led growth and the future of work. &nbsp; &nbsp; <br><BR>Through human-centered design, I aim to unlock the potential of organizations and humans alike. <br><a href="https://daliakatan.com/about">Read full bio here ►</a> 
+  subheading: What does growth look like in an era of unpredictable change? I am a strategist, designer, entrepreneur, and author-speaker and am passionate about the power of curiosity and human connection to drive meaningful growth for businesses.<br><br>I have spent the better part of the last decade focused on design-led innovation, entre/intrapreneurship, storytelling, and business strategy and have published works on diversity-led growth and the future of work. &nbsp; &nbsp; <br><BR>Through human-centered design, I aim to unlock the potential of organizations and humans alike. <br><a href="https://daliakatan.com/about">Read full bio <small>►</small></a> 
 
 team:
   members:
@@ -51,14 +51,14 @@ services:
       text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
     - icon: fa fa-users
       heading: Future of Work & Diversity
-      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and better decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and <a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">diversity programs</a> that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
+      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and improved decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and <a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">diversity programs</a> that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
 
-  btn: Schedule consultation
+  btn: Schedule a consult
 
 
 speaking:
   heading: Speaking Engagements
-  subheading: As a first-generation American and innovation strategist, I am championing dialogue on how diversity and human connection can unlock untapped growth for companies. <BR><br><a href="https://daliakatan.com/speaker">Read more ►</a>
+  subheading: As a first-generation American and innovation strategist, I am championing dialogue on how diversity and human connection can unlock untapped growth for companies. <a href="https://daliakatan.com/speaker">Read more <small>►</small></a>
   btn: Invite to speak
 
 portfolio:
@@ -69,7 +69,7 @@ portfolio:
 testimonials:
   heading: Client Testimonials
   subheading: 
-  btn: Schedule consultation
+  btn: Schedule a consult
 
 contact:
   heading: Get in touch
