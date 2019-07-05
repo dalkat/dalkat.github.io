@@ -55,29 +55,8 @@ layout: default-sub
 
               
             <br><p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:center; padding:0 10%;">Merging the best of corporate innovation tools with a deep understanding of human-centered research and design, I work with my clients to begin their innovation at the customer's need and design strategies for growth that unlock the potential of their organizations and talent alike.   </p><br><br>
-            
-
-            <div class="row">
-              <div class="col-lg-12">
-                <h2 class="section-heading">{{ site.data.strategy.services.heading }}</h2>
-                <h3 class="section-subheading text-muted">{{ site.data.strategy.services.subheading }}</h3>
-              </div>
-            </div>
-            <div class="row">
-              {%- for service in site.data.strategy.services.service -%}
-              {% assign ws = '' %}
-              <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
-                <h4 class="service-heading" style="margin-top:0;">{{ service.heading }}</h4>
-                <p class="text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:left;">{{ service.text }}</p>
-              </div>
-
-              <div class="col-md-1"></div>
-              {%- endfor -%}
-            {% assign ws = '' %}
-            </div>
-
-
-                    <div class="clientcarousel slider">
+          
+                <div class="clientcarousel slider">
                   {%- for client in site.data.home.clients -%}
                   {% assign ws = '' %}
                   <div class="slide" style="height:50px;">
@@ -86,38 +65,48 @@ layout: default-sub
                   {%-  endfor -%}
                 {% assign ws = '' %}
                 </div>
-          
 
           </div>
         
 
 
-          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">Invite to speak</a></div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">Schedule consult</a></div>
       </div>
       </div>
     </section>
 
 
 
-  <div class="col-sm-12 col-lg-6" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
-    <div>
-      <h3 class="text-muted"><span style="text-align: center;"><em>Recent publications</em></span></h3>
-              <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
-              <li><b>A New Home at Work: An Employer's Guidebook to Fostering Inclusion for Refugee Employees</b><br>Deloitte (<a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">2019</a>)</li>
-              <li><b>Business Practice Redesign & The Future of Work: Moving From Best to Better and Better</b><br>Deloitte Center for the Edge (<a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">2018</a>)</li>
-              <li><b>Entrepreneurial Finance: Uber's Path to Success (Case Study)</b><br>MIT Press (<a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">2014</a>)</li>
-              <li><b>Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done</b><br>DaliaKatan.com (<a href="https://daliakatan.com/trailmix/" target="_blank">2019</a>)</li>
-              <li><b>Building a Shared Israeli Society: Improving Arab-Jewish Relations in Israel Through Workforce Integration</b><br>Princeton University (2015)</li>
-            </ul></h5>
-    </div>
-  </div>
-</div>
 
+    <!-- Services -->
+    <section class="bg-light" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">{{ site.data.home.services.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          {%- for service in site.data.home.services.service -%}
+          {% assign ws = '' %}
+          <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
+            <h4 class="service-heading" style="margin-top:0;">{{ service.heading }}</h4>
+            <p class="text-muted" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align:left;">{{ service.text }}</p>
+          </div>
+
+          <div class="col-md-1"></div>
+          {%- endfor -%}
+        {% assign ws = '' %}
+        </div>
+          <div class="col-lg-12" style="text-align:center;"><br><BR><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contact">{{ site.data.home.services.btn }}</a></div>
+      </div>
+    </section>
 
 
 
     <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <section id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -149,7 +138,7 @@ layout: default-sub
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section  class="bg-light" id="testimonials">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
