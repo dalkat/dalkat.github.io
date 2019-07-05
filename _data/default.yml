@@ -4,17 +4,15 @@ menu-string:
 
 nav:
   - title: About
-    url: '#about'
+    url: 'https://daliakatan.com/about'
   - title: Consulting
-    url: '#services'
+    url: 'https://daliakatan.com/strategy'
   - title: Speaking
-    url: '#speaking'
-  - title: Testimonials
-    url: '#testimonials'
-  - title: Contact
-    url: '#contact'
+    url: 'https://daliakatan.com/speaker'
   - title: For You
     url: 'https://daliakatan.com/for-you'
+  - title: Contact
+    url: 'https://daliakatan.com/#contact'
 
 copyright: Copyright &copy; Dalia Katan 2019
 

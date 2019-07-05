@@ -3,14 +3,16 @@ brand:
 menu-string: Menu
 
 nav:
+  - title: About
+    url: 'https://daliakatan.com/about'
   - title: Consulting
     url: 'https://daliakatan.com/strategy'
   - title: Speaking
     url: 'https://daliakatan.com/speaker'
   - title: For You
     url: 'https://daliakatan.com/for-you'
-  - title: Return Home
-    url: 'https://daliakatan.com/'
+  - title: Contact
+    url: 'https://daliakatan.com/#contact'
 
 copyright: Copyright &copy; Dalia Katan 2019
 
