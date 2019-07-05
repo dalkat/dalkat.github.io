@@ -1,0 +1,23 @@
+intro:
+  lead-in: ''
+  heading: Keynotes & <br>Speaking Engagements
+  btn: ''
+
+about:
+  heading: ''
+  subheading: ''
+
+
+clients:
+- img: img/logos/deloitte.png
+  url: ""
+- img: img/logos/princeton.png
+  url: ""
+- img: img/logos/mit.png
+  url: ""
+- img: img/logos/waywelead.png
+  url: ""
+- img: img/logos/c4e.png
+  url: ""
+- img: img/logos/adthis.png
+  url: ""
