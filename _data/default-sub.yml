@@ -3,7 +3,11 @@ brand:
 menu-string: Menu
 
 nav:
-  - title: More
+  - title: Consulting
+    url: 'https://daliakatan.com/strategy'
+  - title: Speaking
+    url: 'https://daliakatan.com/speaker'
+  - title: For You
     url: 'https://daliakatan.com/for-you'
   - title: Return Home
     url: 'https://daliakatan.com/'
