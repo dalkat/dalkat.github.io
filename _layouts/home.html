@@ -23,8 +23,8 @@ layout: default
         <div class="row">
           {%- for member in site.data.home.team.members -%}
           {% assign ws = '' %}
-          <div class="col-md-5 col-sm-12">
-            <div class="team-member" style="padding-right: 10px;">
+          <div class="col-md-4 col-sm-12">
+            <div class="team-member">
               <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:30px;" src="{{ assets_path }}{{ member.img }}" alt="">
               <!-- <p><h4>{{ member.name }}</h4></p>
                <p class="text-muted" style="font-size: 14px; line-height: 1.75 !important;font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ member.role }}</p> -->
@@ -45,7 +45,7 @@ layout: default
           </div>
           {%- endfor -%}
         {% assign ws = '' %}
-          <div class="col-md-7 col-sm-12 text-left" style="margin-top:15px; margin-bottom:20px;">    
+          <div class="col-md-7 offset-md-1 col-sm-12 text-left" style="margin-top:15px; margin-bottom:20px;">    
             <h2 class="section-heading">{{ site.data.home.about.heading }}</h2>
             <p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
 <!--hiding this placement of social for now
