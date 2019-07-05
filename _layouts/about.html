@@ -79,6 +79,18 @@ layout: default-sub
 
   <br><br>I received my BA from Princeton University, where I studied international affairs, entrepreneurship, and human-centered design, and founded Princeton’s marketing and filmmaking organizations.</p>
           </div>
+
+          <br><BR>
+    <!-- Clients -->
+              <div class="clientcarousel slider">
+                {%- for client in site.data.home.clients -%}
+                {% assign ws = '' %}
+                <div class="slide" style="height:50px;">
+                    <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
+                </div>
+                {%-  endfor -%}
+              {% assign ws = '' %}
+              </div>
         </div>
 
 <!--other categories-->
@@ -102,12 +114,12 @@ layout: default-sub
   <div>
     <h3 class="text-muted"><span style="text-align: center;"><em>Recent & upcoming speaking engagements</em></span></h3>
             <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
-            	<li>Connection and Networks in the Digital Economy (Guest Lecturer, November 2019, Princeton University)</li>
-            	<li>Using Workplace Diversity to Bridge Divides (Podcast Guest, June 2019, Way We Lead Podcast)</li>
-              <li>Using Workplace Diversity to Bridge Divides (Speaker, August 2018, Deloitte)</li>
-            <li>How Companies Can Retain Top Talent Through a Culture of Intrapreneurship (Speaker, June 2018, Deloitte)</li>
-            <li>Women in Marketing (Panel Moderator, 2015, Princeton)</li>
-            <li>An Algorithm for Growth (Workshop Speaker, March 2015, Princeton Social Entrepreneurship Conference)</li></ul></h5>
+            <li><b>Connection and Networks in the Digital Economy</b><br>Guest Lecturer, Princeton University (Nov. 2019)</li>
+            <li><b>Using Workplace Diversity to Bridge Divides</b><br>Podcast Guest, Way We Lead Podcast (June 2019)</li>
+            <li><b>Using Workplace Diversity to Bridge Divides</b><br>Speaker, Deloitte D-Talks (Aug. 2018)</li>
+            <li><b>How Companies Can Retain Top Talent Through a Culture of Intrapreneurship</b><br>Speaker, Deloitte (June 2018)</li>
+            <li><b>Women in Marketing</b><br>Panel Moderator, Princeton University (2015)</li>
+            <li><b>An Algorithm for Growth</b><br>Workshop Speaker, Princeton Social Entrepreneurship Conference (March 2015)</li></ul></h5>
   </div>
 </div>
 
@@ -115,11 +127,11 @@ layout: default-sub
   <div>
     <h3 class="text-muted"><span style="text-align: center;"><em>Recent publications</em></span></h3>
             <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
-            <li>A New Home at Work: An Employer's Guidebook to Fostering Inclusion for Refugee Employees (<a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">2019, Deloitte</a>)</li>
-            <li>Business Practice Redesign & The Future of Work: Moving From Best to Better and Better (<a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">2017, Deloitte</a>)</li>
-            <li>Entrepreneurial Finance: Uber's Path to Success (<a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">2014, MIT Press</a>)</li>
-            <li>Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done (<a href="https://daliakatan.com/trailmix/" target="_blank">2019, self-published</a>)</li>
-            <li>Building a Shared Israeli Society: Improving Arab-Jewish Relations in Israel Through Workforce Integration (2015, Princeton University)</li>
+              <li><b>A New Home at Work: An Employer's Guidebook to Fostering Inclusion for Refugee Employees</b><br>Deloitte (<a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">2018</a>)</li>
+              <li><b>Business Practice Redesign & The Future of Work: Moving From Best to Better and Better</b><br>Deloitte Center for the Edge (<a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">2017</a>)</li>
+              <li><b>Entrepreneurial Finance: Uber's Path to Success (Case Study)</b><br>MIT Press (<a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">2014</a>)</li>
+              <li><b>Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done</b><br>DaliaKatan.com (<a href="https://daliakatan.com/trailmix/" target="_blank">2019</a>)</li>
+              <li><b>Building a Shared Israeli Society: Improving Arab-Jewish Relations in Israel Through Workforce Integration</b><br>Princeton University (2015)</li>
           </ul></h5>
   </div>
 </div>
