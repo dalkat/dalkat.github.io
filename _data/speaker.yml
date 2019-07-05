@@ -21,3 +21,13 @@ clients:
   url: ""
 - img: img/logos/adthis.png
   url: ""
+
+
+
+photos:
+  - img: img/about/speaking1.jpg
+    caption: ''
+    maxwidth: 360px
+  - img: img/about/speaking1.jpg
+    caption: ''
+    maxwidth: 360px
