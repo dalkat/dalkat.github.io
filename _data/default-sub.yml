@@ -33,7 +33,6 @@ quicklinks:
     url: '#'
 
 modal:
-  date-string: 'Date: '
   client-string: 'Client: '
   category-string: 'Category: '
   close-icon: 'fa fa-times'
