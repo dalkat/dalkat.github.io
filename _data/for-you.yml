@@ -63,6 +63,10 @@ services1:
       text: How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
       img: img/content/team_thumb.jpg
       url: https://daliakatan.com/for-you/report-teams
+    - heading: More D&I Resources 
+      text: ''
+      img: img/content/more_thumb.jpg
+      url: https://daliakatan.com/inclusion
 
 
 services2:
