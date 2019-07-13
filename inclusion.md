@@ -1,3 +1,3 @@
 ---
-layout: for-you
+layout: inclusion
 ---
