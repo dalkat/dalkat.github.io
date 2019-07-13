@@ -88,6 +88,35 @@ layout: default-sub
       </div>
     </section>
 
+
+
+
+    <!-- Resources4 -->
+    <section id="resources4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 style="text-transform: uppercase; font-weight: 800;border-bottom: 2px #000000 solid;">{{ site.data.for-you.services3.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.for-you.services3.subheading }}</h3>
+          </div>
+        </div>
+        <div class="row text-center"> 
+          {%- for service in site.data.for-you.services3.service -%}
+          {% assign ws = '' %}
+          <div class="col-lg-4 col md-4 col-sm-4 col-xs-6 col-12" style="padding: 5px 20px; height:100%;">
+            <div class="referral" style="background-color:#ffffff; text-align:left; padding:10px;">
+              <a href="{{ service.url }}"><img class="img-fluid" src="{{ service.img }}" alt="" style="width:100%;">
+              <h4 style="text-align:left; font-weight:800; padding:10px;">{{ service.heading }}</h4></a>
+              <p class="text-muted" style="font-size: .8rem; text-align:left; padding:10px;">{{ service.text }}</p>
+            </div>
+          </div>
+
+          {%- endfor -%}
+        {% assign ws = '' %}
+        </div>
+      </div>
+    </section>
+
    <!-- Referrals
     <section id="contentarea" class="bg-light">
       <div class="container">
