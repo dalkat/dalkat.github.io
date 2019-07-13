@@ -66,7 +66,7 @@ services1:
 
 
 services2:
-  heading: Sabbaticals, Productivity, and Miscellaneous
+  heading: Productivity & Sabbaticals
   subheading: " " 
   service:
     - heading: Trail Mix Method
@@ -77,6 +77,12 @@ services2:
       text: A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
+
+
+services3:
+  heading: Miscellaneous
+  subheading: " " 
+  service:
     - heading: Challah Baking
       text: Challah is a traditional Jewish bread and is a huge part of my weekly ritual! Here's a recipe I love and a link to join my class in SF
       img: img/content/challah_thumb.jpg
