@@ -1,6 +1,6 @@
 intro:
-  heading: Diversity & Inclusion Resources
-  lead-in: ''
+  heading: Diversity & Inclusion<br>Resources
+  lead-in: Inclusion is a team sport - this collection of resources will help any teammate or leader to make the shift from diversity to inclusion at work. 
   btn: ''
 
 services1:
@@ -27,11 +27,11 @@ services2:
       img: img/content/refugee_thumb.jpg
       url: https://daliakatan.com/for-you/report-refugee
     - heading: U.S. Employer's Guide to Hiring Refugees
-      text: (External report) This guidebook, developed by the Tent Partnership in collaboration with Lutheran Immigration and Refugee Service, outlines essential information on the logistics, benefits, challenges, and solutions related to refugee recruitment and employment retention in the United States. 
+      text: (Partner report) This guidebook, developed by the Tent Partnership in collaboration with Lutheran Immigration and Refugee Service, outlines essential information on the logistics, benefits, challenges, and solutions related to refugee recruitment and employment retention in the United States. 
       img: img/content/refugeetent_thumb.jpg
       url: https://www.tent.org/wp-content/uploads/2018/01/Tent_Guidebook_FINAL.pdf
     - heading: The Economic Lives of Syrian Refugees in Europe 
-      text: (External report) This Deloitte report offers insight into the challenges that refugees face as they seek work in their host countries, and also examines how businesses in these countries view the hiring of refugees. The report aims to provide practical guidance to private actors on how to support refugees’ economic participation across Europe through employment.
+      text: (Partner report) This Deloitte report offers insight into the challenges that refugees face as they seek work in their host countries, and also examines how businesses in these countries view the hiring of refugees. The report aims to provide practical guidance to private actors on how to support refugees’ economic participation across Europe through employment.
       img: img/content/refugeedeloitte_thumb.jpg
       url: https://www2.deloitte.com/content/dam/Deloitte/global/Documents/About-Deloitte/talent-displaced-syrian-refugees-europe.pdf
 
