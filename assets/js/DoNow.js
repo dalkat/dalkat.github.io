@@ -14,11 +14,12 @@ var quotes = [
 	'<b>Write a haiku</b><br>How about an ode to the weather, gratitude, or about what you had/are having for lunch?',
 	'<b>Take a 20-minute learning break</b><br>How about an online class on food photography or logo design on <a href="https://skl.sh/2TE2fKn" target="_blank">Skillshare</a> or Udemy, or a podcast on real estate investing?',
 	'<b>Do a 20 minute yoga flow</b><br>Have more time? See if there’s a class happening now at the gym!',
-	'<b>Stretch for five minutes</b><br>Yes, for five minutes! Stretch your neck, roll your shoulders, touch your toes.',
+	'<b>Stretch for five minutes</b><br>Yes, for five minutes! Stretch your neck, roll your shoulders, touch your toes. Shake those hips out.',
 	'<b>Meditate</b><br>A five minute meditation on SimpleHabit or Headspace.',
 	'<b>Werk it out</b><br>Ten pushups, 16 squat steps with bands, ten bird dogs. Repeat.',
 	'<b>Write a short poem in your preferred language of love.</b><br>I mean, you have to practice your French anyway...',
 	'<b>Think of three things you\'re grateful for.</b><Br>If there\'s someone you can thank, message them and make their day!',
 	'<b>Send snail mail.</b><br>Yup, old school. Make someone\'s day, send a love note, a life update, a book, etc.',
-	'<b>Take a walk - whether 5 minutes or 45.</b><br>Get some fresh air, clear your head, take a walk around the block - or to the next neighborhood.'
+	'<b>Take a walk - whether 5 minutes or 45.</b><br>Get some fresh air, clear your head, take a walk around the block - or to the next neighborhood.',
+	'<b>Nurture your creativity</b><br>Write a story about:<BR><ul style="text-align:left;"><li>A toddler\'s first day at school</li><li>A cat with the house to herself</li><li>The object 5 feet ahead of you</li></ul>'
 	]
