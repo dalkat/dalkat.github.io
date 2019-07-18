@@ -63,7 +63,7 @@ services1:
       text: How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
       img: img/content/team_thumb.jpg
       url: https://daliakatan.com/for-you/report-teams
-    - heading: How to Create More Inclusive Workplaces
+    - heading: 'Podcast: How to Create More Inclusive Workplaces'
       text: 'Way We Lead Podcast S1E4: Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. We also start to ask what it looks like to be a champion for underrepresented folks when we have a seat at the table. '
       img: img/content/inclusion3_thumb.jpg
       url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
@@ -87,13 +87,17 @@ services2:
   subheading: " " 
   service:
     - heading: Trail Mix Method
-      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done
+      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done.
       img: img/content/TMM_thumb.jpg
       url: https://daliakatan.com/trailmix
     - heading: Do Now Generator
-      text: A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time
+      text: A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time.
       img: img/content/donow_thumb.jpg
       url: https://daliakatan.com/do-now
+    - heading: Sabbatical Update
+      text: A raw, honest account of my experience leaving a full-time job, embarking on a creative sabbatical, and redesigning my life around curiosity.
+      img: img/content/update1_thumb.jpg
+      url: https://daliakatan.com/update-1
 
 
 services3:
