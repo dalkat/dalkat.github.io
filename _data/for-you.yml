@@ -3,6 +3,67 @@ intro:
   lead-in: Collection of miscellaneous tools and guides I've authored or shared 
   btn: ''
 
+services1:
+  heading: Diversity & Inclusion
+  subheading: ""
+  service:
+    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
+      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
+      img: img/content/inclusion1_thumb.jpg
+      url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
+    - heading: 'Podcast: How to Create More Inclusive Workplaces'
+      text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
+      img: img/content/inclusion3_thumb.jpg
+      url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
+    - heading: Unlocking Growth through Diversity and Inclusion
+      text: (Co-Author) Refugee Inclusion in the Workplace - successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
+      img: img/content/refugee_thumb.jpg
+      url: https://daliakatan.com/for-you/report-refugee
+    - heading: Team Performance in the Future of Work
+      text: (Co-Author)How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
+      img: img/content/team_thumb.jpg
+      url: https://daliakatan.com/for-you/report-teams
+    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 2)'
+      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform">Get notified when it's live.</a>
+      img: img/content/inclusion2_soon_thumb.jpg
+      url: https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform
+    - heading: More D&I Resources 
+      text: ''
+      img: img/content/more_thumb.jpg
+      url: https://daliakatan.com/inclusion
+
+
+
+services2:
+  heading: Productivity & Sabbaticals
+  subheading: " " 
+  service:
+    - heading: Trail Mix Method
+      text: (Author) Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done.
+      img: img/content/TMM_thumb.jpg
+      url: https://daliakatan.com/trailmix
+    - heading: Do Now Generator
+      text: (Creator) A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time.
+      img: img/content/donow_thumb.jpg
+      url: https://daliakatan.com/do-now
+    - heading: Sabbatical Update
+      text: (Author) A raw, honest account of my experience leaving a full-time job, embarking on a creative sabbatical, and redesigning my life around curiosity.
+      img: img/content/update1_thumb.jpg
+      url: https://daliakatan.com/update-1
+
+
+services3:
+  heading: Miscellaneous
+  subheading: " " 
+  service:
+    - heading: Challah Baking
+      text: (Author) Challah is a traditional Jewish bread and is a huge part of my weekly ritual! Here's a recipe I love and a link to join my class in SF
+      img: img/content/challah_thumb.jpg
+      url: https://daliakatan.com/challah
+
+
+
+
 contentarea:
   heading: Life Hacks & Gifts
   subheading: ''
@@ -51,60 +112,3 @@ referrals:
 
 
 
-services1:
-  heading: Diversity & Inclusion
-  subheading: ""
-  service:
-    - heading: Unlocking Growth through Diversity and Inclusion
-      text: Refugee Inclusion in the Workplace - successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
-      img: img/content/refugee_thumb.jpg
-      url: https://daliakatan.com/for-you/report-refugee
-    - heading: Team Performance in the Future of Work
-      text: How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
-      img: img/content/team_thumb.jpg
-      url: https://daliakatan.com/for-you/report-teams
-    - heading: 'Podcast: How to Create More Inclusive Workplaces'
-      text: 'Way We Lead Podcast S1E4: Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. We also start to ask what it looks like to be a champion for underrepresented folks when we have a seat at the table. '
-      img: img/content/inclusion3_thumb.jpg
-      url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
-    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
-      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
-      img: img/content/inclusion1_thumb.jpg
-      url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
-    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 2)'
-      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform">Get notified when it's live.</a>
-      img: img/content/inclusion2_soon_thumb.jpg
-      url: https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform
-    - heading: More D&I Resources 
-      text: ''
-      img: img/content/more_thumb.jpg
-      url: https://daliakatan.com/inclusion
-
-
-
-services2:
-  heading: Productivity & Sabbaticals
-  subheading: " " 
-  service:
-    - heading: Trail Mix Method
-      text: Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than disclipline to get things done.
-      img: img/content/TMM_thumb.jpg
-      url: https://daliakatan.com/trailmix
-    - heading: Do Now Generator
-      text: A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time.
-      img: img/content/donow_thumb.jpg
-      url: https://daliakatan.com/do-now
-    - heading: Sabbatical Update
-      text: A raw, honest account of my experience leaving a full-time job, embarking on a creative sabbatical, and redesigning my life around curiosity.
-      img: img/content/update1_thumb.jpg
-      url: https://daliakatan.com/update-1
-
-
-services3:
-  heading: Miscellaneous
-  subheading: " " 
-  service:
-    - heading: Challah Baking
-      text: Challah is a traditional Jewish bread and is a huge part of my weekly ritual! Here's a recipe I love and a link to join my class in SF
-      img: img/content/challah_thumb.jpg
-      url: https://daliakatan.com/challah
