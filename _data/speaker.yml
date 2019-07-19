@@ -25,12 +25,18 @@ clients:
 
 
 photos:
+  - img: img/about/speaking5.jpg
+    caption: ''
+    maxwidth: 360px
   - img: img/about/speaking3.jpg
+    caption: ''
+    maxwidth: 360px
+  - img: img/about/speaking4.jpg
     caption: ''
     maxwidth: 360px
   - img: img/about/speaking1.jpg
     caption: ''
     maxwidth: 360px
-  - img: img/about/speaking4.jpg
+  - img: img/about/speaking6.jpg
     caption: ''
     maxwidth: 360px
