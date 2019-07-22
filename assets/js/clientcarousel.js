@@ -52,16 +52,20 @@ $(document).ready(function(){
     variableWidth: true,
     adaptiveHeight: true,
     responsive: [
-      {
 
-        breakpoint: 500,
+          {
+        breakpoint: 600,
         settings: {
-          slidestoshow:1,
+          slidesToShow: 1,
+          slidesToScroll: 2
         }
+      },
+      {
         breakpoint: 350,
         settings: "unslick"
         
       }
+
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
