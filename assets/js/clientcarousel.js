@@ -59,8 +59,7 @@ $(document).ready(function(){
           slidestoshow:1,
         }
         breakpoint: 350,
-        settings: {
-          unslick
+        settings: "unslick"
         }
       }
       // You can unslick at a given breakpoint now by adding:
