@@ -60,7 +60,7 @@ $(document).ready(function(){
         }
         breakpoint: 350,
         settings: "unslick"
-        }
+        
       }
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
