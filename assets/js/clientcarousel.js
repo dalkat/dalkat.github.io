@@ -51,6 +51,17 @@ $(document).ready(function(){
     slidesToShow: 1,
     variableWidth: true,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 350,
+        settings: {
+          unslick
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 });
 
