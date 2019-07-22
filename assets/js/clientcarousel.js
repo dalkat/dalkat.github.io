@@ -53,6 +53,11 @@ $(document).ready(function(){
     adaptiveHeight: true,
     responsive: [
       {
+
+        breakpoint: 500,
+        settings: {
+          slidestoshow:1,
+        }
         breakpoint: 350,
         settings: {
           unslick
