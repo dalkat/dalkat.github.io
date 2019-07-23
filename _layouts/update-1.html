@@ -139,14 +139,14 @@ layout: default-sub
 
           <div class="col-lg-1 col-md-1" style="line-height: 2;"></div>
           <div class="col-lg-10 col-md-10 col-sm-12 col-12" style="line-height: 2;">            
-            <p><h2>Highlight real</h2><small>If viewing on mobile, best viewed in horizontal-mode! </small></p>
+            <p><h2>Highlight real</h2><small>If viewing on mobile, best viewed horizontal! </small></p>
           </div>
 
               <div class="blogcarousel slider">
                 {%- for client in site.data.blog.feb19 -%}
                 {% assign ws = '' %}
                 <div class="slide">
-                    <center><img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:350px; padding:5px 20px; margin:0 20px!important;"><br><P style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
+                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }}; width:90%;">{{assets_path}}{{ client.caption }}</P></center>
                 </div>
                 {%-  endfor -%}
               {% assign ws = '' %}
