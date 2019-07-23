@@ -651,3 +651,18 @@ button[type=submit] {
 .instalinks a:hover {
     color: #e0e0e0;
   }
+
+
+.blogphoto {
+  height:350px; 
+  width:auto
+  padding:5px 20px; 
+  margin:0 20px!important;
+}
+
+@media screen and (max-width:320px) {
+    .blogphoto {
+        width: 300px;
+        height: auto;
+    }
+}
