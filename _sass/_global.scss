@@ -655,12 +655,12 @@ button[type=submit] {
 
 .blogphoto {
   height:350px; 
-  width:auto
+  width:auto;
   padding:5px 20px; 
   margin:0 20px!important;
 }
 
-@media screen and (max-width:320px) {
+@media (max-width:320px) {
     .blogphoto {
         width: 300px;
         height: auto;
