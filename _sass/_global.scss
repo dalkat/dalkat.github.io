@@ -660,18 +660,20 @@ button[type=submit] {
   margin:0 20px!important;
 }
 
-@media (max-width:350px) {
+
+@media (max-width:415px) {
     .blogphoto {
-        width: 250px;
+        width: 300px;
         height: auto;
         padding: 0;
         margin:0 10px!important;
     }
 }
 
-@media (max-width:415px) {
+
+@media (max-width:350px) {
     .blogphoto {
-        width: 300px;
+        width: 250px;
         height: auto;
         padding: 0;
         margin:0 10px!important;
