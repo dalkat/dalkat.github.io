@@ -653,16 +653,18 @@ button[type=submit] {
   }
 
 
-.blogphoto {
+.blogphoto img {
   height:350px; 
   width:auto;
   padding:5px 20px; 
   margin:0 20px!important;
 }
 
-@media (max-width:320px) {
-    .blogphoto {
-        width: 300px;
+@media (max-width:400px) {
+    .blogphoto img {
+        width: 250px;
         height: auto;
+        padding: 0;
+        margin:0 10px!important;
     }
 }

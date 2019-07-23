@@ -146,7 +146,7 @@ layout: default-sub
                 {%- for client in site.data.blog.feb19 -%}
                 {% assign ws = '' %}
                 <div class="slide">
-                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }}; width:90%;">{{assets_path}}{{ client.caption }}</P></center>
+                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
                 </div>
                 {%-  endfor -%}
               {% assign ws = '' %}
