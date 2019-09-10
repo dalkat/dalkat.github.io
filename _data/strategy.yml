@@ -24,7 +24,7 @@ clients:
 
 
 services:
-  heading: Consulting Services
+  heading: Strategy Services
   subheading: 
   service:
     - icon: fa fa-lightbulb-o
@@ -32,8 +32,5 @@ services:
       text: With over five years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with your team to define and deliver innovative new business ambitions, concepts, and models. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
     - icon: fa fa-laptop
       heading: Brand Design & Storytelling
-      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Marketing & Social Media</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
-    - icon: fa fa-users
-      heading: Future of Work & Diversity
-      text: Diverse teams consistently outperform in the market, offering both greater creativity, increased productivity, and improved decisionmaking, as well as meaningful opportunities to build empathy and understanding across groups. With my expertise in Future of Work, <a href="https://www2.deloitte.com/insights/us/en/topics/talent/business-performance-improvement/process-redesign.html" target="_blank">team productivity</a>, and <a href="https://www2.deloitte.com/content/dam/insights/us/articles/4988_a-new-home-at-work/DI_A-new-home-at-work.pdf" target="_blank">diversity programs</a> that bridge gaps, I can help you with&colon; <br><ul id="services"><li class="services">Public Speaking Engagements</li><li class="services">Work Practice Redesign</li><li class="services">Refugee & Minority Workplace Inclusion</li><li class="services">Workplace Integration for Bridgebuilding</li></ul>
+      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Startup Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
   btn: Schedule a consult
