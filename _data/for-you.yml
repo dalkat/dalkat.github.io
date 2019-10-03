@@ -57,9 +57,13 @@ services3:
   subheading: " " 
   service:
     - heading: Challah Baking
-      text: (Author) Challah is a traditional Jewish bread and is a huge part of my weekly ritual! Here's a recipe I love and a link to join my class in SF
+      text: (Author) Challah is a traditional Jewish bread and is a huge part of my weekly ritual! Here's a recipe I love and a link to join my class in SF.
       img: img/content/challah_thumb.jpg
       url: https://daliakatan.com/challah
+    - heading: 4 Life Lessons From a 10-Year-Old
+      text: (Author) Let's return to our childhood wisdom. 
+      img: img/content/ryanlessons_thumb.jpg
+      url: https://medium.com/@dkatan77/4-life-lessons-from-a-10-year-old-401503c7eb32
 
 
 
