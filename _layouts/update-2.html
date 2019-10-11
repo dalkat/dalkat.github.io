@@ -94,17 +94,8 @@ layout: default-sub
 
             </ol></p><br>
 
-<br><p><h2>Some snippets</h2>
-            	<div class="blogcarousel slider">
-                {%- for client in site.data.blog.oct19 -%}
-                {% assign ws = '' %}
-                <div class="slide">
-                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
-                </div>
-                {%-  endfor -%}
-              {% assign ws = '' %}
-              </div>
-<BR><BR>
+<BR>
+<center><img class="blogphoto img-fluid d-block mx-auto" src="/img/blog/12.jpg" alt=""><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%;">Sunset outside Joshua Tree, in our little, tiny, 100% off-the-grid Airbnb (April, 2019)</P></center><br><BR>
 
             <H5><b>Highlights and favorite moments</b></h5>
 
@@ -126,9 +117,9 @@ layout: default-sub
 			<li><b>I had a lot of fun freelancing, too.</b> I worked on eight freelance projects - 50% of which were the work I wanted to do (consulting startups) and 50% of which were my 'cash cow' (web design). Outside of freelancing, I also got to play around with other income sources, like becoming a GLG/Clarity expert and being a paid speaker on the topics of diversity and inclusion and innovation. It taught me a lot about how our time-value fluctuates at different times in our lives and how that doesn't discredit 'knowing your worth'. There were times I prioritized fun income sources (research interviews, Airbnb Experiences) and other times where I prioritized lucrative ones. I'll write about these, and the passive income ideas, more fully in another post (you'll get an email if you're on <a href="https://forms.gle/U6SYz1QxTACXAKgP8" target="_blank">this</a> list).</li>
 
             </ul></p><br>
-<BR>
-<center><img class="blogphoto img-fluid d-block mx-auto" src="/img/blog/12.jpg" alt=""><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%;">Sunset outside Joshua Tree, in our little, tiny, 100% off-the-grid Airbnb (April, 2019)</P></center><br><BR>
 
+<BR>
+<center><img class="blogphoto img-fluid d-block mx-auto" src="/img/blog/13.jpeg" alt=""><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%;">Anyone who's been here can probably guess where this is: welcome to Zion! I think we slept in our rental car that night... (April, 2019)</P></center><br><BR>
 
             <h5><b>Lowlights and awkward moments</b></h5>
             <p><ul>
@@ -148,9 +139,6 @@ layout: default-sub
 </li>
 
             </ul></p><br>
-
-<BR>
-<center><img class="blogphoto img-fluid d-block mx-auto" src="/img/blog/13.jpeg" alt=""><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%;">Anyone who's been here can probably guess where this is: welcome to Zion! I think we slept in our rental car that night... (April, 2019)</P></center><br><BR>
 
 
 
@@ -236,11 +224,11 @@ layout: default-sub
 
           <div class="col-lg-1 col-md-1" style="line-height: 2;"></div>
           <div class="col-lg-10 col-md-10 col-sm-12 col-12" style="line-height: 2;">            
-            <p><h2>Highlight real</h2><small>If viewing on mobile, best viewed horizontal! </small></p>
+            <p><h2>Highlight reel</h2><small>If viewing on mobile, best viewed horizontal! </small></p>
           </div>
 
               <div class="blogcarousel slider">
-                {%- for client in site.data.blog.oct19-2 -%}
+                {%- for client in site.data.blog.oct19 -%}
                 {% assign ws = '' %}
                 <div class="slide">
                     <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px; height: 100%; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
