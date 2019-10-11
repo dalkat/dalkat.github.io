@@ -79,6 +79,17 @@ layout: default-sub
 
 
             <H5><b>Highlights and favorite moments</b></h5>
+
+            	<div class="blogcarousel slider">
+                {%- for client in site.data.blog.oct19 -%}
+                {% assign ws = '' %}
+                <div class="slide">
+                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
+                </div>
+                {%-  endfor -%}
+              {% assign ws = '' %}
+              </div>
+              
             <p><ul>
             
             <li><b>I got to explore a ton of new hands-on crafts and activities. </b>I picked up wood laser cutting, candlemaking, and bread-baking (challah, baguettes, bagels, pizza, you name it), among other things. That also led to me hosting a Pride rainbow challah bake and becoming an Airbnb Experiences host, teaching challah baking at team events and to tourists visiting from all over the world! I also got to spend my time in ways I wouldn't otherwise be able to. That includes volunteering at a community tea house in San Francisco called the Center SF (realizing how important being in a position of service is to me), taking yoga classes in the middle of the day, remaking my favorite (labor-intensive) Bukharian and Russiandishes from home, meeting other incredible people with flexible work-lives at cafes across the city, and swimming in the freezing Pacific on the one day it hit 95 degrees in San Francisco! (I'd be so bummed to have been stuck in an office for that one!!)
