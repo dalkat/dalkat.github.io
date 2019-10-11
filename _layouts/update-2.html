@@ -84,7 +84,7 @@ layout: default-sub
                 {%- for client in site.data.blog.oct19 -%}
                 {% assign ws = '' %}
                 <div class="slide">
-                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
+                    <center><img class="blogphoto img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt=""><br><P class="blogphoto" style="text-align:center; font-size:10px;height: 100%; max-width: {{assets_path}}{{ client.maxwidth }};">{{assets_path}}{{ client.caption }}</P></center>
                 </div>
                 {%-  endfor -%}
               {% assign ws = '' %}
