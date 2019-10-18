@@ -2,6 +2,7 @@
 body {
   overflow-x: hidden;
   @include body-font;
+  font-weight: 300;
 }
 
 p {
@@ -30,7 +31,7 @@ p {
 }
 
 b, strong {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 a {
