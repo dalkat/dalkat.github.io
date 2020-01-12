@@ -40,3 +40,9 @@ photos:
   - img: img/about/speaking6.jpg
     caption: ''
     maxwidth: 360px
+  - img: img/about/workshop1.jpeg
+    caption: ''
+    maxwidth: 360px
+  - img: img/about/workshop2.jpeg
+    caption: ''
+    maxwidth: 360px
