@@ -13,7 +13,7 @@ var quotes = [
 	'<b>Random act of kindness</b><Br>What could you do right now, big or small?',
 	'<b>Write a haiku</b><br>How about an ode to the weather, gratitude, or about what you had/are having for lunch?',
 	'<b>Take a 20-minute learning break</b><br>How about an online class on food photography or logo design on <a href="https://skl.sh/2TE2fKn" target="_blank">Skillshare</a> or Udemy, or a podcast on real estate investing?',
-	'<b>Do a 20 minute yoga flow</b><br>Have more time? See if there’s a class happening now at the gym!',
+	'<b>Do a 20 minute yoga flow</b><br>Try an app like my favorite, <a href="https://downdogapp.com/share" target="_blank">Down Dog</a>. Have more time? See if there’s a class happening now at the gym!',
 	'<b>Stretch for five minutes</b><br>Yes, for five minutes! Stretch your neck, roll your shoulders, touch your toes. Shake those hips out.',
 	'<b>Meditate</b><br>A five minute meditation on SimpleHabit or Headspace.',
 	'<b>Werk it out</b><br>Ten pushups, 16 squat steps with bands, ten bird dogs. Repeat.',
@@ -27,6 +27,8 @@ var quotes = [
 	'<b>Pick up a new instrument</b><br>Set simple goals: learn four chords, Youtube a tutorial for your favorite song!',
 	'<b>Learn Krav Maga.</b><br>But actually, a super useful thing to pick up. Take a class or watch some instructional videos on Youtube. And find a partner;)',
 	'<b>Oh Romeo, Romeo!</b><br>Put on a Shakespeare production with your roommates, or a virtual show with friends!',
-	'<b>Tackle some dough</b><br>Never too late to learn the art of breadmaking - it\'s not as hard as it sounds. <a href="https://daliakatan.com/challah/" target="_blank">Challah</a> is an easy one to start with!'
+	'<b>Tackle some dough</b><br>Never too late to learn the art of breadmaking - it\'s not as hard as it sounds. <a href="https://daliakatan.com/challah/" target="_blank">Challah</a> is an easy one to start with!',
+	'<b>Call (don\'t text)</b><br>Call someone you haven’t spoken to in a while - it\'ll make their day, and yours!',
+	'<b>Adopt a grandparent</b><br>Reach out to your local senior center and see if there\'s someone that could use a visitor - virtual or in-person! You can also look for a local <a href="https://holocaustsurvivorcare.org/our-subgrantees" target="_blank">Adopt a Survivor</a> program near you.',
 
 	]
