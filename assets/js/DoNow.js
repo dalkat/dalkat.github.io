@@ -24,11 +24,12 @@ var quotes = [
 	'<b>Nurture your creativity</b><br>Write a story about:<BR><ul style="text-align:left;"><li>A toddler\'s first day at school</li><li>A cat with the house to herself</li><li>The object 5 feet ahead of you</li></ul>',
 	'<b>Learn to knit, or sew.</b><br>Should\'ve paid attention in home ec but it\'s not too late!',
 	'<b>Practice a new language</b><br>If Duolingo doesn\'t work for you, try Youtube!',
-	'<b>Pick up a new instrument</b><br>Set simple goals: learn four chords, Youtube a tutorial for your favorite song!',
+	'<b>Pick up a new instrument</b><br>Set simple goals: learn four chords, or Youtube a tutorial to learn the first 15 seconds of your favorite song!',
 	'<b>Learn Krav Maga.</b><br>But actually, a super useful thing to pick up. Take a class or watch some instructional videos on Youtube. And find a partner;)',
 	'<b>Oh Romeo, Romeo!</b><br>Put on a Shakespeare production with your roommates, or a virtual show with friends!',
 	'<b>Tackle some dough</b><br>Never too late to learn the art of breadmaking - it\'s not as hard as it sounds. <a href="https://daliakatan.com/challah/" target="_blank">Challah</a> is an easy one to start with!',
 	'<b>Call (don\'t text)</b><br>Call someone you haven’t spoken to in a while - it\'ll make their day, and yours!',
 	'<b>Adopt a grandparent</b><br>Reach out to your local senior center and see if there\'s someone that could use a visitor - virtual or in-person! You can also look for a local <a href="https://holocaustsurvivorcare.org/our-subgrantees" target="_blank">Adopt a Survivor</a> program near you.',
+	'<b>Etch some wood</b><br>Try out <a href="https://amzn.to/3du8dr1" target="_blank">woodburning</a> - it\'s super relaxing and my sister swears by it. Check out her <a href="https://www.instagram.com/p/BzmJ9Mag6EA/" target="_blank">Frida piece</a>!'
 
 	]
