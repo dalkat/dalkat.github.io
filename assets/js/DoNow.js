@@ -30,6 +30,9 @@ var quotes = [
 	'<b>Tackle some dough</b><br>Never too late to learn the art of breadmaking - it\'s not as hard as it sounds. <a href="https://daliakatan.com/challah/" target="_blank">Challah</a> is an easy one to start with!',
 	'<b>Call (don\'t text)</b><br>Call someone you haven’t spoken to in a while - it\'ll make their day, and yours!',
 	'<b>Adopt a grandparent</b><br>Reach out to your local senior center and see if there\'s someone that could use a visitor - virtual or in-person! You can also look for a local <a href="https://holocaustsurvivorcare.org/our-subgrantees" target="_blank">Adopt a Survivor</a> program near you.',
-	'<b>Etch some wood</b><br>Try out <a href="https://amzn.to/3du8dr1" target="_blank">woodburning</a> - it\'s super relaxing and my sister swears by it. Check out her <a href="https://www.instagram.com/p/BzmJ9Mag6EA/" target="_blank">Frida piece</a>!'
+	'<b>Etch some wood</b><br>Try out <a href="https://amzn.to/3du8dr1" target="_blank">woodburning</a> - it\'s super relaxing and my sister swears by it. Check out her <a href="https://www.instagram.com/p/BzmJ9Mag6EA/" target="_blank">Frida piece</a>!',
+	'<b>Create a gratitude jar</b><br>Or a happy jar! Any time you have a moment of gratitude or happiness, write down the thought and throw it in the jar. It\'s so fun to review all your moments at the end of the year!',
+	'<b>Make a plant friend</b><br>Start a garden in your yard, or buy a potted plant for your room. They\'ll keep the air clean AND add great energy to your room.',
+	'<b>Create a gratitude jar</b><br>Or a happy jar! Any time you have a moment of gratitude or happiness, write down the thought and throw it in the jar. It\'s so fun to review all your moments at the end of the year!'
 
 	]
