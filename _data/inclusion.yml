@@ -1,0 +1,44 @@
+intro:
+  heading: Diversity & Inclusion<br>Resources
+  lead-in: Inclusion is a team sport!<br>These resources will help any team to make the shift from diversity to inclusion. 
+  btn: ''
+
+services1:
+  heading: Diversity, Inclusion & Teams
+  subheading: ''
+  service:
+    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
+      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
+      img: img/content/inclusion1_thumb.jpg
+      url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
+    - heading: 'Podcast: How to Create More Inclusive Workplaces'
+      text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
+      img: img/content/inclusion3_thumb.jpg
+      url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
+    - heading: Team Performance in the Future of Work
+      text: (Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
+      img: img/content/team_thumb.jpg
+      url: https://daliakatan.com/for-you/report-teams
+    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 2)'
+      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform">Get notified when it's live.</a>
+      img: img/content/inclusion2_soon_thumb.jpg
+      url: https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform
+
+
+services2:
+  heading: Refugee Hiring & Inclusion
+  subheading: ''
+  service:
+    - heading: An Employer’s Guide to Fostering Inclusion for Refugees in the Workplace
+      text: (Co-Author) Successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
+      img: img/content/refugee_thumb.jpg
+      url: https://daliakatan.com/for-you/report-refugee
+    - heading: U.S. Employer's Guide to Hiring Refugees
+      text: (Partner report) This guidebook, developed by the Tent Partnership in collaboration with Lutheran Immigration and Refugee Service, outlines essential information on the logistics, benefits, challenges, and solutions related to refugee recruitment and employment retention in the United States. 
+      img: img/content/refugeetent_thumb.jpg
+      url: https://www.tent.org/wp-content/uploads/2018/01/Tent_Guidebook_FINAL.pdf
+    - heading: The Economic Lives of Syrian Refugees in Europe 
+      text: (Partner report) This Deloitte report offers insight into the challenges that refugees face as they seek work in their host countries, and also examines how businesses in these countries view the hiring of refugees. The report aims to provide practical guidance to private actors on how to support refugees’ economic participation across Europe through employment.
+      img: img/content/refugeedeloitte_thumb.jpg
+      url: https://www2.deloitte.com/content/dam/Deloitte/global/Documents/About-Deloitte/talent-displaced-syrian-refugees-europe.pdf
+

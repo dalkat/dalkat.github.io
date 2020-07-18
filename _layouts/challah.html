@@ -1,0 +1,42 @@
+---
+layout: default-sub
+---
+{%- assign assets_path = "assets/" -%}
+{%- if site.assets_path -%}
+  {%- assign assets_path = site.assets_path -%}
+{%- endif -%}
+    {% assign ws = '' %}
+    <!-- Header -->
+    <!-- Header -->
+    <header class="longtext" style="background-image:none; background-color:#212529;">
+
+      <div class="container" style="padding-top:100px;">
+              <div class="intro-text" style="display:block; text-align:center; padding:40px 0; font-style: normal;">
+              <!-- <div class="intro-lead-in"> <b>Resources for You</b><br><small><small>Tools &middot; Guides  &middot; Referrals</small></small> -->
+                </div></div>
+        </div>
+    </header>
+    
+
+   <!-- Referrals-->
+    <section id="contentarea">
+      <div class="container">
+        <div class="row" style="text-align:left;display:inline;">
+
+            <h2>{{ site.data.challah.contentarea.heading }}</h2>
+            <h3 class="section-subheading text-muted">{{ site.data.challah.contentarea.subheading  }}</h3> 
+        </div>
+        <div class="row">
+          {%- for member in site.data.challah.referrals.members -%}
+          {% assign ws = '' %}
+          <div class="col-lg-4 col md-4 col-sm-4 col-xs-6 col-12" style="padding: 5px 20px; height:100%;">
+            <div class="referral" style="background-color:#ffffff;border: 3px #f3f3f3 solid;">
+              <a href="{{ member.url }}" target="_blank"><img class="img-fluid" src="{{ assets_path }}{{ member.img }}" alt="" style="width:100%;">
+              <h4>{{ member.name }}</h4></a>
+              <p class="text-muted" style="font-size: .8rem;">{{ member.text }}</p>
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,73 @@
+intro:
+  lead-in: '&nbsp;'
+  heading:  Strategist. <br>Designer. <br> Speaker.
+  btn: Work with Dalia
+
+about:
+  heading: About Dalia
+  subheading: I am a startup <a href="https://presently.fun" target="_blank">founder</a>, business strategist, and speaker and am passionate about nurturing curiosity and human connection in business and life design alike. <br><br>I have spent the better part of the last decade focused on design-led innovation, entre/intrapreneurship, storytelling, and business strategy and have published works on diversity-led growth and the future of work. <a href="https://daliakatan.com/about">Read full bio <small>►</small></a> <br><br>
+
+team:
+  members:
+    - name: Dalia Katan
+      role: Strategist, Designer, Speaker
+      img: img/team/1.jpg 
+      social-buttons:
+        - icon: fa fa-linkedin
+          url: 'http://linkedin.com/in/daliakatan'
+        - icon: fa fa-medium
+          url: 'http://medium.com/@dkatan77'
+        - icon: fa fa-twitter
+          url: 'http://twitter.com/daliakatan'
+  btn: Work with Dalia
+
+clients:
+  - img: img/logos/deloitte.png
+    url: ""
+  - img: img/logos/doblin.png
+    url: ""
+  - img: img/logos/ibm.png
+    url: "" 
+  - img: img/logos/ubs.png
+    url: ""
+  - img: img/logos/US.png
+    url: ""
+  - img: img/logos/c4e.png
+    url: ""
+  - img: img/logos/princeton.png
+    url: ""
+  - img: img/logos/thuzio.png
+    url: ""
+
+services:
+  heading: Strategy Services
+  subheading: 
+  service:
+    - icon: fa fa-lightbulb-o
+      heading: Innovation & Growth Strategy
+      text: With over five years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with your team to define and deliver innovative new business ambitions, concepts, and models. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
+    - icon: fa fa-laptop
+      heading: Brand Design & Storytelling
+      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Startup Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
+
+  btn: Learn more
+
+
+speaking:
+  heading: DEI Speaking Engagements
+  subheading: As a first-generation American and innovation strategist, I am a champion for the power of diversity and human connection to unlock untapped growth for companies. <a href="https://daliakatan.com/speaker">Read more <small>►</small></a>
+  btn: Invite to speak
+
+portfolio:
+  heading: Portfolio
+  subheading: Below is a sample of over 40 client engagements in innovation strategy, brand design, and workplace diversity. Companies I've worked with have ranged from early-stage startups in the blockchain and energy spaces to Fortune-100 tech, consumer goods, and retail companies. 
+  btn: 
+
+testimonials:
+  heading: Client Testimonials
+  subheading: 
+  btn: Schedule a consult
+
+contact:
+  heading: Get in touch
+  subheading: Let's brainstorm over tea and create something amazing together! <br>Shoot me a message below, or schedule a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;" style="color:#ff453c;">consultation</a>.

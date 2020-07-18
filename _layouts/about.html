@@ -1,0 +1,176 @@
+---
+layout: default-sub
+---
+{%- assign assets_path = "assets/" -%}
+{%- if site.assets_path -%}
+  {%- assign assets_path = site.assets_path -%}
+{%- endif -%}
+    {% assign ws = '' %}
+    <!-- Header -->
+    <!-- Header -->
+
+    <header class="dramatic" style="">
+
+      <div class="container" style="padding-top:100px;">
+
+      <div class="intro-text">
+
+                <center><div class="dalia-button"> </div></center>
+                
+              <div class="intro-heading">{{ site.data.about.intro.heading }}</div>
+               <div class="intro-lead-in">{{ site.data.about.intro.lead-in }}<br><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform" target="_blank" style="margin-top:20px; font-size: 16px;    padding: 5px 20px;    font-weight: 100;    font-style: normal;"><small>Subscribe</small></a>
+                </div></div>
+        </div>
+    </header>
+
+<!--
+   <section class="blog bg-light" style="padding-top:35px;padding-bottom:25px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1 col-md-1" style="line-height: 2;"></div>
+          <div class="col-lg-10 col-md-10 col-sm-12 col-12" style="line-height: 2;">
+            <p><i><SMALL>Below is a collection of random things I've shared over the last few months - I'm just playing so no rhyme or reason just yet :) </SMALL></i></p>
+          </div>
+          </div>
+        </div>
+      </section> 
+-->
+
+   <!-- About -->
+   <div class="row" style="width:100%; margin-top:70px;">
+
+          <div class="col-sm-4">
+             {%- for member in site.data.home.team.members -%}
+             {% assign ws = '' %}
+              <div class="team-member" style="">
+              <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:20px;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <ul class="list-inline social-buttons">
+                {%- for sm in member.social-buttons -%}
+                {% assign ws = '' %}
+                <li class="list-inline-item">
+                  <a href="{{ sm.url }}" target="_blank">
+                    <i class="{{ sm.icon }}"></i>
+                  </a>
+                </li>
+                {%- endfor -%}
+              {% assign ws = '' %}
+              </ul>
+              
+          {%- endfor -%}
+        {% assign ws = '' %}
+              
+            </div>
+          </div>
+
+
+          <div class="col-md-7 col-xs-12 text-left" style="
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-bottom: 80px;
+    ">
+<p class="section-subheading text-muted" style="font-size:14px;font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  I am an entrepreneur, business strategist, and public speaker who uses empathetic design to help startups and corporates launch, grow, and scale their businesses. .<br><br>
+  
+  I am currently the CEO/Founder of <a href="https://presently.fun" target="_blank">Presently</a> and a startup advisor. I previously consulted with Doblin Innovation and Deloitte where I served over 25 clients, working hand-in-hand with management at Fortune-500 companies and startups alike to design strategies that engage consumers, transform organizations and teams, and drive meaningful growth. 
+
+  I spearheaded Doblin Innovation's expansion to the West Coast and was also selected for an innovation fellowship with the Center for the Edge in 2016. Prior to Deloitte, I led marketing and user experience at several e-commerce and media technology startups, held internships at IBM and UBS, and ran a graphic and web design business that served over 4M annual users. 
+
+  <br><br>Influenced by my own family's refugee journey, my passion projects center on human connection, bridging divides, and sharing the power of diversity through talks and workshops. I co-founded Deloitte's Refugee Community of Interest and launched an offering on refugee integration in the workplace, backed by a $450K grant from Deloitte leadership. I've authored publications on the future of work, inclusion in the workplace, and diversity. Previously, I interned at the U.S. House of Representatives. 
+
+  <br><br>I received my BA from Princeton University, where I studied international affairs, entrepreneurship, and human-centered design, and founded Princeton’s marketing and filmmaking organizations.</p>
+          </div>
+
+          <br><BR>
+    <!-- Clients -->
+              <div class="clientcarousel slider">
+                {%- for client in site.data.home.clients -%}
+                {% assign ws = '' %}
+                <div class="slide" style="height:50px;">
+                    <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:100%; padding:5px 20px;">
+                </div>
+                {%-  endfor -%}
+              {% assign ws = '' %}
+              </div><br>
+        </div>
+
+<!--other categories-->
+
+<div class="row">
+<div class="col-sm-12 col-lg-4" style="padding: 5%;   background-color: #f7f7f7;transition: all 0.3s;">
+  <div>
+    <h3 class="text-muted"><span style="text-align: center;"><em>Areas of specialty</em></span>  </h3>
+    <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4"><li>Human-centered Design</li>
+      <li>Innovation & Growth Strategy</li>
+      <li>Growth Ambition Definition</li>
+      <li>Brand Design & Storytelling</li>
+      <li>Future of Work & Workplace Inclusion</li>
+      <li>Startup advisory</li>
+      <li>Corporate innovation</li></ul></h5>
+  </div>
+</div>
+
+
+<div class="col-sm-12 col-lg-4" style="padding: 5%; background-color: #f1f1f1;transition: all 0.3s;">
+  <div>
+    <h3 class="text-muted"><span style="text-align: center;"><em>Recent & upcoming speaking engagements</em></span></h3>
+            <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
+          	<li><b>Connection and Networks in the Digital Economy</b><br>Guest Lecturer, Princeton University (Nov. 2019)</li>
+          	<li><b>Fostering Understanding & Inclusion in Israel-Palestine</b><br>Speaker, IPF Atid (Oct. 2019)</li>
+          	<li><b>Introduction to Human-Centered Design</b><br>Speaker & Workshop Leader, NameCoach Inclusive Excellence Fellowship (Oct. 2019)</li>
+            <li><b>The Secret Weapon to Bridging Deep Cultural Divides</b><br>Speaker, Women Design Talks (July 2019)</li>
+            <li><b>How to Create More Inclusive Workplaces</b><br>Podcast Guest, Way We Lead Podcast <a href="https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan" target="_blank">(July 2019)</a></li>
+            <li><b>Q&A: Creative Sabbaticals</b><br>Interview Guest, Princeton Keller Center for Entrepreneurship (Apr. 2019)</li>
+            <li><b>Using Workplace Diversity to Bridge Divides</b><br>Speaker, Deloitte D-Talks (Aug. 2018)</li></ul>
+            <b><a href="https://daliakatan.com/speaker">View more here</a></b></h5>
+  </div>
+</div>
+
+<div class="col-sm-12 col-lg-4" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
+  <div>
+    <h3 class="text-muted"><span style="text-align: center;"><em>Recent publications</em></span></h3>
+            <h5 style="font-size:1rem!important;"><ul class="text-muted" style="line-height: 1.4">
+              
+              <li><b>Diversity to Inclusion: 9 Steps You Can Take to Unlock Your Company’s Competitive Edge</b><br>Medium (<a href="https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49" target="_blank">2019</a>)</li>
+              <li><b>A New Home at Work: An Employer's Guidebook to Fostering Inclusion for Refugee Employees</b><br>Deloitte (<a href="https://daliakatan.com/for-you/report-refugee" target="_blank">2019</a>)</li>
+              <li><b>Business Practice Redesign & The Future of Work: Moving From Best to Better and Better</b><br>Deloitte Center for the Edge (<a href="https://daliakatan.com/for-you/report-teams" target="_blank">2018</a>)</li>
+              <li><b>Entrepreneurial Finance: Uber's Path to Success (Case Study)</b><br>MIT Press (<a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">2014</a>)</li>
+              <li><b>Rethinking Productivity: Channeling Energy and Flow Over Discipline to Get Things Done</b><br>DaliaKatan.com (<a href="https://daliakatan.com/trailmix/" target="_blank">2019</a>)</li>
+              <li><b>Building a Shared Israeli Society: Improving Arab-Jewish Relations in Israel Through Workforce Integration</b><br>Princeton University (2015)</li>
+              
+          </ul></h5>
+  </div>
+</div>
+</div>
+
+<!-- Contact -->
+<section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-left">
+            <h2 class="section-heading text-uppercase">Get in touch</h2>
+            <h3 class="section-subheading" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:white; margin-bottom:50px;">Let's brainstorm over tea and create something amazing together! <br>Shoot me a message below, or schedule a phone <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script><a href="" onclick="Calendly.showPopupWidget('https://calendly.com/daliakatan');return false;" style="color:#ff453c;">consultation</a>.</h3>
+          </div>
+        </div>
+
+        <div class="row" style="display:block; text-align:left;">
+          <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12"  style="display:inline-block;">
+                            {% assign ws = '' %}
+                            {%- if page.layout == 'thanks' -%}
+                             <p style="text-muted" style="padding: 4px 0; text-align:center; font-size:16px; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</p>
+
+                            {%- endif -%}
+              <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <input type="text" name="name" placeholder="Your full name"required><br>
+                <input type="email" name="_replyto" placeholder="Your email" required><br>
+                <div class="customdropdown">
+                  <select name="_subject" class="embedcontact"><option>Select a Subject</option><option>Consulting Inquiry</option><option>Workshop Inquiry</option><option>Speaking Engagement</option><option>Something Else</option></select></div> 
+                <textarea name="message" placeholder="Your message" class="contact" required></textarea><br>
+                <input type="hidden" name="_next" value="https://daliakatan.com/thanks#contact"/>
+                <button type="submit" class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger">Send</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
