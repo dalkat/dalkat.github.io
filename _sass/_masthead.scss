@@ -2,7 +2,7 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg-720.jpg');
+  background-image: url('');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: bottom center;
@@ -19,11 +19,11 @@ header.masthead {
       @include serif-font;
     }
     .intro-heading {
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
-      line-height: 45px;
+      line-height: auto;
       margin-bottom: 235px;
-      text-shadow: 5px 5px 10px #0e0e0e;
+      text-shadow: 2px 2px 2px #4f2d69;
       @include heading-font;
     }
   }
@@ -46,12 +46,12 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 82px;
+        font-size: 40px;
         font-weight: 700;
-        line-height: 90px;
+        line-height: auto;
         letter-spacing: -1px;
         margin-bottom: 60px;
-        text-shadow: 5px 5px 10px #0e0e0e;
+        text-shadow: 2px 2px 2px #4f2d69;
         @include heading-font;
       }
     }
@@ -62,7 +62,7 @@ header.masthead {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg-720.jpg');
+  background-image: url('');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: bottom center;
@@ -79,11 +79,11 @@ header.masthead {
       @include serif-font;
     }
     .intro-heading {
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
-      line-height: 45px;
+      line-height: auto;
       margin-bottom: 135px;
-      text-shadow: 5px 5px 10px #0e0e0e;
+      text-shadow: 2px 2px 2px #4f2d69;
       @include heading-font;
     }
   }
