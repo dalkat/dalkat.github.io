@@ -1,7 +1,7 @@
 intro:
   lead-in: '&nbsp;'
   heading:  Hi 👋 I’m Dalia. I’m the founder of Presently 🎁 and am stoked to get to know you!
-  btn: Work with Dalia
+  btn: Get to know me
 
 about:
   heading: About Dalia
@@ -11,7 +11,7 @@ about:
 team:
   members:
     - name: Dalia Katan
-      role: Strategist, Designer, Speaker
+      role: Founder, CEO @ Presently
       img: img/team/1.jpg 
       social-buttons:
         - icon: fa fa-linkedin

@@ -14,15 +14,15 @@ nav:
   - title: Contact
     url: 'https://daliakatan.com/#contact'
 
-copyright: Copyright &copy; Dalia Katan 2020
+copyright: Copyright &copy; Dalia Katan 2021
 
 social-buttons:
+  - icon: fa fa-twitter
+    url: 'http://twitter.com/daliakatan'
   - icon: fa fa-linkedin
     url: 'http://linkedin.com/in/daliakatan'
   - icon: fa fa-medium
     url: 'http://medium.com/@dkatan77'
-  - icon: fa fa-twitter
-    url: 'http://twitter.com/daliakatan'
 
 quicklinks:
   - title:  
