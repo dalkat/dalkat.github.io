@@ -43,7 +43,7 @@ layout: default-sub
              {%- for member in site.data.home.team.members -%}
              {% assign ws = '' %}
               <div class="team-member" style="">
-              <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:20px;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:20px;border-radius: 00px 20px 20px 0px;" src="{{ assets_path }}{{ member.img }}" alt="">
               <ul class="list-inline social-buttons">
                 {%- for sm in member.social-buttons -%}
                 {% assign ws = '' %}
@@ -65,12 +65,14 @@ layout: default-sub
 
           <div class="col-md-7 col-xs-12 text-left" style="
     width: 100%;
-    padding-top: 80px;
+    padding-top: 20px;
     padding-left: 5%;
     padding-right:5%;
     padding-bottom: 80px;
     ">
-<p class="section-subheading text-muted" style="font-size:14px;font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+<p class="section-subheading text-muted" style="font-size:14px;">
+  <h4>Hey there 👋</h4>
+
   I am the CEO and Founder of <a href="https://getpresently.com" target="_blank">Presently</a> 🎁 and am insanely passionate about community, curiosity, and connection. <br><br>
   
   In a past life as a management consultant, I used empathetic design to help startups and corporates launch, grow, and scale their businesses. Most recently in my own practice, I worked with 10 companies to revamp (or build for the first time!) a strong growth and brand strategy. I previously consulted with Doblin Innovation and Deloitte where I served over 25 clients, working hand-in-hand with management at Fortune-500 companies to design strategies that drive meaningful growth through strengthened consumer experiences and new product innovation. 
