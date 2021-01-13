@@ -47,7 +47,7 @@ layout: default
         {% assign ws = '' %}
           <div class="col-md-7 offset-md-1 col-sm-12 text-left">    
             <h2 class="section-heading" style="margin-top:15px; margin-bottom:25px;">{{ site.data.home.about.heading }}</h2>
-            <p class="section-subheading text-muted" style="font-size:18px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{ site.data.home.about.subheading  }}</p>
+            <p class="section-subheading text-muted" style="font-size:18px;">{{ site.data.home.about.subheading  }}</p>
 <!--hiding this placement of social for now
 
           {%- for member in site.data.home.team.members -%}
@@ -284,7 +284,7 @@ layout: default
         <div class="row">
           <div class="col-lg-12 text-left">
             <h2 class="section-heading">{{ site.data.home.contact.heading }}</h2>
-            <h3 class="section-subheading" style="font-size:15px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; color:white; margin-bottom:50px;">{{ site.data.home.contact.subheading }}</h3>
+            <h3 class="section-subheading" style="font-size:15px;  color:white; margin-bottom:50px;">{{ site.data.home.contact.subheading }}</h3>
           </div>
         </div>
 
@@ -295,7 +295,7 @@ layout: default
                              <p style="text-muted" style="padding: 4px 0; text-align:center; font-size:16px; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</p>
 
                             {%- endif -%}
-              <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+              <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; ">
                 <input type="text" name="name" placeholder="Your full name"required><br>
                 <input type="email" name="_replyto" placeholder="Your email" required><br>
                 <div class="customdropdown">
