@@ -148,8 +148,7 @@ header.donowbg {
 header.dramatic {
   text-align: center;
   color: white;
-  background: radial-gradient(circle at left top,rgb(233,22,140) 9%,rgb(247,82,84) 91%);
-  background-image: radial-gradient(circle at left top, rgb(233, 22, 140) 9%, rgb(247, 82, 84) 91%); 
+  background: $grey-900;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
