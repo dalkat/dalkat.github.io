@@ -19,6 +19,7 @@
     &:focus,
     &:hover {
       color: darken($primary, 10%);
+      text-shadow: 2px 2px 2px #ffffff;
     }
   }
   .navbar-nav {
