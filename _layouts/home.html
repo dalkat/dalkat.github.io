@@ -23,7 +23,7 @@ layout: default
         <div class="row">
           {%- for member in site.data.home.team.members -%}
           {% assign ws = '' %}
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-12" style="padding:40px;">
             <div class="team-member" style="margin-bottom:10px!important;">
               <img class="mx-auto" style="width:100%; border-radius:15px; height:auto; border:0; margin-bottom:30px;" src="{{ assets_path }}{{ member.img }}" alt="">
               <!-- <p><h4>{{ member.name }}</h4></p>
@@ -45,7 +45,7 @@ layout: default
           </div>
           {%- endfor -%}
         {% assign ws = '' %}
-          <div class="col-md-7 offset-md-1 col-sm-12 text-left">    
+          <div class="col-md-8 col-sm-12 text-left">    
             <h2 class="section-heading" style="margin-top:15px; margin-bottom:25px;">{{ site.data.home.about.heading }}</h2>
             <p class="section-subheading text-muted" style="font-size:18px;">{{ site.data.home.about.subheading  }}</p>
 <!--hiding this placement of social for now
