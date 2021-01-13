@@ -7,6 +7,8 @@ header.masthead {
   background-attachment: scroll;
   background-position: bottom center;
   background-color: #202429;
+  padding-top:50px;
+  padding-bottom:50px;
   @include background-cover;
   .intro-text {
     padding-top: 160px;
