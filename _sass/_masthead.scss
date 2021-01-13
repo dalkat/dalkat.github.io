@@ -26,6 +26,7 @@ header.masthead {
       line-height: auto;
       margin-bottom: 235px;
       text-shadow: 2px 2px 2px #b25fef;
+      max-width: 800px;
       @include heading-font;
     }
   }
@@ -46,7 +47,6 @@ header.masthead {
         font-style: italic;
         line-height: 40px;
         margin-bottom: 25px;
-      max-width: 800px;
         @include serif-font;
       }
       .intro-heading {
@@ -56,6 +56,7 @@ header.masthead {
         letter-spacing: -1px;
         margin-bottom: 60px;
         text-shadow: 2px 2px 2px #b25fef;
+      max-width: 800px;
         @include heading-font;
       }
     }
