@@ -1,0 +1,3 @@
+---
+layout: baguette-recipe
+---
