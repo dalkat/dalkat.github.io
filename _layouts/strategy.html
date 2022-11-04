@@ -95,8 +95,19 @@ layout: default-sub
 
           <div class="col-md-1"></div>
         </div>
+
+        <div class="row">
+          <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
+            <h4 class="service-heading" style="margin-top:0;">Brand Design & Storytelling</h4>
+            <p class="text-muted" style="font-size:14px; text-align:left;">Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies better tailor their brand to their customers and users. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Fundraising Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul></p>
+          </div>
+
+          <div class="col-md-1"></div>
+        </div>
+
          <!--  {%- for service in site.data.home.services.service -%}
-          {% assign ws = '' %}
+          <div class="row">
+            {% assign ws = '' %}
           <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
             <h4 class="service-heading" style="margin-top:0;">{{ service.heading }}</h4>
             <p class="text-muted" style="font-size:14px; text-align:left;">{{ service.text }}</p>
@@ -105,6 +116,7 @@ layout: default-sub
           <div class="col-md-1"></div>
           {%- endfor -%}
           {% assign ws = '' %} -->
+        <!-- </div> -->
         
       </div>
     </section>

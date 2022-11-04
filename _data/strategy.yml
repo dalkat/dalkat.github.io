@@ -33,7 +33,4 @@ services:
     - icon: fa fa-laptop
       heading: Brand Design & Storytelling
       text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies better tailor their brand to their customers and users. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Fundraising Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
-    - icon: fa fa-laptop
-      heading: Brand Design & Storytelling
-      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies better tailor their brand to their customers and users. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Fundraising Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
   btn: Schedule a consult
