@@ -45,17 +45,17 @@ services:
   subheading: 
   service:
     - icon: fa fa-lightbulb-o
-      heading: Innovation & Growth Strategy
-      text: With over five years of experience in management consulting and design-thinking, I have served over 25 companies ranging from Fortune-100 executives to early-stage startup founders. I can work with your team to define and deliver innovative new business ambitions, concepts, and models. Offerings include&colon;<br><ul id="services"><li class="services">Ideation Workshops</li><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Development</li><li class="services">Startup Advisory</li></ol>
+      heading: Product & Growth Strategy
+      text: I have worked with over 40 clients since 2016 ranging from Fortune-100 executives to early-stage startup founders. I can work with your team to define and deliver new product/business concepts, go-to-market approaches, and growth strategies in CPG, Web3, SaaS, fintech, social, and consumer/more. Offerings include&colon;<br><ul id="services"><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Redesign</li><li class="services">Startup Advisory & Fractional CPO</li><li class="services">Corporate Ideation Workshops</li></ol>
     - icon: fa fa-laptop
       heading: Brand Design & Storytelling
-      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies strengthen their brand by meeting consumers' expectations for personal, connected, and experience-driven engagements. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Startup Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
+      text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies better tailor their brand to their customers and users. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Fundraising Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
 
   btn: Learn more
 
 
 speaking:
-  heading: DEI Speaking Engagements
+  heading: Speaking Engagements
   subheading: As a first-generation American and innovation strategist, I am a champion for the power of diversity and human connection to unlock untapped growth for companies. <a href="https://daliakatan.com/speaker">Read more <small>►</small></a>
   btn: Invite to speak
 
