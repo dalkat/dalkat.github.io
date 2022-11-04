@@ -37,13 +37,13 @@ layout: default-sub
 -->
 
    <!-- About -->
-   <div class="row" style="width:100%; margin-top:70px;">
+   <div class="row" style="width:90%; margin: auto; margin-top:70px;">
 
           <div class="col-sm-4">
              {%- for member in site.data.home.team.members -%}
              {% assign ws = '' %}
               <div class="team-member" style="">
-              <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:20px;border-radius: 00px 20px 20px 0px;" src="{{ assets_path }}{{ member.img }}" alt="">
+              <img class="mx-auto" style="width:100%; height:auto; border:0; margin-bottom:20px;border-radius: 20px 20px 20px 20px;" src="{{ assets_path }}{{ member.img }}" alt="">
               <ul class="list-inline social-buttons">
                 {%- for sm in member.social-buttons -%}
                 {% assign ws = '' %}
@@ -71,7 +71,7 @@ layout: default-sub
     padding-bottom: 80px;
     ">
     <h4 >Hey there 👋</h4>
-<p class="section-subheading" style="font-size:16px; font-weight:200;">
+<p class="section-subheading" style="font-size:16px; font-weight:400; padding-top: 8px;">
   I am a senior product leader passionate about the ways we interact with the spaces around us: physical, digital, and social. What if our spaces not only understood but anticipated our needs? That is where I believe we find truly game-changing products.</p>
 
   <p>I'm currently CEO and Founder of <a href="https://getpresently.com" target="_blank">Presently</a>, a startup founded in 2019 to make group buying and gifting easier. I'm also an angel investor and a fractional Head of Product. Most recently, I also served as Chief Product Officer at Alexandria, a decentralized marketplace for authors to publish their works on-chain, and as co-Founder and Head of Product for Coven Swap and Coven Cats, two web3 projects in the Crypto Coven universe. </p>
@@ -80,7 +80,6 @@ layout: default-sub
 
   <p>Prior to consulting, I led marketing and user experience at several e-commerce and media technology startups. I also founded and scaled an online project to over 4M users in 2008, which is how I learned to code and design products. I received my Bachelors from Princeton University, where I studied international affairs, entrepreneurship, and human-centered design.</p>
 
-</p>
           </div>
 
           <br><BR>
