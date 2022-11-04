@@ -88,7 +88,14 @@ layout: default-sub
           </div>
         </div>
         <div class="row">
-          {%- for service in site.data.home.services.service -%}
+          <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
+            <h4 class="service-heading" style="margin-top:0;">Product & Growth Strategy</h4>
+            <p class="text-muted" style="font-size:14px; text-align:left;">I have worked with over 30 clients since 2016 ranging from Fortune-100 executives to early-stage startup founders. I can work with your team to define and deliver new product/business concepts, go-to-market approaches, and growth strategies in CPG, Web3, SaaS, fintech, social, and consumer/more. Offerings include&colon;<br><ul id="services"><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Redesign</li><li class="services">Startup Advisory & Fractional CPO</li><li class="services">Corporate Ideation Workshops</li></ol></p>
+          </div>
+
+          <div class="col-md-1"></div>
+        </div>
+         <!--  {%- for service in site.data.home.services.service -%}
           {% assign ws = '' %}
           <div class="col-md-5" style="border-left: 4px #dedede solid; padding-left:30px; margin-bottom:40px;">
             <h4 class="service-heading" style="margin-top:0;">{{ service.heading }}</h4>
@@ -97,8 +104,8 @@ layout: default-sub
 
           <div class="col-md-1"></div>
           {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
+          {% assign ws = '' %} -->
+        
       </div>
     </section>
 
