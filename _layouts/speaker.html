@@ -113,12 +113,12 @@ layout: default-sub
     <div>
       <h3 class="text-muted"><span style="text-align: center;"><em>Speaker: product & growth</em></span></h3>
           <h5 style="font-size:1rem!important;"><ul class="text-muted" style="font-weight: 200;  line-height: 20px;">
-            {%- for speaking-product in site.data.speaker.speaking-product -%}
+            {%- for gig in site.data.speaker.speaking-product -%}
             {% assign ws = '' %}
             <li style="padding-bottom: 10px;">
-              <span style="font-weight:400;">{{ speaking-product.title }}</span>&nbsp;
-              <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;"> {{ speaking-product.category }}</span><br>
-              {{ speaking-product.description }}
+              <span style="font-weight:400;">{{ gig.title }}</span>&nbsp;
+              <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;"> {{ gig.category }}</span><br>
+              {{ gig.detail }}
                 </li>
             {%-  endfor -%}
           {% assign ws = '' %}
