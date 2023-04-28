@@ -46,7 +46,7 @@ services:
   service:
     - icon: fa fa-lightbulb-o
       heading: Product & Growth Strategy
-      text: From Fortune-100s to early-stage startups, I've worked with over 40 clients spanning social, web3/blockchain, fintech, AI, health, and more. Together, we co-create new product/business concepts, go-to-market approaches, and growth strategies. Offerings include&colon;<br><ul id="services"><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Redesign</li><li class="services">Startup Advisory & Fractional CPO</li><li class="services">Corporate Ideation Workshops</li></ol>
+      text: From Fortune-100s to early-stage startups, I've worked with over 40 clients spanning social, web3/blockchain, fintech, AI, marketplaces, and more. Together, we co-create new product/business concepts, go-to-market approaches, and growth strategies. Offerings include&colon;<br><ul id="services"><li class="services">Consumer Insights & Ethnographic Research</li><li class="services">Concept Prototyping & Redesign</li><li class="services">Startup Advisory & Fractional CPO</li><li class="services">Corporate Ideation Workshops</li></ol>
     - icon: fa fa-laptop
       heading: Brand Design & Storytelling
       text: Leveraging a decade of experience in brand design, digital strategy, and storytelling, I help companies better design their brand or brand story to their customers, users, or stakeholders. Offerings include&colon;<br><ul id="services"><li class="services">Brand Voice & Storytelling</li><li class="services">Fundraising Pitch Design & Narrative</li><li class="services">User Experience Design</li><li class="services">Web Design and Development</li></ul>
