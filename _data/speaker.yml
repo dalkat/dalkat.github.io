@@ -23,6 +23,18 @@ clients:
   url: ""
 
 
+speaking-product:
+- title: Building Early-stage Startups & Adjusting to Market Signals
+  detail: Guest, The Prodcast (Dec. 2021)
+  category: Podcast
+- title: Startup Journey - 0 to 1, Retention, Virality
+  detail: Guest, BRAVE (June 2021)
+  category: Podcast
+- title: Entrepreneurship "AMA"
+  detail: Guest, Journal (June 2021)
+  category: AMA
+
+
 
 photos:
   - img: img/about/speaking5.jpg

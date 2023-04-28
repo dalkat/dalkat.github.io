@@ -9,7 +9,7 @@ layout: default-sub
     <!-- Header -->
     <!-- Header -->
 
-    <header class="dramatic" style="">
+    <header class="dramatic">
 
       <div class="container" style="padding-top:100px;">
 
@@ -113,15 +113,16 @@ layout: default-sub
     <div>
       <h3 class="text-muted"><span style="text-align: center;"><em>Speaker: product & growth</em></span></h3>
           <h5 style="font-size:1rem!important;"><ul class="text-muted" style="font-weight: 200;  line-height: 20px;">
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Building Early-stage Startups & Adjusting to Market Signals</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Podcast</span><br>Guest, The Prodcast (Dec. 2021)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Startup Journey: 0 to 1, Retention, Virality</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Podcast</span><br>Guest, BRAVE (June 2021)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Entrepreneurship "AMA"</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">AMA</span><br>Guest, Journal (June 2021)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Presently & Celebration</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Twitter Spaces</span><br>Live Audio Guest, Journal (June 2021)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Digital Networks and Growth</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">University</span><br>Guest Lecturer, Princeton University (Nov. 2020)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Changemakers: Dalia Katan </span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Podcast</span><br>Guest, Changemakers (Nov. 2020)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Human-Centered Design & Storytelling</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">University</span><br>Guest Lecturer, Princeton University (Nov. 2019)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Introduction to Human-Centered Design</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Workshop</span><br>Speaker & Workshop Leader, NameCoach Inclusive Excellence Fellowship (Oct. 2019)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">An Algorithm for Growth</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Workshop</span><br>Speaker, Princeton Social Entrepreneurship Conference (2015)</li></ul></h5>
+            {%- for speaking-product in site.data.speaker.speaking-product -%}
+            {% assign ws = '' %}
+            <li style="padding-bottom: 10px;">
+              <span style="font-weight:400;">{{ speaking-product.title }}</span>&nbsp;
+              <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;"> {{ speaking-product.category }}</span><br>
+              {{ speaking-product.description }}
+                </li>
+            {%-  endfor -%}
+          {% assign ws = '' %}
+          </ul></h5>
   </div>
   </div>
 
@@ -222,7 +223,7 @@ layout: default-sub
           <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12"  style="display:inline-block;">
                             {% assign ws = '' %}
                             {%- if page.layout == 'thanks' -%}
-                             <p style="text-muted" style="padding: 4px 0; text-align:center; font-size:16px; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</p>
+                             <p class="text-muted" style="padding: 4px 0; text-align:center; font-size:16px; font-weight:normal;"><i class="fa fa-check" aria-hidden="true"></i> &nbsp; &nbsp; Thanks for your message, I'll be in touch shortly!</p>
 
                             {%- endif -%}
               <form method="POST" action="https://formspree.io/dkatan.77@gmail.com" style="font-size:14px; font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
