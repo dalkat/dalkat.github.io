@@ -78,35 +78,7 @@ layout: default-sub
       </div>
     </section>
 
-<section id="speaking" class="bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- <h2 class="section-heading">{{ site.data.speaking.speaking.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.speaking.subheading }}</h3> -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-           
-            
-              <div class="blogcarousel slider">
-                {%- for client in site.data.speaker.photos -%}
-                {% assign ws = '' %}
-                <div class="slide">
-                    <center><img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="" style="height:350px; padding:5px 20px; margin:0 20px!important;"><br><P style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ photos.maxwidth }};">{{assets_path}}{{ photos.caption }}</P></center>
-                </div>
-                {%-  endfor -%}
-              {% assign ws = '' %}
-              </div>
-              <br><br>
-          </div>
 
-          </div>
-        
-      </div>
-      </div>
-    </section>
 <!--other categories-->
 <div class="row">
   <div class="col-sm-12 col-lg-4" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
@@ -127,21 +99,23 @@ layout: default-sub
   </div>
 
 
-
   <div class="col-sm-12 col-lg-4" style="padding: 5%; background-color: #f1f1f1;transition: all 0.3s;">
     <div>
       <h3 class="text-muted"><span style="text-align: center;"><em>Speaker: culture & other</em></span></h3>
           <h5 style="font-size:1rem!important;"><ul class="text-muted" style="font-weight: 200;  line-height: 20px;">
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Fostering Understanding & Inclusion in Israel-Palestine</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Event</span><br>Speaker, IPF Atid (Oct. 2019)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Bridging Cultural Divides at Work</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Conference</span><br>Speaker, Women Design Talks (July 2019)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">How to Create More Inclusive Workplaces</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Podcast</span><br>Guest, Way We Lead Podcast <a href="https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan" target="_blank">(July 2019)</a></li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Creative Sabbaticals</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Q&A</span><br>Interview Guest, Princeton Keller Center for Entrepreneurship (Apr. 2019)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Using Workplace Diversity to Bridge Divides</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Event</span><br>Speaker, Deloitte D-Talks (Aug. 2018)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Retaining Top Talent Through a Culture of Intrapreneurship</span> <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Event</span><br>Speaker, Deloitte (June 2018)</li>
-            <li style="padding-bottom: 10px;"><span style="font-weight:400;">Women in Marketing</span><span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;">Panel</span><br>Moderator, Princeton University (2015)</li>
+            {%- for gig in site.data.speaker.speaking-culture -%}
+            {% assign ws = '' %}
+            <li style="padding-bottom: 10px;">
+              <span style="font-weight:400;">{{ gig.title }}</span>&nbsp;
+              <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;"> {{ gig.category }}</span><br>
+              {{ gig.detail }}
+                </li>
+            {%-  endfor -%}
+          {% assign ws = '' %}
           </ul></h5>
   </div>
   </div>
+
 
 
   <div class="col-sm-12 col-lg-4" style="padding: 5%; background-color: #f7f7f7;transition: all 0.3s;">
@@ -161,6 +135,38 @@ layout: default-sub
     </div>
   </div>
 </div>
+
+
+<section id="speaking" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- <h2 class="section-heading">{{ site.data.speaking.speaking.heading }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.home.speaking.subheading }}</h3> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+       
+        
+          <div class="blogcarousel slider">
+            {%- for photo in site.data.speaker.photos -%}
+            {% assign ws = '' %}
+            <div class="slide">
+                <center><img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ photo.img }}" alt="" style="height:350px; padding:5px 20px; margin:0 20px!important;"><br><P style="text-align:center; font-size:10px; max-width: {{assets_path}}{{ photos.maxwidth }};">{{assets_path}}{{ photos.caption }}</P></center>
+            </div>
+            {%-  endfor -%}
+          {% assign ws = '' %}
+          </div>
+          <br><br>
+      </div>
+
+      </div>
+    
+  </div>
+  </div>
+</section>
+
 
 <!--
 <section class="bg-light" id="services">
