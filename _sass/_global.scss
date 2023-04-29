@@ -192,9 +192,9 @@ input[type="text"], input[type="email"] {
   font-size: 14px;
   outline: none;
   background-color:white;
-  font-weight: 200;
+  font-weight: 400;
   box-sizing:border-box;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   border:1px solid #fff;
   border-radius: 20px;
   margin-bottom:5px;
@@ -210,9 +210,9 @@ textarea.contact {
   font-size: 14px;
   outline: none;
   background-color:white;
-  font-weight: 200;
+  font-weight: 300;
   box-sizing:border-box;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   border:1px solid #fff;
   border-radius: 20px;
   margin-bottom:5px;
@@ -226,9 +226,9 @@ select.contact {
   font-size: 14px;
   outline: none;
   background-color:white;
-  font-weight: 200;
+  font-weight: 300;
   box-sizing:border-box;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   border:1px solid #fff;
   border-radius: 20px;
   margin-bottom:5px;
@@ -243,9 +243,9 @@ select.embedcontact {
   font-size: 14px;
   outline: none;
   background-color:white;
-  font-weight: 200;
+  font-weight: 300;
   box-sizing:border-box;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   border:0px;
   }
 
@@ -269,7 +269,7 @@ button[type=submit] {
   width:100%;
   border: none;
   border-radius: 20px;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   }
 
 

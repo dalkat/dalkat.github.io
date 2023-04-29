@@ -25,24 +25,24 @@ section#contact {
     box-shadow: none;
   }
   ::-webkit-input-placeholder {
-    font-weight: 200;
+    font-weight: 300;
     color: $gray-500;
     @include heading-font;
   }
   :-moz-placeholder {
-    font-weight: 200;
+    font-weight: 300;
     color: $gray-500;
     /* Firefox 18- */
     @include heading-font;
   }
   ::-moz-placeholder {
-    font-weight: 200;
+    font-weight: 300;
     color: $gray-500;
     /* Firefox 19+ */
     @include heading-font;
   }
   :-ms-input-placeholder {
-    font-weight: 200;
+    font-weight: 300;
     color: $gray-500;
     @include heading-font;
   }
