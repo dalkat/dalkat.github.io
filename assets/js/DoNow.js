@@ -12,7 +12,7 @@ var quotes = [
 	'<b>Take care of your skin</b><br>Make a face mask, <a href="https://amzn.to/2UdnaUw" target="_blank">exfoliate</a> your body, or lotion up!',
 	'<b>Random act of kindness</b><Br>What could you do right now, big or small?',
 	'<b>Write a haiku</b><br>How about an ode to the weather, gratitude, or about what you had/are having for lunch?',
-	'<b>Take a 20-minute learning break</b><br>How about an online class on food photography or logo design on <a href="https://skl.sh/2TE2fKn" target="_blank">Skillshare</a> or Udemy, or a podcast on real estate investing?',
+	'<b>Take a 20-minute learning break</b><br>How about an online class on food photography or logo design on <a href="https://skl.sh/2TE2fKn" target="_blank">Skillshare</a>, Udemy, or Masterclass, or a podcast on real estate investing?',
 	'<b>Do a 20 minute yoga flow</b><br>Try an app like my favorite, <a href="https://downdogapp.com/share" target="_blank">Down Dog</a>. Have more time? See if there’s a class happening now at the gym!',
 	'<b>Stretch for five minutes</b><br>Yes, for five minutes! Stretch your neck, roll your shoulders, touch your toes. Shake those hips out.',
 	'<b>Meditate</b><br>A five minute meditation on SimpleHabit or Headspace.',
@@ -33,6 +33,11 @@ var quotes = [
 	'<b>Etch some wood</b><br>Try out <a href="https://amzn.to/3du8dr1" target="_blank">woodburning</a> - it\'s super relaxing and my sister swears by it. Check out her <a href="https://www.instagram.com/p/BzmJ9Mag6EA/" target="_blank">Frida piece</a>!',
 	'<b>Create a gratitude jar</b><br>Or a happy jar! Any time you have a moment of gratitude or happiness, write down the thought and throw it in the jar. It\'s so fun to review all your moments at the end of the year!',
 	'<b>Make a plant friend</b><br>Start a garden in your yard, or buy a potted plant for your room. They\'ll keep the air clean AND add great energy to your room.',
-	'<b>Create a gratitude jar</b><br>Or a happy jar! Any time you have a moment of gratitude or happiness, write down the thought and throw it in the jar. It\'s so fun to review all your moments at the end of the year!'
-
+	'<b>Do a digital decluttering</b><br>Take some time to clean out your digital space by deleting old files, organizing your folders, and clearing out your inbox.',
+	'<b>Watch a TED Talk</b><br>Get inspired by a new idea or perspective by watching a TED Talk on a topic that interests you!',
+	'<b>Organize your pantry or fridge</b><br>Take some time to declutter and organize your pantry or fridge to make meal prep and cooking easier!',
+	'<b>Write a letter to your future self</b><br>Set some goals, reflect on your current life, and write a letter to your future self to read in a year (or 5!). Futureme.org is a great tool for that.',
+	'<b>Take a power nap</b><br>Set a timer for 20-30 minutes and take a power nap to boost your energy and productivity!',
+	'<b>Do a digital detox</b><br>Unplug from your devices for a few hours and spend some time doing an activity that doesn\'t involve screens!'
+	
 	]
