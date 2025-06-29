@@ -1,24 +1,28 @@
 intro:
-  heading: Diversity & Inclusion<br>Resources
-  lead-in: Inclusion is a team sport!<br>These resources will help any team to make the shift from diversity to inclusion. 
+  heading: Workplace & Teambuilding <br>Resources
+  lead-in: Miscellaneous studies into how to improve team 
   btn: ''
 
 services1:
-  heading: Diversity, Inclusion & Teams
+  heading: Teambuilding & Culture
   subheading: ''
   service:
+    - heading: Accelerating Team Performance in the Future of Work
+      text: (Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
+      img: img/content/team_thumb.jpg
+      url: https://daliakatan.com/for-you/report-teams
     - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
       text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
       img: img/content/inclusion1_thumb.jpg
       url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
-    - heading: 'Podcast: How to Create More Inclusive Workplaces'
+    - heading: 'Party From Home: How Teams Can Celebrate While Working Remotely'
+      text: (Author) For managers and team leads who are looking for ways to improve team morale and keep work engaging while remote, here are some tips on how teams can celebrate from a distance.
+      img: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*QaclaZ4TsGWRSOKEYss-dw.png
+      url: https://medium.com/the-helm/party-from-home-how-teams-can-celebrate-while-working-remotely-b3aef7a49567
+  - heading: 'Podcast: How to Create More Inclusive Workplaces'
       text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
       img: img/content/inclusion3_thumb.jpg
       url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
-    - heading: Team Performance in the Future of Work
-      text: (Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
-      img: img/content/team_thumb.jpg
-      url: https://daliakatan.com/for-you/report-teams
     - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 2)'
       text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform">Get notified when it's live.</a>
       img: img/content/inclusion2_soon_thumb.jpg
