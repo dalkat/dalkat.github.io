@@ -3,35 +3,19 @@ intro:
   lead-in: Collection of miscellaneous tools and guides I've authored or shared 
   btn: ''
 
-services1:
-  heading: Diversity & Inclusion
-  subheading: ""
-  service:
-    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
-      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
-      img: img/content/inclusion1_thumb.jpg
-      url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
-    - heading: 'Podcast: How to Create More Inclusive Workplaces'
-      text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
-      img: img/content/inclusion3_thumb.jpg
-      url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
-    - heading: Unlocking Growth through Diversity and Inclusion
-      text: (Co-Author) Refugee Inclusion in the Workplace - successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
-      img: img/content/refugee_thumb.jpg
-      url: https://daliakatan.com/for-you/report-refugee
-    - heading: Team Performance in the Future of Work
-      text: (Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
-      img: img/content/team_thumb.jpg
-      url: https://daliakatan.com/for-you/report-teams
-    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 2)'
-      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform">Get notified when it's live.</a>
-      img: img/content/inclusion2_soon_thumb.jpg
-      url: https://docs.google.com/forms/d/e/1FAIpQLSeChwFAJL93r95q13NO9nk5B1KXZ7NNZu5665wpOpsA4CPWWA/viewform
-    - heading: More D&I Resources 
-      text: ''
-      img: img/content/more_thumb.jpg
-      url: https://daliakatan.com/inclusion
 
+services1:
+  heading: Product & Entrepreneurship
+  subheading: " " 
+  service:
+    - heading: Designing an App Like You Would A Home
+      text: (Author) Every product we design is a space that people will inhabit; to build truly great products, we must learn to think like architects and master the ways humans engage with space. 
+      img: https://substackcdn.com/image/fetch/$s_!w34v!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95cd6943-fffc-4dbf-a2e6-9476b802bf81_1500x1000.png
+      url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
+    - heading: Why First-Gen Founders Need to Learn to Spend
+      text: (Author) “Be scrappy” is great advice for most founders, but for first-generation and minority founders, it’s often the wrong advice — and one of the most challenging things I had to unlearn when I built my first company.
+      img: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*zgRbxG5W14S-fiyw
+      url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
 
 
 services2:
@@ -53,6 +37,32 @@ services2:
 
 
 services3:
+  heading: Workplace & Teambuilding
+  subheading: ""
+  service:
+    - heading: 'Diversity to Inclusion: What Teams Can Do Today to Unlock Its Benefits (Pt. 1)'
+      text: (Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.
+      img: img/content/inclusion1_thumb.jpg
+      url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
+    - heading: 'Podcast: How to Create More Inclusive Workplaces'
+      text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
+      img: img/content/inclusion3_thumb.jpg
+      url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
+    - heading: Unlocking Growth through Diversity and Inclusion
+      text: (Co-Author) Refugee Inclusion in the Workplace - successfully bringing aboard refugee employees requires more than the usual onboarding process. To create an inclusive workplace culture, organizations need a unique approach tied to broader inclusion efforts.
+      img: img/content/refugee_thumb.jpg
+      url: https://daliakatan.com/for-you/report-refugee
+    - heading: Team Performance in the Future of Work
+      text: (Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. (Spoiler... Amp up the friction and play with possibilities!) Focus on 'process' is no longer enough.
+      img: img/content/team_thumb.jpg
+      url: https://daliakatan.com/for-you/report-teams
+    - heading: More D&I Resources 
+      text: ''
+      img: img/content/more_thumb.jpg
+      url: https://daliakatan.com/inclusion
+
+
+services4:
   heading: Miscellaneous
   subheading: " " 
   service:
