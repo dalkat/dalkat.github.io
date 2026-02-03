@@ -24,29 +24,32 @@ clients:
 
 
 speaking-product:
+- title: 'Building on Mobile: Unlocking Your Product Edge'
+  detail: Presentation, Stripe (2024)
+  category: Podcast
 - title: Building Early-stage Startups & Adjusting to Market Signals
-  detail: Guest, The Prodcast (Dec. 2021)
+  detail: Guest, The Prodcast (2021)
   category: Podcast
 - title: Startup Journey - 0 to 1, Retention, Virality
-  detail: Guest, BRAVE (June 2021)
+  detail: Guest, BRAVE (2021)
   category: Podcast
 - title: Entrepreneurship "AMA"
-  detail: Guest, Journal (June 2021)
+  detail: Guest, Journal (2021)
   category: AMA
 - title: Building Presently
-  detail: Live Audio Guest, Journal (June 2021)
+  detail: Live Audio Guest, Journal (2021)
   category: Twitter Spaces
 - title: Digital Networks and Growth
-  detail: Guest Lecturer, Princeton University (Nov. 2020)
+  detail: Guest Lecturer, Princeton University (2020)
   category: University
 - title: Changemakers
-  detail: Guest, Changemakers (Nov. 2020)
+  detail: Guest, Changemakers (2020)
   category: Podcast
 - title: Human-Centered Design & Storytelling
-  detail: Guest Lecturer, Princeton University (Nov. 2019)
+  detail: Guest Lecturer, Princeton University (2019)
   category: University
 - title: Introduction to Human-Centered Design
-  detail: Speaker & Workshop Leader, NameCoach Fellowship (Oct. 2019)
+  detail: Speaker & Workshop Leader, NameCoach Fellowship (2019)
   category: Workshop
 - title: An Algorithm for Growth
   detail: Speaker, Princeton Social Entrepreneurship Conference (2015)
@@ -55,22 +58,22 @@ speaking-product:
 
 speaking-culture:
 - title: Fostering Understanding & Inclusion in Israel-Palestine
-  detail: Speaker, IPF Atid (Oct. 2019)
+  detail: Speaker, IPF Atid (2019)
   category: Event
 - title: Bridging Cultural Divides at Work
-  detail: Speaker, Women Design Talks (July 2019)
+  detail: Speaker, Women Design Talks (2019)
   category: Conference
 - title: Creating More Inclusive Workplaces
-  detail: Guest, Way We Lead <a href="https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan" target="_blank">(July 2019)</a>
+  detail: Guest, Way We Lead (2019)
   category: Podcast
 - title: Creative Sabbaticals 
-  detail: Interview Guest, Princeton Center for Entrepreneurship (Apr. 2019)
+  detail: Interview Guest, Princeton Center for Entrepreneurship (2019)
   category: Q&A
 - title: Using Workplace Diversity to Bridge Divides
-  detail: Speaker, Deloitte D-Talks (Aug. 2018)
+  detail: Speaker, Deloitte D-Talks (2018)
   category: Event
 - title: Retaining Top Talent Through a Culture of Intrapreneurship
-  detail: Speaker, Deloitte (June 2018)
+  detail: Speaker, Deloitte (2018)
   category: Event
 - title: Women in Marketing
   detail: Moderator, Princeton University (2015)
@@ -81,10 +84,7 @@ writing:
 - title: 'The Paradox of Being Scrappy: Why First-Gen Founders Need to Learn to Spend'
   detail: Entrepreneur's Handbook <a href="https://medium.com/entrepreneur-s-handbook/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6" target="_blank">(2023)</a>
   category: ''
-- title: 'Party From Home: How Teams Can Celebrate While Working Remotely'
-  detail: The Helm <a href="https://medium.com/the-helm/party-from-home-how-teams-can-celebrate-while-working-remotely-b3aef7a49567" target="_blank">(2023)</a>
-  category: ''
-- title: 'Diversity to Inclusion: 9 Steps You Can Take to Unlock Your Company’s Competitive Edge'
+- title: '9 Steps You Can Take to Unlock Your Company’s Competitive Edge'
   detail: The Startup <a href="https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49" target="_blank">(2019)</a>, LinkedIn <a href="https://www.linkedin.com/pulse/diversity-inclusion-9-steps-you-can-take-unlock-your-companys-katan/" target="_blank">(2019)</a>
   category: ''
 - title: 'A New Home at Work: An Guidebook to Fostering Inclusion for Refugee Employees'
