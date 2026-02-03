@@ -131,7 +131,8 @@ layout: default-sub
             {%- for gig in site.data.speaker.writing -%}
             {% assign ws = '' %}
             <li style="padding-bottom: 10px;">
-              <span style="font-weight:400;">{{ gig.title }}</span><br>
+              <span style="font-weight:400;">{{ gig.title }}</span>&nbsp;
+              <span style="font-weight:400;padding: 2px 8px;border-radius: 6px;background-color:#EEE7F5;font-size: 12px;color: #bd76ff;margin-left: 0px;"> {{ gig.category }}</span><br>
               {{ gig.detail }}
                 </li>
             {%-  endfor -%}
