@@ -21,6 +21,8 @@ social-buttons:
     url: 'http://twitter.com/daliakatan'
   - icon: fa fa-linkedin
     url: 'http://linkedin.com/in/daliakatan'
+  - icon: fa fa-rss
+    url: 'https://daliakatan.substack.com'
   - icon: fab fa-medium-m
     url: 'http://medium.com/@dkatan77'
   - icon: fa fa-envelope
