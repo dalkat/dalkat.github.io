@@ -83,27 +83,30 @@ speaking-culture:
 
 
 writing:
+- title: 'Interspace: Bringing Architectural Thinking to Product Design'
+  detail: Substack <a href="https://daliakatan.substack.com" target="_blank">(2025-6)</a>
+  category: 'Newsletter'
 - title: 'The Paradox of Being Scrappy: Why First-Gen Founders Need to Learn to Spend'
   detail: Entrepreneur's Handbook <a href="https://medium.com/entrepreneur-s-handbook/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6" target="_blank">(2023)</a>
-  category: ''
+  category: 'Article'
 - title: '9 Steps You Can Take to Unlock Your Company’s Competitive Edge'
   detail: The Startup <a href="https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49" target="_blank">(2019)</a>, LinkedIn <a href="https://www.linkedin.com/pulse/diversity-inclusion-9-steps-you-can-take-unlock-your-companys-katan/" target="_blank">(2019)</a>
-  category: ''
+  category: 'Article'
 - title: 'A New Home at Work: An Guidebook to Fostering Inclusion for Refugee Employees'
   detail: Deloitte <a href="https://daliakatan.com/for-you/report-refugee" target="_blank">(2019)</a>
-  category: 
+  category: 'Whitepaper'
 - title: 'Business Practice Redesign & The Future of Work: Moving From Best to Better and Better'
   detail: Deloitte Center for the Edge <a href="https://daliakatan.com/for-you/report-teams" target="_blank">(2018)</a>
-  category: ''
+  category: 'Whitepaper'
 - title:  'Entrepreneurial Finance: Uber’s Path to Success (Case Study)'
   detail: MIT Press <a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">(2014)</a>
-  category: ''
+  category: 'Textbook'
 # - title:  'Rethinking Productivity: Channeling Energy and Flow Over Discipline'
 #   detail: DaliaKatan.com <a href="https://daliakatan.com/trailmix/" target="_blank">(2019)</a>
 #   category: 
 - title: 'Improving Arab-Jewish Relations in Israel Through Workforce Integration'
   detail: Princeton University (2015)
-  category: ''
+  category: 'Book'
 
 
 photos:
