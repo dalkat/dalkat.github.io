@@ -48,10 +48,10 @@ services3:
       text: (Author) Diverse teams, when properly managed, are 35% more likely to outperform the market. This article highlights steps teams can take to unlock the growth potential that diversity can offer.
       img: img/content/inclusion1_thumb.jpg
       url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
-    - heading: More Teambuilding Resources 
-      text: ''
-      img: img/content/more_thumb.jpg
-      url: https://daliakatan.com/inclusion
+    # - heading: More Teambuilding Resources 
+    #   text: ''
+    #   img: img/content/more_thumb.jpg
+    #   url: https://daliakatan.com/inclusion
 
 
 services4:
