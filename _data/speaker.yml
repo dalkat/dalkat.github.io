@@ -9,6 +9,8 @@ about:
 
 
 clients:
+- img: img/logos/stripe.png
+  url: ""
 - img: img/logos/deloitte.png
   url: ""
 - img: img/logos/princeton.png
@@ -24,7 +26,7 @@ clients:
 
 
 speaking-product:
-- title: 'Building on Mobile: Unlocking Your Product Edge'
+- title: 'Mobile: Meet Your Users Where They Are'
   detail: Presentation, Stripe (2024)
   category: Podcast
 - title: Building Early-stage Startups & Adjusting to Market Signals
