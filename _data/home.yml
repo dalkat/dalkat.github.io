@@ -5,8 +5,8 @@ intro:
 
 about:
   heading: About Dalia
-  subheading: I am a seasoned product leader passionate about the ways we interact with the spaces around us - physical, digital, and social. I'm a fractional Head of Product, angel investor, and startup advisor, and most recently led mobile product at Stripe. Prior to Stripe, I was CEO and Founder of <a href="https://getpresently.com" target="_blank">Presently</a>, as well as Head of Product for several web3 startups.<br><br>I have spent the last decade focused on design-led innovation, product storytelling, and business strategy. <a href="https://daliakatan.com/about">Read full bio <small>►</small></a><br><br>Need to find me? <a href="https://twitter.com/daliakatan" target="_blank">Twitter</a>'s a good bet.  <br><br>
-  btn: Check out Presently
+  subheading: I am a seasoned product leader passionate about the ways we interact with the spaces around us - physical, digital, and social. I'm a fractional Head of Product, angel investor, and startup advisor, and most recently led mobile product at Stripe. Prior to Stripe, I was CEO and Founder of Presently, as well as Head of Product for several web3 startups.<br><br>I have spent the last decade focused on design-led innovation, product storytelling, and business strategy. <a href="https://daliakatan.com/about">Read full bio <small>►</small></a><br><br>Need to find me? <a href="https://twitter.com/daliakatan" target="_blank">Twitter</a>'s a good bet.  <br><br>
+  btn: Follow on Substack
 
 team:
   members:
@@ -15,11 +15,13 @@ team:
       img: img/team/1.jpg 
       social-buttons:
         - icon: fa fa-linkedin
-          url: 'http://linkedin.com/in/daliakatan'
+          url: 'https://linkedin.com/in/daliakatan'
+        - icon: fa fa-rss
+          url: 'https://daliakatan.substack.com'
         - icon: fa fa-medium
-          url: 'http://medium.com/@dkatan77'
+          url: 'https://medium.com/@dkatan77'
         - icon: fa fa-twitter
-          url: 'http://twitter.com/daliakatan'
+          url: 'https://twitter.com/daliakatan'
   btn: Get to know me
 
 clients:
