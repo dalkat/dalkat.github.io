@@ -4,15 +4,15 @@ intro:
   btn: ''
 
 services1:
-  heading: 'Teambuilding & Culture'
+  heading: '01 Teambuilding & Culture'
   subheading: ''
   service:
     - heading: 'Accelerating Team Performance in the Future of Work'
-      text: '(Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? As the challenges we face at work become more and more complex, leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value.'
+      text: '(Co-Author) How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? Leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value. '
       img: img/content/team_thumb.jpg
       url: https://daliakatan.com/for-you/report-teams
     - heading: 'Unlocking the Benefits of Inclusive Workplace Practices'
-      text: '(Author) It’s no surprise that diverse teams, when properly managed, are 35% more likely to outperform the market. But diversity in the workplace can be a double-edged sword. This article highlights steps teams can take to create more inclusive work environments to unlock the growth potential that diversity can offer.'
+      text: (Author) Diverse teams, when properly managed, are 35% more likely to outperform the market. This article highlights steps teams can take to unlock the growth potential that diversity can offer.
       img: img/content/inclusion1_thumb.jpg
       url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
     - heading: 'Party From Home: How Teams Can Celebrate While Working Remotely'
@@ -20,13 +20,13 @@ services1:
       img: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*QaclaZ4TsGWRSOKEYss-dw.png
       url: https://medium.com/the-helm/party-from-home-how-teams-can-celebrate-while-working-remotely-b3aef7a49567
     - heading: 'Podcast: How to Create More Inclusive Workplaces'
-      text: '(Guest) Innovation strategist, Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her practical research-based tips for creating workplace environments that can reduce prejudice and improve social cohesion across gender, race, ethnicity, and political ideologies. Way We Lead Podcast, S1E4.'
+      text: '(Guest) Innovation strategist Dalia Katan is leading the conversation on how diversity and human connection can unlock untapped growth for organizations. Dalia joins us to share her research on creating workplace environments that can reduce prejudice and improve social cohesion. Way We Lead Podcast, S1E4.'
       img: img/content/inclusion3_thumb.jpg
       url: https://www.thewaywelead.com/podcast/episode/49b56c90/s1e4-how-to-create-more-inclusive-workplaces-with-dalia-katan
 
 
 services2:
-  heading: 'Refugee Hiring & Inclusion'
+  heading: '02 Refugee Hiring & Inclusion'
   subheading: ''
   service:
     - heading: An Employer’s Guide to Fostering Inclusion for Refugees in the Workplace
