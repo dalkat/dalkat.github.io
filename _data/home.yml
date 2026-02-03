@@ -23,6 +23,8 @@ team:
   btn: Get to know me
 
 clients:
+  - img: img/logos/stripe.png
+    url: ""
   - img: img/logos/deloitte.png
     url: ""
   - img: img/logos/doblin.png
