@@ -1,6 +1,6 @@
 intro:
   lead-in: ''
-  heading: Keynotes & <br>Speaking Engagements
+  heading: Guest Lectures & <br>Keynotes
   btn: ''
 
 about:
@@ -96,10 +96,10 @@ writing:
 - title:  'Entrepreneurial Finance: Uber’s Path to Success (Case Study)'
   detail: MIT Press <a href="https://mitpress.mit.edu/books/entrepreneurial-finance-and-accounting-high-tech-companies" target="_blank">(2014)</a>
   category: ''
-- title:  'Rethinking Productivity: Channeling Energy and Flow Over Discipline'
-  detail: DaliaKatan.com <a href="https://daliakatan.com/trailmix/" target="_blank">(2019)</a>
-  category: 
-- title: 'Intergroup Contact Theory: Improving Arab-Jewish Relations in Israel Through Workforce Integration'
+# - title:  'Rethinking Productivity: Channeling Energy and Flow Over Discipline'
+#   detail: DaliaKatan.com <a href="https://daliakatan.com/trailmix/" target="_blank">(2019)</a>
+#   category: 
+- title: 'Improving Arab-Jewish Relations in Israel Through Workforce Integration'
   detail: Princeton University (2015)
   category: ''
 
@@ -111,9 +111,9 @@ photos:
   - img: img/about/speaking3.jpg
     caption: ''
     maxwidth: 360px
-  - img: img/about/speaking1.jpg
-    caption: ''
-    maxwidth: 360px
+  # - img: img/about/speaking1.jpg
+  #   caption: ''
+  #   maxwidth: 360px
   - img: img/about/speaking6.jpg
     caption: ''
     maxwidth: 360px
