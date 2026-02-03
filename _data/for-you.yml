@@ -8,6 +8,10 @@ services1:
   heading: 01 Product & Entrepreneurship
   subheading: " " 
   service:
+    - heading: 'Introducing ARCH: Building products people want to live in'
+      text: (Author) Every product we design is a space that people will inhabit; to build truly great products, we must learn to think like architects and master the ways humans engage with space. 
+      img: https://substackcdn.com/image/fetch/$s_!rCIi!,w_1280,h_853,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6b8c25c6-5652-4ed9-8224-0cac648289a6_1920x1080.png
+      url: https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in
     - heading: Designing an App Like You Would A Home
       text: (Author) Every product we design is a space that people will inhabit; to build truly great products, we must learn to think like architects and master the ways humans engage with space. 
       img: https://substackcdn.com/image/fetch/$s_!w34v!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95cd6943-fffc-4dbf-a2e6-9476b802bf81_1500x1000.png
