@@ -16,10 +16,5 @@ plugins:
   - jekyll-sitemap
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - .bundle
-  - vendor
-  - vendor/bundle
   - assets/vendor/bundle
-  - node_modules
+  - vendor/bundle
