@@ -9,6 +9,9 @@ assets_path: ''
 
 collections:
   projects:
+  for_you:
+    output: true
+    permalink: /for-you/:name/
 
 
 plugins:
