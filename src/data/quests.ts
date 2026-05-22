@@ -5,8 +5,8 @@
  * Each tile renders in the same mesh-card style used elsewhere on the site
  * (PostTile-shaped but bigger). Quests with `status: 'coming-soon'` skip
  * the outbound link and render a pill instead — used today for Trail Mix
- * Method, which exists as a write-up at /trailmix but hasn't shipped as
- * an interactive tool yet.
+ * Method, which exists as a write-up at /notes/trailmix but hasn't
+ * shipped as an interactive tool yet.
  *
  * The optional `award` field surfaces a small kicker pill in the
  * top-right of the card (used for the ProductHunt #3 Product of the Day

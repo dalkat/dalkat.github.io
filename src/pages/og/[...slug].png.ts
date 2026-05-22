@@ -39,14 +39,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const entries = await getCollection('for-you', ({ data }) => !data.draft);
 
   // Per-Field-Note cards ----------------------------------------------------
-  // do-now-generator is rendered as a top-level /quests/do-now card below.
-  // trail-mix-method is rendered at /trailmix (top-level slug).
-  const SPECIAL_IDS = new Set(['do-now-generator', 'trail-mix-method']);
+  // do-now-generator gets its own /quests/do-now card below; trail-mix-method
+  // uses the 'trailmix' URL slug (matches /notes/trailmix/).
+  const SLUG_OVERRIDES: Record<string, string> = {
+    'trail-mix-method': 'trailmix',
+  };
   const fieldNoteCards = entries
-    .filter((e) => !SPECIAL_IDS.has(e.id))
+    .filter((e) => e.id !== 'do-now-generator')
     .map((entry) => {
       const tint = tintForType(entry.data.type);
       const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
+      const slug = SLUG_OVERRIDES[entry.id] ?? entry.id;
       const spec: OGCardSpec = {
         title: entry.data.title,
         kicker: `${typeLabel} · Field Notes`,
@@ -56,27 +59,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
         displayWord: DISPLAY_WORDS[entry.id],
       };
       return {
-        params: { slug: `notes/${entry.id}` },
+        params: { slug: `notes/${slug}` },
         props: { spec },
       };
     });
-
-  // Trail Mix Method gets a dedicated top-level /trailmix card -------------
-  const trailMix = entries.find((e) => e.id === 'trail-mix-method');
-  const trailmixCard = trailMix
-    ? [{
-        params: { slug: 'trailmix' },
-        props: {
-          spec: {
-            title: trailMix.data.title,
-            kicker: `${TYPE_LABELS[trailMix.data.type] ?? trailMix.data.type} · Field Notes`,
-            subtitle: trailMix.data.blurb,
-            tint: tintForType(trailMix.data.type),
-            base: C.peach,
-          } satisfies OGCardSpec,
-        },
-      }]
-    : [];
 
   // Top-level page cards ----------------------------------------------------
   const siteDescription = 'What might life look like if designed around curiosity?';
@@ -169,7 +155,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     },
   ];
 
-  return [...fieldNoteCards, ...trailmixCard, ...topLevelCards];
+  return [...fieldNoteCards, ...topLevelCards];
 };
 
 export const GET: APIRoute = async ({ props }) => {

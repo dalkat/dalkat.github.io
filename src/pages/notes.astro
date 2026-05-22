@@ -34,7 +34,10 @@ const THEME_LABELS: Record<string, string> = {
 const tlabel = (t: string) => TYPE_LABELS[t] ?? t;
 const thlabel = (t: string) => THEME_LABELS[t] ?? t;
 
-const hosted = await getCollection('for-you', ({ data }) => !data.draft);
+// Hide do-now-generator from the archive entirely — it's a Side Quest
+// (lives at /quests/do-now), not a Field Note.
+const hosted = (await getCollection('for-you', ({ data }) => !data.draft))
+  .filter((entry) => entry.id !== 'do-now-generator');
 const external = await getCollection('for-you-external');
 
 const articles: ArchiveItem[] = [
@@ -46,13 +49,10 @@ const articles: ArchiveItem[] = [
     year: entry.data.year,
     read_time: entry.data.read_time ?? null,
     blurb: entry.data.blurb,
-    // Special-cases:
-    //   do-now-generator  → the interactive tool lives at /quests/do-now
-    //   trail-mix-method  → top-level pretty URL /trailmix
-    //   everything else   → /notes/<id>/
+    // trail-mix-method uses a custom slug ('trailmix') rather than its
+    // file id; every other piece uses its id directly.
     href:
-      entry.id === 'do-now-generator' ? '/quests/do-now'
-      : entry.id === 'trail-mix-method' ? '/trailmix/'
+      entry.id === 'trail-mix-method' ? '/notes/trailmix/'
       : `/notes/${entry.id}/`,
   })),
   ...external.map((entry) => ({

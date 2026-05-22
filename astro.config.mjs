@@ -19,11 +19,11 @@ export default defineConfig({
   ],
   redirects: {
     // Legacy → canonical (Astro auto-normalizes trailing slashes)
-    // /trailmix is now a real page, not a redirect.
     '/for-you': '/notes',
     '/field-notes': '/notes',
     '/side-quests': '/quests',
     '/do-now': '/quests/do-now',
+    '/trailmix': '/notes/trailmix/',
     '/update-1': '/notes/sabbatical-update/',
     '/update-2': '/notes/sabbatical-update-2/',
     '/challah-recipe': '/notes/challah-recipe/',
@@ -41,6 +41,6 @@ export default defineConfig({
     '/field-notes/baguette-recipe': '/notes/baguette-recipe/',
     '/field-notes/report-refugee': '/notes/report-refugee/',
     '/field-notes/report-teams': '/notes/report-teams/',
-    '/field-notes/trail-mix-method': '/trailmix/',
+    '/field-notes/trail-mix-method': '/notes/trailmix/',
   },
 });

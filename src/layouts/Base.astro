@@ -29,12 +29,11 @@ const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 //   /                       → home
 //   /about                  → about
 //   /notes                  → notes
-//   /notes/<slug>           → notes/<slug>
+//   /notes/<slug>           → notes/<slug>  (trail-mix lives at /notes/trailmix)
 //   /quests                 → quests
 //   /quests/do-now          → quests/do-now
-//   /trailmix               → trailmix
 // Pages with no generated card fall back to the portrait.
-const KNOWN_TOP_LEVEL = new Set(['about', 'strategy', 'speaker', 'notes', 'quests', 'trailmix']);
+const KNOWN_TOP_LEVEL = new Set(['about', 'strategy', 'speaker', 'notes', 'quests']);
 function ogSlugFromPath(pathname: string): string | null {
   const trimmed = pathname.replace(/^\/+|\/+$/g, '');
   if (trimmed === '') return 'home';
