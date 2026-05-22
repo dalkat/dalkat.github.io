@@ -191,12 +191,35 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     line-height: 1.4;
     color: #221a3a;
   }
-  .mesh-prose ul, .mesh-prose ol {
+  /* Tailwind's preflight reset wipes default list-style from ul/ol;
+   * restore disc/decimal markers explicitly so blog posts render
+   * bullets and numbered lists correctly. Coral marker accent for
+   * a touch of the v7 palette inside long-form prose. */
+  .mesh-prose ul {
+    list-style: disc outside;
     margin: 0 0 24px;
     padding-left: 28px;
   }
+  .mesh-prose ol {
+    list-style: decimal outside;
+    margin: 0 0 24px;
+    padding-left: 32px;
+  }
+  .mesh-prose ul ul,
+  .mesh-prose ol ol,
+  .mesh-prose ul ol,
+  .mesh-prose ol ul {
+    margin: 8px 0 8px;
+  }
+  .mesh-prose ul ul { list-style: circle outside; }
+  .mesh-prose ol ol { list-style: lower-alpha outside; }
   .mesh-prose li {
     margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  .mesh-prose li::marker {
+    color: #ff8a7a;
+    font-weight: 600;
   }
   .mesh-prose code {
     background: #f3edf9;
