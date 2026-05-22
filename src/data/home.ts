@@ -152,5 +152,6 @@ export const NAV: NavLink[] = [
   { id: 'strategy', label: 'Strategy',    href: '/strategy' },
   { id: 'speaker',  label: 'Speaker',     href: '/speaker' },
   { id: 'foryou',   label: 'Field Notes', href: '/field-notes' },
+  { id: 'projects', label: 'Projects',    href: '/projects' },
   { id: 'donow',    label: 'Do Now',      href: '/do-now' },
 ];

@@ -1,0 +1,252 @@
+---
+/**
+ * /projects — side projects index.
+ *
+ * Hero (peach-mesh + kicker pill + Fraunces flourish) over a stacked
+ * single-column list of large project cards. Each card has a mesh-tinted
+ * thumb tile on the left and copy on the right; `coming-soon` cards swap
+ * the outbound CTA for a pill.
+ *
+ * Add new projects by appending to `PROJECTS` in `src/data/projects.ts`.
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+import { PROJECTS } from '@/data/projects';
+
+const gt = gradientText();
+---
+<Base
+  title="Projects — Dalia Katan"
+  description="Side projects, weekend tools, and small experiments — things I've built outside of paid work."
+>
+  <PageNav current="projects" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="projects"
+    style={{
+      background: meshBg({
+        base: C.peach,
+        blobs: [
+          [`${C.butter}cc`,  12, 18, 50],
+          [`${C.lavender}cc`, 88, 12, 45],
+          [`${C.mint}cc`,    72, 92, 40],
+          [`${C.coral}aa`,   10, 88, 35],
+        ],
+      }),
+      padding: '88px 64px 72px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <div
+        style={{
+          display: 'inline-flex',
+          gap: '10px',
+          alignItems: 'center',
+          padding: '6px 14px',
+          background: `${C.white}cc`,
+          borderRadius: '999px',
+          fontFamily: fontUI,
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: C.coral,
+          marginBottom: '24px',
+        }}
+      >
+        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.coral }}></span>
+        /projects · things I've made
+      </div>
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '96px',
+          lineHeight: '0.98',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '900px',
+        }}
+      >
+        Side <span style={gt}>projects</span><span style={{ color: C.coral }}>.</span>
+      </h1>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontStyle: 'italic',
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.inkSoft,
+          marginTop: '20px',
+          maxWidth: '780px',
+          textWrap: 'pretty',
+        }}
+      >
+        Weekend tools, half-built experiments, and things I made because
+        I wanted them to exist. Mostly free, mostly small, mostly running
+        on the cheapest tier of something.
+      </p>
+    </div>
+  </section>
+
+  {/* ───────── Cards ───────── */}
+  <section
+    style={{
+      background: C.paper,
+      padding: '64px 64px 96px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div
+      style={{
+        maxWidth: '960px',
+        margin: '0 auto',
+        display: 'grid',
+        gap: '22px',
+      }}
+    >
+      {PROJECTS.map((p) => {
+        const isComingSoon = p.status === 'coming-soon';
+        const isExternal = !!p.href && p.href.startsWith('http');
+        const Tag = p.href ? 'a' : 'article';
+        return (
+          <Tag
+            href={p.href}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
+            style={{
+              background: C.white,
+              borderRadius: '24px',
+              padding: '28px',
+              border: `1px solid ${C.ink}10`,
+              boxShadow: `0 18px 36px -22px ${C.ink}55`,
+              display: 'grid',
+              gridTemplateColumns: '180px 1fr',
+              gap: '28px',
+              alignItems: 'flex-start',
+              textDecoration: 'none',
+              color: C.ink,
+              cursor: p.href ? 'pointer' : 'default',
+              opacity: isComingSoon ? 0.92 : 1,
+            }}
+          >
+            {/* Mesh thumb */}
+            <div
+              style={{
+                width: '180px',
+                height: '180px',
+                borderRadius: '20px',
+                background: meshBg({
+                  base: p.tint,
+                  blobs: [
+                    [`${C.butter}dd`, 80, 24, 65],
+                    [`${C.white}aa`,  18, 78, 60],
+                    [`${C.lavender}aa`, 50, 50, 40],
+                  ],
+                }),
+                border: `1px solid ${C.ink}10`,
+                position: 'relative',
+                overflow: 'hidden',
+              }}
+            >
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundImage: `repeating-linear-gradient(135deg, transparent 0 11px, ${C.ink}10 11px 12px)`,
+                }}
+              ></div>
+              {/* Initials chip — like a tiny brand mark */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '14px',
+                  left: '14px',
+                  padding: '6px 12px',
+                  background: `${C.white}f0`,
+                  borderRadius: '999px',
+                  fontFamily: fontUI,
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: C.ink,
+                  boxShadow: `0 6px 14px -10px ${C.ink}66`,
+                }}
+              >{p.kind}</div>
+            </div>
+
+            {/* Right column */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div
+                style={{
+                  fontFamily: fontDisplay,
+                  fontWeight: 400,
+                  fontSize: '42px',
+                  lineHeight: '1.02',
+                  letterSpacing: '-0.025em',
+                  color: C.ink,
+                  textWrap: 'balance',
+                }}
+              >{p.title}</div>
+              <div
+                style={{
+                  fontFamily: fontReader,
+                  fontSize: '17px',
+                  lineHeight: '1.6',
+                  color: C.inkSoft,
+                  textWrap: 'pretty',
+                  maxWidth: '620px',
+                }}
+              >{p.blurb}</div>
+              <div
+                style={{
+                  marginTop: '8px',
+                  paddingTop: '14px',
+                  borderTop: `1px dashed ${C.ink}18`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  fontFamily: fontUI,
+                  fontSize: '13px',
+                  color: p.tint,
+                  fontWeight: 600,
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                }}
+              >
+                {isComingSoon ? (
+                  <span
+                    style={{
+                      padding: '6px 14px',
+                      background: `${p.tint}22`,
+                      color: p.tint,
+                      borderRadius: '999px',
+                      fontSize: '12px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      fontWeight: 700,
+                    }}
+                  >Coming soon</span>
+                ) : (
+                  <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
+                )}
+                <span style={{ color: C.inkSoft, fontWeight: 500 }}>
+                  {p.href ? p.href.replace(/^https?:\/\//, '') : ''}
+                </span>
+              </div>
+            </div>
+          </Tag>
+        );
+      })}
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

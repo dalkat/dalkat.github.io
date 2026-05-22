@@ -123,6 +123,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
+      params: { slug: 'projects' },
+      props: {
+        spec: {
+          title: 'Side projects',
+          kicker: 'Things I made',
+          subtitle: 'Weekend tools, half-built experiments, and things I made because I wanted them to exist.',
+          tint: C.coral,
+          base: C.peach,
+          displayWord: 'projects',
+        },
+      },
+    },
+    {
       params: { slug: 'do-now' },
       props: {
         spec: {
