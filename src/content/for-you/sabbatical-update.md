@@ -19,7 +19,7 @@ highlight_reel:
   - src: /img/blog/3.jpg
     caption: My cousin George's big fat Jewish wedding in November — beautiful huppa, broken glass, "Next year in Jerusalem," all of it. I think as we get older we finally appreciate and cherish our cultures and traditions, and it was that week I realized how important preserving that is for me.
   - src: /img/blog/1.jpg
-    caption: Joe and I's first anniversary in October. The gluttons we are, we celebrated at a French baking class. Unbeknownst to us, these amateur bakers had accidentally signed up for an advanced course…
+    caption: Making the most of SF with a French baking class! Unbeknownst to us, these amateur bakers had accidentally signed up for an advanced course…
   - src: /img/blog/5.jpg
     caption: Over New Years, Joe and I backpacked in Torres del Paine, Patagonia. A million layers to combat fickle weather, incredible views on our uphill trek, and me being grumpy after 25 of our 30+ miles of backpacking. One of the physically hardest things I've ever done.
 ---
