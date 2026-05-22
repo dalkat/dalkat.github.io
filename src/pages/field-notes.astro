@@ -116,7 +116,7 @@ const gt = gradientText();
           fontFamily: fontDisplay,
           fontWeight: 400,
           fontSize: '112px',
-          lineHeight: '0.94',
+          lineHeight: '1.05',
           letterSpacing: '-0.04em',
           color: C.ink,
           margin: 0,
@@ -124,7 +124,7 @@ const gt = gradientText();
           maxWidth: '960px',
         }}
       >
-        <span style={gt}>Field</span> notes<span style={{ color: C.coral }}>.</span>
+        <span style={{ ...gt, display: 'inline-block', paddingBottom: '0.06em' }}>Field</span> notes<span style={{ color: C.coral }}>.</span>
       </h1>
       <p
         style={{
