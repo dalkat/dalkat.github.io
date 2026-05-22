@@ -21,7 +21,6 @@ export default defineConfig({
     // Legacy → canonical (Astro auto-normalizes trailing slashes)
     '/for-you': '/field-notes',
     '/trailmix': '/field-notes/trail-mix-method/',
-    '/do-now': '/field-notes/do-now-generator/',
     '/update-1': '/field-notes/sabbatical-update/',
     '/update-2': '/field-notes/sabbatical-update-2/',
     '/challah-recipe': '/field-notes/challah-recipe/',

@@ -1,0 +1,344 @@
+---
+/**
+ * Recipe template — modeled on the design's MeshChallah (recipe-donow.jsx).
+ * Hero with caveat tagline + huge serif italic display title + stat tiles,
+ * then a two-column body (sticky ingredients aside + numbered steps).
+ *
+ * Ingredients, steps, and stat tiles are passed as front-matter data on
+ * the Field Note's markdown file so each recipe can configure its own.
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+interface Ingredient {
+  qty: string;
+  name: string;
+  note?: string;
+}
+interface Step {
+  n: string;
+  title: string;
+  body: string;
+  note?: string;
+}
+interface StatTile {
+  lbl: string;
+  val: string;
+}
+interface Props {
+  title: string;
+  /** Display word for the H1, e.g. "Challah" or "Baguette". */
+  displayWord: string;
+  tagline: string;
+  blurb: string;
+  themeLabel: string;
+  slug: string;
+  year: number;
+  source: string;
+  stats: StatTile[];
+  ingredients: Ingredient[];
+  steps: Step[];
+  /** Optional p.s. note in the ingredients aside. */
+  ingredientsNote?: string;
+}
+const {
+  title, displayWord, tagline, blurb, themeLabel, slug, year, source,
+  stats, ingredients, steps, ingredientsNote,
+} = Astro.props;
+const gt = gradientText();
+const tints = [C.coral, C.plum, C.teal, C.coral];
+---
+<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb}>
+  <PageNav current="foryou" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    style={{
+      background: meshBg({
+        base: C.peach,
+        blobs: [
+          [C.butter,         15, 18, 55],
+          [`${C.coral}cc`,   85, 14, 45],
+          [`${C.lavender}cc`,88, 86, 50],
+          [`${C.mint}cc`,    14, 86, 45],
+        ],
+      }),
+      padding: '72px 64px 56px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1180px', margin: '0 auto', position: 'relative' }}>
+      <Breadcrumbs theme={themeLabel} slug={slug} />
+      <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '40px', alignItems: 'flex-end' }}>
+        <div>
+          <div
+            style={{
+              fontFamily: 'Caveat, cursive',
+              fontSize: '30px',
+              color: C.coral,
+              transform: 'rotate(-3deg)',
+              display: 'inline-block',
+              marginBottom: '4px',
+            }}
+          >{tagline}</div>
+          <h1
+            class="mesh-display-xl"
+            style={{
+              fontFamily: fontDisplay,
+              fontWeight: 400,
+              fontSize: '140px',
+              lineHeight: '0.86',
+              letterSpacing: '-0.045em',
+              color: C.ink,
+              margin: 0,
+              textWrap: 'balance',
+            }}
+          >
+            <span style={gt}>{displayWord}</span><span style={{ color: C.coral }}>.</span>
+          </h1>
+          <p
+            style={{
+              fontFamily: fontReader,
+              fontStyle: 'italic',
+              fontSize: '22px',
+              lineHeight: '1.5',
+              color: C.inkSoft,
+              margin: '20px 0 0',
+              maxWidth: '540px',
+              textWrap: 'pretty',
+            }}
+          >{blurb}</p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+          {stats.map((s, i) => (
+            <div
+              style={{
+                padding: '18px 20px',
+                background: C.white,
+                borderRadius: '18px',
+                border: `1px solid ${C.ink}10`,
+                boxShadow: `0 14px 28px -18px ${C.ink}44`,
+                transform: `rotate(${(i % 2 === 0 ? -1 : 1) * (i + 1) * 0.5}deg)`,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: fontUI,
+                  fontSize: '11px',
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  color: C.inkSoft,
+                  fontWeight: 700,
+                }}
+              >{s.lbl}</div>
+              <div
+                style={{
+                  marginTop: '4px',
+                  fontFamily: fontDisplay,
+                  fontWeight: 400,
+                  fontSize: '26px',
+                  color: tints[i % tints.length],
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.1',
+                }}
+              >{s.val}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── Body: ingredients + steps ───────── */}
+  <section style={{ background: C.paper, padding: '64px 64px 80px', scrollMarginTop: '80px' }}>
+    <div
+      style={{
+        maxWidth: '1180px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: '340px 1fr',
+        gap: '64px',
+        alignItems: 'flex-start',
+      }}
+    >
+      <aside>
+        <div
+          style={{
+            padding: '24px 26px',
+            background: meshBg({ base: C.butter, blobs: [[`${C.peach}cc`, 50, 50, 80]] }),
+            borderRadius: '22px',
+            border: `1px dashed ${C.ink}30`,
+            position: 'sticky',
+            top: '88px',
+          }}
+        >
+          <div
+            style={{
+              fontFamily: 'Caveat, cursive',
+              fontSize: '28px',
+              color: C.coral,
+              marginBottom: '4px',
+            }}
+          >what you'll need —</div>
+          <h2
+            style={{
+              fontFamily: fontDisplay,
+              fontWeight: 500,
+              fontSize: '26px',
+              margin: 0,
+              letterSpacing: '-0.02em',
+              color: C.ink,
+            }}
+          >Ingredients</h2>
+          <ul
+            style={{
+              listStyle: 'none',
+              margin: '18px 0 0',
+              padding: 0,
+              display: 'grid',
+              gap: '10px',
+            }}
+          >
+            {ingredients.map((it) => (
+              <li
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '92px 1fr',
+                  gap: '10px',
+                  alignItems: 'baseline',
+                  paddingBottom: '10px',
+                  borderBottom: `1px dashed ${C.ink}22`,
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: '13px',
+                    color: C.ink,
+                    fontWeight: 500,
+                  }}
+                >{it.qty}</div>
+                <div>
+                  <div
+                    style={{
+                      fontFamily: fontDisplay,
+                      fontSize: '17px',
+                      color: C.ink,
+                      letterSpacing: '-0.01em',
+                    }}
+                  >{it.name}</div>
+                  {it.note && (
+                    <div
+                      style={{
+                        fontFamily: fontReader,
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        color: C.inkSoft,
+                        marginTop: '2px',
+                      }}
+                    >{it.note}</div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+          {ingredientsNote && (
+            <div
+              style={{
+                marginTop: '18px',
+                padding: '10px 14px',
+                background: C.white,
+                borderRadius: '12px',
+                fontFamily: 'Caveat, cursive',
+                fontSize: '20px',
+                color: C.ink,
+                transform: 'rotate(-1deg)',
+                boxShadow: `0 6px 14px -10px ${C.ink}55`,
+              }}
+            >{ingredientsNote}</div>
+          )}
+        </div>
+      </aside>
+
+      <main>
+        <ol style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+          {steps.map((s, i) => (
+            <li
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '88px 1fr 90px',
+                gap: '24px',
+                paddingBottom: '28px',
+                marginBottom: '28px',
+                borderBottom: i < steps.length - 1 ? `1px solid ${C.ink}15` : 'none',
+                alignItems: 'flex-start',
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: fontDisplay,
+                  fontStyle: 'italic',
+                  fontSize: '64px',
+                  color: i % 2 === 0 ? C.coral : C.plum,
+                  lineHeight: 1,
+                  letterSpacing: '-0.02em',
+                }}
+              >{s.n}</div>
+              <div>
+                <h3
+                  style={{
+                    margin: '6px 0 8px',
+                    fontFamily: fontDisplay,
+                    fontWeight: 500,
+                    fontSize: '24px',
+                    letterSpacing: '-0.02em',
+                    color: C.ink,
+                  }}
+                >{s.title}</h3>
+                <p
+                  style={{
+                    margin: 0,
+                    fontFamily: fontReader,
+                    fontSize: '17px',
+                    lineHeight: '1.65',
+                    color: C.inkSoft,
+                    textWrap: 'pretty',
+                  }}
+                >{s.body}</p>
+              </div>
+              <div
+                style={{
+                  padding: '4px 10px',
+                  background: C.paper,
+                  borderRadius: '999px',
+                  fontFamily: '"DM Mono", monospace',
+                  fontSize: '12px',
+                  color: C.inkSoft,
+                  border: `1px solid ${C.ink}15`,
+                  justifySelf: 'flex-start',
+                  whiteSpace: 'nowrap',
+                }}
+              >{s.note ?? ''}</div>
+            </li>
+          ))}
+        </ol>
+        <div
+          style={{
+            marginTop: '24px',
+            fontFamily: fontUI,
+            fontSize: '12px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: C.inkSoft,
+            fontWeight: 600,
+          }}
+        >↳ Originally published on {source}, {year}</div>
+      </main>
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

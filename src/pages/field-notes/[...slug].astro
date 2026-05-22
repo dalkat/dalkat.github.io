@@ -1,0 +1,163 @@
+---
+/**
+ * Per-Field-Note dynamic route. Picks a template based on the entry's
+ * `type` field (recipe → RecipeLayout, report → ReportLayout, otherwise
+ * → ArticleLayout). The markdown body is rendered into the chosen layout.
+ *
+ * The for-you collection's `id` becomes the URL slug: /field-notes/<id>/.
+ */
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import RecipeLayout from '@/layouts/RecipeLayout.astro';
+import ReportLayout from '@/layouts/ReportLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('for-you', ({ data }) => !data.draft);
+  return entries
+    // /do-now is its own top-level route (the interactive tool); the
+    // Field Notes archive links to it directly, so we don't generate
+    // a redundant /field-notes/do-now-generator/ page here.
+    .filter((entry) => entry.id !== 'do-now-generator')
+    .map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry },
+    }));
+}
+
+const TYPE_LABELS: Record<string, string> = {
+  essay: 'Essay',
+  'field-guide': 'Field guide',
+  framework: 'Framework',
+  report: 'Report',
+  tool: 'Tool',
+  recipe: 'Recipe',
+  letter: 'Letter',
+  notes: 'Notes',
+  travelogue: 'Travelogue',
+};
+const THEME_LABELS: Record<string, string> = {
+  strategy: 'Strategy',
+  product: 'Product',
+  innovation: 'Innovation',
+  creativity: 'Creativity',
+  self: 'Self',
+  travel: 'Travel',
+  food: 'Food',
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
+const themeLabel = THEME_LABELS[entry.data.theme] ?? entry.data.theme;
+
+// ── Recipe-template configuration is held inline here per slug for now.
+// Each new recipe adds an entry; ingredients/steps live alongside.
+const RECIPE_CONFIG: Record<string, {
+  displayWord: string;
+  tagline: string;
+  stats: { lbl: string; val: string }[];
+  ingredients: { qty: string; name: string; note?: string }[];
+  steps: { n: string; title: string; body: string; note?: string }[];
+  ingredientsNote?: string;
+}> = {
+  'challah-recipe': {
+    displayWord: 'Challah',
+    tagline: 'a friday ritual, in six steps —',
+    stats: [
+      { lbl: 'Yields',     val: 'One big braid' },
+      { lbl: 'Active',     val: '45 min' },
+      { lbl: 'Total',      val: '~4 hours' },
+      { lbl: 'Difficulty', val: 'forgiving' },
+    ],
+    ingredients: [
+      { qty: '1 cup',       name: 'warm water',       note: 'body-temperature' },
+      { qty: '2 ¼ tsp',     name: 'active dry yeast', note: 'one packet' },
+      { qty: '½ cup',       name: 'granulated sugar', note: 'plus a pinch for the yeast' },
+      { qty: '⅓ cup',       name: 'neutral oil',      note: 'I use sunflower' },
+      { qty: '2',           name: 'eggs',             note: 'room temp, beaten' },
+      { qty: '1 tsp',       name: 'fine sea salt',    note: '— do not skip' },
+      { qty: '4–4 ½ cups',  name: 'bread flour',      note: 'plus more for the counter' },
+      { qty: '1',           name: 'egg yolk',         note: 'for the wash' },
+      { qty: 'a handful',   name: 'sesame or poppy',  note: 'whichever you have' },
+    ],
+    steps: [
+      { n: 'I',   title: 'Wake the yeast.',                 body: "Stir the yeast and a pinch of sugar into the warm water. Walk away for ten minutes. When you come back it should be foamy and a little angry — if it isn't, the water was too hot or the yeast is old.", note: '10 min' },
+      { n: 'II',  title: 'Bring the dough together.',       body: 'Whisk the sugar, oil, eggs, and salt into the yeast mixture. Add the flour a cup at a time, switching to your hands when it stops accepting the spoon. The dough should be tacky but not sticky.', note: '8 min' },
+      { n: 'III', title: 'Knead like you mean it.',         body: 'Turn it out onto a lightly floured counter and knead for a full ten minutes. This is not optional. Put on a song you like; you should be a little bit out of breath at the end.', note: '10 min' },
+      { n: 'IV',  title: 'First rise.',                     body: 'Oil a large bowl, drop the dough in, flip it once so the top is greased. Cover with a tea towel. Let it double — about an hour and a half in a warm kitchen, longer if your apartment is honest about being cold.', note: '~90 min' },
+      { n: 'V',   title: 'Braid (the part you came here for).', body: 'Punch it down. Divide into six equal pieces (a kitchen scale helps). Roll each into a 16" rope, slightly thicker in the middle. Pinch the tops together. Then braid: six over one, two over six, one over five, three over one — repeat until you run out of dough.', note: '15 min' },
+      { n: 'VI',  title: 'Second rise, wash, bake.',        body: 'Transfer the braid to a parchment-lined sheet. Cover loosely; let rise 45 minutes more. Brush with egg yolk, sprinkle seeds. Bake at 350°F for 28–32 minutes, until the crown sounds hollow when you knock it.', note: '~80 min' },
+    ],
+    ingredientsNote: "p.s. — start the dough by 11am if you want bread for dinner.",
+  },
+  'baguette-recipe': {
+    displayWord: 'Baguette',
+    tagline: 'crust on the outside, cloud within —',
+    stats: [
+      { lbl: 'Yields',     val: 'Two loaves' },
+      { lbl: 'Active',     val: '30 min' },
+      { lbl: 'Total',      val: '~24 hours' },
+      { lbl: 'Difficulty', val: 'patient' },
+    ],
+    ingredients: [
+      { qty: '500 g',       name: 'bread flour',       note: 'high-protein if you have it' },
+      { qty: '10 g',        name: 'fine sea salt',     note: 'about 2 tsp' },
+      { qty: '2 g',         name: 'instant yeast',     note: '½ tsp; less is more' },
+      { qty: '375 ml',      name: 'cold water',        note: '~75% hydration' },
+      { qty: 'a small bowl',name: 'flour for shaping', note: 'a couche helps' },
+    ],
+    steps: [
+      { n: 'I',   title: 'Mix and rest.',          body: 'Combine flour, salt, yeast, and cold water in a large bowl. Mix until no dry spots remain. Cover and rest 30 minutes. The dough will look rough — this is fine.', note: '30 min' },
+      { n: 'II',  title: 'Fold (four times).',    body: 'Every 30 minutes, stretch one side of the dough up and fold it over the rest. Rotate the bowl. Repeat four times in total. This builds gluten without kneading.', note: '2 hr' },
+      { n: 'III', title: 'Cold ferment overnight.', body: 'Cover and refrigerate 18–24 hours. The slow rise develops flavor. Don\'t skip this.', note: '~24 hr' },
+      { n: 'IV',  title: 'Divide and pre-shape.', body: 'Tip onto a floured counter. Divide in two. Gently form each piece into a loose cylinder. Rest 20 minutes seam-side down, covered.', note: '20 min' },
+      { n: 'V',   title: 'Final shape and proof.',body: 'Roll each cylinder into a 14-inch baguette. Place seam-side up in a floured couche or between folds of a tea towel. Proof at room temp until puffy, ~45 minutes.', note: '45 min' },
+      { n: 'VI',  title: 'Slash and bake hot.',   body: 'Preheat oven and a baking stone to 475°F. Transfer loaves seam-side down to parchment. Slash three diagonal cuts per loaf. Bake with steam (a tray of water on the bottom rack) for 22–24 minutes until deep golden.', note: '24 min' },
+    ],
+  },
+};
+
+const recipeCfg = RECIPE_CONFIG[entry.id];
+---
+{entry.data.type === 'recipe' && recipeCfg ? (
+  <RecipeLayout
+    title={entry.data.title}
+    displayWord={recipeCfg.displayWord}
+    tagline={recipeCfg.tagline}
+    blurb={entry.data.blurb}
+    themeLabel={themeLabel}
+    slug={entry.id}
+    year={entry.data.year}
+    source={entry.data.source}
+    stats={recipeCfg.stats}
+    ingredients={recipeCfg.ingredients}
+    steps={recipeCfg.steps}
+    ingredientsNote={recipeCfg.ingredientsNote}
+  />
+) : entry.data.type === 'report' ? (
+  <ReportLayout
+    title={entry.data.title}
+    blurb={entry.data.blurb}
+    themeLabel={themeLabel}
+    source={entry.data.source}
+    year={entry.data.year}
+    read_time={entry.data.read_time ?? null}
+    slug={entry.id}
+  >
+    <Content />
+  </ReportLayout>
+) : (
+  <ArticleLayout
+    title={entry.data.title}
+    blurb={entry.data.blurb}
+    type={typeLabel}
+    themeLabel={themeLabel}
+    source={entry.data.source}
+    year={entry.data.year}
+    read_time={entry.data.read_time ?? null}
+    slug={entry.id}
+  >
+    <Content />
+  </ArticleLayout>
+)}

@@ -47,7 +47,8 @@ const articles: ArchiveItem[] = [
     year: entry.data.year,
     read_time: entry.data.read_time ?? null,
     blurb: entry.data.blurb,
-    href: `/field-notes/${entry.id}/`,
+    // /do-now is its own top-level route; everything else lives under /field-notes/<slug>/.
+    href: entry.id === 'do-now-generator' ? '/do-now' : `/field-notes/${entry.id}/`,
   })),
   ...external.map((entry) => ({
     title: entry.data.title,

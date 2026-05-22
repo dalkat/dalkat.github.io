@@ -1,0 +1,44 @@
+---
+/**
+ * "Report · 2020 · 15 min read" pill used on content templates.
+ */
+import { C, fontUI } from '@/lib/mesh';
+
+interface Props {
+  category: string;
+  date: string | number;
+  read?: string;
+  tint?: string;
+}
+const { category, date, read, tint = C.coral } = Astro.props;
+---
+<div
+  class="mesh-kicker"
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '14px',
+    padding: '8px 16px',
+    background: C.white,
+    borderRadius: '999px',
+    border: `1px solid ${C.ink}10`,
+    boxShadow: `0 8px 18px -14px ${C.ink}55`,
+    fontFamily: fontUI,
+    fontSize: '12px',
+    fontWeight: 700,
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    color: tint,
+  }}
+>
+  <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: tint }}></span>
+  <span>{category}</span>
+  <span class="mesh-kicker-sep" style={{ width: '1px', height: '12px', background: `${C.ink}22` }}></span>
+  <span style={{ color: C.inkSoft }}>{date}</span>
+  {read && (
+    <>
+      <span class="mesh-kicker-sep" style={{ width: '1px', height: '12px', background: `${C.ink}22` }}></span>
+      <span style={{ color: C.inkSoft }}>{read}</span>
+    </>
+  )}
+</div>

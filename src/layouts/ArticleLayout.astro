@@ -1,0 +1,177 @@
+---
+/**
+ * Generic article shell — used for letters (sabbatical-update*) and the
+ * trailmix tool post. Hero w/ breadcrumbs + kicker + headline + lead, then
+ * a single reader-friendly markdown body column on paper.
+ *
+ * Pages that need bespoke layouts (recipes, reports, do-now) use their
+ * own template files; this is the default for type ∈ {letter, tool, notes,
+ * essay, field-guide, travelogue}.
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Kicker from '@/components/Kicker.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
+
+interface Props {
+  title: string;
+  blurb: string;
+  type: string;
+  themeLabel: string;
+  source: string;
+  year: number;
+  read_time: number | null;
+  slug: string;
+  /** Tint accent color (defaults to coral). */
+  tint?: string;
+}
+const { title, blurb, type, themeLabel, source, year, read_time, slug, tint = C.coral } = Astro.props;
+const readLabel = read_time == null ? null : `${read_time} min read`;
+---
+<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb}>
+  <PageNav current="foryou" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.peach}cc`,    90, 14, 40],
+          [`${C.lavender}cc`,  8, 50, 40],
+          [`${C.mint}cc`,     85, 92, 35],
+        ],
+      }),
+      padding: '72px 64px 56px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+      <Breadcrumbs theme={themeLabel} slug={slug} />
+      <Kicker category={type} date={year} read={readLabel ?? undefined} tint={tint} />
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '68px',
+          lineHeight: '1.02',
+          letterSpacing: '-0.035em',
+          color: C.ink,
+          margin: '24px 0 0',
+          textWrap: 'balance',
+        }}
+      >{title}</h1>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontStyle: 'italic',
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.inkSoft,
+          marginTop: '20px',
+          maxWidth: '720px',
+          textWrap: 'pretty',
+        }}
+      >{blurb}</p>
+      <div
+        style={{
+          marginTop: '20px',
+          fontFamily: fontUI,
+          fontSize: '12px',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: C.inkSoft,
+          fontWeight: 600,
+        }}
+      >↳ Originally published on {source}</div>
+    </div>
+  </section>
+
+  {/* ───────── Body ───────── */}
+  <section
+    style={{
+      background: C.paper,
+      padding: '56px 64px 96px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <article
+      class="mesh-prose"
+      style={{
+        maxWidth: '720px',
+        margin: '0 auto',
+        fontFamily: fontReader,
+        fontSize: '18px',
+        lineHeight: '1.7',
+        color: C.inkSoft,
+      }}
+    >
+      <slot />
+    </article>
+  </section>
+
+  <Footer tint={tint} />
+</Base>
+
+<style is:global>
+  .mesh-prose h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: #221a3a;
+    margin: 48px 0 16px;
+    text-wrap: balance;
+  }
+  .mesh-prose h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #221a3a;
+    margin: 36px 0 12px;
+    text-wrap: balance;
+  }
+  .mesh-prose p {
+    margin: 0 0 20px;
+    text-wrap: pretty;
+  }
+  .mesh-prose a {
+    color: #ff8a7a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .mesh-prose blockquote {
+    margin: 32px 0;
+    padding: 22px 28px;
+    border-left: 4px solid #ff8a7a;
+    background: #fff;
+    border-radius: 0 14px 14px 0;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.4;
+    color: #221a3a;
+  }
+  .mesh-prose ul, .mesh-prose ol {
+    margin: 0 0 24px;
+    padding-left: 28px;
+  }
+  .mesh-prose li {
+    margin-bottom: 8px;
+  }
+  .mesh-prose code {
+    background: #f3edf9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.92em;
+  }
+  .mesh-prose hr {
+    border: none;
+    border-top: 1px dashed #221a3a30;
+    margin: 36px 0;
+  }
+</style>
