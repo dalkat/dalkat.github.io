@@ -168,9 +168,18 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     text-wrap: pretty;
   }
   .mesh-prose a {
-    color: #ff8a7a;
+    color: var(--post-tint, #ff8a7a);
     text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--post-tint, #ff8a7a) 50%, transparent);
+    transition: text-decoration-color .15s;
+  }
+  .mesh-prose a:hover {
+    text-decoration-color: var(--post-tint, #ff8a7a);
+  }
+  .mesh-prose li::marker {
+    color: var(--post-tint, #ff8a7a);
+    font-weight: 600;
   }
   /* Pull-quote — matches the design's <PullQuote> component
    * (content-pages.jsx). Slight negative side-margin to break out of the
@@ -275,10 +284,6 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
   .mesh-prose li {
     margin-bottom: 8px;
     padding-left: 4px;
-  }
-  .mesh-prose li::marker {
-    color: #ff8a7a;
-    font-weight: 600;
   }
   .mesh-prose code {
     background: #f3edf9;
