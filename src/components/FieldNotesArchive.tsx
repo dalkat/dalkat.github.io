@@ -21,7 +21,7 @@ interface Props {
 const THEMES = [
   'All',
   'Entrepreneurship & Product',
-  'Workplace & Teambuilding',
+  'Teambuilding',
   'Productivity',
   'Personal Essays',
   'Food',
@@ -35,7 +35,7 @@ type Theme = (typeof THEMES)[number];
  * Trail Mix); Personal Essays stays plum (introspective). */
 const themeTints: Record<string, string> = {
   'Entrepreneurship & Product': C.coral,
-  'Workplace & Teambuilding': C.teal,
+  Teambuilding: C.teal,
   Productivity: C.coral,
   'Personal Essays': C.plum,
   Food: C.coral,
