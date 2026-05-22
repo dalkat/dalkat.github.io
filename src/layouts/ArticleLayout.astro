@@ -57,7 +57,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '720px', margin: '0 auto' }}>
       <Breadcrumbs theme={themeLabel} slug={slug} />
       <Kicker category={type} date={year} read={readLabel ?? undefined} tint={tint} />
       <h1
@@ -129,7 +129,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
         scrollMarginTop: '80px',
       }}
     >
-      <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '720px', margin: '0 auto' }}>
         {highlightReelTitle && (
           <h2
             style={{
@@ -232,6 +232,19 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     border: none;
     border-top: 1px dashed #221a3a30;
     margin: 36px 0;
+  }
+  /* Embedded documents (Slideshare, YouTube, etc.) inside a markdown body. */
+  .mesh-prose iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    margin: 32px 0;
+    border-radius: 14px;
+    border: 1px solid #221a3a18;
+    box-shadow: 0 24px 50px -28px #221a3a55;
+    background: #fff;
   }
   /* Full-bleed inline figure — breaks out of the 720px article column
    * to span the full viewport. Used for the photos sprinkled through

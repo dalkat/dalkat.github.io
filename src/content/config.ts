@@ -53,6 +53,12 @@ const forYou = defineCollection({
       src: z.string(),
       caption: z.string(),
     })).optional(),
+    /**
+     * Optional outbound URL for hosted Field Notes that are also published
+     * elsewhere (e.g. Slideshare-hosted reports). When set, the report hero
+     * renders a "Read the report ↗" CTA pointing to this URL.
+     */
+    external_url: z.string().url().optional(),
   }),
 });
 
