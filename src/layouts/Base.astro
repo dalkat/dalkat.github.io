@@ -5,10 +5,10 @@ interface Props {
   title?: string;
   description?: string;
   /**
-   * Open Graph image path. Defaults to the portrait. Phase 2 will swap
-   * this for per-page generated cards (mesh-tinted by type with the title
-   * baked in). For now a single default image still gives every share
-   * link a real preview card.
+   * Open Graph image path. If omitted, defaults to the per-page generated
+   * mesh card at `/og/<derived-slug>.png` (built by
+   * `src/pages/og/[...slug].png.ts`). Pages that don't have a card fall
+   * through to the portrait.
    */
   ogImage?: string;
   /** Either "website" (default) or "article" for individual Field Notes. */
@@ -18,15 +18,35 @@ interface Props {
 const {
   title = 'Dalia Katan',
   description = 'What might life look like if designed around curiosity?',
-  ogImage = '/img/Dalia-portrait-1.jpeg',
+  ogImage,
   ogType = 'website',
 } = Astro.props;
 
 const siteOrigin = (Astro.site?.origin ?? 'https://daliakatan.com').replace(/\/$/, '');
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
-const ogImageUrl = ogImage.startsWith('http')
-  ? ogImage
-  : `${siteOrigin}${ogImage}`;
+
+// Derive the OG slug from the current path. Mirrors the endpoint:
+//   /                       → home
+//   /about                  → about
+//   /field-notes            → field-notes
+//   /field-notes/<slug>     → field-notes/<slug>
+// Pages with no generated card fall back to the portrait.
+const KNOWN_TOP_LEVEL = new Set(['about', 'strategy', 'speaker', 'field-notes', 'do-now']);
+function ogSlugFromPath(pathname: string): string | null {
+  const trimmed = pathname.replace(/^\/+|\/+$/g, '');
+  if (trimmed === '') return 'home';
+  if (KNOWN_TOP_LEVEL.has(trimmed)) return trimmed;
+  if (trimmed.startsWith('field-notes/')) return trimmed;
+  return null;
+}
+const derivedOgPath = (() => {
+  const slug = ogSlugFromPath(Astro.url.pathname);
+  return slug ? `/og/${slug}.png` : '/img/Dalia-portrait-1.jpeg';
+})();
+const resolvedOgImage = ogImage ?? derivedOgPath;
+const ogImageUrl = resolvedOgImage.startsWith('http')
+  ? resolvedOgImage
+  : `${siteOrigin}${resolvedOgImage}`;
 ---
 <!doctype html>
 <html lang="en">
