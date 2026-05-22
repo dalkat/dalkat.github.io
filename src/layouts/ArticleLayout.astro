@@ -39,7 +39,7 @@ const {
 } = Astro.props;
 const readLabel = read_time == null ? null : `${read_time} min read`;
 ---
-<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb}>
+<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
   <PageNav current="foryou" />
 
   {/* ───────── Hero ───────── */}

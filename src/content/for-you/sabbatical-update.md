@@ -1,6 +1,6 @@
 ---
 title: "Sabbatical Update #1"
-type: letter
+type: essay
 theme: personal-essays
 source: daliakatan.com
 year: 2019

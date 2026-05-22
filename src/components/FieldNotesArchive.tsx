@@ -22,17 +22,21 @@ const THEMES = [
   'All',
   'Entrepreneurship & Product',
   'Workplace & Teambuilding',
-  'Productivity & Creativity',
+  'Productivity',
   'Personal Essays',
   'Food',
 ] as const;
 
 type Theme = (typeof THEMES)[number];
 
+/* Adjacent themes must not share a tint. Sequence: coral, teal, coral,
+ * plum, coral — no two neighbors repeat. Productivity is coral
+ * (matches the energetic/actionable mood of tools like Do Now and
+ * Trail Mix); Personal Essays stays plum (introspective). */
 const themeTints: Record<string, string> = {
   'Entrepreneurship & Product': C.coral,
   'Workplace & Teambuilding': C.teal,
-  'Productivity & Creativity': C.plum,
+  Productivity: C.coral,
   'Personal Essays': C.plum,
   Food: C.coral,
 };

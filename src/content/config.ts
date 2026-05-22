@@ -22,7 +22,7 @@ const fieldNoteType = z.enum([
 const fieldNoteTheme = z.enum([
   'entrepreneurship-product',
   'workplace-teambuilding',
-  'productivity-creativity',
+  'productivity',
   'personal-essays',
   'food',
 ]);

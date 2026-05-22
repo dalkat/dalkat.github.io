@@ -4,12 +4,29 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  /**
+   * Open Graph image path. Defaults to the portrait. Phase 2 will swap
+   * this for per-page generated cards (mesh-tinted by type with the title
+   * baked in). For now a single default image still gives every share
+   * link a real preview card.
+   */
+  ogImage?: string;
+  /** Either "website" (default) or "article" for individual Field Notes. */
+  ogType?: 'website' | 'article';
 }
 
 const {
   title = 'Dalia Katan',
   description = 'What might life look like if designed around curiosity?',
+  ogImage = '/img/Dalia-portrait-1.jpeg',
+  ogType = 'website',
 } = Astro.props;
+
+const siteOrigin = (Astro.site?.origin ?? 'https://daliakatan.com').replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+const ogImageUrl = ogImage.startsWith('http')
+  ? ogImage
+  : `${siteOrigin}${ogImage}`;
 ---
 <!doctype html>
 <html lang="en">
@@ -18,6 +35,31 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* Favicon — DK gradient disc, matches the brand mark in the nav */}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <meta name="theme-color" content="#fbf7ee" />
+
+    {/* Open Graph (Facebook, LinkedIn, Slack, iMessage, etc.) */}
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Dalia Katan" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    {/* Twitter / X */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
