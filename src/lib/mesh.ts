@@ -30,23 +30,23 @@ export type MeshBlob = [color: string, x: number, y: number, size: number];
 /**
  * Build a stacked radial-gradient backdrop on a base color.
  *
- * v7 quirk (preserved deliberately): if a blob color is an 8-digit hex
- * (#rrggbbaa), naïvely appending '00' produces a 10-digit string Chrome
- * rejects — killing the whole gradient. We normalize 8-digit hex back to
- * 6-digit + alpha 00; pass other formats through.
+ * VERBATIM v7 meshBg (from mesh-pages/shared-v7-override.jsx).
+ *
+ * The v7 implementation naively appends "00" to the blob color string.
+ * For 6-digit hex like "#ffd9c2" → "#ffd9c200" (valid: opaque → transparent).
+ * For 8-digit alpha hex like "#ff8a7aaa" → "#ff8a7aaa00" (10 digits, INVALID
+ * hex — Chrome rejects the whole gradient stop, so that blob silently fails
+ * to render).
+ *
+ * This is a *deliberate* preservation of the v7 quirk: alpha-suffixed blobs
+ * are skipped, which gives the v7 mesh its quieter density. mesh3.html
+ * mounts this exact behavior. Do NOT "fix" by normalizing 8-digit hex back
+ * — the design depends on those blobs vanishing.
  */
-function fadeStop(c: string): string {
-  if (typeof c !== 'string') return c;
-  if (/^#[0-9a-f]{8}$/i.test(c)) return c.slice(0, 7) + '00';
-  if (/^#[0-9a-f]{6}$/i.test(c)) return c + '00';
-  if (/^#[0-9a-f]{3,4}$/i.test(c)) return c + '0';
-  return c;
-}
-
 export function meshBg({ base, blobs }: { base: string; blobs: MeshBlob[] }): string {
   const stops = blobs
     .map(([color, x, y, size]) =>
-      `radial-gradient(circle at ${x}% ${y}%, ${color} 0%, ${fadeStop(color)} ${size}%)`
+      `radial-gradient(circle at ${x}% ${y}%, ${color} 0%, ${color}00 ${size}%)`
     )
     .join(', ');
   return `${stops}, ${base}`;
