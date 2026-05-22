@@ -1,9 +1,10 @@
 ---
 /**
- * Site footer. Mesh-tinted paper band with a brand row left + copyright right.
- * Sat below every page; a thin gradient line marks the seam with content.
+ * Minimal footer: a single centered copyright line on a mesh-tinted band.
+ * Earlier revisions had a DK gradient mark + name on the left; per user
+ * direction these are removed in favor of a quieter, copyright-only footer.
  */
-import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
+import { C, fontUI, meshBg } from '@/lib/mesh';
 
 interface Props {
   tint?: string;
@@ -32,67 +33,16 @@ const year = new Date().getFullYear();
     color: C.ink,
     padding: '32px 64px 30px',
     fontFamily: fontUI,
+    textAlign: 'center',
   }}
 >
   <div
-    class="mesh-footer-row"
     style={{
-      maxWidth: '1180px',
-      margin: '0 auto',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      gap: '24px',
-      flexWrap: 'wrap',
+      fontFamily: fontUI,
+      fontSize: '12px',
+      color: C.inkSoft,
+      fontWeight: 500,
+      letterSpacing: '0.02em',
     }}
-  >
-    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      <span
-        style={{
-          width: '32px',
-          height: '32px',
-          borderRadius: '50%',
-          background: `linear-gradient(135deg, ${C.coral}, ${C.plum} 60%, ${C.teal})`,
-          color: C.white,
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontFamily: fontUI,
-          fontSize: '12px',
-          fontWeight: 700,
-          boxShadow: `0 4px 10px -4px ${C.coral}66`,
-        }}
-      >DK</span>
-      <div>
-        <div
-          style={{
-            fontFamily: fontDisplay,
-            fontWeight: 500,
-            fontSize: '17px',
-            letterSpacing: '-0.01em',
-            color: C.ink,
-            lineHeight: '1.1',
-          }}
-        >Dalia Katan</div>
-        <div
-          style={{
-            fontFamily: fontUI,
-            fontSize: '11px',
-            color: C.inkSoft,
-            letterSpacing: '0.04em',
-            marginTop: '2px',
-          }}
-        >Brooklyn, NY</div>
-      </div>
-    </div>
-    <div
-      style={{
-        fontFamily: fontUI,
-        fontSize: '12px',
-        color: C.inkSoft,
-        fontWeight: 500,
-        letterSpacing: '0.02em',
-      }}
-    >© {year} Dalia Katan. All rights reserved.</div>
-  </div>
+  >© {year} Dalia Katan. All rights reserved.</div>
 </footer>

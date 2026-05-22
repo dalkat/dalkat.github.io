@@ -21,26 +21,36 @@ export interface Testimonial {
   role: string;
 }
 
+/**
+ * Real testimonials carried over from the previous site's home.html
+ * ("People saying nice things 🥰" section). Verbatim quotes and
+ * attributions; don't editorialize.
+ */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote: "Dalia is one of those rare product leaders who can hold the strategy in one hand and the pixel in the other. She makes everyone around her braver.",
-    author: 'A founder she advised',
-    role: 'Seed-stage CEO',
+    quote: "Dalia is one of the best all-around people that I know. Her tremendous background (Ivy League, Big 4 Consulting, startups) is rooted in the foundation of subject expertise/knowledge, integrity, professionalism, heart, pride in her work, and how she treats people at all levels — leaving a lasting impression to those lucky to have worked with her.",
+    author: 'John Z.',
+    role: 'EVP Marketing, Indigenous',
   },
   {
-    quote: "She turned three months of meandering conversations into a roadmap the whole company could see itself in. We're still running on it.",
-    author: 'Series B operator',
-    role: 'Head of Product',
+    quote: "Dalia has incredible strategic thinking, leadership skills — Envisioning, Engaging and Execution skills. She demonstrates great presence, EQ, IQ and drive and took full ownership of our project along with her colleagues. Teamwork between Dalia and various members was outstanding making it seamless for the entire team. She is a great talent to seek out to solve big and complex challenges.",
+    author: 'Akhil S.',
+    role: 'Global CFO, Estée Lauder',
   },
   {
-    quote: "Working with Dalia feels like being read aloud to. You leave each session with the thing you came in trying to say, only sharper.",
-    author: 'A repeat collaborator',
-    role: 'Designer & writer',
+    quote: "There are only a few people in the world who match her vision along with her determination and energy, and I have time and time again been left speechless.",
+    author: 'Aoi S.',
+    role: 'CEO/Founder, Colabra',
   },
   {
-    quote: "I've never seen anyone hold so much complexity so lightly. She makes hard decisions feel obvious in retrospect.",
-    author: 'Former Stripe peer',
-    role: 'Product lead',
+    quote: "I worked with Dalia to establish and manage a network of professionals to grow Doblin's presence on the west coast. Dalia was the driver of this effort, helping it grow from the two of us to a vibrant community of practitioners, partners, and account leaders. […] Dalia is smart, proactive, thoughtful and energetic. She delivers high quality work and is a pleasure to work with. I have been lucky to have her as a colleague!",
+    author: 'Erik K.',
+    role: 'Managing Director, Deloitte',
+  },
+  {
+    quote: "Dalia is extremely professional and one of the most collaborative people I've met with genuine interests and passions for helping others. She is detail-oriented and well-organized… She really owned the room and helped our people think outside of the box. Dalia is truly a leader and an asset for any business.",
+    author: 'Anna S.',
+    role: 'Client, Fortune-500 Consumer Goods Co.',
   },
 ];
 
