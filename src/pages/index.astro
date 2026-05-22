@@ -5,8 +5,7 @@ import SectionHeader from '@/components/SectionHeader.astro';
 import CompanyLogos from '@/components/CompanyLogos.astro';
 import PostTile from '@/components/PostTile.astro';
 import PhotoSlab from '@/components/PhotoSlab.astro';
-// Footer intentionally not imported — v7 has no footer
-// (see mesh-pages/shared-v7-override.jsx). Re-add if v8 brings it back.
+import Footer from '@/components/Footer.astro';
 import PraiseCarousel from '@/components/PraiseCarousel.tsx';
 import ContactForm from '@/components/ContactForm.tsx';
 import {
@@ -366,5 +365,5 @@ const gt = gradientText();
     </div>
   </section>
 
-  {/* v7 has no footer per shared-v7-override.jsx; intentionally omitted. */}
+  <Footer tint={C.coral} />
 </Base>
