@@ -287,7 +287,7 @@ export default function FieldNotesArchive({ articles }: Props) {
                       }}
                     >
                       <span>{readLabel(a.read_time)}</span>
-                      <span>Read →</span>
+                      <span>{a.type === 'Video' ? 'Watch →' : 'Read →'}</span>
                     </div>
                   </a>
                 </li>
