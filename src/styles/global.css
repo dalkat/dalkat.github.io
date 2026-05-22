@@ -6,6 +6,11 @@
  * (e.g. inline gradient-color computations in the meshBg helper).
  * Mirrors the C object in the original design handoff. */
 :root {
+  /* Global mesh scale — design tokens are sized for a 1280px artboard;
+   * dial this down to soften the visual weight on production viewports.
+   * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
+   * radii, shadows — proportionally). Tune in one place. */
+  --mesh-scale: 0.9;
   --c-lavender: #dcd0ff;
   --c-lilac: #cbb8ff;
   --c-mint: #cdf2d8;
@@ -28,11 +33,18 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+  html {
+    background: var(--c-paper);
+  }
   body {
     background: var(--c-paper);
     color: var(--c-ink);
     font-family: 'Inter', sans-serif;
     margin: 0;
+    /* Scale the whole document proportionally. `zoom` is a real layout
+     * effect (not a transform), so sticky positioning, click targets, and
+     * scroll all behave correctly. Modern WebKit/Chromium/Firefox 126+. */
+    zoom: var(--mesh-scale);
   }
   *, *::before, *::after {
     box-sizing: border-box;
