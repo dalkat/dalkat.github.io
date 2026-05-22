@@ -1,0 +1,57 @@
+---
+/**
+ * /trailmix — the Trail Mix Method writeup at its own pretty URL.
+ *
+ * The piece is still a member of the for-you content collection (so it
+ * appears in the /notes archive), but its canonical URL is /trailmix
+ * instead of /notes/trail-mix-method. The dynamic [...slug] route
+ * (src/pages/notes/[...slug].astro) skips this id; we render it here
+ * via the same ArticleLayout it would otherwise have used.
+ */
+import { getEntry, render } from 'astro:content';
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { tintForType } from '@/lib/mesh';
+
+const TYPE_LABELS: Record<string, string> = {
+  essay: 'Essay',
+  'field-guide': 'Field guide',
+  framework: 'Framework',
+  report: 'Report',
+  tool: 'Tool',
+  recipe: 'Recipe',
+  letter: 'Letter',
+  notes: 'Notes',
+  travelogue: 'Travelogue',
+  video: 'Video',
+};
+const THEME_LABELS: Record<string, string> = {
+  'entrepreneurship-product': 'Entrepreneurship & Product',
+  'workplace-teambuilding': 'Workplace & Teambuilding',
+  productivity: 'Productivity',
+  'personal-essays': 'Personal Essays',
+  food: 'Food',
+};
+
+const entry = await getEntry('for-you', 'trail-mix-method');
+if (!entry) throw new Error('Trail Mix Method entry missing from content collection.');
+const { Content } = await render(entry);
+
+const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
+const themeLabel = THEME_LABELS[entry.data.theme] ?? entry.data.theme;
+const tint = tintForType(entry.data.type);
+---
+<ArticleLayout
+  title={entry.data.title}
+  blurb={entry.data.blurb}
+  type={typeLabel}
+  themeLabel={themeLabel}
+  source={entry.data.source}
+  year={entry.data.year}
+  read_time={entry.data.read_time ?? null}
+  slug="trailmix"
+  tint={tint}
+  highlightReel={entry.data.highlight_reel}
+  highlightReelTitle={entry.data.highlight_reel ? 'Highlight reel' : undefined}
+>
+  <Content />
+</ArticleLayout>

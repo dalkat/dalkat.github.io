@@ -2,8 +2,8 @@
  * Static OG card endpoint.
  *
  * Generates one 1200×630 PNG per page at build time. The slug becomes the
- * URL path the card is *for* — e.g. `/og/field-notes/sabbatical-update.png`
- * is the preview card for `/field-notes/sabbatical-update/`. Top-level pages
+ * URL path the card is *for* — e.g. `/og/notes/sabbatical-update.png`
+ * is the preview card for `/notes/sabbatical-update/`. Top-level pages
  * use slugs like `home`, `about`, `strategy`, etc.
  *
  * Each page's `Base.astro` derives its `og:image` URL from its own path so
@@ -39,8 +39,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const entries = await getCollection('for-you', ({ data }) => !data.draft);
 
   // Per-Field-Note cards ----------------------------------------------------
+  // do-now-generator is rendered as a top-level /quests/do-now card below.
+  // trail-mix-method is rendered at /trailmix (top-level slug).
+  const SPECIAL_IDS = new Set(['do-now-generator', 'trail-mix-method']);
   const fieldNoteCards = entries
-    .filter((e) => e.id !== 'do-now-generator')
+    .filter((e) => !SPECIAL_IDS.has(e.id))
     .map((entry) => {
       const tint = tintForType(entry.data.type);
       const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
@@ -53,10 +56,27 @@ export const getStaticPaths: GetStaticPaths = async () => {
         displayWord: DISPLAY_WORDS[entry.id],
       };
       return {
-        params: { slug: `field-notes/${entry.id}` },
+        params: { slug: `notes/${entry.id}` },
         props: { spec },
       };
     });
+
+  // Trail Mix Method gets a dedicated top-level /trailmix card -------------
+  const trailMix = entries.find((e) => e.id === 'trail-mix-method');
+  const trailmixCard = trailMix
+    ? [{
+        params: { slug: 'trailmix' },
+        props: {
+          spec: {
+            title: trailMix.data.title,
+            kicker: `${TYPE_LABELS[trailMix.data.type] ?? trailMix.data.type} · Field Notes`,
+            subtitle: trailMix.data.blurb,
+            tint: tintForType(trailMix.data.type),
+            base: C.peach,
+          } satisfies OGCardSpec,
+        },
+      }]
+    : [];
 
   // Top-level page cards ----------------------------------------------------
   const siteDescription = 'What might life look like if designed around curiosity?';
@@ -110,7 +130,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
-      params: { slug: 'field-notes' },
+      params: { slug: 'notes' },
       props: {
         spec: {
           title: 'Field Notes',
@@ -123,7 +143,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
-      params: { slug: 'side-quests' },
+      params: { slug: 'quests' },
       props: {
         spec: {
           title: 'Side quests',
@@ -136,7 +156,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
-      params: { slug: 'do-now' },
+      params: { slug: 'quests/do-now' },
       props: {
         spec: {
           title: 'Do Now',
@@ -149,7 +169,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     },
   ];
 
-  return [...fieldNoteCards, ...topLevelCards];
+  return [...fieldNoteCards, ...trailmixCard, ...topLevelCards];
 };
 
 export const GET: APIRoute = async ({ props }) => {

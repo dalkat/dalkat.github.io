@@ -46,8 +46,14 @@ const articles: ArchiveItem[] = [
     year: entry.data.year,
     read_time: entry.data.read_time ?? null,
     blurb: entry.data.blurb,
-    // /do-now is its own top-level route; everything else lives under /field-notes/<slug>/.
-    href: entry.id === 'do-now-generator' ? '/do-now' : `/field-notes/${entry.id}/`,
+    // Special-cases:
+    //   do-now-generator  → the interactive tool lives at /quests/do-now
+    //   trail-mix-method  → top-level pretty URL /trailmix
+    //   everything else   → /notes/<id>/
+    href:
+      entry.id === 'do-now-generator' ? '/quests/do-now'
+      : entry.id === 'trail-mix-method' ? '/trailmix/'
+      : `/notes/${entry.id}/`,
   })),
   ...external.map((entry) => ({
     title: entry.data.title,
@@ -71,11 +77,11 @@ const gt = gradientText();
   title="Field Notes — Dalia Katan"
   description="Essays, recipes, tools, and small experiments — filed by what I was actually thinking about when I made them."
 >
-  <PageNav current="foryou" />
+  <PageNav current="notes" />
 
   {/* ───────── Hero ───────── */}
   <section
-    id="foryou"
+    id="notes"
     style={{
       background: meshBg({
         base: C.lavender,
@@ -109,7 +115,7 @@ const gt = gradientText();
         }}
       >
         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.plum }}></span>
-        /field-notes · the archive
+        /notes · the archive
       </div>
       <h1
         style={{

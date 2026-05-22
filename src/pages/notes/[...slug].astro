@@ -4,7 +4,11 @@
  * `type` field (recipe → RecipeLayout, report → ReportLayout, otherwise
  * → ArticleLayout). The markdown body is rendered into the chosen layout.
  *
- * The for-you collection's `id` becomes the URL slug: /field-notes/<id>/.
+ * The for-you collection's `id` becomes the URL slug: /notes/<id>/.
+ *
+ * Two entries skip this route and get bespoke top-level pages:
+ *   do-now-generator → /quests/do-now (the interactive tool)
+ *   trail-mix-method → /trailmix     (pretty top-level URL)
  */
 import { getCollection, render } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
@@ -13,12 +17,12 @@ import ReportLayout from '@/layouts/ReportLayout.astro';
 import { tintForType } from '@/lib/mesh';
 
 export async function getStaticPaths() {
+  // Astro processes getStaticPaths in isolation (module-level locals aren't
+  // always in scope), so the skip-list is inlined here.
+  const SKIP_IDS = new Set(['do-now-generator', 'trail-mix-method']);
   const entries = await getCollection('for-you', ({ data }) => !data.draft);
   return entries
-    // /do-now is its own top-level route (the interactive tool); the
-    // Field Notes archive links to it directly, so we don't generate
-    // a redundant /field-notes/do-now-generator/ page here.
-    .filter((entry) => entry.id !== 'do-now-generator')
+    .filter((entry) => !SKIP_IDS.has(entry.id))
     .map((entry) => ({
       params: { slug: entry.id },
       props: { entry },

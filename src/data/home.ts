@@ -85,7 +85,7 @@ export const COMPANIES: CompanyWordmark[] = [
 
 /** Field Notes teaser tiles — four picks on the Home page that link out to
  *  the actual pieces (Substack/Medium). Mirrors a slice of the archive at
- *  /field-notes; the CTA underneath sends visitors to the full library. */
+ *  /notes; the CTA underneath sends visitors to the full library. */
 export interface FieldNoteTeaser {
   kind: string;
   title: string;
@@ -148,9 +148,9 @@ export interface NavLink {
 }
 
 export const NAV: NavLink[] = [
-  { id: 'home',       label: 'Home',        href: '/' },
-  { id: 'strategy',   label: 'Strategy',    href: '/strategy' },
-  { id: 'speaker',    label: 'Speaker',     href: '/speaker' },
-  { id: 'foryou',     label: 'Field Notes', href: '/field-notes' },
-  { id: 'side-quests', label: 'Side quests', href: '/side-quests' },
+  { id: 'home',     label: 'Home',        href: '/' },
+  { id: 'strategy', label: 'Strategy',    href: '/strategy' },
+  { id: 'speaker',  label: 'Speaker',     href: '/speaker' },
+  { id: 'notes',    label: 'Field Notes', href: '/notes' },
+  { id: 'quests',   label: 'Side Quests', href: '/quests' },
 ];
