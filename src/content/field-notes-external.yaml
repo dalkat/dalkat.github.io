@@ -4,6 +4,26 @@
 #
 # Each entry must include an `id` (slug) — Astro's file() loader uses it.
 
+- id: arch-atmosphere
+  title: "03 Atmosphere: Getting the vibes right"
+  type: framework
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2026
+  read_time: 10            # TODO: confirm
+  blurb: "The emotional baseline of product experience — and how it quietly shapes whether users return."
+  url: https://daliakatan.substack.com/p/arch-atmosphere
+
+- id: atmosphere-case-study-hopper
+  title: "04 How Atmosphere makes or breaks user trust and retention"
+  type: essay
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2026
+  read_time: 12            # TODO: confirm
+  blurb: "Atmosphere in action: Hopper and the Las Vegas effect."
+  url: https://daliakatan.substack.com/p/04-atmosphere-case-study-hopper-how-atmosphere-makes-or-breaks-trust-and-retention
+
 - id: introducing-arch
   title: "Introducing ARCH: Building Products People Want to Live In"
   type: framework
