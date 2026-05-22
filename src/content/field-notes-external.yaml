@@ -60,7 +60,7 @@
   type: video
   theme: food
   source: YouTube
-  year: 2023            # TODO: confirm
+  year: 2016
   read_time: 12         # TODO: confirm (video length, minutes)
   blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table — layered rice, lamb, carrots, the long patient way."
   url: https://www.youtube.com/watch?v=-_U_T2r8mBs
@@ -70,7 +70,7 @@
   type: video
   theme: food
   source: YouTube
-  year: 2023            # TODO: confirm
+  year: 2016
   read_time: 14         # TODO: confirm (video length, minutes)
   blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice — a long-afternoon dish that turns kitchen labor into a family ritual."
   url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s
