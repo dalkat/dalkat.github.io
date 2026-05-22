@@ -44,6 +44,15 @@ const forYou = defineCollection({
   schema: baseFieldNote.extend({
     redirect_from: z.array(z.string()).optional(),
     draft: z.boolean().optional().default(false),
+    /**
+     * Optional photo gallery rendered after the article body in
+     * ArticleLayout, matching the design's ImageCarousel styling.
+     * Used on the two sabbatical updates (feb19 + oct19 highlight reels).
+     */
+    highlight_reel: z.array(z.object({
+      src: z.string(),
+      caption: z.string(),
+    })).optional(),
   }),
 });
 

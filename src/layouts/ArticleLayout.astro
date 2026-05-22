@@ -13,6 +13,8 @@ import PageNav from '@/components/PageNav.astro';
 import Footer from '@/components/Footer.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Kicker from '@/components/Kicker.astro';
+import HighlightReel from '@/components/HighlightReel.tsx';
+import type { ReelImage } from '@/components/HighlightReel.tsx';
 import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
 
 interface Props {
@@ -26,8 +28,15 @@ interface Props {
   slug: string;
   /** Tint accent color (defaults to coral). */
   tint?: string;
+  /** Optional photo gallery rendered after the article body. */
+  highlightReel?: ReelImage[];
+  /** Optional H2 heading shown above the highlight reel. */
+  highlightReelTitle?: string;
 }
-const { title, blurb, type, themeLabel, source, year, read_time, slug, tint = C.coral } = Astro.props;
+const {
+  title, blurb, type, themeLabel, source, year, read_time, slug,
+  tint = C.coral, highlightReel, highlightReelTitle,
+} = Astro.props;
 const readLabel = read_time == null ? null : `${read_time} min read`;
 ---
 <Base title={`${title} — Field Notes — Dalia Katan`} description={blurb}>
@@ -111,6 +120,33 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
       <slot />
     </article>
   </section>
+
+  {highlightReel && highlightReel.length > 0 && (
+    <section
+      style={{
+        background: C.paper,
+        padding: '0 64px 96px',
+        scrollMarginTop: '80px',
+      }}
+    >
+      <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+        {highlightReelTitle && (
+          <h2
+            style={{
+              fontFamily: fontDisplay,
+              fontWeight: 500,
+              fontSize: '32px',
+              letterSpacing: '-0.02em',
+              color: C.ink,
+              margin: '0 0 8px',
+              textWrap: 'balance',
+            }}
+          >{highlightReelTitle}</h2>
+        )}
+        <HighlightReel client:visible images={highlightReel} tint={tint} />
+      </div>
+    </section>
+  )}
 
   <Footer tint={tint} />
 </Base>

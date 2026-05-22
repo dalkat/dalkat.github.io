@@ -11,6 +11,17 @@ permalink: /for-you/sabbatical-update/
 redirect_from:
   - /update-1
   - /update-1/
+highlight_reel:
+  - src: /img/blog/6.jpg
+    caption: My youngest brother, Ryan, turned 10 this February! We organized our first "Camp Katan" retreat weekend in the Catskills to celebrate — board games, challah and pancakes, smores, tubing. After day one, Ryan said, "This is the most family bonding time we ever had!" and I almost cried.
+  - src: /img/blog/2.jpg
+    caption: My sister and I spent a few days in Cinque Terre, Italy in October. She was backpacking Europe after graduating college and met up with me on the first leg of my trip. We forgot to pack bathing suits that day, but it didn't stop us from jumping in.
+  - src: /img/blog/3.jpg
+    caption: My cousin George's big fat Jewish wedding in November — beautiful huppa, broken glass, "Next year in Jerusalem," all of it. I think as we get older we finally appreciate and cherish our cultures and traditions, and it was that week I realized how important preserving that is for me.
+  - src: /img/blog/1.jpg
+    caption: Joe and I's first anniversary in October. The gluttons we are, we celebrated at a French baking class. Unbeknownst to us, these amateur bakers had accidentally signed up for an advanced course…
+  - src: /img/blog/5.jpg
+    caption: Over New Years, Joe and I backpacked in Torres del Paine, Patagonia. A million layers to combat fickle weather, incredible views on our uphill trek, and me being grumpy after 25 of our 30+ miles of backpacking. One of the physically hardest things I've ever done.
 ---
 
 *This has been so hard to write and so difficult to prevent the perfectionist in me from taking over — so a quick yay that I've finally clicked send, and a yay to embracing imperfection. My goal in writing these updates is to share my journey experimenting with a lifestyle that doesn't involve full-time or freelance work, to ask for help and input on the many questions I'm asking myself, and perhaps even to infuse some inspiration for what's possible into the lives of the amazing people around me. My one request: I would love to hear from you — if there's something that particularly resonates, or if you have advice from your own journeys, write me a note. And let me know how you're doing, too.*

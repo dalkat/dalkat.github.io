@@ -157,6 +157,8 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     year={entry.data.year}
     read_time={entry.data.read_time ?? null}
     slug={entry.id}
+    highlightReel={entry.data.highlight_reel}
+    highlightReelTitle={entry.data.highlight_reel ? 'Highlight reel' : undefined}
   >
     <Content />
   </ArticleLayout>

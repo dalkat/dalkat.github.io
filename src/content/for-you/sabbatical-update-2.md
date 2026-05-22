@@ -11,6 +11,27 @@ permalink: /for-you/sabbatical-update-2/
 redirect_from:
   - /update-2
   - /update-2/
+highlight_reel:
+  - src: /img/blog/7.jpg
+    caption: My first Tough Mudder. Joe inspired our group of friends into doing triathlons and other fun competitions; this one was definitely my favorite.
+  - src: /img/blog/11.jpg
+    caption: Mike, Joe, and I on the one day it hit 95 degrees in San Francisco. SF apartments don't have AC — and as we moped around the house Monday morning throwing ice cubes down our shirts, we realized it was so hot we wouldn't feel how cold the Pacific was. There we were, minutes later, swimming by the Golden Gate bridge.
+  - src: /img/blog/9.jpg
+    caption: Nothing brought me more joy than spending time with my little munchkin brother. He came to visit me for a week in SF and reminded me how to live life like a kid. One of the things we did was go camping on a farm, where we got to herd a flock of geese and feed baby goats.
+  - src: /img/blog/10.jpg
+    caption: An amazing retreat with my Sandbox community — child-like forts in a tree grove under the stars, hikes ending in dance parties on the beach, heart-to-hearts, art and cacao ceremony, and 16 loaves of challah baked on Friday night for the crew.
+  - src: /img/blog/12.jpg
+    caption: Sunset outside Joshua Tree, in a teeny-tiny 100%-off-the-grid Airbnb. (April 2019)
+  - src: /img/blog/17.jpg
+    caption: If the goat didn't get your attention, I thought the llama might. A weekend at a llama sanctuary for Joe's birthday, then a goat and goose farm when my brother Ryan was visiting. (March/August 2019)
+  - src: /img/blog/13.jpeg
+    caption: Anyone who's been here can probably guess where this is — welcome to Zion. We slept in our rental car that night. (April 2019)
+  - src: /img/blog/14.jpg
+    caption: Hanging with the Flintstones at Joshua Tree. (April 2019)
+  - src: /img/blog/15.jpg
+    caption: These people are some of the most important in my life. This night felt very much like high school, when your best friends could show up at your house unannounced and stay up all night laughing about everything and nothing at the same time. Grateful.
+  - src: /img/blog/18.jpg
+    caption: A gift to you for making it to the end — my stylish mother makes it to the bottom of a tube run.
 ---
 
 ### Hi friends,
