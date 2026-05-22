@@ -1,39 +1,40 @@
 ---
 /**
- * /projects — side projects index.
+ * /side-quests — things I built outside of paid work.
  *
  * Hero (peach-mesh + kicker pill + Fraunces flourish) over a stacked
- * single-column list of large project cards. Each card has a mesh-tinted
+ * single-column list of large quest cards. Each card has a mesh-tinted
  * thumb tile on the left and copy on the right; `coming-soon` cards swap
- * the outbound CTA for a pill.
+ * the outbound CTA for a pill, and tiles with an `award` field render
+ * a small honor pill above the title.
  *
- * Add new projects by appending to `PROJECTS` in `src/data/projects.ts`.
+ * Add new entries by appending to `SIDE_QUESTS` in `src/data/side-quests.ts`.
  */
 import Base from '@/layouts/Base.astro';
 import PageNav from '@/components/PageNav.astro';
 import Footer from '@/components/Footer.astro';
 import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
-import { PROJECTS } from '@/data/projects';
+import { SIDE_QUESTS } from '@/data/side-quests';
 
 const gt = gradientText();
 ---
 <Base
-  title="Projects — Dalia Katan"
+  title="Side quests — Dalia Katan"
   description="Side projects, weekend tools, and small experiments — things I've built outside of paid work."
 >
-  <PageNav current="projects" />
+  <PageNav current="side-quests" />
 
   {/* ───────── Hero ───────── */}
   <section
-    id="projects"
+    id="side-quests"
     style={{
       background: meshBg({
         base: C.peach,
         blobs: [
-          [`${C.butter}cc`,  12, 18, 50],
+          [`${C.butter}cc`,   12, 18, 50],
           [`${C.lavender}cc`, 88, 12, 45],
-          [`${C.mint}cc`,    72, 92, 40],
-          [`${C.coral}aa`,   10, 88, 35],
+          [`${C.mint}cc`,     72, 92, 40],
+          [`${C.coral}aa`,    10, 88, 35],
         ],
       }),
       padding: '88px 64px 72px',
@@ -59,7 +60,7 @@ const gt = gradientText();
         }}
       >
         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.coral }}></span>
-        /projects · things I've made
+        /side-quests · things I've made
       </div>
       <h1
         style={{
@@ -74,7 +75,7 @@ const gt = gradientText();
           maxWidth: '900px',
         }}
       >
-        Side <span style={gt}>projects</span><span style={{ color: C.coral }}>.</span>
+        Side <span style={gt}>quests</span><span style={{ color: C.coral }}>.</span>
       </h1>
       <p
         style={{
@@ -111,13 +112,13 @@ const gt = gradientText();
         gap: '22px',
       }}
     >
-      {PROJECTS.map((p) => {
-        const isComingSoon = p.status === 'coming-soon';
-        const isExternal = !!p.href && p.href.startsWith('http');
-        const Tag = p.href ? 'a' : 'article';
+      {SIDE_QUESTS.map((q) => {
+        const isComingSoon = q.status === 'coming-soon';
+        const isExternal = !!q.href && q.href.startsWith('http');
+        const Tag = q.href ? 'a' : 'article';
         return (
           <Tag
-            href={p.href}
+            href={q.href}
             target={isExternal ? '_blank' : undefined}
             rel={isExternal ? 'noopener noreferrer' : undefined}
             style={{
@@ -132,7 +133,7 @@ const gt = gradientText();
               alignItems: 'flex-start',
               textDecoration: 'none',
               color: C.ink,
-              cursor: p.href ? 'pointer' : 'default',
+              cursor: q.href ? 'pointer' : 'default',
               opacity: isComingSoon ? 0.92 : 1,
             }}
           >
@@ -143,10 +144,10 @@ const gt = gradientText();
                 height: '180px',
                 borderRadius: '20px',
                 background: meshBg({
-                  base: p.tint,
+                  base: q.tint,
                   blobs: [
-                    [`${C.butter}dd`, 80, 24, 65],
-                    [`${C.white}aa`,  18, 78, 60],
+                    [`${C.butter}dd`,   80, 24, 65],
+                    [`${C.white}aa`,    18, 78, 60],
                     [`${C.lavender}aa`, 50, 50, 40],
                   ],
                 }),
@@ -162,7 +163,7 @@ const gt = gradientText();
                   backgroundImage: `repeating-linear-gradient(135deg, transparent 0 11px, ${C.ink}10 11px 12px)`,
                 }}
               ></div>
-              {/* Initials chip — like a tiny brand mark */}
+              {/* Kind pill — small brand mark in the corner */}
               <div
                 style={{
                   position: 'absolute',
@@ -179,22 +180,72 @@ const gt = gradientText();
                   color: C.ink,
                   boxShadow: `0 6px 14px -10px ${C.ink}66`,
                 }}
-              >{p.kind}</div>
+              >{q.kind}</div>
             </div>
 
             {/* Right column */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {q.award && (
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignSelf: 'flex-start',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '7px 14px 7px 10px',
+                    background: meshBg({
+                      base: C.butter,
+                      blobs: [
+                        [`${C.peach}dd`,  100, 50, 80],
+                        [`${C.white}bb`,    0, 50, 60],
+                      ],
+                    }),
+                    borderRadius: '999px',
+                    border: `1px solid ${C.ink}10`,
+                    boxShadow: `0 6px 14px -10px ${C.ink}55`,
+                    fontFamily: fontUI,
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    color: C.ink,
+                    letterSpacing: '-0.005em',
+                  }}
+                >
+                  {q.award.icon && <span style={{ fontSize: '14px', lineHeight: 1 }}>{q.award.icon}</span>}
+                  <span>{q.award.text}</span>
+                </div>
+              )}
               <div
                 style={{
-                  fontFamily: fontDisplay,
-                  fontWeight: 400,
-                  fontSize: '42px',
-                  lineHeight: '1.02',
-                  letterSpacing: '-0.025em',
-                  color: C.ink,
-                  textWrap: 'balance',
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  flexWrap: 'wrap',
+                  columnGap: '14px',
+                  rowGap: '4px',
                 }}
-              >{p.title}</div>
+              >
+                <div
+                  style={{
+                    fontFamily: fontDisplay,
+                    fontWeight: 400,
+                    fontSize: '42px',
+                    lineHeight: '1.02',
+                    letterSpacing: '-0.025em',
+                    color: C.ink,
+                    textWrap: 'balance',
+                  }}
+                >{q.title}</div>
+                {q.year && (
+                  <div
+                    style={{
+                      fontFamily: 'Caveat, cursive',
+                      fontSize: '24px',
+                      color: q.tint,
+                      transform: 'rotate(-2deg)',
+                      lineHeight: 1,
+                    }}
+                  >— {q.year}</div>
+                )}
+              </div>
               <div
                 style={{
                   fontFamily: fontReader,
@@ -204,7 +255,7 @@ const gt = gradientText();
                   textWrap: 'pretty',
                   maxWidth: '620px',
                 }}
-              >{p.blurb}</div>
+              >{q.blurb}</div>
               <div
                 style={{
                   marginTop: '8px',
@@ -215,7 +266,7 @@ const gt = gradientText();
                   justifyContent: 'space-between',
                   fontFamily: fontUI,
                   fontSize: '13px',
-                  color: p.tint,
+                  color: q.tint,
                   fontWeight: 600,
                   flexWrap: 'wrap',
                   gap: '12px',
@@ -225,8 +276,8 @@ const gt = gradientText();
                   <span
                     style={{
                       padding: '6px 14px',
-                      background: `${p.tint}22`,
-                      color: p.tint,
+                      background: `${q.tint}22`,
+                      color: q.tint,
                       borderRadius: '999px',
                       fontSize: '12px',
                       letterSpacing: '0.12em',
@@ -238,7 +289,7 @@ const gt = gradientText();
                   <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
                 )}
                 <span style={{ color: C.inkSoft, fontWeight: 500 }}>
-                  {p.href ? p.href.replace(/^https?:\/\//, '') : ''}
+                  {q.href ? q.href.replace(/^https?:\/\//, '') : ''}
                 </span>
               </div>
             </div>
