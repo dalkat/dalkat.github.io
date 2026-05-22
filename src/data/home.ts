@@ -52,6 +52,16 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Anna S.',
     role: 'Client, Fortune-500 Consumer Goods Co.',
   },
+  {
+    quote: "Working with Dalia was an organic addition and accelerant to our business development. From our earliest conversations, she dove into the esoteric nuances of our company and market. She applied our differentiation and milestones to improve our market positioning and business model. She distilled these conclusions into an artfully designed fundraising presentation that spoke to industry experts and novices alike. I highly endorse her services.",
+    author: 'Adam C.',
+    role: 'COO, Battlestar Capital',
+  },
+  {
+    quote: "We engaged Dalia for a quick turnaround on our Series A investor presentation. She was responsive and diligent in quickly learning our business and our market and in creating a wonderful presentation for us. Perhaps most impressive was the fact that she provided valuable insight into the VC / entrepreneur thought process and recommendations that improved our storytelling. We look forward to working with Dalia again.",
+    author: 'Turab B.',
+    role: 'VP of Finance, Crusoe Energy Systems',
+  },
 ];
 
 /** Companies row — typographic wordmarks (no copyrighted glyphs). */
