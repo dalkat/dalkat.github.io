@@ -12,7 +12,7 @@ export const BIO_LONG: string[] = [
 
 /** Hero subhead under the "Hi, I'm Dalia." headline. */
 export const HERO_SUBHEAD =
-  "Product leader, fractional CPO, angel investor — helping early-stage teams find the line between the product they're shipping and the company they're actually trying to build.";
+  "Product leader, fractional CPO, angel investor — I help early-stage teams turn products into companies that can actually scale.";
 
 /** Testimonials carousel on the Praise section. */
 export interface Testimonial {
@@ -83,8 +83,10 @@ export const COMPANIES: CompanyWordmark[] = [
   { name: 'Alexandria',  style: { fontFamily: fontDisplay, fontStyle: 'italic', fontWeight: 400, fontSize: '24px', letterSpacing: '-0.01em' } },
 ];
 
-/** ARCH / Interspace writing tiles — featured pieces on Home. */
-export interface ArchPost {
+/** Field Notes teaser tiles — four picks on the Home page that link out to
+ *  the actual pieces (Substack/Medium). Mirrors a slice of the archive at
+ *  /field-notes; the CTA underneath sends visitors to the full library. */
+export interface FieldNoteTeaser {
   kind: string;
   title: string;
   blurb: string;
@@ -95,46 +97,46 @@ export interface ArchPost {
   href?: string;
 }
 
-export const ARCH_POSTS: ArchPost[] = [
+export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
   {
     kind: 'Framework',
     tint: C.coral,
     title: 'Introducing ARCH: Building Products People Want to Live In',
-    blurb: 'A four-part framework — Architecture, Rooms, Connections, Hospitality — for designing products the way you would design a home.',
+    blurb: 'Every product is a space people inhabit. To build truly great products, we must think like architects.',
     where: 'Substack',
-    year: 2024,
-    read: '12 min',
+    year: 2023,
+    read: '10 min',
     href: 'https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in',
+  },
+  {
+    kind: 'Framework',
+    tint: C.teal,
+    title: '03 Atmosphere: Getting the vibes right',
+    blurb: 'The emotional baseline of product experience — and how it quietly shapes whether users return.',
+    where: 'Substack',
+    year: 2026,
+    read: '10 min',
+    href: 'https://daliakatan.substack.com/p/arch-atmosphere',
   },
   {
     kind: 'Essay',
     tint: C.plum,
-    title: 'Interspace, or why every app feels the same now',
-    blurb: 'On the collapse of distinct product feelings into a single grey corridor — and what it would take to design buildings again.',
-    where: 'Substack',
-    year: 2025,
-    read: '9 min',
-    href: 'https://daliakatan.substack.com/',
+    title: 'Why First-Gen Founders Need to Learn to Spend',
+    blurb: '“Be scrappy” is the wrong advice for first-gen and minority founders — and one of the hardest things I had to unlearn.',
+    where: 'Medium',
+    year: 2022,
+    read: '8 min',
+    href: 'https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6',
   },
   {
-    kind: 'Notes',
-    tint: C.teal,
-    title: 'Thresholds: the most underrated part of any product',
-    blurb: 'Front doors, hallways, the moment between rooms. Notes on transitions, and why nobody designs them on purpose anymore.',
-    where: 'Substack',
-    year: 2025,
-    read: '6 min',
-    href: 'https://daliakatan.substack.com/',
-  },
-  {
-    kind: 'Field guide',
+    kind: 'Essay',
     tint: C.coral,
-    title: 'Designing an app like you would a home',
-    blurb: 'A walk-through of the ARCH framework applied to a consumer mobile product — rooms, light, what gets pinned to the fridge.',
+    title: '04 How Atmosphere makes or breaks user trust and retention',
+    blurb: 'Atmosphere in action: Hopper and the Las Vegas effect.',
     where: 'Substack',
-    year: 2024,
-    read: '10 min',
-    href: 'https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home',
+    year: 2026,
+    read: '12 min',
+    href: 'https://daliakatan.substack.com/p/04-atmosphere-case-study-hopper-how-atmosphere-makes-or-breaks-trust-and-retention',
   },
 ];
 

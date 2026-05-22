@@ -13,7 +13,7 @@ import {
   HERO_SUBHEAD,
   TESTIMONIALS,
   COMPANIES,
-  ARCH_POSTS,
+  FIELD_NOTE_TEASERS,
 } from '@/data/home';
 import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
 
@@ -154,7 +154,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={1} sub="About" title="The longer version" accent={C.teal} />
+      <SectionHeader n={1} sub="About" title="A bit of background" accent={C.teal} />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
         {BIO_LONG.map((p) => (
           <p
@@ -181,9 +181,9 @@ const gt = gradientText();
     </div>
   </section>
 
-  {/* ───────── 02 · ARCH / Interspace ───────── */}
+  {/* ───────── 02 · Field Notes teaser ───────── */}
   <section
-    id="arch"
+    id="field-notes-teaser"
     style={{
       background: meshBg({
         base: C.butter,
@@ -201,7 +201,7 @@ const gt = gradientText();
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={2} sub="Writing" accent={C.coral}>
-        Notes on <span style={gt}>arch / interspace</span>.
+        A few <span style={gt}>field notes</span>.
       </SectionHeader>
       <p
         style={{
@@ -214,12 +214,12 @@ const gt = gradientText();
           textWrap: 'pretty',
         }}
       >
-        Interspace is a collection of longer essays — about the empty between-spaces
-        of digital life, what gets lost when AI makes everything feel the same, and
-        how to build products people want to live in.
+        Essays, frameworks, recipes, and reports from a life built around
+        curiosity — across product, work, and what gets pinned to the fridge.
+        A few favorites:
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
-        {ARCH_POSTS.map((p) => (
+        {FIELD_NOTE_TEASERS.map((p) => (
           <PostTile
             kind={p.kind}
             title={p.title}
@@ -236,32 +236,12 @@ const gt = gradientText();
         style={{
           marginTop: '32px',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'flex-end',
           alignItems: 'center',
           flexWrap: 'wrap',
           gap: '16px',
         }}
       >
-        <a
-          href="https://daliakatan.substack.com"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '12px 4px',
-            color: C.ink,
-            opacity: 0.72,
-            fontFamily: fontUI,
-            fontSize: '13px',
-            fontWeight: 600,
-            textDecoration: 'none',
-            borderBottom: `1px solid ${C.ink}33`,
-          }}
-        >
-          Subscribe on Substack <span style={{ opacity: 0.5 }}>↗</span>
-        </a>
         <a
           href="/field-notes"
           style={{
@@ -303,7 +283,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={3} sub="Nice things" title="What people say" accent={C.plum} />
+      <SectionHeader n={3} sub="Nice things" title="Kind words" accent={C.plum} />
       <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
     </div>
   </section>
