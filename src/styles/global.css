@@ -45,6 +45,8 @@
      * effect (not a transform), so sticky positioning, click targets, and
      * scroll all behave correctly. Modern WebKit/Chromium/Firefox 126+. */
     zoom: var(--mesh-scale);
+    /* Prevent horizontal scroll from the full-bleed image trick below. */
+    overflow-x: hidden;
   }
   *, *::before, *::after {
     box-sizing: border-box;

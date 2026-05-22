@@ -210,4 +210,30 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     border-top: 1px dashed #221a3a30;
     margin: 36px 0;
   }
+  /* Full-bleed inline figure — breaks out of the 720px article column
+   * to span the full viewport. Used for the photos sprinkled through
+   * the sabbatical updates. */
+  .mesh-prose .full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+  .mesh-prose .full-bleed img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 86vh;
+    object-fit: cover;
+  }
+  .mesh-prose .full-bleed figcaption {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #4a3f6e;
+    text-align: center;
+    padding: 16px 24px 0;
+    text-wrap: pretty;
+  }
 </style>

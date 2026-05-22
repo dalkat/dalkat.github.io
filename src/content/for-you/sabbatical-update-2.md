@@ -11,6 +11,9 @@ permalink: /for-you/sabbatical-update-2/
 redirect_from:
   - /update-2
   - /update-2/
+# Highlight reel carousel at the END of the post (the original oct19 set).
+# The inline body photos (12, 17, 13, 14) are sprinkled through the prose
+# below as full-bleed figures, matching the original update-2 layout.
 highlight_reel:
   - src: /img/blog/7.jpg
     caption: My first Tough Mudder. Joe inspired our group of friends into doing triathlons and other fun competitions; this one was definitely my favorite.
@@ -20,14 +23,6 @@ highlight_reel:
     caption: Nothing brought me more joy than spending time with my little munchkin brother. He came to visit me for a week in SF and reminded me how to live life like a kid. One of the things we did was go camping on a farm, where we got to herd a flock of geese and feed baby goats.
   - src: /img/blog/10.jpg
     caption: An amazing retreat with my Sandbox community — child-like forts in a tree grove under the stars, hikes ending in dance parties on the beach, heart-to-hearts, art and cacao ceremony, and 16 loaves of challah baked on Friday night for the crew.
-  - src: /img/blog/12.jpg
-    caption: Sunset outside Joshua Tree, in a teeny-tiny 100%-off-the-grid Airbnb. (April 2019)
-  - src: /img/blog/17.jpg
-    caption: If the goat didn't get your attention, I thought the llama might. A weekend at a llama sanctuary for Joe's birthday, then a goat and goose farm when my brother Ryan was visiting. (March/August 2019)
-  - src: /img/blog/13.jpeg
-    caption: Anyone who's been here can probably guess where this is — welcome to Zion. We slept in our rental car that night. (April 2019)
-  - src: /img/blog/14.jpg
-    caption: Hanging with the Flintstones at Joshua Tree. (April 2019)
   - src: /img/blog/15.jpg
     caption: These people are some of the most important in my life. This night felt very much like high school, when your best friends could show up at your house unannounced and stay up all night laughing about everything and nothing at the same time. Grateful.
   - src: /img/blog/18.jpg
@@ -41,6 +36,11 @@ Life is just a roller coaster, isn't it? It's the one-year anniversary of starti
 After a year, I'm feeling simultaneously at ease with my new life and bewildered that it's turned out completely different from what I'd imagined. I wrote in [February](/field-notes/sabbatical-update/) that I felt I was reconnecting with the human side of me — and that's definitely still true. Even through the lowlights (see below), I feel like I have ownership over my life, and whether or not I accomplish a life goal is entirely in my hands. Now in the third chapter of my sabbatical (the three chapters were reset, play, and build for financial sustainability), which has been by far the longest chapter and a long period of incubation, the many moving parts are only just starting to shape up into what I believe my life can look like. Finally, I also wrote that I was overall feeling clarity, as though I were on the precipice of a breakthrough. Well, it definitely takes a lot more work than I'd realized to truly redesign life, especially when the systems are set up for you to go with the grain. And yet, I feel so happy to be trying and lucky to be able to.
 
 I wanted to share some things I've learned over the past year (and the highlights and lowlights), and the ways they might help you in changing up the status quo and designing the life that feels best for you.
+
+<figure class="full-bleed">
+  <img src="/img/blog/12.jpg" alt="Sunset outside Joshua Tree, in a teeny-tiny 100%-off-the-grid Airbnb" loading="lazy" />
+  <figcaption>Sunset outside Joshua Tree, in a teeny-tiny 100%-off-the-grid Airbnb. (April 2019)</figcaption>
+</figure>
 
 ## Seven aha moments and what I learned
 
@@ -80,6 +80,11 @@ There are a lot of ways to become financially sufficient in this world (yes, all
 
 > *"Whatever you do in life will be a struggle, so you need to find the struggle that's right for you."* — Mark Manson, [The Subtle Art of Not Giving a F\*ck](https://amzn.to/2ICaR0k)
 
+<figure class="full-bleed">
+  <img src="/img/blog/17.jpg" alt="A weekend at a llama sanctuary and a goat farm" loading="lazy" />
+  <figcaption>If the goat didn't get your attention, I thought the llama might. A weekend at a llama sanctuary for Joe's birthday, then a goat and goose farm when my brother Ryan was visiting. (March / August 2019)</figcaption>
+</figure>
+
 ## Highlights and favorite moments
 
 - **I got to explore a ton of new hands-on crafts and activities.** I picked up wood laser cutting, candlemaking, and bread-baking (challah, baguettes, bagels, pizza, you name it), among other things. Speaking of challah, I became an Airbnb Experiences [host](https://www.airbnb.com/experiences/665697) and was featured in a [documentary](https://around.film/). I also started volunteering at a community space, which helped me realize how important it is to me to be in a position of service. I had the flexibility to take yoga classes in the middle of the day, remake my favorite (labor-intensive) Bukharian and Russian dishes from home, meet other incredible people with flexible work-lives at cafés across the city, and swim in the freezing Pacific on the one day it hit 95 degrees in San Francisco.
@@ -89,6 +94,11 @@ There are a lot of ways to become financially sufficient in this world (yes, all
 - **I served my first customer for my [startup](https://presently.fun).** What started as a side project (minimizing waste around kids' birthdays) became a real thing, and it's been fun bootstrapping it and living up to my commitment to environmental preservation. My mom is my co-founder, and we found out last week that we've been accepted to an all-female accelerator.
 - **I had a lot of fun experimenting with income, too.** My goal was to experiment with a lifestyle outside of full-time and freelance, but I definitely needed to turn to freelance in parallel to support myself. In addition to strategy consulting, I also earned as a paid conference speaker on D&I and innovation, a writer in Medium's Partner Program, a participant in research interviews, a host on Airbnb Experiences and Homes, and more. I also failed at earning with quite a few experiments, like stock photography. I learned that our time-value fluctuates at different times in our lives and how that doesn't discredit "knowing your worth."
 
+<figure class="full-bleed">
+  <img src="/img/blog/13.jpeg" alt="Welcome to Zion — we slept in our rental car that night" loading="lazy" />
+  <figcaption>Anyone who's been here can probably guess where this is — welcome to Zion. We slept in our rental car that night. (April 2019)</figcaption>
+</figure>
+
 ## Lowlights and awkward moments
 
 - **I didn't take good enough care of my mental and physical health, ironically.** I thought leaving my job to live my best life would help me shed burnout, but I realize now that health is a really complicated equation. More than simply doing the things that make you happy, self-care is also about remembering to feed ALL of your energy needs — physical, emotional, psychological, spiritual, etc. I wasn't aware of a number of subtle things that were negatively impacting my mental health, like where/when I worked or how I protected "me time." Guidelines would have helped keep my mental health strong, and to a point I raise a bit later, sometimes self-care also means prioritizing *spending* on yourself.
@@ -97,6 +107,11 @@ There are a lot of ways to become financially sufficient in this world (yes, all
 - **My biggest lowlight: my relationship fell apart.** Ever the optimist, I thought everything could be worked on if there was love. It turns out that in the process of loving one another, we forgot to love ourselves. We still care about one another very much and I'm trying to figure out the whole "get my heart back together, find a place to live, remain best friends / in one another's lives" situation. Perhaps more importantly, also the "love yourself" situation. I'm mainly hurting though at the moment. But I'm so, so grateful to have other glowing hearts to lean on.
 
 > *"At a certain point, if you allow it, the pain becomes a gift — a doorway really into the deepest clarity of what you truly need for personal fulfillment."* — my friend Kate
+
+<figure class="full-bleed">
+  <img src="/img/blog/14.jpg" alt="Hanging with the Flintstones at Joshua Tree" loading="lazy" />
+  <figcaption>Hanging with the Flintstones at Joshua Tree. (April 2019)</figcaption>
+</figure>
 
 ## What would I do differently?
 
