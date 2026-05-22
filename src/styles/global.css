@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens as CSS variables — for use outside Tailwind utility classes
+ * (e.g. inline gradient-color computations in the meshBg helper).
+ * Mirrors the C object in the original design handoff. */
+:root {
+  --c-lavender: #dcd0ff;
+  --c-lilac: #cbb8ff;
+  --c-mint: #cdf2d8;
+  --c-sky: #cde4ff;
+  --c-peach: #ffd9c2;
+  --c-butter: #fff2b3;
+  --c-coral: #ff8a7a;
+  --c-plum: #9a7be6;
+  --c-teal: #5ec5c0;
+  --c-rose: #f4a3b8;
+  --c-ink: #221a3a;
+  --c-ink-soft: #4a3f6e;
+  --c-paper: #fbf7ee;
+  --c-paper2: #f3edf9;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--c-paper);
+    color: var(--c-ink);
+    font-family: 'Inter', sans-serif;
+  }
+}

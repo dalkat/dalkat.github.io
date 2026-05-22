@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const hosted = await getCollection('for-you', ({ data }) => !data.draft);
+const external = await getCollection('for-you-external');
+---
+<Base title="Dalia Katan — scaffold preview">
+  <main class="mx-auto max-w-content px-6 py-24">
+    <p class="font-mono text-caption uppercase tracking-[0.12em] text-ink-soft">
+      Astro scaffold · phase 1
+    </p>
+    <h1 class="mt-4 font-display text-h2 text-ink">Hello from Astro.</h1>
+    <p class="mt-4 max-w-prose font-reader text-lg text-ink-soft">
+      This is a placeholder. The content collections are wired up and validated
+      against the schema. The real design lands in phase 4.
+    </p>
+
+    <h2 class="mt-16 font-display text-h3 text-ink">Hosted Field Notes ({hosted.length})</h2>
+    <ul class="mt-4 space-y-2 font-ui text-sm">
+      {hosted.map((entry) => (
+        <li>
+          <span class="inline-block min-w-[8rem] font-mono text-caption uppercase text-coral">{entry.data.type}</span>
+          <span class="text-ink">{entry.data.title}</span>
+          <span class="text-ink-soft"> — /field-notes/{entry.id}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="mt-12 font-display text-h3 text-ink">External Field Notes ({external.length})</h2>
+    <ul class="mt-4 space-y-2 font-ui text-sm">
+      {external.map((entry) => (
+        <li>
+          <span class="inline-block min-w-[8rem] font-mono text-caption uppercase text-plum">{entry.data.type}</span>
+          <span class="text-ink">{entry.data.title}</span>
+          <span class="text-ink-soft"> · {entry.data.source} · {entry.data.year}</span>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Base>

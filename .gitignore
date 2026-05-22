@@ -1,5 +1,19 @@
 .DS_Store
+# Jekyll
 _site
 .jekyll-cache
 .jekyll-metadata
+# Vercel CLI / deploy output
 .vercel
+# Local design references (not committed)
+.design
+# Astro / Node
+node_modules
+dist
+.astro
+.env
+.env.production
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
