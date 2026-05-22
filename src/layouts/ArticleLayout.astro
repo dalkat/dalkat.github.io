@@ -183,18 +183,22 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
   }
   /* Pull-quote — matches the design's <PullQuote> component
    * (content-pages.jsx). Slight negative side-margin to break out of the
-   * reading column; mesh-tinted backdrop using the post's tint variable;
-   * larger Fraunces italic copy. */
+   * reading column; clean white card with a tinted left border (no
+   * gradient backdrop); larger Fraunces italic copy.
+   *
+   * Multi-paragraph blockquotes: the first paragraph is the quote, and
+   * any following paragraph is rendered as the attribution line
+   * ("↳ ME, SIX WEEKS IN" pattern in Space Grotesk uppercase). Write
+   * the markdown as:
+   *
+   *   > *"quote text"*
+   *   >
+   *   > Author, source
+   */
   .mesh-prose blockquote {
     margin: 36px -32px;
     padding: 32px 40px;
-    background:
-      radial-gradient(
-        circle at 10% 50%,
-        color-mix(in srgb, var(--post-tint, #ff8a7a) 33%, transparent),
-        transparent 60%
-      ),
-      #fff;
+    background: #fff;
     border-left: 4px solid var(--post-tint, #ff8a7a);
     border-radius: 22px;
     box-shadow: 0 14px 26px -20px rgba(34, 26, 58, 0.44);
@@ -212,6 +216,25 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
   }
   .mesh-prose blockquote p:last-child {
     margin-bottom: 0;
+  }
+  /* Attribution — any paragraph after the first inside a blockquote is
+   * the citation line. Uppercase Space Grotesk + post-tinted ↳ glyph
+   * prefix. Links inside keep their tinted underline. */
+  .mesh-prose blockquote p + p {
+    margin-top: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4a3f6e;
+    line-height: 1.4;
+  }
+  .mesh-prose blockquote p + p::before {
+    content: '↳ ';
+    margin-right: 6px;
+    color: var(--post-tint, #ff8a7a);
   }
 
   /* Foreword — matches the design's <Foreword> component. Wrap a paragraph
