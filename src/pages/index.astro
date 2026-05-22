@@ -64,41 +64,18 @@ const gt = gradientText();
             transform: 'rotate(-3deg)',
           }}
         >
-          <div
+          <img
+            src="/img/Dalia-portrait-1.jpeg"
+            alt="Dalia"
             style={{
+              display: 'block',
               width: '100%',
               height: '100%',
               borderRadius: '50%',
-              background: meshBg({
-                base: C.peach,
-                blobs: [
-                  [`${C.lavender}cc`, 75, 25, 55],
-                  [`${C.butter}cc`,   25, 80, 55],
-                  [`${C.coral}88`,    55, 55, 35],
-                ],
-              }),
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: C.ink,
-              fontFamily: fontDisplay,
-              fontStyle: 'italic',
-              fontSize: '22px',
-              fontWeight: 400,
-              letterSpacing: '-0.02em',
-              position: 'relative',
-              overflow: 'hidden',
+              objectFit: 'cover',
+              objectPosition: '50% 22%',
             }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage: `repeating-linear-gradient(135deg, transparent 0 5px, ${C.ink}10 5px 6px)`,
-              }}
-            ></div>
-            <span style={{ position: 'relative' }}>DK</span>
-          </div>
+          />
         </div>
         <span
           class="mesh-photo-caption"
@@ -359,7 +336,7 @@ const gt = gradientText();
           alignItems: 'flex-start',
         }}
       >
-        <PhotoSlab size={360} label="photo of Dalia" tone={C.peach} />
+        <PhotoSlab size={360} label="photo of Dalia" src="/img/Dalia-portrait-1.jpeg" />
         <ContactForm client:visible accent={C.coral} />
       </div>
     </div>
