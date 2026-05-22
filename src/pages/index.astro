@@ -43,7 +43,7 @@ const gt = gradientText();
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ position: 'relative', maxWidth: '1080px' }}>
+    <div style={{ position: 'relative', maxWidth: '1080px', margin: '0 auto' }}>
       <div
         class="mesh-photo-card"
         style={{
@@ -176,7 +176,7 @@ const gt = gradientText();
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '1080px' }}>
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={1} sub="About" title="The longer version" accent={C.teal} />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
         {BIO_LONG.map((p) => (
@@ -222,7 +222,7 @@ const gt = gradientText();
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '1080px' }}>
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={2} sub="Writing" accent={C.coral}>
         Notes on <span style={gt}>arch / interspace</span>.
       </SectionHeader>
@@ -325,7 +325,7 @@ const gt = gradientText();
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '1080px' }}>
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={3} sub="Nice things" title="What people say" accent={C.plum} />
       <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
     </div>
@@ -349,7 +349,7 @@ const gt = gradientText();
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '1080px' }}>
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={4} sub="Contact" title="Drop a line" accent={C.coral} />
       <div
         style={{
