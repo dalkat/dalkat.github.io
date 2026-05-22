@@ -1,0 +1,273 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import CompanyLogos from '@/components/CompanyLogos.astro';
+import OfferingCard from '@/components/OfferingCard.astro';
+import CaseCard from '@/components/CaseCard.astro';
+import Footer from '@/components/Footer.astro';
+import PraiseCarousel from '@/components/PraiseCarousel.tsx';
+import ContactForm from '@/components/ContactForm.tsx';
+import { TESTIMONIALS } from '@/data/home';
+import { OFFERINGS, CASE_STUDIES, STRATEGY_CLIENTS } from '@/data/strategy';
+import { C, fontDisplay, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+const gt = gradientText();
+const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
+---
+<Base
+  title="Dalia Katan — Strategy"
+  description="Consulting portfolio: design-led innovation strategy, fractional CPO work, edge innovation, and the case studies behind a decade of engagements."
+>
+  <PageNav current="strategy" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="strategy"
+    style={{
+      background: meshBg({
+        base: C.lavender,
+        blobs: [
+          [C.peach,  10, 20, 55],
+          [C.butter, 80,  8, 45],
+          [C.sky,    90, 70, 50],
+          [C.mint,   20, 90, 50],
+        ],
+      }),
+      padding: '96px 64px 96px',
+      position: 'relative',
+      overflow: 'hidden',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <div
+        style={{
+          display: 'inline-flex',
+          gap: '10px',
+          alignItems: 'center',
+          padding: '6px 14px',
+          background: `${C.white}cc`,
+          borderRadius: '999px',
+          fontFamily: fontUI,
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: C.plum,
+          marginBottom: '24px',
+        }}
+      >
+        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.plum }}></span>
+        /strategy · consulting portfolio
+      </div>
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '112px',
+          lineHeight: '0.95',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '1000px',
+        }}
+      >
+        Strategy that <span style={gt}>survives contact</span><br />
+        with shipping.
+      </h1>
+      <p
+        style={{
+          fontFamily: fontUI,
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.ink,
+          marginTop: '28px',
+          maxWidth: '720px',
+          textWrap: 'pretty',
+        }}
+      >
+        A decade of design-led innovation across Fortune 10 portfolios,
+        Series A startups, and the internal teams that quietly run $1T
+        companies. Brought to bear on whatever you're actually trying to
+        build.
+      </p>
+    </div>
+  </section>
+
+  {/* ───────── 01 · Offerings ───────── */}
+  <section
+    id="offerings"
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.peach}cc`,    90, 10, 35],
+          [`${C.lavender}cc`,  8, 50, 35],
+          [`${C.mint}cc`,     85, 92, 35],
+        ],
+      }),
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+      <SectionHeader n={1} sub="Work together" accent={C.coral}>
+        Three engagement shapes — <span style={gt}>brand, product, and a bet</span>.
+      </SectionHeader>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '18px',
+          marginTop: '16px',
+        }}
+      >
+        {OFFERINGS.map((o, i) => <OfferingCard offering={o} n={i + 1} />)}
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── Trusted by — logos band (surfaced before testimonials) ───────── */}
+  <section
+    id="trusted"
+    style={{
+      background: meshBg({
+        base: C.butter,
+        blobs: [
+          [`${C.peach}cc`,    15, 25, 50],
+          [`${C.lavender}cc`, 85, 20, 50],
+          [`${C.mint}cc`,     50, 90, 40],
+        ],
+      }),
+      padding: '72px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '280px 1fr',
+          gap: '48px',
+          alignItems: 'center',
+        }}
+      >
+        <div>
+          <div
+            style={{
+              fontFamily: fontUI,
+              fontSize: '11px',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: C.plum,
+              fontWeight: 700,
+              marginBottom: '6px',
+            }}
+          >Past clients</div>
+          <div
+            style={{
+              fontFamily: fontDisplay,
+              fontWeight: 400,
+              fontSize: '34px',
+              color: C.ink,
+              letterSpacing: '-0.02em',
+              lineHeight: '1.05',
+              textWrap: 'balance',
+            }}
+          >Teams I've helped <span style={gt}>ship things</span>.</div>
+        </div>
+        <CompanyLogos variant="band" companies={STRATEGY_CLIENTS} />
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 02 · Portfolio ───────── */}
+  <section
+    id="portfolio"
+    style={{
+      background: meshBg({
+        base: C.paper2,
+        blobs: [
+          [`${C.mint}cc`,  85, 12, 40],
+          [`${C.peach}aa`,  8, 88, 45],
+          [C.lavender,     50, 50, 30],
+        ],
+      }),
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+      <SectionHeader n={2} sub="Portfolio" title="A representative slice" accent={C.teal} />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '20px',
+        }}
+      >
+        {CASE_STUDIES.map((c, i) => <CaseCard c={c} tint={caseTints[i % caseTints.length]} />)}
+      </div>
+      <div
+        style={{
+          marginTop: '28px',
+          fontFamily: fontDisplay,
+          fontStyle: 'italic',
+          fontSize: '16px',
+          color: C.inkSoft,
+        }}
+      >
+        ↳ another two dozen engagements under NDA — happy to walk you through them.
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 03 · Praise carousel ───────── */}
+  <section
+    id="praise"
+    style={{
+      background: meshBg({
+        base: C.sky,
+        blobs: [
+          [C.lavender,       12, 18, 50],
+          [C.peach,          85, 80, 45],
+          [`${C.butter}cc`,  60, 12, 35],
+        ],
+      }),
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={3} sub="In their own words" title="What clients say" accent={C.plum} />
+      <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
+    </div>
+  </section>
+
+  {/* ───────── 04 · Contact ───────── */}
+  <section
+    id="contact"
+    style={{
+      background: meshBg({
+        base: C.lilac,
+        blobs: [
+          [C.peach,         18, 18, 50],
+          [C.butter,        82, 28, 40],
+          [C.mint,          72, 88, 45],
+          [`${C.coral}aa`,  18, 80, 38],
+        ],
+      }),
+      padding: '96px 64px 80px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={4} sub="Let's work together" title="Drop a line" accent={C.coral} />
+      <ContactForm client:visible accent={C.coral} />
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

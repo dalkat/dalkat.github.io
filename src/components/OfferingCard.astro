@@ -1,0 +1,114 @@
+---
+/**
+ * Strategy offering card. White tile with a soft mesh blob in the corner,
+ * "Mode N" tint badge, title, italic kicker, then a bulleted services list
+ * separated by a dashed top border.
+ */
+import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
+import type { Offering } from '@/data/strategy';
+
+interface Props {
+  offering: Offering;
+  /** 1-based mode number. */
+  n: number;
+}
+
+const { offering, n } = Astro.props;
+const { group, tint, blob, kicker, services } = offering;
+---
+<article
+  style={{
+    position: 'relative',
+    background: C.white,
+    borderRadius: '22px',
+    padding: '28px 28px 26px',
+    border: `1px solid ${C.ink}10`,
+    boxShadow: `0 18px 32px -22px ${C.ink}44`,
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+  }}
+>
+  {/* Soft mesh blob, top-right */}
+  <div
+    style={{
+      position: 'absolute',
+      right: '-50px',
+      top: '-50px',
+      width: '140px',
+      height: '140px',
+      borderRadius: '50%',
+      background: meshBg({ base: blob[0], blobs: [[blob[1], 50, 50, 80]] }),
+      opacity: 0.5,
+    }}
+  ></div>
+  <div style={{ position: 'relative' }}>
+    <div
+      style={{
+        display: 'inline-block',
+        padding: '3px 10px',
+        borderRadius: '6px',
+        background: tint,
+        color: C.ink,
+        fontFamily: fontUI,
+        fontSize: '11px',
+        fontWeight: 700,
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        marginBottom: '14px',
+      }}
+    >Mode {n}</div>
+    <h3
+      style={{
+        margin: '0 0 10px',
+        fontFamily: fontDisplay,
+        fontWeight: 400,
+        fontSize: '24px',
+        lineHeight: '1.15',
+        color: C.ink,
+        letterSpacing: '-0.02em',
+        textWrap: 'balance',
+      }}
+    >{group}</h3>
+    <p
+      style={{
+        margin: '0 0 18px',
+        fontFamily: fontReader,
+        fontStyle: 'italic',
+        fontSize: '15px',
+        lineHeight: '1.5',
+        color: C.inkSoft,
+        textWrap: 'pretty',
+      }}
+    >{kicker}</p>
+    <ul
+      style={{
+        listStyle: 'none',
+        margin: 0,
+        padding: 0,
+        display: 'grid',
+        gap: '6px',
+        paddingTop: '16px',
+        borderTop: `1px dashed ${C.ink}22`,
+      }}
+    >
+      {services.map((s) => (
+        <li
+          style={{
+            fontFamily: fontUI,
+            fontSize: '14px',
+            color: C.ink,
+            fontWeight: 500,
+            display: 'grid',
+            gridTemplateColumns: '14px 1fr',
+            gap: '8px',
+            alignItems: 'baseline',
+          }}
+        >
+          <span style={{ color: tint, fontSize: '11px' }}>●</span>
+          <span>{s}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>
