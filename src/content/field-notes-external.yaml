@@ -1,8 +1,11 @@
 # Externally hosted Field Notes (Substack, Medium, eHandbook, etc.)
 # These do not generate Jekyll pages on the site — the archive links straight out.
 # Hosted pieces live in the _for_you/ collection instead.
+#
+# Each entry must include an `id` (slug) — Astro's file() loader uses it.
 
-- title: "Introducing ARCH: Building Products People Want to Live In"
+- id: introducing-arch
+  title: "Introducing ARCH: Building Products People Want to Live In"
   type: framework
   theme: product
   source: Substack
@@ -11,7 +14,8 @@
   blurb: "Every product is a space people inhabit. To build truly great products, we must think like architects."
   url: https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in
 
-- title: "Designing an App Like You Would a Home"
+- id: designing-an-app-like-a-home
+  title: "Designing an App Like You Would a Home"
   type: essay
   theme: product
   source: Substack
@@ -20,7 +24,8 @@
   blurb: "A walk-through of the ARCH framework applied to consumer mobile — rooms, thresholds, light."
   url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
 
-- title: "Why First-Gen Founders Need to Learn to Spend"
+- id: why-first-gen-founders
+  title: "Why First-Gen Founders Need to Learn to Spend"
   type: essay
   theme: strategy
   source: eHandbook
@@ -29,7 +34,8 @@
   blurb: "“Be scrappy” is the wrong advice for first-gen and minority founders — and one of the hardest things I had to unlearn."
   url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
 
-- title: "Unlocking the Benefits of Inclusive Workplace Practices"
+- id: inclusive-workplace
+  title: "Unlocking the Benefits of Inclusive Workplace Practices"
   type: essay
   theme: innovation
   source: Medium
@@ -38,7 +44,8 @@
   blurb: "Diverse teams, properly managed, are 35% more likely to outperform — here are nine steps to actually getting there."
   url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
 
-- title: "4 Life Lessons From a 10-Year-Old"
+- id: four-life-lessons
+  title: "4 Life Lessons From a 10-Year-Old"
   type: essay
   theme: creativity
   source: Medium

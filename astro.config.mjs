@@ -18,9 +18,8 @@ export default defineConfig({
     sitemap(),
   ],
   redirects: {
-    // Legacy → canonical
+    // Legacy → canonical (Astro auto-normalizes trailing slashes)
     '/for-you': '/field-notes',
-    '/for-you/': '/field-notes/',
     '/trailmix': '/field-notes/trail-mix-method/',
     '/do-now': '/field-notes/do-now-generator/',
     '/update-1': '/field-notes/sabbatical-update/',
