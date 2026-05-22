@@ -47,6 +47,8 @@ What constitutes unstructured time? It's essentially free time without time-sens
 
 This is where the little bit of upfront structure and discipline comes in to help you surrender throughout the week. I schedule an hour chunk every Sunday night that I call "Trail Mix Sunday" where I create my bag for the week. Ideally, you would schedule this for whenever you feel your week starts so that you can plan for the week. I don't usually need the full hour, but I use any extra time to knock off a few items from my Trail Mix bag. For your first Trail Mix Sunday, you'll need the full time to set up your system and create your first bag.
 
+![Sample of my Trail Mix notebook layout — categories down the left, bite-sized activities in the center, time allocations on the right.](/img/content/TMM_sample.jpg)
+
 ### Your first time
 
 1. **5 minutes, meditation.** Take a moment to settle your mind — whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
@@ -54,14 +56,22 @@ This is where the little bit of upfront structure and discipline comes in to hel
 3. **5 minutes, build your bag.** Determine what your "bag" looks like — any physical form (not digital) will work, such as a zip-lock bag or bowl filled with fortune-cookie-sized paper, a [small notebook](https://amzn.to/30ITmBL), or half-sheet of paper with columns of bullets.
 4. **15 minutes, category goals.** Reflect on the following question: what are the areas in your life that you want to invest your energy? Write down 5–8 categories that resonate with you to start, and keep them in an accessible space — such as your wall or at the front of your notebook — so you can refer to them each week during your Trail Mix ritual.
 
+![Example categories — learning, body, home, money, relationships, projects, rest.](/img/content/trailmixcategories.png)
+
 ### Your weekly ritual
 
 *If it's your first week, skip to step 3. Otherwise, start on step 1.*
 
 1. **5-minute meditation.** Take a moment to settle your mind — whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
 2. **5 minutes, intentions.** Grab a pen and your notebook or a sheet of paper, and set your intention for this week: what do you want to feel, create, or channel? What do you want to give yourself?
+
+    ![Example weekly intentions written out before filling the bag.](/img/content/tmm-intent.jpg)
+
 3. **5 minutes, reflection.** Reflect on last week's trail mix bag. What did you easily accomplish? What was harder to accomplish? What was left untouched in the bag? Circle or write down any items that were particularly difficult or remained untouched — ask yourself: why was there resistance? Was the task too daunting? Identify "leftovers" that you want to postpone for a future week, and for those you want to carry over into this week's bag, add them to your new list.
 4. **20 minutes, fill a new bag.** Go through your Category Goals sheet you created during your first Trail Mix Sunday, and for each category, reflect on your intentions for that category for the week. Then begin filling it with ideas you want to pursue, skills you want to explore, or even inner personas you want to feel into during your unstructured time that week. Make them bite-sized by adding a time allocation between 5 and 60 minutes, depending on how difficult or intimidating a task is (less time) or how easy or enjoyable it is (more time). This allocation makes a small difficult task equally attractive as a long easy task, giving everything in your bag equal weighting (balance). If you want to do it multiple times that week, or if it's a task that will require more time to complete, add multiple bullets with the same activity.
+
+    ![Example filled-out trail mix bag — bite-sized activities with their time allocations.](/img/content/tmm-bag.jpg)
+
 5. **5 minutes, zoom out.** Take a step back and see whether your bag is mixed, balanced, and achievable this week. You can do a rough add-up of the times to get a general sense of how achievable it is and whether your categories feel generally balanced. For example, you may not want to be "doing stuff" for more than 20 hours of the week, or you may know that 6 hours of your day are already busy with structured commitments or social time.
 
 ### Trail mix in your day-to-day

@@ -246,6 +246,23 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     box-shadow: 0 24px 50px -28px #221a3a55;
     background: #fff;
   }
+  /* Inline images inside a markdown body (e.g. trail-mix diagrams) — soft
+   * card framing, centered in the column. Full-bleed photos override below. */
+  .mesh-prose img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 32px auto;
+    border-radius: 14px;
+    border: 1px solid #221a3a15;
+    box-shadow: 0 18px 36px -24px #221a3a55;
+  }
+  .mesh-prose .full-bleed img {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
   /* Full-bleed inline figure — breaks out of the 720px article column
    * to span the full viewport. Used for the photos sprinkled through
    * the sabbatical updates. */
