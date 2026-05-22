@@ -1,0 +1,93 @@
+---
+/**
+ * Sticky top nav — frosted-white band with the gradient brand mark and
+ * page links. The active link gets opacity 1 + weight 600.
+ *
+ * On real routes (not anchors), `current` is one of the NAV ids.
+ */
+import { C, fontDisplay, fontUI } from '@/lib/mesh';
+import { NAV } from '@/data/home';
+
+interface Props {
+  current?: string;
+}
+
+const { current = 'home' } = Astro.props;
+---
+<nav
+  style={{
+    position: 'sticky',
+    top: '0',
+    zIndex: 30,
+    background: `${C.white}b8`,
+    backdropFilter: 'blur(18px) saturate(150%)',
+    WebkitBackdropFilter: 'blur(18px) saturate(150%)',
+    borderBottom: `1px solid ${C.ink}10`,
+    padding: '14px 56px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    fontFamily: fontUI,
+  }}
+>
+  <a
+    href="/"
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      color: C.ink,
+      textDecoration: 'none',
+      fontFamily: fontDisplay,
+      fontWeight: 500,
+      fontSize: '17px',
+      letterSpacing: '-0.01em',
+    }}
+  >
+    <span
+      style={{
+        width: '26px',
+        height: '26px',
+        borderRadius: '50%',
+        background: `linear-gradient(135deg, ${C.coral}, ${C.plum} 60%, ${C.teal})`,
+        color: C.white,
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontFamily: fontUI,
+        fontSize: '13px',
+        fontWeight: 600,
+      }}
+    >DK</span>
+    Dalia Katan
+  </a>
+  <div
+    class="mesh-nav-links"
+    style={{ display: 'flex', gap: '28px', alignItems: 'center' }}
+  >
+    {NAV.map((n) => (
+      <a
+        href={n.href}
+        style={{
+          color: C.ink,
+          textDecoration: 'none',
+          fontSize: '14px',
+          opacity: current === n.id ? 1 : 0.65,
+          fontWeight: current === n.id ? 600 : 400,
+        }}
+      >{n.label}</a>
+    ))}
+    <a
+      href="/#contact"
+      style={{
+        padding: '8px 16px',
+        background: C.ink,
+        color: C.paper,
+        borderRadius: '999px',
+        fontSize: '13px',
+        fontWeight: 600,
+        textDecoration: 'none',
+      }}
+    >Work with me</a>
+  </div>
+</nav>

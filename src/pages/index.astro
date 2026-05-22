@@ -1,41 +1,369 @@
 ---
-import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import CompanyLogos from '@/components/CompanyLogos.astro';
+import PostTile from '@/components/PostTile.astro';
+import PhotoSlab from '@/components/PhotoSlab.astro';
+import Footer from '@/components/Footer.astro';
+import PraiseCarousel from '@/components/PraiseCarousel.tsx';
+import ContactForm from '@/components/ContactForm.tsx';
+import {
+  BIO_LONG,
+  HERO_SUBHEAD,
+  TESTIMONIALS,
+  COMPANIES,
+  ARCH_POSTS,
+} from '@/data/home';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
 
-const hosted = await getCollection('for-you', ({ data }) => !data.draft);
-const external = await getCollection('for-you-external');
+const gt = gradientText();
 ---
-<Base title="Dalia Katan — scaffold preview">
-  <main class="mx-auto max-w-content px-6 py-24">
-    <p class="font-mono text-caption uppercase tracking-[0.12em] text-ink-soft">
-      Astro scaffold · phase 1
-    </p>
-    <h1 class="mt-4 font-display text-h2 text-ink">Hello from Astro.</h1>
-    <p class="mt-4 max-w-prose font-reader text-lg text-ink-soft">
-      This is a placeholder. The content collections are wired up and validated
-      against the schema. The real design lands in phase 4.
-    </p>
+<Base title="Dalia Katan — product leader, fractional CPO, advisor">
+  <PageNav current="home" />
 
-    <h2 class="mt-16 font-display text-h3 text-ink">Hosted Field Notes ({hosted.length})</h2>
-    <ul class="mt-4 space-y-2 font-ui text-sm">
-      {hosted.map((entry) => (
-        <li>
-          <span class="inline-block min-w-[8rem] font-mono text-caption uppercase text-coral">{entry.data.type}</span>
-          <span class="text-ink">{entry.data.title}</span>
-          <span class="text-ink-soft"> — /field-notes/{entry.id}</span>
-        </li>
-      ))}
-    </ul>
+  {/* ───────── Hero ───────── */}
+  <section
+    id="home"
+    style={{
+      background: meshBg({
+        base: C.lavender,
+        blobs: [
+          [C.peach,         10, 20, 55],
+          [C.butter,        80,  8, 45],
+          [C.sky,           90, 70, 50],
+          [C.mint,          20, 90, 50],
+          [`${C.coral}aa`,  55, 55, 30],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px 110px',
+      position: 'relative',
+      overflow: 'hidden',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ position: 'relative', maxWidth: '1080px' }}>
+      <div
+        class="mesh-photo-card"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '16px',
+          marginBottom: '28px',
+        }}
+      >
+        <div
+          style={{
+            width: '64px',
+            height: '64px',
+            borderRadius: '50%',
+            padding: '3px',
+            background: C.white,
+            boxShadow: `0 14px 28px -14px ${C.plum}88, 0 0 0 1px ${C.ink}0a`,
+            transform: 'rotate(-3deg)',
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              background: meshBg({
+                base: C.peach,
+                blobs: [
+                  [`${C.lavender}cc`, 75, 25, 55],
+                  [`${C.butter}cc`,   25, 80, 55],
+                  [`${C.coral}88`,    55, 55, 35],
+                ],
+              }),
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: C.ink,
+              fontFamily: fontDisplay,
+              fontStyle: 'italic',
+              fontSize: '22px',
+              fontWeight: 400,
+              letterSpacing: '-0.02em',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: `repeating-linear-gradient(135deg, transparent 0 5px, ${C.ink}10 5px 6px)`,
+              }}
+            ></div>
+            <span style={{ position: 'relative' }}>DK</span>
+          </div>
+        </div>
+        <span
+          class="mesh-photo-caption"
+          style={{
+            fontFamily: 'Caveat, cursive',
+            fontSize: '24px',
+            color: C.coral,
+            transform: 'rotate(-2deg)',
+            display: 'inline-block',
+          }}
+        >— hi.</span>
+      </div>
 
-    <h2 class="mt-12 font-display text-h3 text-ink">External Field Notes ({external.length})</h2>
-    <ul class="mt-4 space-y-2 font-ui text-sm">
-      {external.map((entry) => (
-        <li>
-          <span class="inline-block min-w-[8rem] font-mono text-caption uppercase text-plum">{entry.data.type}</span>
-          <span class="text-ink">{entry.data.title}</span>
-          <span class="text-ink-soft"> · {entry.data.source} · {entry.data.year}</span>
-        </li>
-      ))}
-    </ul>
-  </main>
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '124px',
+          lineHeight: '0.94',
+          letterSpacing: '-0.045em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '1020px',
+        }}
+      >
+        Hi, I'm <span style={gt}>Dalia</span><span style={{ color: C.coral }}>.</span>
+      </h1>
+      <p
+        style={{
+          fontFamily: fontUI,
+          fontSize: '22px',
+          lineHeight: '1.45',
+          color: C.ink,
+          marginTop: '28px',
+          maxWidth: '680px',
+          textWrap: 'pretty',
+          fontWeight: 400,
+        }}
+      >{HERO_SUBHEAD}</p>
+      <div style={{ display: 'flex', gap: '12px', marginTop: '36px' }}>
+        <a
+          href="#contact"
+          style={{
+            padding: '14px 24px',
+            background: C.ink,
+            color: C.paper,
+            border: 'none',
+            borderRadius: '999px',
+            fontSize: '15px',
+            fontWeight: 600,
+            fontFamily: fontUI,
+            cursor: 'pointer',
+            textDecoration: 'none',
+            boxShadow: `0 14px 28px -14px ${C.ink}88`,
+          }}
+        >Work with me →</a>
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 01 · About ───────── */}
+  <section
+    id="about"
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.mint}cc`,  85, 15, 40],
+          [`${C.peach}aa`, 10, 80, 45],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px' }}>
+      <SectionHeader n={1} sub="About" title="The longer version" accent={C.teal} />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
+        {BIO_LONG.map((p) => (
+          <p
+            style={{
+              fontFamily: fontReader,
+              fontSize: '18px',
+              lineHeight: '1.65',
+              color: C.inkSoft,
+              margin: 0,
+              textWrap: 'pretty',
+            }}
+          >{p}</p>
+        ))}
+      </div>
+      <div
+        style={{
+          marginTop: '56px',
+          paddingTop: '28px',
+          borderTop: `1px dashed ${C.ink}22`,
+        }}
+      >
+        <CompanyLogos variant="inline" label="Places I've worked" companies={COMPANIES} />
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 02 · ARCH / Interspace ───────── */}
+  <section
+    id="arch"
+    style={{
+      background: meshBg({
+        base: C.butter,
+        blobs: [
+          [C.peach,         10, 15, 50],
+          [C.lavender,      88, 18, 45],
+          [`${C.mint}cc`,   60, 90, 45],
+          [`${C.coral}88`,  15, 88, 35],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px' }}>
+      <SectionHeader n={2} sub="Writing" accent={C.coral}>
+        Notes on <span style={gt}>arch / interspace</span>.
+      </SectionHeader>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontSize: '20px',
+          lineHeight: '1.6',
+          color: C.inkSoft,
+          margin: '0 0 44px',
+          maxWidth: '820px',
+          textWrap: 'pretty',
+        }}
+      >
+        Interspace is a collection of longer essays — about the empty between-spaces
+        of digital life, what gets lost when AI makes everything feel the same, and
+        how to build products people want to live in.
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
+        {ARCH_POSTS.map((p) => (
+          <PostTile
+            kind={p.kind}
+            title={p.title}
+            blurb={p.blurb}
+            where={p.where}
+            year={p.year}
+            read={p.read}
+            tint={p.tint}
+            href={p.href}
+          />
+        ))}
+      </div>
+      <div
+        style={{
+          marginTop: '32px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px',
+        }}
+      >
+        <a
+          href="https://daliakatan.substack.com"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 4px',
+            color: C.ink,
+            opacity: 0.72,
+            fontFamily: fontUI,
+            fontSize: '13px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            borderBottom: `1px solid ${C.ink}33`,
+          }}
+        >
+          Subscribe on Substack <span style={{ opacity: 0.5 }}>↗</span>
+        </a>
+        <a
+          href="/field-notes"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '14px 24px',
+            background: C.ink,
+            color: C.paper,
+            borderRadius: '999px',
+            fontFamily: fontUI,
+            fontSize: '14px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            boxShadow: `0 14px 28px -14px ${C.ink}88`,
+          }}
+        >
+          Read the full archive <span style={{ opacity: 0.7 }}>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 03 · Praise ───────── */}
+  <section
+    id="praise"
+    style={{
+      background: meshBg({
+        base: C.sky,
+        blobs: [
+          [C.lavender,       12, 18, 50],
+          [C.peach,          85, 80, 45],
+          [`${C.butter}cc`,  60, 12, 35],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px' }}>
+      <SectionHeader n={3} sub="Nice things" title="What people say" accent={C.plum} />
+      <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
+    </div>
+  </section>
+
+  {/* ───────── 04 · Contact ───────── */}
+  <section
+    id="contact"
+    style={{
+      background: meshBg({
+        base: C.lilac,
+        blobs: [
+          [C.peach,         18, 18, 50],
+          [C.butter,        82, 28, 40],
+          [C.mint,          72, 88, 45],
+          [`${C.coral}aa`,  18, 80, 38],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px 80px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px' }}>
+      <SectionHeader n={4} sub="Contact" title="Drop a line" accent={C.coral} />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '360px 1fr',
+          gap: '48px',
+          alignItems: 'flex-start',
+        }}
+      >
+        <PhotoSlab size={360} label="photo of Dalia" tone={C.peach} />
+        <ContactForm client:visible accent={C.coral} />
+      </div>
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
 </Base>

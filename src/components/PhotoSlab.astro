@@ -1,0 +1,60 @@
+---
+/**
+ * Square mesh-gradient placeholder for photography. 24px radius, hatching
+ * overlay, "↳ photo of …" mono caption pill bottom-left.
+ *
+ * When real photos are supplied, swap the inner overlay for an <img> at the
+ * same dimensions and keep border-radius: 24.
+ */
+import { C, meshBg } from '@/lib/mesh';
+
+interface Props {
+  size?: number;
+  label?: string;
+  tone?: string;
+}
+
+const { size = 360, label = 'photo of dalia', tone = C.peach } = Astro.props;
+---
+<div
+  style={{
+    width: `${size}px`,
+    height: `${size}px`,
+    borderRadius: '24px',
+    overflow: 'hidden',
+    background: meshBg({
+      base: tone,
+      blobs: [
+        [`${C.lavender}cc`, 80, 20, 55],
+        [`${C.butter}cc`, 20, 80, 55],
+        [`${C.coral}88`, 60, 60, 35],
+      ],
+    }),
+    position: 'relative',
+    border: `1px solid ${C.ink}15`,
+    boxShadow: `0 30px 60px -34px ${C.ink}66`,
+  }}
+>
+  <div
+    style={{
+      position: 'absolute',
+      inset: 0,
+      backgroundImage: `repeating-linear-gradient(135deg, transparent 0 14px, ${C.ink}08 14px 15px)`,
+    }}
+  ></div>
+  <div
+    style={{
+      position: 'absolute',
+      left: '18px',
+      bottom: '18px',
+      padding: '6px 12px',
+      background: C.white,
+      borderRadius: '999px',
+      fontFamily: '"DM Mono", monospace',
+      fontSize: '11px',
+      color: C.inkSoft,
+      letterSpacing: '0.06em',
+      boxShadow: `0 6px 14px -8px ${C.ink}55`,
+    }}
+  >↳ {label}</div>
+</div>
