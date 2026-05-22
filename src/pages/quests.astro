@@ -160,8 +160,42 @@ function hostFor(href: string | undefined): string | null {
               color: C.ink,
               cursor: q.href ? 'pointer' : 'default',
               opacity: isComingSoon ? 0.92 : 1,
+              // Award badge overhangs the top edge as a "sticker" — needs
+              // position context + visible overflow at the card boundary.
+              position: 'relative',
+              overflow: 'visible',
             }}
           >
+            {/* Award badge — overhangs the top edge of the card (TOP PICK
+                sticker pattern). Solid coral fill, white uppercase text. */}
+            {q.award && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '-16px',
+                  right: '28px',
+                  zIndex: 2,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '8px 18px 8px 14px',
+                  background: C.coral,
+                  borderRadius: '999px',
+                  border: `2px solid ${C.paper}`,
+                  boxShadow: `0 10px 22px -10px ${C.coral}aa, 0 14px 28px -14px ${C.ink}66`,
+                  fontFamily: fontUI,
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: C.white,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
+                <span>{q.award.text}</span>
+              </div>
+            )}
             {/* Thumb — product screenshot if `image` is set, else mesh tile.
                 The Kind pill sits in the bottom-left corner in both cases. */}
             <div
@@ -227,46 +261,29 @@ function hostFor(href: string | undefined): string | null {
 
             {/* Right column */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: 0 }}>
-              {/* Top row: award eyebrow (if present) on the left of host·year */}
+              {/* Title row: title on the left, host·year on the right.
+                  Aligned to their TOP edges so the small uppercase text
+                  sits flush with the cap-height of the Fraunces title. */}
               <div
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
-                  justifyContent: q.award ? 'space-between' : 'flex-end',
-                  gap: '16px',
+                  justifyContent: 'space-between',
+                  gap: '20px',
                   flexWrap: 'wrap',
                 }}
               >
-                {q.award && (
-                  <div
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '8px 16px 8px 12px',
-                      background: meshBg({
-                        base: C.coral,
-                        blobs: [
-                          [`${C.peach}dd`, 100, 50, 80],
-                          [`${C.butter}cc`,  0, 50, 60],
-                        ],
-                      }),
-                      borderRadius: '999px',
-                      border: `1px solid ${C.ink}10`,
-                      boxShadow: `0 8px 18px -10px ${C.ink}66`,
-                      fontFamily: fontUI,
-                      fontSize: '11px',
-                      fontWeight: 700,
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      color: C.white,
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
-                    <span>{q.award.text}</span>
-                  </div>
-                )}
+                <div
+                  style={{
+                    fontFamily: fontDisplay,
+                    fontWeight: 400,
+                    fontSize: '42px',
+                    lineHeight: '1.02',
+                    letterSpacing: '-0.025em',
+                    color: C.ink,
+                    textWrap: 'balance',
+                  }}
+                >{q.title}</div>
                 {(host || q.year) && (
                   <div
                     style={{
@@ -277,7 +294,9 @@ function hostFor(href: string | undefined): string | null {
                       textTransform: 'uppercase',
                       color: C.inkSoft,
                       whiteSpace: 'nowrap',
-                      paddingTop: '4px',
+                      // Nudge down so the baseline sits with the title's
+                      // x-height instead of overshooting the cap line.
+                      paddingTop: '14px',
                     }}
                   >
                     {host && <span>{host}</span>}
@@ -286,19 +305,6 @@ function hostFor(href: string | undefined): string | null {
                   </div>
                 )}
               </div>
-
-              {/* Title */}
-              <div
-                style={{
-                  fontFamily: fontDisplay,
-                  fontWeight: 400,
-                  fontSize: '42px',
-                  lineHeight: '1.02',
-                  letterSpacing: '-0.025em',
-                  color: C.ink,
-                  textWrap: 'balance',
-                }}
-              >{q.title}</div>
 
               {/* Blurb */}
               <div
