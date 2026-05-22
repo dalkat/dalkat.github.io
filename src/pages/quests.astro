@@ -167,22 +167,23 @@ function hostFor(href: string | undefined): string | null {
             }}
           >
             {/* Award badge — overhangs the top edge of the card (TOP PICK
-                sticker pattern). Solid coral fill, white uppercase text. */}
+                sticker pattern). Solid coral fill, white uppercase text;
+                shadow only — no border ring (cleaner on both the white
+                card and the paper page bg). */}
             {q.award && (
               <div
                 style={{
                   position: 'absolute',
-                  top: '-16px',
+                  top: '-18px',
                   right: '28px',
                   zIndex: 2,
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  padding: '8px 18px 8px 14px',
+                  padding: '9px 18px 9px 14px',
                   background: C.coral,
                   borderRadius: '999px',
-                  border: `2px solid ${C.paper}`,
-                  boxShadow: `0 10px 22px -10px ${C.coral}aa, 0 14px 28px -14px ${C.ink}66`,
+                  boxShadow: `0 6px 14px -6px ${C.coral}cc, 0 14px 28px -16px ${C.ink}77`,
                   fontFamily: fontUI,
                   fontSize: '11px',
                   fontWeight: 700,
@@ -261,50 +262,18 @@ function hostFor(href: string | undefined): string | null {
 
             {/* Right column */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: 0 }}>
-              {/* Title row: title on the left, host·year on the right.
-                  Aligned to their TOP edges so the small uppercase text
-                  sits flush with the cap-height of the Fraunces title. */}
+              {/* Title */}
               <div
                 style={{
-                  display: 'flex',
-                  alignItems: 'flex-start',
-                  justifyContent: 'space-between',
-                  gap: '20px',
-                  flexWrap: 'wrap',
+                  fontFamily: fontDisplay,
+                  fontWeight: 400,
+                  fontSize: '42px',
+                  lineHeight: '1.02',
+                  letterSpacing: '-0.025em',
+                  color: C.ink,
+                  textWrap: 'balance',
                 }}
-              >
-                <div
-                  style={{
-                    fontFamily: fontDisplay,
-                    fontWeight: 400,
-                    fontSize: '42px',
-                    lineHeight: '1.02',
-                    letterSpacing: '-0.025em',
-                    color: C.ink,
-                    textWrap: 'balance',
-                  }}
-                >{q.title}</div>
-                {(host || q.year) && (
-                  <div
-                    style={{
-                      fontFamily: fontUI,
-                      fontSize: '11px',
-                      fontWeight: 600,
-                      letterSpacing: '0.1em',
-                      textTransform: 'uppercase',
-                      color: C.inkSoft,
-                      whiteSpace: 'nowrap',
-                      // Nudge down so the baseline sits with the title's
-                      // x-height instead of overshooting the cap line.
-                      paddingTop: '14px',
-                    }}
-                  >
-                    {host && <span>{host}</span>}
-                    {host && q.year && <span style={{ opacity: 0.5, margin: '0 6px' }}>·</span>}
-                    {q.year && <span>{q.year}</span>}
-                  </div>
-                )}
-              </div>
+              >{q.title}</div>
 
               {/* Blurb */}
               <div
@@ -318,7 +287,9 @@ function hostFor(href: string | undefined): string | null {
                 }}
               >{q.blurb}</div>
 
-              {/* Bottom row: Coming-soon pill on the left OR Visit ↗ on the right. */}
+              {/* Footer: host·year (or Coming-soon pill) on the left,
+                  Visit ↗ / Try it → on the right. Mirrors the bottom-row
+                  pattern used on PostTile. */}
               <div
                 style={{
                   marginTop: '8px',
@@ -336,26 +307,36 @@ function hostFor(href: string | undefined): string | null {
                 }}
               >
                 {isComingSoon ? (
-                  <>
-                    <span
-                      style={{
-                        padding: '6px 14px',
-                        background: `${q.tint}22`,
-                        color: q.tint,
-                        borderRadius: '999px',
-                        fontSize: '12px',
-                        letterSpacing: '0.12em',
-                        textTransform: 'uppercase',
-                        fontWeight: 700,
-                      }}
-                    >Coming soon</span>
-                    <span />
-                  </>
+                  <span
+                    style={{
+                      padding: '6px 14px',
+                      background: `${q.tint}22`,
+                      color: q.tint,
+                      borderRadius: '999px',
+                      fontSize: '12px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      fontWeight: 700,
+                    }}
+                  >Coming soon</span>
                 ) : (
-                  <>
-                    <span />
-                    <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
-                  </>
+                  <span
+                    style={{
+                      fontFamily: fontUI,
+                      fontSize: '11px',
+                      fontWeight: 600,
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      color: C.inkSoft,
+                    }}
+                  >
+                    {host && <span>{host}</span>}
+                    {host && q.year && <span style={{ opacity: 0.5, margin: '0 6px' }}>·</span>}
+                    {q.year && <span>{q.year}</span>}
+                  </span>
+                )}
+                {!isComingSoon && q.href && (
+                  <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
                 )}
               </div>
             </div>
