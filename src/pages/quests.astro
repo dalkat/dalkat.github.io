@@ -1,32 +1,56 @@
 ---
 /**
- * /side-quests — things I built outside of paid work.
+ * /quests — side quests index. Things I built outside of paid work.
  *
- * Hero (peach-mesh + kicker pill + Fraunces flourish) over a stacked
- * single-column list of large quest cards. Each card has a mesh-tinted
- * thumb tile on the left and copy on the right; `coming-soon` cards swap
- * the outbound CTA for a pill, and tiles with an `award` field render
- * a small honor pill above the title.
+ * Hero (peach-mesh) over a list of large quest cards. Each card has a
+ * mesh-tinted thumb tile or product screenshot on the left and copy on
+ * the right; `coming-soon` cards swap the outbound CTA for a pill.
  *
- * Add new entries by appending to `SIDE_QUESTS` in `src/data/side-quests.ts`.
+ * Card right-column layout mirrors the site's PostTile pattern:
+ *   ┌────────────────────────────────────────────────────────────┐
+ *   │ [image]                              [Award eyebrow]       │
+ *   │ [thumb]                              host · year (top-rt)  │
+ *   │                                                            │
+ *   │           Title                                            │
+ *   │           Blurb...                                         │
+ *   │           ──────────────────────────────────────           │
+ *   │                                                  Visit ↗  │
+ *   └────────────────────────────────────────────────────────────┘
+ *
+ * Add new entries by appending to `QUESTS` in `src/data/quests.ts`.
  */
 import Base from '@/layouts/Base.astro';
 import PageNav from '@/components/PageNav.astro';
 import Footer from '@/components/Footer.astro';
 import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
-import { SIDE_QUESTS } from '@/data/side-quests';
+import { QUESTS } from '@/data/quests';
 
 const gt = gradientText();
+
+/** Pretty-print the "where" for the top-right line. External URLs show
+ *  the hostname; internal links show 'daliakatan.com' since that's where
+ *  the visitor goes when they click. Coming-soon tiles return null. */
+function hostFor(href: string | undefined): string | null {
+  if (!href) return null;
+  if (href.startsWith('http')) {
+    try {
+      return new URL(href).hostname.replace(/^www\./, '');
+    } catch {
+      return null;
+    }
+  }
+  return 'daliakatan.com';
+}
 ---
 <Base
-  title="Side quests — Dalia Katan"
+  title="Side Quests — Dalia Katan"
   description="Side projects, weekend tools, and small experiments — things I've built outside of paid work."
 >
-  <PageNav current="side-quests" />
+  <PageNav current="quests" />
 
   {/* ───────── Hero ───────── */}
   <section
-    id="side-quests"
+    id="quests"
     style={{
       background: meshBg({
         base: C.peach,
@@ -60,7 +84,7 @@ const gt = gradientText();
         }}
       >
         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.coral }}></span>
-        /side-quests · things I've made
+        /quests · things I've made
       </div>
       <h1
         style={{
@@ -106,16 +130,17 @@ const gt = gradientText();
   >
     <div
       style={{
-        maxWidth: '960px',
+        maxWidth: '1080px',
         margin: '0 auto',
         display: 'grid',
         gap: '22px',
       }}
     >
-      {SIDE_QUESTS.map((q) => {
+      {QUESTS.map((q) => {
         const isComingSoon = q.status === 'coming-soon';
         const isExternal = !!q.href && q.href.startsWith('http');
         const Tag = q.href ? 'a' : 'article';
+        const host = hostFor(q.href);
         return (
           <Tag
             href={q.href}
@@ -138,7 +163,7 @@ const gt = gradientText();
             }}
           >
             {/* Thumb — product screenshot if `image` is set, else mesh tile.
-                The kind pill sits in the bottom-left corner in both cases. */}
+                The Kind pill sits in the bottom-left corner in both cases. */}
             <div
               style={{
                 width: '180px',
@@ -201,68 +226,81 @@ const gt = gradientText();
             </div>
 
             {/* Right column */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {q.award && (
-                <div
-                  style={{
-                    display: 'inline-flex',
-                    alignSelf: 'flex-start',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '7px 14px 7px 10px',
-                    background: meshBg({
-                      base: C.butter,
-                      blobs: [
-                        [`${C.peach}dd`,  100, 50, 80],
-                        [`${C.white}bb`,    0, 50, 60],
-                      ],
-                    }),
-                    borderRadius: '999px',
-                    border: `1px solid ${C.ink}10`,
-                    boxShadow: `0 6px 14px -10px ${C.ink}55`,
-                    fontFamily: fontUI,
-                    fontSize: '12px',
-                    fontWeight: 600,
-                    color: C.ink,
-                    letterSpacing: '-0.005em',
-                  }}
-                >
-                  {q.award.icon && <span style={{ fontSize: '14px', lineHeight: 1 }}>{q.award.icon}</span>}
-                  <span>{q.award.text}</span>
-                </div>
-              )}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: 0 }}>
+              {/* Top row: award eyebrow (if present) on the left of host·year */}
               <div
                 style={{
                   display: 'flex',
-                  alignItems: 'baseline',
+                  alignItems: 'flex-start',
+                  justifyContent: q.award ? 'space-between' : 'flex-end',
+                  gap: '16px',
                   flexWrap: 'wrap',
-                  columnGap: '14px',
-                  rowGap: '4px',
                 }}
               >
-                <div
-                  style={{
-                    fontFamily: fontDisplay,
-                    fontWeight: 400,
-                    fontSize: '42px',
-                    lineHeight: '1.02',
-                    letterSpacing: '-0.025em',
-                    color: C.ink,
-                    textWrap: 'balance',
-                  }}
-                >{q.title}</div>
-                {q.year && (
+                {q.award && (
                   <div
                     style={{
-                      fontFamily: 'Caveat, cursive',
-                      fontSize: '24px',
-                      color: q.tint,
-                      transform: 'rotate(-2deg)',
-                      lineHeight: 1,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '8px 16px 8px 12px',
+                      background: meshBg({
+                        base: C.coral,
+                        blobs: [
+                          [`${C.peach}dd`, 100, 50, 80],
+                          [`${C.butter}cc`,  0, 50, 60],
+                        ],
+                      }),
+                      borderRadius: '999px',
+                      border: `1px solid ${C.ink}10`,
+                      boxShadow: `0 8px 18px -10px ${C.ink}66`,
+                      fontFamily: fontUI,
+                      fontSize: '11px',
+                      fontWeight: 700,
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: C.white,
+                      whiteSpace: 'nowrap',
                     }}
-                  >— {q.year}</div>
+                  >
+                    {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
+                    <span>{q.award.text}</span>
+                  </div>
+                )}
+                {(host || q.year) && (
+                  <div
+                    style={{
+                      fontFamily: fontUI,
+                      fontSize: '11px',
+                      fontWeight: 600,
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      color: C.inkSoft,
+                      whiteSpace: 'nowrap',
+                      paddingTop: '4px',
+                    }}
+                  >
+                    {host && <span>{host}</span>}
+                    {host && q.year && <span style={{ opacity: 0.5, margin: '0 6px' }}>·</span>}
+                    {q.year && <span>{q.year}</span>}
+                  </div>
                 )}
               </div>
+
+              {/* Title */}
+              <div
+                style={{
+                  fontFamily: fontDisplay,
+                  fontWeight: 400,
+                  fontSize: '42px',
+                  lineHeight: '1.02',
+                  letterSpacing: '-0.025em',
+                  color: C.ink,
+                  textWrap: 'balance',
+                }}
+              >{q.title}</div>
+
+              {/* Blurb */}
               <div
                 style={{
                   fontFamily: fontReader,
@@ -273,6 +311,8 @@ const gt = gradientText();
                   maxWidth: '620px',
                 }}
               >{q.blurb}</div>
+
+              {/* Bottom row: Coming-soon pill on the left OR Visit ↗ on the right. */}
               <div
                 style={{
                   marginTop: '8px',
@@ -290,24 +330,27 @@ const gt = gradientText();
                 }}
               >
                 {isComingSoon ? (
-                  <span
-                    style={{
-                      padding: '6px 14px',
-                      background: `${q.tint}22`,
-                      color: q.tint,
-                      borderRadius: '999px',
-                      fontSize: '12px',
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      fontWeight: 700,
-                    }}
-                  >Coming soon</span>
+                  <>
+                    <span
+                      style={{
+                        padding: '6px 14px',
+                        background: `${q.tint}22`,
+                        color: q.tint,
+                        borderRadius: '999px',
+                        fontSize: '12px',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        fontWeight: 700,
+                      }}
+                    >Coming soon</span>
+                    <span />
+                  </>
                 ) : (
-                  <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
+                  <>
+                    <span />
+                    <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
+                  </>
                 )}
-                <span style={{ color: C.inkSoft, fontWeight: 500 }}>
-                  {q.href ? q.href.replace(/^https?:\/\//, '') : ''}
-                </span>
               </div>
             </div>
           </Tag>
