@@ -16,15 +16,14 @@ const fieldNoteType = z.enum([
   'letter',
   'notes',
   'travelogue',
+  'video',
 ]);
 
 const fieldNoteTheme = z.enum([
-  'strategy',
-  'product',
-  'innovation',
-  'creativity',
-  'self',
-  'travel',
+  'entrepreneurship-product',
+  'workplace-teambuilding',
+  'productivity-creativity',
+  'personal-essays',
   'food',
 ]);
 

@@ -1,7 +1,7 @@
 ---
 title: Trail Mix Method
 type: tool
-theme: self
+theme: productivity-creativity
 source: daliakatan.com
 year: 2019
 read_time: 10

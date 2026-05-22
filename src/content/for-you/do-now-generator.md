@@ -1,7 +1,7 @@
 ---
 title: Do Now Generator
 type: tool
-theme: creativity
+theme: productivity-creativity
 source: daliakatan.com
 year: 2023            # TODO: confirm
 read_time:            # null — shown as "Toy"

@@ -1,7 +1,7 @@
 ---
 title: Accelerating Team Performance in the Future of Work
 type: report
-theme: innovation
+theme: workplace-teambuilding
 source: Deloitte
 year: 2018
 read_time: 15

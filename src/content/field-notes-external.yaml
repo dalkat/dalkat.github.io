@@ -1,4 +1,4 @@
-# Externally hosted Field Notes (Substack, Medium, eHandbook, etc.)
+# Externally hosted Field Notes (Substack, Medium, eHandbook, YouTube, etc.)
 # These do not generate Jekyll pages on the site — the archive links straight out.
 # Hosted pieces live in the _for_you/ collection instead.
 #
@@ -7,7 +7,7 @@
 - id: introducing-arch
   title: "Introducing ARCH: Building Products People Want to Live In"
   type: framework
-  theme: product
+  theme: entrepreneurship-product
   source: Substack
   year: 2023
   read_time: 10
@@ -17,7 +17,7 @@
 - id: designing-an-app-like-a-home
   title: "Designing an App Like You Would a Home"
   type: essay
-  theme: product
+  theme: entrepreneurship-product
   source: Substack
   year: 2023
   read_time: 8
@@ -27,7 +27,7 @@
 - id: why-first-gen-founders
   title: "Why First-Gen Founders Need to Learn to Spend"
   type: essay
-  theme: strategy
+  theme: entrepreneurship-product
   source: eHandbook
   year: 2022
   read_time: 8
@@ -37,7 +37,7 @@
 - id: inclusive-workplace
   title: "Unlocking the Benefits of Inclusive Workplace Practices"
   type: essay
-  theme: innovation
+  theme: workplace-teambuilding
   source: Medium
   year: 2021
   read_time: 8
@@ -47,9 +47,30 @@
 - id: four-life-lessons
   title: "4 Life Lessons From a 10-Year-Old"
   type: essay
-  theme: creativity
+  theme: personal-essays
   source: Medium
   year: 2021
   read_time: 5
   blurb: "A return to childhood wisdom — what I learned watching my niece spend a week noticing everything."
   url: https://medium.com/@dkatan77/4-life-lessons-from-a-10-year-old-401503c7eb32
+
+# ── My grandmother's cooking show on YouTube ───────────────────────────
+- id: bukharian-plov
+  title: "Bukharian Plov"
+  type: video
+  theme: food
+  source: YouTube
+  year: 2023            # TODO: confirm
+  read_time: 12         # TODO: confirm (video length, minutes)
+  blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table — layered rice, lamb, carrots, the long patient way."
+  url: https://www.youtube.com/watch?v=-_U_T2r8mBs
+
+- id: stuffed-vegetables
+  title: "Stuffed Vegetables"
+  type: video
+  theme: food
+  source: YouTube
+  year: 2023            # TODO: confirm
+  read_time: 14         # TODO: confirm (video length, minutes)
+  blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice — a long-afternoon dish that turns kitchen labor into a family ritual."
+  url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s

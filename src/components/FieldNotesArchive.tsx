@@ -20,24 +20,20 @@ interface Props {
 
 const THEMES = [
   'All',
-  'Strategy',
-  'Product',
-  'Innovation',
-  'Creativity',
-  'Self',
-  'Travel',
+  'Entrepreneurship & Product',
+  'Workplace & Teambuilding',
+  'Productivity & Creativity',
+  'Personal Essays',
   'Food',
 ] as const;
 
 type Theme = (typeof THEMES)[number];
 
 const themeTints: Record<string, string> = {
-  Strategy: C.coral,
-  Product: C.plum,
-  Innovation: C.teal,
-  Creativity: C.coral,
-  Self: C.plum,
-  Travel: C.teal,
+  'Entrepreneurship & Product': C.coral,
+  'Workplace & Teambuilding': C.teal,
+  'Productivity & Creativity': C.plum,
+  'Personal Essays': C.plum,
   Food: C.coral,
 };
 

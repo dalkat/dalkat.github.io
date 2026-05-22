@@ -1,7 +1,7 @@
 ---
 title: "A New Home at Work: Refugee Inclusion in the Workplace"
 type: report
-theme: innovation
+theme: workplace-teambuilding
 source: Deloitte
 year: 2019
 read_time: 12
