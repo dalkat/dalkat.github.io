@@ -36,15 +36,29 @@ export default function HighlightReel({ images, tint = C.coral, intervalMs = 520
   return (
     <div
       style={{
-        margin: '40px 0',
-        padding: '24px 24px 22px',
+        // Break out of the reader column to full viewport width
+        // (body has overflow-x: hidden to swallow the negative margin).
+        width: '100vw',
+        marginLeft: 'calc(50% - 50vw)',
+        marginRight: 'calc(50% - 50vw)',
+        marginTop: 48,
+        marginBottom: 48,
+        padding: '40px 32px 32px',
         background: C.paper2,
-        borderRadius: 22,
-        border: `1px solid ${C.ink}10`,
+        borderTop: `1px solid ${C.ink}10`,
+        borderBottom: `1px solid ${C.ink}10`,
       }}
     >
-      {/* Frame */}
-      <div style={{ display: 'grid', placeItems: 'center', minHeight: 340 }}>
+      {/* Frame — inner content recentered within the wide band */}
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          display: 'grid',
+          placeItems: 'center',
+          minHeight: 340,
+        }}
+      >
         <div
           className="mesh-carousel-frame"
           style={{
@@ -65,7 +79,7 @@ export default function HighlightReel({ images, tint = C.coral, intervalMs = 520
             style={{
               display: 'block',
               maxWidth: '100%',
-              maxHeight: 460,
+              maxHeight: '70vh',
               objectFit: 'contain',
             }}
           />
@@ -88,8 +102,8 @@ export default function HighlightReel({ images, tint = C.coral, intervalMs = 520
           </div>
         </div>
       </div>
-      {/* Caption + controls */}
-      <div style={{ marginTop: 18, display: 'grid', gap: 10 }}>
+      {/* Caption + controls (constrained to a narrower column for legibility) */}
+      <div style={{ marginTop: 18, maxWidth: 720, marginLeft: 'auto', marginRight: 'auto', display: 'grid', gap: 10 }}>
         <div
           style={{
             fontFamily: fontDisplay,

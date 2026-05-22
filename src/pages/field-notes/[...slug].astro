@@ -10,6 +10,7 @@ import { getCollection, render } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import RecipeLayout from '@/layouts/RecipeLayout.astro';
 import ReportLayout from '@/layouts/ReportLayout.astro';
+import { tintForType } from '@/lib/mesh';
 
 export async function getStaticPaths() {
   const entries = await getCollection('for-you', ({ data }) => !data.draft);
@@ -50,6 +51,7 @@ const { Content } = await render(entry);
 
 const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
 const themeLabel = THEME_LABELS[entry.data.theme] ?? entry.data.theme;
+const tint = tintForType(entry.data.type);
 
 // ── Recipe-template configuration is held inline here per slug for now.
 // Each new recipe adds an entry; ingredients/steps live alongside.
@@ -145,6 +147,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     read_time={entry.data.read_time ?? null}
     slug={entry.id}
     externalUrl={entry.data.external_url}
+    tint={tint}
   >
     <Content />
   </ReportLayout>
@@ -158,6 +161,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     year={entry.data.year}
     read_time={entry.data.read_time ?? null}
     slug={entry.id}
+    tint={tint}
     highlightReel={entry.data.highlight_reel}
     highlightReelTitle={entry.data.highlight_reel ? 'Highlight reel' : undefined}
   >

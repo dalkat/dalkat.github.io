@@ -24,7 +24,11 @@ highlight_reel:
     caption: Over New Years, Joe and I backpacked in Torres del Paine, Patagonia. A million layers to combat fickle weather, incredible views on our uphill trek, and me being grumpy after 25 of our 30+ miles of backpacking. One of the physically hardest things I've ever done.
 ---
 
-*This has been so hard to write and so difficult to prevent the perfectionist in me from taking over — so a quick yay that I've finally clicked send, and a yay to embracing imperfection. My goal in writing these updates is to share my journey experimenting with a lifestyle that doesn't involve full-time or freelance work, to ask for help and input on the many questions I'm asking myself, and perhaps even to infuse some inspiration for what's possible into the lives of the amazing people around me. My one request: I would love to hear from you — if there's something that particularly resonates, or if you have advice from your own journeys, write me a note. And let me know how you're doing, too.*
+<aside class="mesh-foreword">
+
+This has been so hard to write and so difficult to prevent the perfectionist in me from taking over — so a quick yay that I've finally clicked send, and a yay to embracing imperfection. My goal in writing these updates is to share my journey experimenting with a lifestyle that doesn't involve full-time or freelance work, to ask for help and input on the many questions I'm asking myself, and perhaps even to infuse some inspiration for what's possible into the lives of the amazing people around me. My one request: I would love to hear from you — if there's something that particularly resonates, or if you have advice from your own journeys, write me a note. And let me know how you're doing, too.
+
+</aside>
 
 ### Hi friends,
 

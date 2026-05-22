@@ -13,7 +13,11 @@ redirect_from:
   - /trailmix/
 ---
 
-*This simple productivity tool has helped me navigate my free time in a way that feels equally productive, fun, and curiosity-driven, and channels flow and energy rather than discipline alone to get things done. I think it'll be useful for others that have unstructured time in their lives as well, whether due to a sabbatical, self-employment / flexible jobs, or the weekend. Below is a bit about how this method came about and how it's helped, as well as how to try it in your own routine.*
+<aside class="mesh-foreword">
+
+This simple productivity tool has helped me navigate my free time in a way that feels equally productive, fun, and curiosity-driven, and channels flow and energy rather than discipline alone to get things done. I think it'll be useful for others that have unstructured time in their lives as well, whether due to a sabbatical, self-employment / flexible jobs, or the weekend. Below is a bit about how this method came about and how it's helped, as well as how to try it in your own routine.
+
+</aside>
 
 ## Introduction
 

@@ -69,3 +69,30 @@ export function gradientText(): Record<string, string | number> {
 export const fontDisplay = 'Fraunces, serif';
 export const fontUI = '"Space Grotesk", sans-serif';
 export const fontReader = 'Newsreader, serif';
+
+/**
+ * Tint mapping by Field Note `type`. Mirrors the design source
+ * (content-pages.jsx + recipe-donow.jsx), where each template hard-codes
+ * a tint based on the *mood* of the content:
+ *   plum  — introspective / narrative (letter, essay, notes)
+ *   teal  — structured / analytical (report, field-guide)
+ *   coral — energetic / actionable (tool, recipe, framework, travelogue)
+ */
+export function tintForType(type: string): string {
+  switch (type) {
+    case 'letter':
+    case 'essay':
+    case 'notes':
+      return C.plum;
+    case 'report':
+    case 'field-guide':
+      return C.teal;
+    case 'tool':
+    case 'recipe':
+    case 'framework':
+    case 'travelogue':
+      return C.coral;
+    default:
+      return C.coral;
+  }
+}
