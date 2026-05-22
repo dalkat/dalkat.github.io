@@ -37,8 +37,11 @@ export interface SideQuest {
   href?: string;
   /** Defaults to 'live'. */
   status?: SideQuestStatus;
-  /** Mesh-thumb accent color. */
+  /** Mesh-thumb accent color (also used for the year tag + CTA color). */
   tint: string;
+  /** Optional product screenshot. When set, replaces the mesh thumb with
+   *  an object-cover <img>. Path must be served from /public. */
+  image?: string;
   /** Optional honor — gets a small kicker pill above the title. */
   award?: SideQuestAward;
 }
@@ -50,6 +53,7 @@ export const SIDE_QUESTS: SideQuest[] = [
     year: 2021,
     tint: C.coral,
     href: 'https://giftpicker.io',
+    image: '/img/giftpicker-quiz.png',
     blurb:
       "Stuck on what to get someone? Answer a handful of questions about the person — vibe, budget, last thing that made them smile — and get a curated shortlist in under a minute. A weekend project that picked up a quiet following around the holidays.",
     award: {
