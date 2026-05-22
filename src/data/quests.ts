@@ -23,6 +23,10 @@ export interface QuestAward {
   text: string;
   /** Single-character icon shown left of the text (emoji works). */
   icon?: string;
+  /** Optional outbound link (e.g. the ProductHunt launch page). When set,
+   *  the badge becomes a clickable anchor — distinct from the card's
+   *  primary href. */
+  href?: string;
 }
 
 export interface Quest {
@@ -60,6 +64,7 @@ export const QUESTS: Quest[] = [
     award: {
       icon: '🏆',
       text: '#3 Product of the Day on ProductHunt',
+      href: 'https://www.producthunt.com/posts/giftpicker-by-presently',
     },
   },
   {

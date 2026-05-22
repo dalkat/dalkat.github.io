@@ -141,62 +141,76 @@ function hostFor(href: string | undefined): string | null {
         const isExternal = !!q.href && q.href.startsWith('http');
         const Tag = q.href ? 'a' : 'article';
         const host = hostFor(q.href);
+        // Shared style block for the award sticker — used as both an
+        // anchor (when q.award.href is set) and a static div otherwise.
+        const awardStyle = {
+          position: 'absolute' as const,
+          top: '-18px',
+          right: '28px',
+          zIndex: 2,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '9px 18px 9px 14px',
+          background: C.coral,
+          borderRadius: '999px',
+          boxShadow: `0 6px 14px -6px ${C.coral}cc, 0 14px 28px -16px ${C.ink}77`,
+          fontFamily: fontUI,
+          fontSize: '11px',
+          fontWeight: 700,
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: C.white,
+          textDecoration: 'none',
+          whiteSpace: 'nowrap' as const,
+        };
+        const awardInner = q.award && (
+          <>
+            {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
+            <span>{q.award.text}</span>
+          </>
+        );
         return (
-          <Tag
-            href={q.href}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
-            style={{
-              background: C.white,
-              borderRadius: '24px',
-              padding: '28px',
-              border: `1px solid ${C.ink}10`,
-              boxShadow: `0 18px 36px -22px ${C.ink}55`,
-              display: 'grid',
-              gridTemplateColumns: '180px 1fr',
-              gap: '28px',
-              alignItems: 'flex-start',
-              textDecoration: 'none',
-              color: C.ink,
-              cursor: q.href ? 'pointer' : 'default',
-              opacity: isComingSoon ? 0.92 : 1,
-              // Award badge overhangs the top edge as a "sticker" — needs
-              // position context + visible overflow at the card boundary.
-              position: 'relative',
-              overflow: 'visible',
-            }}
-          >
+          /* Positioning shell — the badge needs to overhang the card's top
+             edge, but anchors can't legally nest inside each other (the
+             card itself is an <a> when q.href is set, and the badge is its
+             own <a> when q.award.href is set). Wrapping both as siblings
+             inside this <div> gives the badge a real positioning context
+             without nesting. */
+          <div style={{ position: 'relative' }}>
             {/* Award badge — overhangs the top edge of the card (TOP PICK
-                sticker pattern). Solid coral fill, white uppercase text;
-                shadow only — no border ring (cleaner on both the white
-                card and the paper page bg). */}
-            {q.award && (
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '-18px',
-                  right: '28px',
-                  zIndex: 2,
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '9px 18px 9px 14px',
-                  background: C.coral,
-                  borderRadius: '999px',
-                  boxShadow: `0 6px 14px -6px ${C.coral}cc, 0 14px 28px -16px ${C.ink}77`,
-                  fontFamily: fontUI,
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: C.white,
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
-                <span>{q.award.text}</span>
-              </div>
-            )}
+                sticker). Renders as an <a> when it has its own href,
+                otherwise as a plain <div>. */}
+            {q.award && (q.award.href ? (
+              <a
+                href={q.award.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={awardStyle}
+              >{awardInner}</a>
+            ) : (
+              <div style={awardStyle}>{awardInner}</div>
+            ))}
+            <Tag
+              href={q.href}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              style={{
+                background: C.white,
+                borderRadius: '24px',
+                padding: '28px',
+                border: `1px solid ${C.ink}10`,
+                boxShadow: `0 18px 36px -22px ${C.ink}55`,
+                display: 'grid',
+                gridTemplateColumns: '180px 1fr',
+                gap: '28px',
+                alignItems: 'flex-start',
+                textDecoration: 'none',
+                color: C.ink,
+                cursor: q.href ? 'pointer' : 'default',
+                opacity: isComingSoon ? 0.92 : 1,
+              }}
+            >
             {/* Thumb — product screenshot if `image` is set, else mesh tile.
                 The Kind pill sits in the bottom-left corner in both cases. */}
             <div
@@ -341,6 +355,7 @@ function hostFor(href: string | undefined): string | null {
               </div>
             </div>
           </Tag>
+          </div>
         );
       })}
     </div>
