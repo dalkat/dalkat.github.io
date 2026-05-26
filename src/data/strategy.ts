@@ -77,12 +77,12 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2018',
     summary:
-      "A Fortune-10 company saw customer behavior shifting around mobility — how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working side-by-side with client leadership to define a vision for long-term planning and the core design principles that would help them execute.",
-    outcome: 'A prioritized set of 20 growth opportunities mapped along the customer journey.',
+      "A Fortune-10 company saw customer behavior shifting around mobility — how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
+    outcome: '20 growth opportunities prioritized and mapped along the customer journey.',
   },
   {
     n: '02',
-    kicker: 'Brand narrative · Crusoe',
+    kicker: 'Narrative & fundraising · Crusoe',
     title: 'A Series A deck — for a company now worth billions',
     client: 'Crusoe Energy',
     tags: ['brand narrative', 'fundraising', 'investor deck'],
@@ -100,18 +100,18 @@ export const CASE_STUDIES: CaseStudy[] = [
     year: '2019–2020',
     summary:
       "Zone7's AI predicts injury and fatigue risk in pro sports and military. They brought me in to help identify what industries might become their next growth edge. I led the full go-to-market strategy design — market research and selection, pricing, and sourcing pilot customers — to strengthen the company's position ahead of an ambitious fundraise.",
-    outcome: "Secured healthcare pilot in NY Hospital network to validate Zone7's next market.",
+    outcome: 'Secured pilot at top NYC hospital to validate next market.',
   },
   {
     n: '04',
-    kicker: 'Market entry · Fortune-10',
+    kicker: 'Monetization & launch strategy · Fortune-10',
     title: 'Reaching new markets with a mobility app',
     client: 'Fortune-10 Automaker',
     tags: ['market entry', 'business model', 'monetization'],
     year: '2016',
     summary:
       "A global automaker was expanding beyond cars into mobility and payments, preparing to launch its first such app in Europe and China — two markets with little in common. My team and I designed the launch strategy across three questions: which markets to prioritize, what shape the offering should take in each region, and how it would actually make money.",
-    outcome: 'Strategy greenlit by client leadership; the app went to market that year.',
+    outcome: 'Strategy greenlit by client leadership; app went to market.',
   },
   {
     n: '05',
@@ -132,7 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
     year: '2017',
     summary:
-      'Led the innovation workstream for a global toymaker across 10+ brands. Gathered consumer insights on purchasing behavior and ran ideation workshops with each brand to surface strategic and tactical design initiatives.',
+      "A global toymaker engaged us to rethink packaging across its portfolio of 10+ brands — each with its own consumers and constraints. I led the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop for toys, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had in the brands.",
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
   },
 ];
