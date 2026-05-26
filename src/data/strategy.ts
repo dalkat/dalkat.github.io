@@ -73,11 +73,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     n: '01',
     kicker: 'Innovation strategy · Fortune-10',
     title: 'Choosing where to grow next',
-    client: 'Fortune-10',
+    client: 'Fortune-10 Company',
     tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2018',
     summary:
-      "A Fortune-10 saw customer behavior shifting around how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
+      "A Fortune-10 company saw customer behavior shifting around how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
     outcome: '20 growth opportunities prioritized for near- and long-term.',
   },
   {
@@ -117,11 +117,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     n: '05',
     kicker: 'Brand & growth strategy · Fortune 500',
     title: 'A growth strategy for seven global CPG brands',
-    client: 'Fortune 500 CPG',
+    client: 'Fortune 500 CPG Manufacturer',
     tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
     year: '2016',
     summary:
-      "A Fortune 500 CPG needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, and how marketing and creative would flex to stay locally relevant.",
+      "A global CPG manufacturer needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, and how marketing and creative would flex to stay locally relevant.",
     outcome: 'A three-year strategy adopted by the C-suite, with regional growth targets set across channels and consumer segments.',
   },
   {
@@ -132,7 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
     year: '2017',
     summary:
-      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands — each a distinct product line with its own consumers and constraints. I led the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
+      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands — each with its own consumers and constraints. I led the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
   },
 ];
