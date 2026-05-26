@@ -14,9 +14,12 @@ interface Props {
   read: string;
   tint?: string;
   href?: string;
+  /** Optional cover image (path under /public). Swaps in for the mesh
+   *  thumb; rendered with object-fit: cover at 88x88. */
+  image?: string;
 }
 
-const { kind, title, blurb, where, year, read, tint = C.plum, href } = Astro.props;
+const { kind, title, blurb, where, year, read, tint = C.plum, href, image } = Astro.props;
 const Tag = href ? 'a' : 'article';
 ---
 <Tag
@@ -46,25 +49,42 @@ const Tag = href ? 'a' : 'article';
       width: '88px',
       height: '88px',
       borderRadius: '16px',
-      background: meshBg({
-        base: tint,
-        blobs: [
-          [`${C.butter}dd`, 80, 30, 70],
-          [`${C.white}aa`, 20, 80, 60],
-        ],
-      }),
+      background: image
+        ? C.paper
+        : meshBg({
+            base: tint,
+            blobs: [
+              [`${C.butter}dd`, 80, 30, 70],
+              [`${C.white}aa`, 20, 80, 60],
+            ],
+          }),
       border: `1px solid ${C.ink}10`,
       position: 'relative',
       overflow: 'hidden',
     }}
   >
-    <div
-      style={{
-        position: 'absolute',
-        inset: 0,
-        backgroundImage: `repeating-linear-gradient(135deg, transparent 0 9px, ${C.ink}10 9px 10px)`,
-      }}
-    ></div>
+    {image ? (
+      <img
+        src={image}
+        alt=""
+        loading="lazy"
+        style={{
+          display: 'block',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+        }}
+      />
+    ) : (
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `repeating-linear-gradient(135deg, transparent 0 9px, ${C.ink}10 9px 10px)`,
+        }}
+      ></div>
+    )}
   </div>
   <div>
     <div

@@ -95,6 +95,10 @@ export interface FieldNoteTeaser {
   read: string;
   tint: string;
   href?: string;
+  /** Optional cover image (path under /public). Pulled from each
+   *  article's own og:image so the tile thumbnail mirrors what shows
+   *  up when the post is shared. */
+  image?: string;
 }
 
 export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
@@ -107,6 +111,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     year: 2023,
     read: '10 min',
     href: 'https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in',
+    image: '/img/teasers/introducing-arch.jpg',
   },
   {
     kind: 'Framework',
@@ -117,6 +122,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     year: 2026,
     read: '10 min',
     href: 'https://daliakatan.substack.com/p/arch-atmosphere',
+    image: '/img/teasers/arch-atmosphere.jpg',
   },
   {
     kind: 'Essay',
@@ -127,6 +133,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     year: 2022,
     read: '8 min',
     href: 'https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6',
+    image: '/img/teasers/first-gen-founders.jpg',
   },
   {
     kind: 'Essay',
@@ -137,6 +144,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     year: 2026,
     read: '12 min',
     href: 'https://daliakatan.substack.com/p/04-atmosphere-case-study-hopper-how-atmosphere-makes-or-breaks-trust-and-retention',
+    image: '/img/teasers/hopper-atmosphere.jpg',
   },
 ];
 
