@@ -1,0 +1,100 @@
+---
+/**
+ * 404 — page-not-found. Intentionally minimal: no nav, no footer, just
+ * the error and a way back home. Astro emits this as dist/404.html
+ * automatically; Vercel serves it for unmatched routes.
+ *
+ * Uses Base for the <head> (fonts, favicon, og) but skips PageNav and
+ * Footer so the page reads as a quiet "you've stepped off the path"
+ * moment rather than a regular page.
+ */
+import Base from '@/layouts/Base.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+const gt = gradientText();
+---
+<Base
+  title="404 — Dalia Katan"
+  description="The page you're looking for took a wrong turn."
+>
+  <main
+    style={{
+      minHeight: '100vh',
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.peach}cc`,    12, 18, 50],
+          [`${C.lavender}cc`, 88, 22, 45],
+          [`${C.mint}cc`,     74, 88, 45],
+          [`${C.butter}cc`,    8, 84, 40],
+        ],
+      }),
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '64px 32px',
+      textAlign: 'center',
+    }}
+  >
+    <div
+      style={{
+        fontFamily: 'Caveat, cursive',
+        fontSize: '36px',
+        color: C.coral,
+        transform: 'rotate(-3deg)',
+        marginBottom: '8px',
+      }}
+    >— hmm.</div>
+
+    <h1
+      style={{
+        fontFamily: fontDisplay,
+        fontWeight: 400,
+        fontSize: '160px',
+        lineHeight: '0.9',
+        letterSpacing: '-0.045em',
+        color: C.ink,
+        margin: 0,
+      }}
+    >
+      <span style={gt}>404</span><span style={{ color: C.coral }}>.</span>
+    </h1>
+
+    <p
+      style={{
+        fontFamily: fontReader,
+        fontStyle: 'italic',
+        fontSize: '24px',
+        lineHeight: '1.5',
+        color: C.inkSoft,
+        margin: '24px 0 0',
+        maxWidth: '520px',
+        textWrap: 'pretty',
+      }}
+    >
+      This page took a wrong turn. Nothing to see here.
+    </p>
+
+    <a
+      href="/"
+      style={{
+        marginTop: '40px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '8px',
+        padding: '14px 28px',
+        background: C.ink,
+        color: C.paper,
+        borderRadius: '999px',
+        fontFamily: fontUI,
+        fontSize: '15px',
+        fontWeight: 600,
+        textDecoration: 'none',
+        boxShadow: `0 14px 28px -14px ${C.ink}88`,
+      }}
+    >
+      ← Take me home
+    </a>
+  </main>
+</Base>
