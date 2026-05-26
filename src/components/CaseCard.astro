@@ -48,7 +48,10 @@ const { c, tint } = Astro.props;
         fontSize: '11px',
         letterSpacing: '0.18em',
         textTransform: 'uppercase',
-        color: C.plum,
+        // Kicker text is inkSoft so it sits quietly under the title.
+        // The italic numeral inside this block has its own `color: tint`
+        // override, so the number stays vivid.
+        color: C.inkSoft,
         fontWeight: 700,
         marginBottom: '12px',
       }}
