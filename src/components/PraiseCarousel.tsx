@@ -117,6 +117,12 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
       }}
     >
       <div
+        // Block drag/hover handling on the page counter pill — it's a
+        // visual label, not a swipe surface. stopPropagation prevents
+        // the counter from initiating a drag or pausing the carousel.
+        onMouseDown={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
+        onMouseEnter={(e) => e.stopPropagation()}
         style={{
           position: 'absolute',
           top: -22,
@@ -131,6 +137,7 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
           textTransform: 'uppercase',
           fontWeight: 700,
           boxShadow: `0 12px 22px -10px ${C.coral}aa`,
+          cursor: 'default',
         }}
       >
         {String(i + 1).padStart(2, '0')} of {String(testimonials.length).padStart(2, '0')}

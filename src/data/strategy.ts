@@ -71,14 +71,14 @@ export interface CaseStudy {
 export const CASE_STUDIES: CaseStudy[] = [
   {
     n: '01',
-    kicker: 'Growth ambition · Fortune 10',
-    title: 'A long-term growth vision for a Fortune-10 portfolio',
-    client: 'Fortune 10 Company',
-    tags: ['growth ambition', 'innovation strategy', 'vision'],
+    kicker: 'Innovation strategy · Fortune-10',
+    title: 'A long-term growth vision',
+    client: 'Fortune-10 Company',
+    tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2019–2020',
     summary:
-      'Co-created a long-term growth ambition using ethnographic research and consumer trends. Defined priority growth opportunities along the customer journey, plus the design principles that would guide execution.',
-    outcome: '20+ vetted opportunities; vision adopted as the 5-year roadmap anchor.',
+      "A Fortune-10 company saw customer behavior shifting around mobility — how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working side-by-side with client leadership to define a vision for long-term planning and the core design principles that would help them execute.",
+    outcome: 'A prioritized set of 20 growth opportunities mapped along the customer journey.',
   },
   {
     n: '02',
@@ -104,11 +104,11 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     n: '04',
-    kicker: 'Market entry · Fortune-10 automotive',
+    kicker: 'Market entry · Fortune-10',
     title: 'Reaching new markets with a mobility app',
     client: 'Fortune-10 Automaker',
     tags: ['market entry', 'mobile strategy', 'payments'],
-    year: '2017',
+    year: '2016',
     summary:
       "A global automaker was expanding beyond cars into mobility and payments — and preparing to launch its first such app in Europe and China. My team and I designed the market-entry strategy: which markets to prioritize, where the monetization potential was, and which payments partners to launch with — grounded in consumer behavior and market insight.",
     outcome: 'Strategy greenlit by client leadership; app went to market that year.',

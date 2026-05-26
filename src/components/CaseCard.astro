@@ -116,22 +116,7 @@ const { c, tint } = Astro.props;
         }}
       >{c.year}</div>
     </div>
-    <div
-      style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}
-    >
-      {c.tags.map((t) => (
-        <span
-          style={{
-            padding: '4px 10px',
-            background: `${tint}33`,
-            color: C.ink,
-            borderRadius: '999px',
-            fontFamily: fontUI,
-            fontSize: '11px',
-            fontWeight: 500,
-          }}
-        >{t}</span>
-      ))}
-    </div>
+    {/* Tag chips intentionally hidden — kept in the data model in case
+        we want to reintroduce filtering or search later. */}
   </div>
 </article>
