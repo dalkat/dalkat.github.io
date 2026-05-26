@@ -77,7 +77,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2018',
     summary:
-      "A Fortune-10 company saw customer behavior shifting around mobility — how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
+      "A Fortune-10 company saw customer behavior shifting around how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
     outcome: '20 growth opportunities prioritized and mapped along the customer journey.',
   },
   {
@@ -149,6 +149,7 @@ export const STRATEGY_CLIENTS: CompanyWordmark[] = [
   { name: 'Mattel',         style: { fontFamily: fontUI, fontWeight: 800, fontSize: '22px', letterSpacing: '0.02em' } },
   { name: 'Tory Burch',     style: { fontFamily: fontDisplay, fontWeight: 400, fontSize: '20px', letterSpacing: '0.18em', textTransform: 'uppercase' } },
   { name: 'Ford',           style: { fontFamily: fontDisplay, fontStyle: 'italic', fontWeight: 500, fontSize: '26px', letterSpacing: '-0.01em' } },
+  { name: 'ExxonMobil',     style: { fontFamily: fontUI, fontWeight: 700, fontSize: '22px', letterSpacing: '-0.01em' } },
   { name: 'Sysco',          style: { fontFamily: fontUI, fontWeight: 800, fontSize: '24px', letterSpacing: '-0.01em' } },
   { name: 'Deloitte.',      style: { fontFamily: fontUI, fontWeight: 700, fontSize: '22px', letterSpacing: '-0.02em' } },
   { name: 'TD Bank',        style: { fontFamily: fontUI, fontWeight: 700, fontSize: '22px', letterSpacing: '-0.01em' } },
