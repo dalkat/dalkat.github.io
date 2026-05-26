@@ -110,19 +110,19 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['market entry', 'business model', 'monetization'],
     year: '2016',
     summary:
-      "A global automaker was expanding beyond cars into mobility and payments — and preparing to launch its first such app in Europe and China. My team and I designed three intertwined strategies: market entry (which markets and payments partners to prioritize, and the considerations unique to each region); business model (the short-, medium-, and long-term shape of the offering and how closely it should mirror the US); and monetization (the core, adjacent, and transformational paths through the digital marketplace).",
-    outcome: 'Strategy greenlit by client leadership; app went to market that year.',
+      "A global automaker was expanding beyond cars into mobility and payments, preparing to launch its first such app in Europe and China — two markets with little in common. My team and I designed the launch strategy across three questions: which markets to prioritize, what shape the offering should take in each region, and how it would actually make money.",
+    outcome: 'Strategy greenlit by client leadership; the app went to market that year.',
   },
   {
     n: '05',
-    kicker: 'Brand & growth · Fortune 500 beauty',
-    title: 'The next three years of beauty',
+    kicker: 'Brand & growth strategy · Seven global brands',
+    title: 'Future of beauty with seven global brands',
     client: 'Fortune 500 Beauty Manufacturer',
-    tags: ['brand strategy', 'consumer growth', 'innovation'],
+    tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
     year: '2016',
     summary:
-      "A large beauty manufacturer engaged Deloitte to develop its multi-year brand, marketing, and consumer-growth strategy for the C-Suite. I worked directly with senior leadership across every department to define brand ambition; build data-driven consumer recruitment, engagement, and retention strategies by region; rework marketing and creative across social, digital, and retail with local relevancy; and redesign internal work practices.",
-    outcome: 'Multi-year strategy adopted by C-Suite; regional growth targets set across channels and consumer segments.',
+      "A large beauty manufacturer needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition, then build the regional playbooks beneath it: how each market would recruit, engage, and keep its consumers, and how marketing and creative would flex to stay locally relevant.",
+    outcome: 'A three-year strategy adopted by the C-suite, with regional growth targets set across channels and consumer segments.',
   },
   {
     n: '06',
