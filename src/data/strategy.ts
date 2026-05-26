@@ -132,7 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
     year: '2017',
     summary:
-      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands — each with its own consumers and constraints. I led the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
+      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands — each with its own consumers and constraints. I was brought in to lead the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
   },
 ];
