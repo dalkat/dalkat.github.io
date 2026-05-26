@@ -93,14 +93,14 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     n: '03',
-    kicker: 'D&I · Tent Partnership',
-    title: 'Refugee integration in the workplace',
-    client: 'Tent Partnership for Refugees',
-    tags: ['human-centered design', 'D&I', 'workplace practices'],
-    year: '2017',
+    kicker: 'Market expansion · Sports AI',
+    title: 'From sports science to a new industry',
+    client: 'Zone7',
+    tags: ['go-to-market', 'market expansion', 'pilot sourcing'],
+    year: '2023',
     summary:
-      'Launched a project to help private-sector leaders improve the hiring and inclusion of refugees. Interviewed ~100 employers and refugee employees to surface challenges and success stories.',
-    outcome: 'Published guidance now used by employers across 4 industries.',
+      "Zone7's AI predicts injury and fatigue risk — proven across pro sports and military. The question: which adjacent industry should it expand into, and how? I led the full go-to-market strategy — market research, market selection, pricing, and sourcing the first pilot customers — to strengthen the company's position ahead of an ambitious fundraise.",
+    outcome: "Healthcare validated as Zone7's next market; pilots sourced and launched. Zone7 was acquired by Svexa in 2024.",
   },
   {
     n: '04',
@@ -126,14 +126,14 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     n: '06',
-    kicker: 'Edge innovation · Fortune 500 insurance',
-    title: 'Building an edge innovation team',
-    client: 'Fortune 500 Insurance Company',
-    tags: ['innovation strategy', 'agile', 'team design'],
-    year: '2019',
+    kicker: 'Brand narrative · Series A',
+    title: 'A Series A deck — for a company now worth billions',
+    client: 'Crusoe Energy',
+    tags: ['brand narrative', 'fundraising', 'investor deck'],
+    year: '2020',
     summary:
-      'Supported leadership in designing an edge innovation team and shifting toward transformational bets outside the core. Identified ten new opportunity spaces, prioritized two, and built a research plan.',
-    outcome: 'Two opportunity spaces moved to scoped pilots within a quarter.',
+      "Crusoe is pioneering sustainable AI infrastructure — Fast Company's 100 Most Innovative in 2026, $1B Series E that same year. But in its early days, the team needed a Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
+    outcome: "Deck delivered for Crusoe's $30M Series A raise; the company went on to become a major AI-infrastructure player.",
   },
 ];
 
