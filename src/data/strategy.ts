@@ -75,7 +75,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'A long-term growth vision',
     client: 'Fortune-10 Company',
     tags: ['innovation strategy', 'growth vision', 'mobility'],
-    year: '2019–2020',
+    year: '2018',
     summary:
       "A Fortune-10 company saw customer behavior shifting around mobility — how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working side-by-side with client leadership to define a vision for long-term planning and the core design principles that would help them execute.",
     outcome: 'A prioritized set of 20 growth opportunities mapped along the customer journey.',
@@ -86,9 +86,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'A Series A deck — for a company now worth billions',
     client: 'Crusoe Energy',
     tags: ['brand narrative', 'fundraising', 'investor deck'],
-    year: '2020',
+    year: '2019',
     summary:
-      "Crusoe is pioneering sustainable AI infrastructure — Fast Company's 100 Most Innovative in 2026, $1B Series E that same year. But in its early days, the team needed a Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
+      "Crusoe is pioneering sustainable AI infrastructure — Fast Company's 100 Most Innovative in 2026, $1B Series E that same year. But in its early days, they brought me in to design their Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
     outcome: "Fundraising deck supported Crusoe's $30M Series A raise.",
   },
   {
@@ -97,7 +97,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'From sports science to a new industry',
     client: 'Zone7',
     tags: ['go-to-market', 'market expansion', 'pilot sourcing'],
-    year: '2023',
+    year: '2019–2020',
     summary:
       "Zone7's AI predicts injury and fatigue risk in pro sports and military. They brought me in to help identify what industries might become their next growth edge. I led the full go-to-market strategy design — market research and selection, pricing, and sourcing pilot customers — to strengthen the company's position ahead of an ambitious fundraise.",
     outcome: "Secured healthcare pilot in NY Hospital network to validate Zone7's next market.",
@@ -119,7 +119,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Future of beauty with seven global brands',
     client: 'Global Beauty Brand (Fortune 500)',
     tags: ['brand strategy', 'innovation', 'customer analysis'],
-    year: '2018–2019',
+    year: '2016',
     summary:
       'Worked with senior executives across seven global beauty brands to develop a 3-year brand and consumer growth strategy. Coordinated 7 cross-functional teams across customer, product, and region.',
     outcome: '4–10% CAGR growth target by region — up from flat-line.',
@@ -130,7 +130,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Toward a future of toys and packaging',
     client: 'Global Toymaker',
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
-    year: '2018',
+    year: '2017',
     summary:
       'Led the innovation workstream for a global toymaker across 10+ brands. Gathered consumer insights on purchasing behavior and ran ideation workshops with each brand to surface strategic and tactical design initiatives.',
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
