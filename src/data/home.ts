@@ -30,7 +30,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote: "We engaged Dalia for a quick turnaround on our Series A investor presentation. She was responsive and diligent in quickly learning our business and our market and in creating a wonderful presentation for us. Perhaps most impressive was the fact that she provided valuable insight into the VC / entrepreneur thought process and recommendations that improved our storytelling. We look forward to working with Dalia again.",
     author: 'Turab B.',
-    role: 'VP of Finance, Crusoe',
+    role: 'VP of Finance, Crusoe AI',
   },
   {
     quote: "Dalia is one of the best all-around people that I know. Her tremendous background (Ivy League, Big 4 Consulting, startups) is rooted in the foundation of subject expertise/knowledge, integrity, professionalism, heart, pride in her work, and how she treats people at all levels — leaving a lasting impression to those lucky to have worked with her.",
