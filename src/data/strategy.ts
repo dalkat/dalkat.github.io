@@ -104,14 +104,14 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     n: '04',
-    kicker: 'Mobile · Fortune 10',
-    title: 'Reaching new markets with mobile offerings',
-    client: 'Fortune 10 Company',
-    tags: ['market entry', 'mobile strategy', 'product launch'],
+    kicker: 'Market entry · Fortune-10 automotive',
+    title: 'Reaching new markets with a mobility app',
+    client: 'Fortune-10 Automaker',
+    tags: ['market entry', 'mobile strategy', 'payments'],
     year: '2017',
     summary:
-      'Designed market-entry strategies for the mobile app launch in Europe and China. Used customer behavior and market insights to transform business-model thinking and define monetization opportunities.',
-    outcome: '20+ monetization paths identified across two regions.',
+      "A global automaker was expanding beyond cars into mobility and payments — and preparing to launch its first such app in Europe and China. My team and I designed the market-entry strategy: which markets to prioritize, where the monetization potential was, and which payments partners to launch with — grounded in consumer behavior and market insight.",
+    outcome: 'Strategy greenlit by client leadership; app went to market that year.',
   },
   {
     n: '05',
