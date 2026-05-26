@@ -45,8 +45,3 @@ stays in the `CaseStudy` type for potential future filtering or
 search; the render block is commented out in
 `src/components/CaseCard.astro`.
 
-## "+ Two/three dozen engagements under NDA" line
-
-Currently visible at the bottom of /strategy's portfolio section.
-Worth periodically retuning the count as the engagement number
-grows. Currently reads "another three dozen."

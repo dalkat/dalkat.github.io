@@ -78,7 +78,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     year: '2018',
     summary:
       "A Fortune-10 company saw customer behavior shifting around how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
-    outcome: '20 growth opportunities prioritized and mapped along the customer journey.',
+    outcome: '20 growth opportunities prioritized for near- and long-term.',
   },
   {
     n: '02',
