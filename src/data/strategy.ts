@@ -115,7 +115,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     n: '05',
-    kicker: 'Brand & growth strategy · Seven global brands',
+    kicker: 'Brand & growth strategy · Fortune 500 beauty',
     title: 'A growth strategy for seven global beauty brands',
     client: 'Fortune 500 Beauty Manufacturer',
     tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
