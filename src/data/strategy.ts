@@ -121,8 +121,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
     year: '2016',
     summary:
-      "A global CPG manufacturer needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, and how marketing and creative would flex to stay locally relevant.",
-    outcome: 'A three-year strategy adopted by the C-suite, with regional growth targets set across channels and consumer segments.',
+      "A global CPG manufacturer needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, how marketing and creative would flex to stay locally relevant across channels and segments, and the growth targets each would aim for.",
+    outcome: 'A three-year strategy adopted by the C-suite.',
   },
   {
     n: '06',
