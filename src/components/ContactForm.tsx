@@ -102,18 +102,18 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     >
       <div>
         <label style={labelStyle}>Your name</label>
-        <input type="text" name="name" placeholder="Maya Hernandez" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="text" name="name" placeholder="Future pen pal" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Email</label>
-        <input type="email" name="email" placeholder="maya@studio.com" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="email" name="email" placeholder="you@somewhere.com" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Company or project</label>
-        <input type="text" name="company" placeholder="What you're building" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="text" name="company" placeholder="Where you spend your time" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
-        <label style={labelStyle}>What kind of help?</label>
+        <label style={labelStyle}>Topic</label>
         <select
           name="kind"
           defaultValue=""
@@ -130,18 +130,17 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
         >
           <option value="" disabled>Pick one</option>
           <option>Fractional CPO / product leadership</option>
-          <option>Strategy sprint or workshop</option>
           <option>Founder advising</option>
           <option>Speaking, writing, or teaching</option>
           <option>Something else</option>
         </select>
       </div>
       <div style={{ gridColumn: '1 / -1' }}>
-        <label style={labelStyle}>The messy first draft</label>
+        <label style={labelStyle}>Your note</label>
         <textarea
           rows={5}
           name="message"
-          placeholder="What you're trying to figure out, in your own words."
+          placeholder="Anything you want to share — half-formed is fine."
           style={{ ...fieldStyle, minHeight: 130 }}
           onFocus={onFocus}
           onBlur={onBlur}
