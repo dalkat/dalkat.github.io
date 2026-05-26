@@ -72,7 +72,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     n: '01',
     kicker: 'Innovation strategy · Fortune-10',
-    title: 'A long-term growth vision',
+    title: 'Choosing where to grow next',
     client: 'Fortune-10 Company',
     tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2018',
@@ -116,7 +116,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     n: '05',
     kicker: 'Brand & growth strategy · Seven global brands',
-    title: 'Future of beauty with seven global brands',
+    title: 'A growth strategy for seven global beauty brands',
     client: 'Fortune 500 Beauty Manufacturer',
     tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
     year: '2016',
