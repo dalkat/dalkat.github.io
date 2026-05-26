@@ -10,7 +10,7 @@ import PraiseCarousel from '@/components/PraiseCarousel.tsx';
 import ContactForm from '@/components/ContactForm.tsx';
 import { TESTIMONIALS } from '@/data/home';
 import { OFFERINGS, CASE_STUDIES, STRATEGY_CLIENTS } from '@/data/strategy';
-import { C, fontDisplay, fontUI, meshBg, gradientText } from '@/lib/mesh';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
 
 const gt = gradientText();
 const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
@@ -87,10 +87,8 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
           textWrap: 'pretty',
         }}
       >
-        A decade of design-led innovation across Fortune 10 portfolios,
-        Series A startups, and the internal teams that quietly run $1T
-        companies. Brought to bear on whatever you're actually trying to
-        build.
+        Over 15 years of strategy and product work for Fortune-10
+        portfolios and Series A startups alike.
       </p>
     </div>
   </section>
@@ -112,9 +110,24 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
     }}
   >
     <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-      <SectionHeader n={1} sub="Work together" accent={C.coral}>
-        Three engagement shapes — <span style={gt}>brand, product, and a bet</span>.
-      </SectionHeader>
+      <SectionHeader n={1} sub="Services" title="Ways to work together" accent={C.coral} />
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontSize: '19px',
+          lineHeight: '1.65',
+          color: C.inkSoft,
+          margin: '-12px 0 36px',
+          maxWidth: '820px',
+          textWrap: 'pretty',
+        }}
+      >
+        I work with teams as a consultant or a fractional Head of Product.
+        I'm most useful at inflection points — the high-stakes moments
+        when a team has to make a real product or company decision. I've
+        helped 40+ companies set product strategy, build and scale
+        products, find their next bet, and shape their story before a raise.
+      </p>
       <div
         style={{
           display: 'grid',
@@ -218,7 +231,7 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
           color: C.inkSoft,
         }}
       >
-        ↳ another two dozen engagements under NDA — happy to walk you through them.
+        ↳ another three dozen engagements under NDA — happy to walk you through them.
       </div>
     </div>
   </section>

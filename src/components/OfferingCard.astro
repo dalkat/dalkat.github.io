@@ -1,20 +1,21 @@
 ---
 /**
  * Strategy offering card. White tile with a soft mesh blob in the corner,
- * "Mode N" tint badge, title, italic kicker, then a bulleted services list
- * separated by a dashed top border.
+ * "Practice N" tint badge, title, then a bulleted services list separated
+ * by a dashed top border. (The italic kicker line has been retired — each
+ * card now goes straight from title to services list.)
  */
-import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
+import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
 import type { Offering } from '@/data/strategy';
 
 interface Props {
   offering: Offering;
-  /** 1-based mode number. */
+  /** 1-based practice number. */
   n: number;
 }
 
 const { offering, n } = Astro.props;
-const { group, tint, blob, kicker, services } = offering;
+const { group, tint, blob, services } = offering;
 ---
 <article
   style={{
@@ -57,10 +58,10 @@ const { group, tint, blob, kicker, services } = offering;
         textTransform: 'uppercase',
         marginBottom: '14px',
       }}
-    >Mode {n}</div>
+    >Practice {n}</div>
     <h3
       style={{
-        margin: '0 0 10px',
+        margin: '0 0 18px',
         fontFamily: fontDisplay,
         fontWeight: 400,
         fontSize: '24px',
@@ -70,17 +71,6 @@ const { group, tint, blob, kicker, services } = offering;
         textWrap: 'balance',
       }}
     >{group}</h3>
-    <p
-      style={{
-        margin: '0 0 18px',
-        fontFamily: fontReader,
-        fontStyle: 'italic',
-        fontSize: '15px',
-        lineHeight: '1.5',
-        color: C.inkSoft,
-        textWrap: 'pretty',
-      }}
-    >{kicker}</p>
     <ul
       style={{
         listStyle: 'none',

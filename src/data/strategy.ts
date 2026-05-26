@@ -16,32 +16,15 @@ export interface Offering {
   tint: string;
   /** [baseColor, blobColor] for the mesh blob in the card corner. */
   blob: [string, string];
-  /** One-line italic positioning statement. */
-  kicker: string;
-  /** Comma-separated services this umbrella covers. */
+  /** Services this umbrella covers — bulleted on the card. */
   services: string[];
 }
 
 export const OFFERINGS: Offering[] = [
   {
-    group: 'Full-suite brand & digital strategy',
-    tint: C.coral,
-    blob: [C.peach, C.butter],
-    kicker: 'For teams that need their outside to match their inside.',
-    services: [
-      'Brand Architecture',
-      'Creative Strategy',
-      'Brand Narrative & Storytelling',
-      'Digital Strategy',
-      'Content & Editorial',
-      'Partnerships with PR',
-    ],
-  },
-  {
     group: 'UX & Product Experience',
     tint: C.plum,
     blob: [C.lavender, C.sky],
-    kicker: 'For teams whose product is ahead of the team running it.',
     services: [
       'UX Audit & Product Experience',
       'Mobile Product Strategy',
@@ -54,10 +37,19 @@ export const OFFERINGS: Offering[] = [
     group: 'Innovation, venture studio & AI',
     tint: C.teal,
     blob: [C.mint, C.sky],
-    kicker: 'For teams placing a bet outside the core.',
     services: [
       'Venture Studio / Concept-to-Prototype',
       'AI Product Strategy',
+    ],
+  },
+  {
+    group: 'Brand & Digital Strategy',
+    tint: C.coral,
+    blob: [C.peach, C.butter],
+    services: [
+      'Brand & Digital Strategy',
+      'Brand Narrative & Storytelling',
+      'Fundraising Pitch',
     ],
   },
 ];
