@@ -157,16 +157,11 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
           gap: 16,
         }}
       >
-        <div
-          style={{
-            fontFamily: fontDisplay,
-            fontStyle: 'italic',
-            fontSize: 15,
-            color: C.inkSoft,
-          }}
-        >
-          ↳ I take on one new engagement per quarter, and answer every note within a week.
-        </div>
+        {/* "↳ I take on one new engagement per quarter, and answer every
+            note within a week." hidden for now — see TODO.md. Empty
+            spacer keeps the submit button right-aligned via the parent's
+            justify-content: space-between. */}
+        <span />
         <button
           type="submit"
           style={{

@@ -30,6 +30,36 @@ comment right where the pill used to live. Copy the original markup
 back from git history (commit message: "Hide hero kicker pills on
 root pages").
 
+## Template styling polish (deferred 2026-05-27)
+
+Three article-template surfaces still on Phase-3-level styling and
+due for a design pass:
+
+  1. `/quests/do-now` — the interactive Do Now generator. Card pull
+     UX works, but the button + card chrome haven't been tuned to
+     match the rest of the mesh design language.
+  2. **Recipes** — `RecipeLayout.astro`. Used by /notes/challah-recipe
+     and /notes/baguette-recipe. The hero stat-tiles row, ingredients
+     aside, and numbered steps work but could use a refinement pass
+     for type hierarchy and spacing consistency with the new hero
+     pattern.
+  3. **Reports** — `ReportLayout.astro`. Used by the two reports
+     under /notes (report-teams, report-refugee). Currently a hero
+     + external-link CTA + markdown body. Worth tightening up the
+     hero treatment and the "Read the report ↗" CTA shape to match
+     the strategy/speaker cards.
+
+## ContactForm — "engagement per quarter" line (hidden 2026-05-27)
+
+The italic Fraunces line in the contact form's action row:
+*"↳ I take on one new engagement per quarter, and answer every note
+within a week."* — hidden for now. Replaced with an empty `<span />`
+spacer so the submit button stays right-aligned. Lives in
+`src/components/ContactForm.tsx` near line 160.
+
+To restore: swap the `<span />` back to the original `<div>` block
+(comment in the source points to this entry).
+
 ## Home page portraits (hidden 2026-05-27)
 
 Two portrait treatments hidden on the home page for now:
