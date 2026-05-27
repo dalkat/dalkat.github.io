@@ -10,12 +10,11 @@ interface Props {
  * Mesh contact form. Six fields, mesh-tinted submit button. Success state
  * swaps the form for a card saying "Got it — talk soon."
  *
- * Submit posts to Formspree (https://formspree.io). The form ID comes
- * from PUBLIC_FORMSPREE_ID at build time. If it's unset (dev without an
- * env file), the form falls back to a console-warn no-op so the page
- * still functions.
+ * Submit POSTs directly to Formspree at the endpoint below. The endpoint
+ * is just a public URL routed to Dalia's email — no secret, no env var
+ * required. Swap the email below if the destination ever changes.
  */
-const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID as string | undefined;
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/dkatan.77@gmail.com';
 
 export default function ContactForm({ accent = C.coral, compact = false }: Props) {
   const [sent, setSent] = useState(false);
@@ -91,23 +90,10 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    if (!FORMSPREE_ID) {
-      // Local dev without an env file — keep the original no-op so the
-      // success state is reachable. Production builds will always have
-      // the env var set via Vercel.
-      if (typeof window !== 'undefined') {
-        console.warn(
-          '[ContactForm] PUBLIC_FORMSPREE_ID not set — submitting is a no-op.',
-        );
-      }
-      setSent(true);
-      return;
-    }
-
     setError(null);
     setSubmitting(true);
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         body: formData,
         headers: { Accept: 'application/json' },
