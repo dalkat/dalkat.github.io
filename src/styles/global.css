@@ -122,6 +122,16 @@
     grid-template-columns: 1fr !important;
   }
 
+  /* Do Now card: shell drops its 64px horizontal padding on mobile so
+     the card spans nearly the full viewport; inner padding shrinks too
+     so big-glyph copy doesn't crowd the edges. */
+  .mesh-root .mesh-donow-shell {
+    padding: 0 12px !important;
+  }
+  .mesh-root .mesh-donow-card {
+    padding: 32px 22px 28px !important;
+  }
+
   /* Contact form action row stacks vertically */
   .mesh-root .mesh-form-actions {
     flex-direction: column !important;

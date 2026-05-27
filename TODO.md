@@ -30,6 +30,19 @@ comment right where the pill used to live. Copy the original markup
 back from git history (commit message: "Hide hero kicker pills on
 root pages").
 
+## Mobile polish (deferred 2026-05-27)
+
+Two visual issues to revisit:
+
+  1. **Article hero ↔ foreword gap** — on mobile, the space between
+     a Field Notes article title and the first foreword aside is too
+     generous. Probably tighten the section padding or the foreword
+     `margin-top` for `@media (max-width: 720px)` in `ArticleLayout.astro`.
+  2. **Field Notes archive section titles on mobile** — they "render a
+     bit weird" per Dalia. Need a closer look. Likely related to
+     `FieldNotesArchive.tsx` group headings vs the filter chip row at
+     a narrow width.
+
 ## Template styling polish (deferred 2026-05-27)
 
 Three article-template surfaces still on Phase-3-level styling and

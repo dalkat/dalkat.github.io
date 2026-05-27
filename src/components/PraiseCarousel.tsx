@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
 import type { Testimonial } from '@/data/home';
 
@@ -12,12 +12,12 @@ interface Props {
  *   - click a page indicator to jump to that quote (pauses autoplay)
  *   - hover anywhere on the card to pause autoplay (resumes on leave)
  *   - drag horizontally (mouse or touch) to swipe between quotes
- *     (>= 50px horizontal travel commits the swipe, pauses autoplay)
+ *     (>= 40px horizontal travel commits the swipe, pauses autoplay)
  *
- * Transitions: when the index changes (auto, click, or swipe), the
- * current quote fades out + slides a few px in the travel direction;
- * after ~180ms the content swaps and the new quote fades back in from
- * the opposite side. Direction is +1 for forward, -1 for backward.
+ * Drag state is `useState` (not `useRef`) so each touchmove re-renders
+ * the card and translates with the finger — earlier the ref-based
+ * version worked on desktop but sometimes failed to register the first
+ * touchmove on iOS Safari.
  */
 export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Props) {
   const [i, setI] = useState(0);
@@ -25,10 +25,9 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
   const [hovering, setHovering] = useState(false);
   const [phase, setPhase] = useState<'in' | 'out'>('in');
   const [direction, setDirection] = useState(1);
-  const dragStartX = useRef<number | null>(null);
-  const dragLastX = useRef<number | null>(null);
+  const [dragStartX, setDragStartX] = useState<number | null>(null);
   const [dragOffset, setDragOffset] = useState(0);
-  const dragging = dragStartX.current != null;
+  const dragging = dragStartX != null;
 
   const paused = pausedByClick || hovering || dragging || phase === 'out';
 
@@ -44,8 +43,6 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
   const goto = (idx: number, lock = true) => {
     const targetIdx = ((idx % testimonials.length) + testimonials.length) % testimonials.length;
     if (targetIdx === i) return;
-    // Direction: +1 if moving forward, -1 if backward (treat the auto wrap
-    // from last → 0 as a "forward" step to keep the animation natural).
     const forwardDist = (targetIdx - i + testimonials.length) % testimonials.length;
     const backwardDist = (i - targetIdx + testimonials.length) % testimonials.length;
     setDirection(forwardDist <= backwardDist ? 1 : -1);
@@ -58,23 +55,20 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
   };
 
   const onDragStart = (clientX: number) => {
-    dragStartX.current = clientX;
-    dragLastX.current = clientX;
+    setDragStartX(clientX);
     setDragOffset(0);
   };
   const onDragMove = (clientX: number) => {
-    if (dragStartX.current == null) return;
-    dragLastX.current = clientX;
-    setDragOffset(clientX - dragStartX.current);
+    if (dragStartX == null) return;
+    setDragOffset(clientX - dragStartX);
   };
   const onDragEnd = () => {
-    if (dragStartX.current == null) return;
-    const delta = (dragLastX.current ?? dragStartX.current) - dragStartX.current;
-    dragStartX.current = null;
-    dragLastX.current = null;
+    if (dragStartX == null) return;
+    const delta = dragOffset;
+    setDragStartX(null);
     setDragOffset(0);
-    if (Math.abs(delta) >= 50) {
-      // Drag-right → previous, drag-left → next
+    // Slightly looser threshold (40 vs 50) for mobile-finger comfort.
+    if (Math.abs(delta) >= 40) {
       goto(delta > 0 ? i - 1 : i + 1);
     }
   };

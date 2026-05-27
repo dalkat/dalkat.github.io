@@ -29,17 +29,11 @@ export default function DoNowCard({ prompts }: Props) {
       style={{ maxWidth: 920, margin: '0 auto', padding: '0 64px' }}
     >
       <div
+        className="mesh-donow-card"
         style={{
           position: 'relative',
           padding: '48px 48px 40px',
-          background: meshBg({
-            base: C.white,
-            blobs: [
-              [`${C.butter}cc`, 10, 20, 55],
-              [`${C.peach}cc`, 90, 20, 55],
-              [`${C.lavender}cc`, 50, 90, 55],
-            ],
-          }),
+          background: C.white,
           borderRadius: 28,
           border: `1px solid ${C.ink}10`,
           boxShadow: `0 30px 60px -28px ${C.ink}66, 0 0 0 1px ${C.ink}08`,

@@ -124,8 +124,13 @@ const { current = 'home' } = Astro.props;
   class="mesh-mobile-nav"
   style={{
     display: 'none',
-    position: 'sticky',
+    /* fixed (not sticky) so opening the drawer overlays the hero
+     * instead of pushing the page content down. left/right anchored
+     * so it spans the full viewport width regardless of scroll. */
+    position: 'fixed',
     top: '60px',
+    left: 0,
+    right: 0,
     zIndex: 29,
     background: `${C.white}f2`,
     backdropFilter: 'blur(18px) saturate(150%)',

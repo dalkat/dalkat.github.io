@@ -55,7 +55,7 @@ const ogImageUrl = resolvedOgImage.startsWith('http')
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={description} />
     <title>{title}</title>
 
@@ -64,7 +64,11 @@ const ogImageUrl = resolvedOgImage.startsWith('http')
     {/* Favicon — DK gradient disc, matches the brand mark in the nav */}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
-    <meta name="theme-color" content="#fbf7ee" />
+    {/* theme-color drives the iOS Safari URL bar tint. The sticky nav
+        uses translucent white over each page's mesh — perceived as
+        near-white. Setting theme-color to white makes the URL bar
+        match the nav so the chrome reads as one continuous band. */}
+    <meta name="theme-color" content="#ffffff" />
 
     {/* Open Graph (Facebook, LinkedIn, Slack, iMessage, etc.) */}
     <meta property="og:type" content={ogType} />

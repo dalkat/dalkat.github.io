@@ -90,6 +90,20 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Belt-and-suspenders client-side validation. The HTML5 `required`
+    // attribute should block this from ever firing with empty values,
+    // but mobile Safari has been seen to bypass it in some configs.
+    const requiredFields = ['name', 'email', 'company', 'kind', 'message'];
+    for (const field of requiredFields) {
+      const v = String(formData.get(field) ?? '').trim();
+      if (!v) {
+        setError(`Please fill out every field — “${field}” is empty.`);
+        const el = form.elements.namedItem(field) as HTMLElement | null;
+        el?.focus();
+        return;
+      }
+    }
+
     setError(null);
     setSubmitting(true);
     try {
