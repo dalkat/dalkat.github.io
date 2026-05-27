@@ -6,7 +6,9 @@
  * Adapted from the design handoff (.design-ref/design_handoff_speaker_page/
  * mesh-pages/speaker-themes-shared.jsx) with content reconciled against
  * the previous Jekyll _data/speaker.yml so nothing from the live site is
- * dropped.
+ * dropped — including the role context (Speaker, Guest Lecturer,
+ * Moderator, etc.) which the design ref omitted but is important for
+ * each entry's framing.
  */
 import { C } from '@/lib/mesh';
 
@@ -15,9 +17,15 @@ export interface SpeakerItem {
    *  "Organizer & Moderator". CSS uppercases at render time. */
   kind: string;
   title: string;
-  /** Italic sub-line under the title (venue, publication, or — for
-   *  self-organized entries — a short descriptive phrase). */
+  /** Venue or publication. Rendered after the optional role on the
+   *  italic sub-line, e.g. "Guest · The Prodcast". */
   where: string;
+  /** Optional role label (e.g. "Speaker", "Guest Lecturer",
+   *  "Interview Guest", "Moderator"). When set, surfaces ahead of
+   *  the venue: "Role · Venue". Omit for author/written entries
+   *  where the role is implicit, and for entries where the kind chip
+   *  already names the role (e.g. "Organizer & Moderator"). */
+  role?: string;
   /** Number or range string like "2025–6". */
   year: number | string;
 }
@@ -36,13 +44,13 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     title: 'The startup journey',
     tint: C.teal,
     items: [
-      { kind: 'Essay',    title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                      year: 2023 },
-      { kind: 'Podcast',  title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                                 year: 2021 },
-      { kind: 'Podcast',  title: 'Startup Journey — 0 to 1, Retention, Virality',               where: 'BRAVE',                                        year: 2021 },
-      { kind: 'AMA',      title: 'Entrepreneurship AMA',                                         where: 'Journal',                                      year: 2021 },
-      { kind: 'Q&A',      title: 'Creative Sabbaticals',                                         where: 'Princeton Center for Entrepreneurship',         year: 2019 },
-      { kind: 'Workshop', title: 'An Algorithm for Growth',                                      where: 'Princeton Social Entrepreneurship Conference', year: 2015 },
-      { kind: 'Textbook', title: "Entrepreneurial Finance: Uber's Path to Success",              where: 'MIT Press',                                    year: 2014 },
+      { kind: 'Essay',    title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                                                      year: 2023 },
+      { kind: 'Podcast',  title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                                role: 'Guest',                  year: 2021 },
+      { kind: 'Podcast',  title: 'Startup Journey — 0 to 1, Retention, Virality',               where: 'BRAVE',                                       role: 'Guest',                  year: 2021 },
+      { kind: 'AMA',      title: 'Entrepreneurship AMA',                                         where: 'Journal',                                     role: 'Guest',                  year: 2021 },
+      { kind: 'Q&A',      title: 'Creative Sabbaticals',                                         where: 'Princeton Center for Entrepreneurship',       role: 'Interview Guest',        year: 2019 },
+      { kind: 'Workshop', title: 'An Algorithm for Growth',                                      where: 'Princeton Social Entrepreneurship Conference', role: 'Speaker',                year: 2015 },
+      { kind: 'Textbook', title: "Entrepreneurial Finance: Uber's Path to Success",              where: 'MIT Press',                                                                    year: 2014 },
     ],
   },
   {
@@ -50,16 +58,18 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     title: 'Product & business',
     tint: C.coral,
     items: [
-      { kind: 'Newsletter',           title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                       year: '2025–6' },
-      { kind: 'Workshop',             title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                         year: 2024 },
-      { kind: 'Organizer & Moderator', title: 'Presently Speaker Series',                              where: 'Organized and moderated a 10-part founder speaker series', year: 2021 },
-      { kind: 'Twitter Spaces',       title: 'Building Presently',                                     where: 'Journal',                        year: 2021 },
-      { kind: 'University Lecture',   title: 'Digital Networks and Growth',                            where: 'Princeton University',           year: 2020 },
-      { kind: 'University Lecture',   title: 'Human-Centered Design & Storytelling',                   where: 'Princeton University',           year: 2019 },
-      { kind: 'Article',              title: "9 Steps to Unlock Your Company's Competitive Edge",     where: 'The Startup · LinkedIn',         year: 2019 },
-      { kind: 'Workshop',             title: 'Introduction to Human-Centered Design',                  where: 'NameCoach Fellowship',           year: 2019 },
-      { kind: 'Whitepaper',           title: 'Business Practice Redesign & The Future of Work',       where: 'Deloitte Center for the Edge',   year: 2018 },
-      { kind: 'Organizer & Moderator', title: 'Princeton Marketing Conference',                        where: 'Organized and led the conference', year: 2015 },
+      { kind: 'Newsletter',            title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                                                                          year: '2025–6' },
+      { kind: 'Workshop',              title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                                role: 'Speaker',                          year: 2024 },
+      { kind: 'Organizer & Moderator', title: 'Presently Speaker Series',                              where: 'Organized and moderated a 10-part founder speaker series',                          year: 2021 },
+      { kind: 'Twitter Spaces',        title: 'Building Presently',                                     where: 'Journal',                              role: 'Live Audio Guest',                 year: 2021 },
+      { kind: 'University Lecture',    title: 'Digital Networks and Growth',                            where: 'Princeton University',                 role: 'Guest Lecturer',                   year: 2020 },
+      { kind: 'Podcast',               title: 'Changemakers',                                           where: 'Changemakers',                         role: 'Guest',                            year: 2020 },
+      { kind: 'University Lecture',    title: 'Human-Centered Design & Storytelling',                   where: 'Princeton University',                 role: 'Guest Lecturer',                   year: 2019 },
+      { kind: 'Article',               title: "9 Steps to Unlock Your Company's Competitive Edge",     where: 'The Startup · LinkedIn',                                                            year: 2019 },
+      { kind: 'Workshop',              title: 'Introduction to Human-Centered Design',                  where: 'NameCoach Fellowship',                 role: 'Speaker & Workshop Leader',        year: 2019 },
+      { kind: 'Whitepaper',            title: 'Business Practice Redesign & The Future of Work',       where: 'Deloitte Center for the Edge',                                                      year: 2018 },
+      { kind: 'Panel',                 title: 'Women in Marketing',                                     where: 'Princeton University',                 role: 'Moderator',                        year: 2015 },
+      { kind: 'Organizer & Moderator', title: 'Princeton Marketing Conference',                         where: 'Organized and led the conference',                                                  year: 2015 },
     ],
   },
   {
@@ -67,15 +77,13 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     title: 'Culture-building',
     tint: C.plum,
     items: [
-      { kind: 'Podcast',    title: 'Changemakers',                                                                    where: 'Changemakers',          year: 2020 },
-      { kind: 'Whitepaper', title: 'A New Home at Work: Fostering Inclusion for Refugee Employees',                   where: 'Deloitte',              year: 2019 },
-      { kind: 'Conference', title: 'Bridging Cultural Divides at Work',                                                where: 'Women Design Talks',    year: 2019 },
-      { kind: 'Podcast',    title: 'Creating More Inclusive Workplaces',                                               where: 'Way We Lead',           year: 2019 },
-      { kind: 'Event',      title: 'Fostering Understanding & Inclusion in Israel-Palestine',                          where: 'IPF Atid',              year: 2019 },
-      { kind: 'Event',      title: 'Using Workplace Diversity to Bridge Divides',                                      where: 'Deloitte D-Talks',      year: 2018 },
-      { kind: 'Event',      title: 'Retaining Top Talent Through a Culture of Intrapreneurship',                       where: 'Deloitte',              year: 2018 },
-      { kind: 'Book',       title: 'Improving Arab-Jewish Relations in Israel Through Workforce Integration',          where: 'Princeton University',  year: 2015 },
-      { kind: 'Panel',      title: 'Women in Marketing',                                                               where: 'Princeton University · Moderator', year: 2015 },
+      { kind: 'Whitepaper', title: 'A New Home at Work: Fostering Inclusion for Refugee Employees',                   where: 'Deloitte',                                                year: 2019 },
+      { kind: 'Conference', title: 'Bridging Cultural Divides at Work',                                                where: 'Women Design Talks',     role: 'Speaker',                year: 2019 },
+      { kind: 'Podcast',    title: 'Creating More Inclusive Workplaces',                                               where: 'Way We Lead',            role: 'Guest',                  year: 2019 },
+      { kind: 'Event',      title: 'Fostering Understanding & Inclusion in Israel-Palestine',                          where: 'IPF Atid',               role: 'Speaker',                year: 2019 },
+      { kind: 'Event',      title: 'Using Workplace Diversity to Bridge Divides',                                      where: 'Deloitte D-Talks',       role: 'Speaker',                year: 2018 },
+      { kind: 'Event',      title: 'Retaining Top Talent Through a Culture of Intrapreneurship',                       where: 'Deloitte',               role: 'Speaker',                year: 2018 },
+      { kind: 'Book',       title: 'Improving Arab-Jewish Relations in Israel Through Workforce Integration',          where: 'Princeton University',                                  year: 2015 },
     ],
   },
 ];

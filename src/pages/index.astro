@@ -44,51 +44,8 @@ const gt = gradientText();
     }}
   >
     <div style={{ position: 'relative', maxWidth: '1080px', margin: '0 auto' }}>
-      <div
-        class="mesh-photo-card"
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '16px',
-          marginBottom: '28px',
-        }}
-      >
-        <div
-          style={{
-            width: '64px',
-            height: '64px',
-            borderRadius: '50%',
-            padding: '3px',
-            background: C.white,
-            boxShadow: `0 14px 28px -14px ${C.plum}88, 0 0 0 1px ${C.ink}0a`,
-            transform: 'rotate(-3deg)',
-          }}
-        >
-          <img
-            src="/img/Dalia-portrait-1.jpeg"
-            alt="Dalia"
-            style={{
-              display: 'block',
-              width: '100%',
-              height: '100%',
-              borderRadius: '50%',
-              objectFit: 'cover',
-              objectPosition: '50% 22%',
-            }}
-          />
-        </div>
-        <span
-          class="mesh-photo-caption"
-          style={{
-            fontFamily: 'Caveat, cursive',
-            fontSize: '24px',
-            color: C.coral,
-            transform: 'rotate(-2deg)',
-            display: 'inline-block',
-          }}
-        >— hi.</span>
-      </div>
-
+      {/* Portrait circle + "— hi." caveat hidden for now — see TODO.md
+          (redundant with H1's "Hi, I'm Dalia."). */}
       <h1
         style={{
           fontFamily: fontDisplay,
@@ -309,17 +266,9 @@ const gt = gradientText();
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
       <SectionHeader n={4} sub="Contact" title="Drop a line" accent={C.coral} />
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '360px 1fr',
-          gap: '48px',
-          alignItems: 'flex-start',
-        }}
-      >
-        <PhotoSlab size={360} label="photo of Dalia" src="/img/Dalia-portrait-1.jpeg" />
-        <ContactForm client:visible accent={C.coral} />
-      </div>
+      {/* Portrait PhotoSlab hidden for now — see TODO.md. The contact
+          form spans full width until we bring the photo back. */}
+      <ContactForm client:visible accent={C.coral} />
     </div>
   </section>
 

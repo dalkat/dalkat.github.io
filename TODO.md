@@ -30,6 +30,22 @@ comment right where the pill used to live. Copy the original markup
 back from git history (commit message: "Hide hero kicker pills on
 root pages").
 
+## Home page portraits (hidden 2026-05-27)
+
+Two portrait treatments hidden on the home page for now:
+
+  1. **Hero portrait circle + "— hi." Caveat caption** — sat above
+     the H1, redundant with the H1's own "Hi, I'm Dalia." greeting.
+     Lives in `src/pages/index.astro` directly above the hero `<h1>`.
+     Restore: copy the `<div class="mesh-photo-card">…</div>` block
+     back from git history (commit subject: "Home: hide hero
+     portrait and contact-section portrait").
+  2. **Contact section PhotoSlab** — left-column portrait next to the
+     ContactForm. Replaced with the form spanning full-width.
+     Restore: bring back the 2-column grid wrapper + `<PhotoSlab>`.
+     `PhotoSlab` import at the top of `index.astro` is still present
+     so the restore is one paste.
+
 ## Strategy practice cards (since 2026-05-25)
 
 The italic kicker line under each card title is gone. Per-card
