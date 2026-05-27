@@ -18,10 +18,10 @@ export interface SpeakerItem {
   kind: string;
   title: string;
   /** Institution / venue / publisher — rendered after the role on the
-   *  italic sub-line as "Role, Institution". */
+   *  italic sub-line as "Role · Institution". */
   where: string;
   /** Role label (e.g. "Speaker", "Guest Lecturer", "Author",
-   *  "Moderator", "Organizer and moderator"). Required — surfaces
+   *  "Moderator", "Organizer & moderator"). Required — surfaces
    *  on the italic sub-line ahead of the institution. */
   role: string;
   /** Number or range string like "2025–6". */
@@ -57,13 +57,13 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     items: [
       { kind: 'Newsletter',         title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                                            role: 'Author',                    year: '2025–6' },
       { kind: 'Workshop',           title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                                              role: 'Speaker',                   year: 2024 },
-      { kind: 'Education',          title: 'Startup Speaker Series',                                 where: 'Presently',                                           role: 'Organizer and moderator',   year: 2021 },
+      { kind: 'Education',          title: 'Startup Speaker Series',                                 where: 'Presently',                                           role: 'Organizer & moderator',   year: 2021 },
       { kind: 'University Lecture', title: 'Digital Networks and Growth',                            where: 'Princeton University',                                role: 'Guest Lecturer',            year: 2020 },
       { kind: 'Podcast',            title: 'Changemakers',                                           where: 'Changemakers',                                        role: 'Guest',                     year: 2020 },
       { kind: 'University Lecture', title: 'Human-Centered Design & Storytelling',                   where: 'Princeton University',                                role: 'Guest Lecturer',            year: 2019 },
       { kind: 'Workshop',           title: 'Introduction to Human-Centered Design',                  where: 'NameCoach Fellowship',                                role: 'Speaker & Workshop Leader', year: 2019 },
       { kind: 'Panel',              title: 'Women in Marketing',                                     where: 'Princeton University',                                role: 'Moderator',                 year: 2015 },
-      { kind: 'Conference',         title: 'Princeton Marketing Conference',                         where: 'Princeton University',                                role: 'Organizer and moderator',   year: 2015 },
+      { kind: 'Conference',         title: 'Princeton Marketing Conference',                         where: 'Princeton University',                                role: 'Organizer & moderator',   year: 2015 },
       { kind: 'Workshop',           title: 'An Algorithm for Growth',                                where: 'Princeton Social Entrepreneurship Conference',         role: 'Speaker',                   year: 2015 },
       { kind: 'Textbook',           title: "Entrepreneurial Finance: Uber's Path to Success",       where: 'MIT Press',                                            role: 'Author',                    year: 2014 },
     ],
@@ -80,7 +80,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Whitepaper', title: 'Business Practice Redesign & The Future of Work',                                  where: 'Deloitte Center for the Edge',   role: 'Author',                  year: 2018 },
       { kind: 'Event',      title: 'Using Workplace Diversity to Bridge Divides',                                      where: 'Deloitte D-Talks',               role: 'Speaker',                 year: 2018 },
       { kind: 'Event',      title: 'Retaining Top Talent Through a Culture of Intrapreneurship',                       where: 'Deloitte',                       role: 'Speaker',                 year: 2018 },
-      { kind: 'Thesis',     title: 'Improving societal cohesion through workforce integration',                        where: 'Princeton',                      role: 'Author and researcher',   year: 2015 },
+      { kind: 'Thesis',     title: 'Improving societal cohesion through workforce integration',                        where: 'Princeton University',           role: 'Author & researcher',   year: 2015 },
     ],
   },
 ];
