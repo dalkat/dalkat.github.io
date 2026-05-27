@@ -1,0 +1,33 @@
+---
+/**
+ * Field Notes breadcrumb trail used at the top of every piece template:
+ *   notes / <theme> / <slug>
+ */
+import { C, fontUI } from '@/lib/mesh';
+
+interface Props {
+  theme: string;
+  slug: string;
+}
+const { theme, slug } = Astro.props;
+---
+<div
+  style={{
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginBottom: '22px',
+    fontFamily: fontUI,
+    fontSize: '12px',
+    color: C.inkSoft,
+    fontWeight: 600,
+    letterSpacing: '0.04em',
+  }}
+>
+  <a href="/notes" style={{ color: C.inkSoft, textDecoration: 'none' }}>notes</a>
+  <span style={{ opacity: 0.4 }}>/</span>
+  <span style={{ color: C.inkSoft, textTransform: 'lowercase' }}>{theme}</span>
+  <span style={{ opacity: 0.4 }}>/</span>
+  <span style={{ color: C.ink, textTransform: 'lowercase' }}>{slug}</span>
+</div>

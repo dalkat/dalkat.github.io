@@ -1,0 +1,157 @@
+---
+/**
+ * Blog/portfolio post tile — 88px mesh thumb on the left + copy on the right.
+ * 22px radius, white bg, hairline border, soft shadow, dashed-top "Read →" footer.
+ */
+import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
+
+interface Props {
+  kind: string;
+  title: string;
+  blurb: string;
+  where: string;
+  year: number | string;
+  read: string;
+  tint?: string;
+  href?: string;
+  /** Optional cover image (path under /public). Swaps in for the mesh
+   *  thumb; rendered with object-fit: cover at 88x88. */
+  image?: string;
+}
+
+const { kind, title, blurb, where, year, read, tint = C.plum, href, image } = Astro.props;
+const Tag = href ? 'a' : 'article';
+---
+<Tag
+  href={href}
+  target={href?.startsWith('http') ? '_blank' : undefined}
+  rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+  style={{
+    background: C.white,
+    borderRadius: '22px',
+    padding: '24px 24px 22px',
+    border: `1px solid ${C.ink}10`,
+    boxShadow: `0 14px 28px -20px ${C.ink}44`,
+    cursor: 'pointer',
+    position: 'relative',
+    overflow: 'hidden',
+    display: 'grid',
+    gridTemplateColumns: '88px 1fr',
+    gap: '18px',
+    alignItems: 'flex-start',
+    textDecoration: 'none',
+    color: C.ink,
+  }}
+>
+  <div
+    class="mesh-post-tile-thumb"
+    style={{
+      width: '88px',
+      height: '88px',
+      borderRadius: '16px',
+      background: image
+        ? C.paper
+        : meshBg({
+            base: tint,
+            blobs: [
+              [`${C.butter}dd`, 80, 30, 70],
+              [`${C.white}aa`, 20, 80, 60],
+            ],
+          }),
+      border: `1px solid ${C.ink}10`,
+      position: 'relative',
+      overflow: 'hidden',
+    }}
+  >
+    {image ? (
+      <img
+        src={image}
+        alt=""
+        loading="lazy"
+        style={{
+          display: 'block',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          // Right-aligned crop: most article OG cards put the headline
+          // on the left and the visual on the right, so the right side
+          // is what we want to keep in the 88x88 thumb.
+          objectPosition: 'right center',
+        }}
+      />
+    ) : (
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `repeating-linear-gradient(135deg, transparent 0 9px, ${C.ink}10 9px 10px)`,
+        }}
+      ></div>
+    )}
+  </div>
+  <div>
+    <div
+      style={{
+        display: 'flex',
+        gap: '8px',
+        alignItems: 'baseline',
+        marginBottom: '8px',
+        flexWrap: 'wrap',
+      }}
+    >
+      <span
+        style={{
+          padding: '3px 10px',
+          background: `${tint}33`,
+          color: tint,
+          borderRadius: '999px',
+          fontFamily: fontUI,
+          fontSize: '11px',
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+        }}
+      >{kind}</span>
+      <span style={{ fontFamily: fontUI, fontSize: '11px', color: C.inkSoft, fontWeight: 600 }}>
+        {where} · {year}
+      </span>
+    </div>
+    <div
+      style={{
+        fontFamily: fontDisplay,
+        fontWeight: 400,
+        fontSize: '20px',
+        color: C.ink,
+        letterSpacing: '-0.01em',
+        lineHeight: '1.25',
+        marginBottom: '8px',
+        textWrap: 'balance',
+      }}
+    >{title}</div>
+    <div
+      style={{
+        fontFamily: fontUI,
+        fontSize: '14px',
+        color: C.inkSoft,
+        lineHeight: '1.5',
+        textWrap: 'pretty',
+      }}
+    >{blurb}</div>
+    <div
+      style={{
+        marginTop: '14px',
+        paddingTop: '12px',
+        borderTop: `1px dashed ${C.ink}15`,
+        display: 'flex',
+        justifyContent: 'space-between',
+        fontFamily: fontUI,
+        fontSize: '12px',
+        color: tint,
+        fontWeight: 600,
+      }}
+    >
+      <span>{read}</span>
+      <span>Read →</span>
+    </div>
+  </div>
+</Tag>

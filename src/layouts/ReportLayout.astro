@@ -1,0 +1,123 @@
+---
+/**
+ * Report template — modeled on the design's MeshReportTeams (content-pages.jsx).
+ * Hero with breadcrumbs + kicker + bold gradient-accent headline + lead,
+ * then a PDF-frame-styled body with mesh-page placeholders (real PDFs slot
+ * in via the body slot).
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Kicker from '@/components/Kicker.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+interface Props {
+  title: string;
+  blurb: string;
+  themeLabel: string;
+  source: string;
+  year: number;
+  read_time: number | null;
+  slug: string;
+  /** Optional URL for the source PDF / slideshare. */
+  externalUrl?: string;
+  /** Accent tint (defaults to teal for reports). */
+  tint?: string;
+}
+const { title, blurb, themeLabel, source, year, read_time, slug, externalUrl, tint = C.teal } = Astro.props;
+const gt = gradientText();
+const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
+---
+<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
+  <PageNav current="notes" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    style={{
+      background: meshBg({
+        base: C.mint,
+        blobs: [
+          [C.butter,         12, 18, 50],
+          [`${C.lavender}cc`,82, 12, 45],
+          [`${C.peach}cc`,   65, 88, 40],
+          [C.sky,            18, 82, 40],
+        ],
+      }),
+      padding: '72px 64px 56px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <Breadcrumbs theme={themeLabel} slug={slug} />
+      <Kicker category="Report" date={year} read={readLabel} tint={tint} />
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '60px',
+          lineHeight: '1.05',
+          letterSpacing: '-0.03em',
+          color: C.ink,
+          margin: '24px 0 0',
+          textWrap: 'balance',
+          maxWidth: '920px',
+        }}
+      >{title}</h1>
+      <p
+        style={{
+          fontFamily: fontUI,
+          fontSize: '20px',
+          lineHeight: '1.5',
+          color: C.ink,
+          marginTop: '24px',
+          maxWidth: '800px',
+          textWrap: 'pretty',
+        }}
+      >{blurb}</p>
+      {externalUrl && (
+        <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <a
+            href={externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: '12px 22px',
+              background: meshBg({ base: C.ink, blobs: [[C.coral, 0, 100, 70], [C.plum, 100, 0, 70]] }),
+              color: C.paper,
+              border: 'none',
+              borderRadius: '999px',
+              fontFamily: fontUI,
+              fontSize: '14px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              boxShadow: `0 14px 26px -14px ${C.ink}88`,
+            }}
+          >Read the report ↗</a>
+          <span
+            style={{
+              fontFamily: fontUI,
+              fontSize: '12px',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: C.inkSoft,
+              fontWeight: 600,
+            }}
+          >via {source}</span>
+        </div>
+      )}
+    </div>
+  </section>
+
+  {/* ───────── Body (markdown content from slot, or embedded preview) ───────── */}
+  <section style={{ background: C.paper, padding: '40px 64px 80px', scrollMarginTop: '80px' }}>
+    <article
+      class="mesh-prose"
+      style={`max-width:800px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
+    >
+      <slot />
+    </article>
+  </section>
+
+  <Footer tint={tint} />
+</Base>

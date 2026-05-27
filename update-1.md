@@ -1,3 +1,0 @@
----
-layout: update-1
----

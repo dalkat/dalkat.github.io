@@ -1,0 +1,94 @@
+---
+/**
+ * Square photography slot. Two modes:
+ *
+ *  - With `src`: renders the real photo cropped to a square at the same
+ *    24-px radius + ink-drop shadow.
+ *  - Without `src`: mesh-gradient placeholder with hatching overlay and
+ *    "↳ photo of …" mono caption pill bottom-left (per the design's
+ *    MeshPhotoSlab placeholder).
+ *
+ * `objectPosition` lets callers nudge the crop (default leaves room at
+ * top for a face).
+ */
+import { C, meshBg } from '@/lib/mesh';
+
+interface Props {
+  size?: number;
+  label?: string;
+  tone?: string;
+  /** When provided, renders the real image and hides the placeholder. */
+  src?: string;
+  /** CSS object-position for the cropped photo. */
+  objectPosition?: string;
+}
+
+const {
+  size = 360,
+  label = 'photo of dalia',
+  tone = C.peach,
+  src,
+  objectPosition = '50% 28%',
+} = Astro.props;
+---
+<div
+  style={{
+    width: `${size}px`,
+    height: `${size}px`,
+    borderRadius: '24px',
+    overflow: 'hidden',
+    position: 'relative',
+    border: `1px solid ${C.ink}15`,
+    boxShadow: `0 30px 60px -34px ${C.ink}66`,
+    background: src
+      ? C.peach
+      : meshBg({
+          base: tone,
+          blobs: [
+            [`${C.lavender}cc`, 80, 20, 55],
+            [`${C.butter}cc`, 20, 80, 55],
+            [`${C.coral}88`, 60, 60, 35],
+          ],
+        }),
+  }}
+>
+  {src ? (
+    <img
+      src={src}
+      alt={label}
+      loading="lazy"
+      style={{
+        display: 'block',
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition,
+      }}
+    />
+  ) : (
+    <>
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `repeating-linear-gradient(135deg, transparent 0 14px, ${C.ink}08 14px 15px)`,
+        }}
+      ></div>
+      <div
+        style={{
+          position: 'absolute',
+          left: '18px',
+          bottom: '18px',
+          padding: '6px 12px',
+          background: C.white,
+          borderRadius: '999px',
+          fontFamily: '"DM Mono", monospace',
+          fontSize: '11px',
+          color: C.inkSoft,
+          letterSpacing: '0.06em',
+          boxShadow: `0 6px 14px -8px ${C.ink}55`,
+        }}
+      >↳ {label}</div>
+    </>
+  )}
+</div>

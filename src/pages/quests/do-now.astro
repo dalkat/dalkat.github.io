@@ -1,0 +1,160 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import DoNowCard from '@/components/DoNowCard.tsx';
+import { DO_NOW_PROMPTS } from '@/data/do-now-prompts';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+const gt = gradientText();
+---
+<Base
+  title="Do Now — Dalia Katan"
+  description="A small oracle for the moment you're stuck. One card at a time — specific, surprising, doable before your next coffee."
+>
+  <PageNav current="quests" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="donow"
+    style={{
+      background: meshBg({
+        base: C.butter,
+        blobs: [
+          [C.peach,           12, 22, 55],
+          [`${C.coral}cc`,    85, 14, 45],
+          [`${C.lavender}cc`, 86, 84, 50],
+          [`${C.mint}cc`,     14, 86, 45],
+        ],
+      }),
+      padding: '72px 64px 36px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '920px', margin: '0 auto', textAlign: 'center' }}>
+      {/* Kicker pill hidden for now — see TODO.md ("/quests/do-now · a small oracle") */}
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '100px',
+          lineHeight: '0.94',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+        }}
+      >
+        What should you <span style={gt}>do right now</span>?
+      </h1>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontStyle: 'italic',
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.inkSoft,
+          margin: '20px auto 0',
+          maxWidth: '640px',
+          textWrap: 'pretty',
+        }}
+      >
+        A tiny generator for the moment you're stuck. One card at a time —
+        specific, surprising, doable before your next coffee.
+      </p>
+    </div>
+  </section>
+
+  {/* ───────── Generator card ───────── */}
+  <section
+    style={{
+      padding: '32px 0 72px',
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.peach}aa`,    90, 14, 30],
+          [`${C.lavender}aa`,  8, 78, 30],
+        ],
+      }),
+      scrollMarginTop: '80px',
+    }}
+  >
+    <DoNowCard client:visible prompts={DO_NOW_PROMPTS} />
+  </section>
+
+  {/* ───────── About this ───────── */}
+  <section
+    id="how"
+    style={{
+      background: meshBg({
+        base: C.paper2,
+        blobs: [[`${C.butter}cc`, 50, 50, 50]],
+      }),
+      padding: '56px 64px 88px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+      <div
+        style={{
+          fontFamily: fontUI,
+          fontSize: '11px',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          color: C.plum,
+          fontWeight: 700,
+          marginBottom: '8px',
+        }}
+      >About this</div>
+      <h3
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '32px',
+          margin: '0 0 14px',
+          letterSpacing: '-0.02em',
+          color: C.ink,
+          textWrap: 'balance',
+        }}
+      >Outsource the decision.</h3>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontSize: '18px',
+          lineHeight: '1.6',
+          color: C.inkSoft,
+          margin: '0 0 14px',
+          textWrap: 'pretty',
+        }}
+      >
+        Sometimes it's easier to outsource decisionmaking. If you have a free
+        moment and infinite things you <em>could</em> do, this generator
+        removes some of the choosing for you — pull a card, do what's on it,
+        move on.
+      </p>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontSize: '18px',
+          lineHeight: '1.6',
+          color: C.inkSoft,
+          margin: 0,
+          textWrap: 'pretty',
+        }}
+      >
+        It's a cousin of the{' '}
+        <a
+          href="/notes/trailmix/"
+          style={{
+            color: C.coral,
+            textDecoration: 'underline',
+            textUnderlineOffset: '3px',
+            textDecorationColor: `${C.coral}80`,
+          }}
+        >trail mix method</a>.
+      </p>
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

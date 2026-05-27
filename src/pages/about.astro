@@ -1,0 +1,175 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import PhotoSlab from '@/components/PhotoSlab.astro';
+import Footer from '@/components/Footer.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+const gt = gradientText();
+---
+<Base
+  title="About — Dalia Katan"
+  description="Fractional Head of Product, angel investor, and startup advisor. Most recently mobile product at Stripe; previously Doblin/Deloitte and a Princeton kid who's been building things since 13."
+>
+  <PageNav current="about" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="about"
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.mint}cc`,    85, 15, 40],
+          [`${C.peach}aa`,   10, 80, 45],
+          [`${C.lavender}cc`, 50, 50, 30],
+        ],
+      }),
+      padding: '88px 64px 72px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Kicker pill hidden for now — see TODO.md ("/about · the longer version") */}
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '88px',
+          lineHeight: '0.98',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '900px',
+        }}
+      >
+        Hey there <span style={{ ...gt, paddingRight: '0.08em' }}>👋</span>
+      </h1>
+    </div>
+  </section>
+
+  {/* ───────── Body: portrait + bio prose ───────── */}
+  <section
+    style={{
+      background: C.paper,
+      padding: '64px 64px 56px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div
+      style={{
+        maxWidth: '1080px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: '340px 1fr',
+        gap: '64px',
+        alignItems: 'flex-start',
+      }}
+    >
+      <aside style={{ position: 'sticky', top: '88px' }}>
+        <PhotoSlab size={320} label="photo of Dalia" src="/img/Dalia-portrait-1.jpeg" />
+        <div
+          style={{
+            marginTop: '18px',
+            fontFamily: fontUI,
+            fontSize: '11px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: C.inkSoft,
+            fontWeight: 700,
+          }}
+        >Brooklyn, NY</div>
+      </aside>
+
+      <article
+        style={{
+          fontFamily: fontReader,
+          fontSize: '19px',
+          lineHeight: '1.65',
+          color: C.inkSoft,
+          textWrap: 'pretty',
+        }}
+      >
+        <p style={{ margin: '0 0 22px' }}>
+          I work as a fractional Head of Product, angel investor, and startup
+          advisor. Most recently, I led mobile product at <strong style={{ color: C.ink }}>Stripe</strong>. Before
+          Stripe, I founded and led <strong style={{ color: C.ink }}>Presently</strong>, a startup focused on making
+          group payments easier, as well as served as Head of Product at two
+          startups across fintech and web3.
+        </p>
+        <p style={{ margin: '0 0 22px' }}>
+          Earlier in my career, I spent over six years as a management consultant,
+          both independently and at <strong style={{ color: C.ink }}>Monitor Deloitte / Doblin</strong>, working
+          with over 30 startups and Fortune 500s to launch and grow new products
+          and businesses. I also previously worked at several e-commerce and
+          media startups, and in 2008 founded and scaled an online project to
+          over 4 million users — which is how I first learned to code and
+          design products.
+        </p>
+        <p style={{ margin: '0 0 22px' }}>
+          I received my Bachelors from <strong style={{ color: C.ink }}>Princeton University</strong>, where I
+          studied international affairs, entrepreneurship, and human-centered
+          design.
+        </p>
+
+        <div
+          style={{
+            marginTop: '40px',
+            paddingTop: '28px',
+            borderTop: `1px dashed ${C.ink}22`,
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '12px',
+            alignItems: 'center',
+          }}
+        >
+          <a
+            href="/strategy"
+            style={{
+              padding: '12px 22px',
+              background: C.ink,
+              color: C.paper,
+              borderRadius: '999px',
+              fontFamily: fontUI,
+              fontSize: '14px',
+              fontWeight: 600,
+              textDecoration: 'none',
+              boxShadow: `0 14px 28px -14px ${C.ink}88`,
+            }}
+          >See my strategy work →</a>
+          <a
+            href="/speaker"
+            style={{
+              padding: '12px 22px',
+              background: C.white,
+              color: C.ink,
+              border: `1px solid ${C.ink}18`,
+              borderRadius: '999px',
+              fontFamily: fontUI,
+              fontSize: '14px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >Talks &amp; publications</a>
+          <a
+            href="/notes"
+            style={{
+              padding: '12px 22px',
+              background: C.white,
+              color: C.ink,
+              border: `1px solid ${C.ink}18`,
+              borderRadius: '999px',
+              fontFamily: fontUI,
+              fontSize: '14px',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >Field Notes</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <Footer tint={C.plum} />
+</Base>

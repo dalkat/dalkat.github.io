@@ -1,5 +1,0 @@
-{
-  "buildCommand": "bundle install && bundle exec jekyll build && for d in css js img vendor; do [ -d _site/assets/$d ] && cp -a _site/assets/$d _site/$d; done",
-  "outputDirectory": "_site",
-  "cleanUrls": true
-}

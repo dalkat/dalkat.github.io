@@ -1,0 +1,346 @@
+---
+/**
+ * /quests — side quests index. Things I built outside of paid work.
+ *
+ * Hero (peach-mesh) over a list of large quest cards. Each card has a
+ * mesh-tinted thumb tile or product screenshot on the left and copy on
+ * the right; `coming-soon` cards swap the outbound CTA for a pill.
+ *
+ * Card right-column layout mirrors the site's PostTile pattern:
+ *   ┌────────────────────────────────────────────────────────────┐
+ *   │ [image]                              [Award eyebrow]       │
+ *   │ [thumb]                              host · year (top-rt)  │
+ *   │                                                            │
+ *   │           Title                                            │
+ *   │           Blurb...                                         │
+ *   │           ──────────────────────────────────────           │
+ *   │                                                  Visit ↗  │
+ *   └────────────────────────────────────────────────────────────┘
+ *
+ * Add new entries by appending to `QUESTS` in `src/data/quests.ts`.
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+import { QUESTS } from '@/data/quests';
+
+const gt = gradientText();
+
+/** Pretty-print the "where" for the top-right line. External URLs show
+ *  the hostname; internal links show 'daliakatan.com' since that's where
+ *  the visitor goes when they click. Coming-soon tiles return null. */
+function hostFor(href: string | undefined): string | null {
+  if (!href) return null;
+  if (href.startsWith('http')) {
+    try {
+      return new URL(href).hostname.replace(/^www\./, '');
+    } catch {
+      return null;
+    }
+  }
+  return 'daliakatan.com';
+}
+---
+<Base
+  title="Side Quests — Dalia Katan"
+  description="Side projects, weekend tools, and small experiments — things I've built outside of paid work."
+>
+  <PageNav current="quests" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="quests"
+    style={{
+      background: meshBg({
+        base: C.peach,
+        blobs: [
+          [`${C.butter}cc`,   12, 18, 50],
+          [`${C.lavender}cc`, 88, 12, 45],
+          [`${C.mint}cc`,     72, 92, 40],
+          [`${C.coral}aa`,    10, 88, 35],
+        ],
+      }),
+      padding: '88px 64px 72px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Kicker pill hidden for now — see TODO.md ("/quests · things I've made") */}
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '96px',
+          lineHeight: '0.98',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '900px',
+        }}
+      >
+        Side <span style={gt}>quests</span><span style={{ color: C.coral }}>.</span>
+      </h1>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontStyle: 'italic',
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.inkSoft,
+          marginTop: '20px',
+          maxWidth: '780px',
+          textWrap: 'pretty',
+        }}
+      >
+        Weekend tools, half-built experiments, and things I made because
+        I wanted them to exist. Mostly free, mostly small, mostly running
+        on the cheapest tier of something.
+      </p>
+    </div>
+  </section>
+
+  {/* ───────── Cards ───────── */}
+  <section
+    style={{
+      background: C.paper,
+      padding: '64px 64px 96px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div
+      style={{
+        maxWidth: '1080px',
+        margin: '0 auto',
+        display: 'grid',
+        gap: '22px',
+      }}
+    >
+      {QUESTS.map((q) => {
+        const isComingSoon = q.status === 'coming-soon';
+        const isExternal = !!q.href && q.href.startsWith('http');
+        const Tag = q.href ? 'a' : 'article';
+        const host = hostFor(q.href);
+        // Shared style block for the award sticker — used as both an
+        // anchor (when q.award.href is set) and a static div otherwise.
+        const awardStyle = {
+          position: 'absolute' as const,
+          top: '-18px',
+          right: '28px',
+          zIndex: 2,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '9px 18px 9px 14px',
+          background: C.coral,
+          borderRadius: '999px',
+          boxShadow: `0 6px 14px -6px ${C.coral}cc, 0 14px 28px -16px ${C.ink}77`,
+          fontFamily: fontUI,
+          fontSize: '11px',
+          fontWeight: 700,
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: C.white,
+          textDecoration: 'none',
+          whiteSpace: 'nowrap' as const,
+        };
+        const awardInner = q.award && (
+          <>
+            {q.award.icon && <span style={{ fontSize: '13px', lineHeight: 1 }}>{q.award.icon}</span>}
+            <span>{q.award.text}</span>
+          </>
+        );
+        return (
+          /* Positioning shell — the badge needs to overhang the card's top
+             edge, but anchors can't legally nest inside each other (the
+             card itself is an <a> when q.href is set, and the badge is its
+             own <a> when q.award.href is set). Wrapping both as siblings
+             inside this <div> gives the badge a real positioning context
+             without nesting. */
+          <div style={{ position: 'relative' }}>
+            {/* Award badge — overhangs the top edge of the card (TOP PICK
+                sticker). Renders as an <a> when it has its own href,
+                otherwise as a plain <div>. */}
+            {q.award && (q.award.href ? (
+              <a
+                href={q.award.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={awardStyle}
+              >{awardInner}</a>
+            ) : (
+              <div style={awardStyle}>{awardInner}</div>
+            ))}
+            <Tag
+              href={q.href}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              style={{
+                background: C.white,
+                borderRadius: '24px',
+                padding: '28px',
+                border: `1px solid ${C.ink}10`,
+                boxShadow: `0 18px 36px -22px ${C.ink}55`,
+                display: 'grid',
+                gridTemplateColumns: '180px 1fr',
+                gap: '28px',
+                alignItems: 'flex-start',
+                textDecoration: 'none',
+                color: C.ink,
+                cursor: q.href ? 'pointer' : 'default',
+                opacity: isComingSoon ? 0.92 : 1,
+              }}
+            >
+            {/* Thumb — product screenshot if `image` is set, else mesh tile.
+                The Kind pill sits in the bottom-left corner in both cases. */}
+            <div
+              style={{
+                width: '180px',
+                height: '180px',
+                borderRadius: '20px',
+                background: q.image
+                  ? C.paper
+                  : meshBg({
+                      base: q.tint,
+                      blobs: [
+                        [`${C.butter}dd`,   80, 24, 65],
+                        [`${C.white}aa`,    18, 78, 60],
+                        [`${C.lavender}aa`, 50, 50, 40],
+                      ],
+                    }),
+                border: `1px solid ${C.ink}10`,
+                position: 'relative',
+                overflow: 'hidden',
+              }}
+            >
+              {q.image ? (
+                <img
+                  src={q.image}
+                  alt={`${q.title} screenshot`}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 30%',
+                  }}
+                />
+              ) : (
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: `repeating-linear-gradient(135deg, transparent 0 11px, ${C.ink}10 11px 12px)`,
+                  }}
+                ></div>
+              )}
+              {/* Kind pill — small brand mark in the corner */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '14px',
+                  left: '14px',
+                  padding: '6px 12px',
+                  background: `${C.white}f0`,
+                  borderRadius: '999px',
+                  fontFamily: fontUI,
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: C.ink,
+                  boxShadow: `0 6px 14px -10px ${C.ink}66`,
+                }}
+              >{q.kind}</div>
+            </div>
+
+            {/* Right column */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', minWidth: 0 }}>
+              {/* Title */}
+              <div
+                style={{
+                  fontFamily: fontDisplay,
+                  fontWeight: 400,
+                  fontSize: '42px',
+                  lineHeight: '1.02',
+                  letterSpacing: '-0.025em',
+                  color: C.ink,
+                  textWrap: 'balance',
+                }}
+              >{q.title}</div>
+
+              {/* Blurb */}
+              <div
+                style={{
+                  fontFamily: fontReader,
+                  fontSize: '17px',
+                  lineHeight: '1.6',
+                  color: C.inkSoft,
+                  textWrap: 'pretty',
+                  maxWidth: '620px',
+                }}
+              >{q.blurb}</div>
+
+              {/* Footer: host·year (or Coming-soon pill) on the left,
+                  Visit ↗ / Try it → on the right. Mirrors the bottom-row
+                  pattern used on PostTile. */}
+              <div
+                style={{
+                  marginTop: '8px',
+                  paddingTop: '14px',
+                  borderTop: `1px dashed ${C.ink}18`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  fontFamily: fontUI,
+                  fontSize: '13px',
+                  color: q.tint,
+                  fontWeight: 600,
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                }}
+              >
+                {isComingSoon ? (
+                  <span
+                    style={{
+                      padding: '6px 14px',
+                      background: `${q.tint}22`,
+                      color: q.tint,
+                      borderRadius: '999px',
+                      fontSize: '12px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      fontWeight: 700,
+                    }}
+                  >Coming soon</span>
+                ) : (
+                  <span
+                    style={{
+                      fontFamily: fontUI,
+                      fontSize: '11px',
+                      fontWeight: 600,
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      color: C.inkSoft,
+                    }}
+                  >
+                    {host && <span>{host}</span>}
+                    {host && q.year && <span style={{ opacity: 0.5, margin: '0 6px' }}>·</span>}
+                    {q.year && <span>{q.year}</span>}
+                  </span>
+                )}
+                {!isComingSoon && q.href && (
+                  <span>{isExternal ? 'Visit' : 'Try it'} {isExternal ? '↗' : '→'}</span>
+                )}
+              </div>
+            </div>
+          </Tag>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

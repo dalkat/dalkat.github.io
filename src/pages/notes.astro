@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import FieldNotesArchive from '@/components/FieldNotesArchive.tsx';
+import type { ArchiveItem } from '@/components/FieldNotesArchive.tsx';
+import { C, fontDisplay, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+/* ─────────────────────────────────────────────
+ * Merge hosted (markdown collection) and external
+ * (YAML data) Field Notes into one display array.
+ * Display strings are title-cased / readable.
+ * ───────────────────────────────────────────── */
+const TYPE_LABELS: Record<string, string> = {
+  essay: 'Essay',
+  'field-guide': 'Field guide',
+  framework: 'Framework',
+  report: 'Report',
+  tool: 'Tool',
+  recipe: 'Recipe',
+  letter: 'Letter',
+  notes: 'Notes',
+  travelogue: 'Travelogue',
+  video: 'Video',
+};
+const THEME_LABELS: Record<string, string> = {
+  'entrepreneurship-product': 'Entrepreneurship & Product',
+  'workplace-teambuilding': 'Teambuilding',
+  productivity: 'Productivity',
+  'personal-essays': 'Personal Essays',
+  food: 'Food',
+};
+const tlabel = (t: string) => TYPE_LABELS[t] ?? t;
+const thlabel = (t: string) => THEME_LABELS[t] ?? t;
+
+// Hide do-now-generator from the archive entirely — it's a Side Quest
+// (lives at /quests/do-now), not a Field Note.
+const hosted = (await getCollection('for-you', ({ data }) => !data.draft))
+  .filter((entry) => entry.id !== 'do-now-generator');
+const external = await getCollection('for-you-external');
+
+const articles: ArchiveItem[] = [
+  ...hosted.map((entry) => ({
+    title: entry.data.title,
+    type: tlabel(entry.data.type),
+    theme: thlabel(entry.data.theme),
+    source: entry.data.source,
+    year: entry.data.year,
+    read_time: entry.data.read_time ?? null,
+    blurb: entry.data.blurb,
+    // trail-mix-method uses a custom slug ('trailmix') rather than its
+    // file id; every other piece uses its id directly.
+    href:
+      entry.id === 'trail-mix-method' ? '/notes/trailmix/'
+      : `/notes/${entry.id}/`,
+  })),
+  ...external.map((entry) => ({
+    title: entry.data.title,
+    type: tlabel(entry.data.type),
+    theme: thlabel(entry.data.theme),
+    source: entry.data.source,
+    year: entry.data.year,
+    read_time: entry.data.read_time ?? null,
+    blurb: entry.data.blurb,
+    href: entry.data.url,
+  })),
+];
+
+// Sort by year desc within each theme (handled by the grouping logic), but
+// also stable-sort the master list so equal-themed items go year-desc.
+articles.sort((a, b) => b.year - a.year);
+
+const gt = gradientText();
+---
+<Base
+  title="Field Notes — Dalia Katan"
+  description="Essays, recipes, tools, and small experiments — filed by what I was actually thinking about when I made them."
+>
+  <PageNav current="notes" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="notes"
+    style={{
+      background: meshBg({
+        base: C.lavender,
+        blobs: [
+          [C.peach,  85, 15, 50],
+          [C.butter, 10, 12, 45],
+          [C.mint,   88, 88, 50],
+          [C.sky,    14, 88, 50],
+        ],
+      }),
+      padding: '88px 64px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Kicker pill hidden for now — see TODO.md ("/notes · the archive") */}
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '112px',
+          lineHeight: '0.94',
+          letterSpacing: '-0.04em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '960px',
+        }}
+      >
+        <span style={{ ...gt, paddingRight: '0.08em' }}>Field</span> notes<span style={{ color: C.coral }}>.</span>
+      </h1>
+      <p
+        style={{
+          fontFamily: fontUI,
+          fontSize: '20px',
+          lineHeight: '1.5',
+          color: C.ink,
+          marginTop: '24px',
+          maxWidth: '680px',
+          textWrap: 'pretty',
+        }}
+      >
+        Short essays, blogs, tools, and recipes — the trail of what I've
+        been curious about.
+      </p>
+    </div>
+  </section>
+
+  {/* ───────── Archive ───────── */}
+  <section
+    id="archive"
+    style={{
+      background: C.paper,
+      padding: '56px 64px 96px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <FieldNotesArchive client:visible articles={articles} />
+    </div>
+  </section>
+
+  <Footer tint={C.plum} />
+</Base>

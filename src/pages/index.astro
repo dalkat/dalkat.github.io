@@ -1,0 +1,276 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import CompanyLogos from '@/components/CompanyLogos.astro';
+import PostTile from '@/components/PostTile.astro';
+import PhotoSlab from '@/components/PhotoSlab.astro';
+import Footer from '@/components/Footer.astro';
+import PraiseCarousel from '@/components/PraiseCarousel.tsx';
+import ContactForm from '@/components/ContactForm.tsx';
+import {
+  BIO_LONG,
+  HERO_SUBHEAD,
+  TESTIMONIALS,
+  COMPANIES,
+  FIELD_NOTE_TEASERS,
+} from '@/data/home';
+import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+
+const gt = gradientText();
+---
+<Base title="Dalia Katan — product leader, fractional CPO, advisor">
+  <PageNav current="home" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    id="home"
+    style={{
+      background: meshBg({
+        base: C.lavender,
+        blobs: [
+          [C.peach,         10, 20, 55],
+          [C.butter,        80,  8, 45],
+          [C.sky,           90, 70, 50],
+          [C.mint,          20, 90, 50],
+          [`${C.coral}aa`,  55, 55, 30],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px 110px',
+      position: 'relative',
+      overflow: 'hidden',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ position: 'relative', maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Portrait circle + "— hi." caveat hidden for now — see TODO.md
+          (redundant with H1's "Hi, I'm Dalia."). */}
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '124px',
+          lineHeight: '0.94',
+          letterSpacing: '-0.045em',
+          color: C.ink,
+          margin: 0,
+          textWrap: 'balance',
+          maxWidth: '1020px',
+        }}
+      >
+        Hi, I'm <span style={gt}>Dalia</span><span style={{ color: C.coral }}>.</span>
+      </h1>
+      <p
+        style={{
+          fontFamily: fontUI,
+          fontSize: '22px',
+          lineHeight: '1.45',
+          color: C.ink,
+          marginTop: '28px',
+          maxWidth: '680px',
+          textWrap: 'pretty',
+          fontWeight: 400,
+        }}
+      >{HERO_SUBHEAD}</p>
+      <div style={{ display: 'flex', gap: '12px', marginTop: '36px' }}>
+        <a
+          href="#contact"
+          style={{
+            padding: '14px 24px',
+            background: C.ink,
+            color: C.paper,
+            border: 'none',
+            borderRadius: '999px',
+            fontSize: '15px',
+            fontWeight: 600,
+            fontFamily: fontUI,
+            cursor: 'pointer',
+            textDecoration: 'none',
+            boxShadow: `0 14px 28px -14px ${C.ink}88`,
+          }}
+        >Work with me →</a>
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 01 · About ───────── */}
+  <section
+    id="about"
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.mint}cc`,  85, 15, 40],
+          [`${C.peach}aa`, 10, 80, 45],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={1} sub="About" title="A bit of background" accent={C.teal} />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
+        {BIO_LONG.map((p) => (
+          <p
+            style={{
+              fontFamily: fontReader,
+              fontSize: '18px',
+              lineHeight: '1.65',
+              color: C.inkSoft,
+              margin: 0,
+              textWrap: 'pretty',
+            }}
+          >{p}</p>
+        ))}
+      </div>
+      <div
+        style={{
+          marginTop: '56px',
+          paddingTop: '28px',
+          borderTop: `1px dashed ${C.ink}22`,
+        }}
+      >
+        <CompanyLogos variant="inline" label="Places I've worked" companies={COMPANIES} />
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 02 · Field Notes teaser ───────── */}
+  <section
+    id="field-notes-teaser"
+    style={{
+      background: meshBg({
+        base: C.butter,
+        blobs: [
+          [C.peach,         10, 15, 50],
+          [C.lavender,      88, 18, 45],
+          [`${C.mint}cc`,   60, 90, 45],
+          [`${C.coral}88`,  15, 88, 35],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={2} sub="Writing" accent={C.coral}>
+        A few <span style={gt}>field notes</span>.
+      </SectionHeader>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontSize: '20px',
+          lineHeight: '1.6',
+          color: C.inkSoft,
+          margin: '0 0 44px',
+          maxWidth: '820px',
+          textWrap: 'pretty',
+        }}
+      >
+        Essays, frameworks, recipes, and reports from a life built around
+        curiosity — across product, work, and what gets pinned to the fridge.
+        A few favorites:
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
+        {FIELD_NOTE_TEASERS.map((p) => (
+          <PostTile
+            kind={p.kind}
+            title={p.title}
+            blurb={p.blurb}
+            where={p.where}
+            year={p.year}
+            read={p.read}
+            tint={p.tint}
+            href={p.href}
+            image={p.image}
+          />
+        ))}
+      </div>
+      <div
+        style={{
+          marginTop: '32px',
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px',
+        }}
+      >
+        <a
+          href="/notes"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '14px 24px',
+            background: C.ink,
+            color: C.paper,
+            borderRadius: '999px',
+            fontFamily: fontUI,
+            fontSize: '14px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            boxShadow: `0 14px 28px -14px ${C.ink}88`,
+          }}
+        >
+          Visit the full archive <span style={{ opacity: 0.7 }}>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ───────── 03 · Praise ───────── */}
+  <section
+    id="praise"
+    style={{
+      background: meshBg({
+        base: C.sky,
+        blobs: [
+          [C.lavender,       12, 18, 50],
+          [C.peach,          85, 80, 45],
+          [`${C.butter}cc`,  60, 12, 35],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={3} sub="Kind words" title="People saying nice things" accent={C.plum} />
+      <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
+    </div>
+  </section>
+
+  {/* ───────── 04 · Contact ───────── */}
+  <section
+    id="contact"
+    style={{
+      background: meshBg({
+        base: C.lilac,
+        blobs: [
+          [C.peach,         18, 18, 50],
+          [C.butter,        82, 28, 40],
+          [C.mint,          72, 88, 45],
+          [`${C.coral}aa`,  18, 80, 38],
+        ],
+      }),
+      color: C.ink,
+      padding: '96px 64px 80px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      <SectionHeader n={4} sub="Contact" title="Drop a line" accent={C.coral} />
+      {/* Portrait PhotoSlab hidden for now — see TODO.md. The contact
+          form spans full width until we bring the photo back. */}
+      <ContactForm client:visible accent={C.coral} />
+    </div>
+  </section>
+
+  <Footer tint={C.coral} />
+</Base>

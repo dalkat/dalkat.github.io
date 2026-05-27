@@ -1,0 +1,379 @@
+---
+/**
+ * Generic article shell — used for letters (sabbatical-update*) and the
+ * trailmix tool post. Hero w/ breadcrumbs + kicker + headline + lead, then
+ * a single reader-friendly markdown body column on paper.
+ *
+ * Pages that need bespoke layouts (recipes, reports, do-now) use their
+ * own template files; this is the default for type ∈ {letter, tool, notes,
+ * essay, field-guide, travelogue}.
+ */
+import Base from '@/layouts/Base.astro';
+import PageNav from '@/components/PageNav.astro';
+import Footer from '@/components/Footer.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Kicker from '@/components/Kicker.astro';
+import HighlightReel from '@/components/HighlightReel.tsx';
+import type { ReelImage } from '@/components/HighlightReel.tsx';
+import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
+
+interface Props {
+  title: string;
+  blurb: string;
+  type: string;
+  themeLabel: string;
+  source: string;
+  year: number;
+  read_time: number | null;
+  slug: string;
+  /** Tint accent color (defaults to coral). */
+  tint?: string;
+  /** Optional photo gallery rendered after the article body. */
+  highlightReel?: ReelImage[];
+  /** Optional H2 heading shown above the highlight reel. */
+  highlightReelTitle?: string;
+}
+const {
+  title, blurb, type, themeLabel, source, year, read_time, slug,
+  tint = C.coral, highlightReel, highlightReelTitle,
+} = Astro.props;
+const readLabel = read_time == null ? null : `${read_time} min read`;
+---
+<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
+  <PageNav current="notes" />
+
+  {/* ───────── Hero ───────── */}
+  <section
+    style={{
+      background: meshBg({
+        base: C.paper,
+        blobs: [
+          [`${C.peach}cc`,    90, 14, 40],
+          [`${C.lavender}cc`,  8, 50, 40],
+          [`${C.mint}cc`,     85, 92, 35],
+        ],
+      }),
+      padding: '72px 64px 56px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <Breadcrumbs theme={themeLabel} slug={slug} />
+      <Kicker category={type} date={year} read={readLabel ?? undefined} tint={tint} />
+      <h1
+        style={{
+          fontFamily: fontDisplay,
+          fontWeight: 400,
+          fontSize: '68px',
+          lineHeight: '1.02',
+          letterSpacing: '-0.035em',
+          color: C.ink,
+          margin: '24px 0 0',
+          textWrap: 'balance',
+        }}
+      >{title}</h1>
+      <p
+        style={{
+          fontFamily: fontReader,
+          fontStyle: 'italic',
+          fontSize: '22px',
+          lineHeight: '1.5',
+          color: C.inkSoft,
+          marginTop: '20px',
+          maxWidth: '800px',
+          textWrap: 'pretty',
+        }}
+      >{blurb}</p>
+      <div
+        style={{
+          marginTop: '20px',
+          fontFamily: fontUI,
+          fontSize: '12px',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: C.inkSoft,
+          fontWeight: 600,
+        }}
+      >↳ Originally published on {source}</div>
+    </div>
+  </section>
+
+  {/* ───────── Body ───────── */}
+  <section
+    style={{
+      background: C.paper,
+      padding: '56px 64px 96px',
+      scrollMarginTop: '80px',
+    }}
+  >
+    <article
+      class="mesh-prose"
+      style={`max-width:800px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
+    >
+      <slot />
+    </article>
+  </section>
+
+  {highlightReel && highlightReel.length > 0 && (
+    <section
+      style={{
+        background: C.paper,
+        padding: '0 64px 96px',
+        scrollMarginTop: '80px',
+      }}
+    >
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        {highlightReelTitle && (
+          <h2
+            style={{
+              fontFamily: fontDisplay,
+              fontWeight: 500,
+              fontSize: '32px',
+              letterSpacing: '-0.02em',
+              color: C.ink,
+              margin: '0 0 8px',
+              textWrap: 'balance',
+            }}
+          >{highlightReelTitle}</h2>
+        )}
+        <HighlightReel client:visible images={highlightReel} tint={tint} />
+      </div>
+    </section>
+  )}
+
+  <Footer tint={tint} />
+</Base>
+
+<style is:global>
+  .mesh-prose h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: #221a3a;
+    margin: 48px 0 16px;
+    text-wrap: balance;
+  }
+  .mesh-prose h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #221a3a;
+    margin: 36px 0 12px;
+    text-wrap: balance;
+  }
+  .mesh-prose p {
+    margin: 0 0 20px;
+    text-wrap: pretty;
+  }
+  .mesh-prose a {
+    color: var(--post-tint, #ff8a7a);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--post-tint, #ff8a7a) 50%, transparent);
+    transition: text-decoration-color .15s;
+  }
+  .mesh-prose a:hover {
+    text-decoration-color: var(--post-tint, #ff8a7a);
+  }
+  .mesh-prose li::marker {
+    color: var(--post-tint, #ff8a7a);
+    font-weight: 600;
+  }
+  /* Pull-quote — matches the design's <PullQuote> component
+   * (content-pages.jsx). Slight negative side-margin to break out of the
+   * reading column; clean white card with a tinted left border (no
+   * gradient backdrop); larger Fraunces italic copy.
+   *
+   * Multi-paragraph blockquotes: the first paragraph is the quote, and
+   * any following paragraph is rendered as the attribution line
+   * ("↳ ME, SIX WEEKS IN" pattern in Space Grotesk uppercase). Write
+   * the markdown as:
+   *
+   *   > *"quote text"*
+   *   >
+   *   > Author, source
+   */
+  .mesh-prose blockquote {
+    margin: 36px -32px;
+    padding: 32px 40px;
+    background: #fff;
+    border-left: 4px solid var(--post-tint, #ff8a7a);
+    border-radius: 22px;
+    box-shadow: 0 14px 26px -20px rgba(34, 26, 58, 0.44);
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #221a3a;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .mesh-prose blockquote p {
+    margin: 0 0 14px;
+  }
+  .mesh-prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  /* Attribution — any paragraph after the first inside a blockquote is
+   * the citation line. Uppercase Space Grotesk + post-tinted ↳ glyph
+   * prefix. Links inside keep their tinted underline. */
+  .mesh-prose blockquote p + p {
+    margin-top: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4a3f6e;
+    line-height: 1.4;
+  }
+  .mesh-prose blockquote p + p::before {
+    content: '↳ ';
+    margin-right: 6px;
+    color: var(--post-tint, #ff8a7a);
+  }
+
+  /* Foreword — matches the design's <Foreword> component. Wrap a paragraph
+   * in <aside class="mesh-foreword"> in the markdown body to use it. The
+   * "FOREWORD" pill is a CSS ::before, no extra markup required. */
+  .mesh-prose .mesh-foreword {
+    position: relative;
+    margin: 8px -16px 36px;
+    padding: 26px 30px 22px;
+    background:
+      radial-gradient(
+        circle at 0% 50%,
+        color-mix(in srgb, var(--post-tint, #ff8a7a) 22%, transparent),
+        transparent 60%
+      ),
+      #f3edf9;
+    border-left: 4px solid var(--post-tint, #ff8a7a);
+    border-radius: 0 18px 18px 0;
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #4a3f6e;
+    text-wrap: pretty;
+  }
+  .mesh-prose .mesh-foreword::before {
+    content: 'Foreword';
+    position: absolute;
+    top: -12px;
+    left: 22px;
+    padding: 4px 12px;
+    background: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--post-tint, #ff8a7a);
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px -6px rgba(34, 26, 58, 0.55);
+  }
+  .mesh-prose .mesh-foreword p {
+    margin: 0 0 12px;
+  }
+  .mesh-prose .mesh-foreword p:last-child {
+    margin-bottom: 0;
+  }
+  /* Tailwind's preflight reset wipes default list-style from ul/ol;
+   * restore disc/decimal markers explicitly so blog posts render
+   * bullets and numbered lists correctly. Coral marker accent for
+   * a touch of the v7 palette inside long-form prose. */
+  .mesh-prose ul {
+    list-style: disc outside;
+    margin: 0 0 24px;
+    padding-left: 28px;
+  }
+  .mesh-prose ol {
+    list-style: decimal outside;
+    margin: 0 0 24px;
+    padding-left: 32px;
+  }
+  .mesh-prose ul ul,
+  .mesh-prose ol ol,
+  .mesh-prose ul ol,
+  .mesh-prose ol ul {
+    margin: 8px 0 8px;
+  }
+  .mesh-prose ul ul { list-style: circle outside; }
+  .mesh-prose ol ol { list-style: lower-alpha outside; }
+  .mesh-prose li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  .mesh-prose code {
+    background: #f3edf9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.92em;
+  }
+  .mesh-prose hr {
+    border: none;
+    border-top: 1px dashed #221a3a30;
+    margin: 36px 0;
+  }
+  /* Embedded documents (Slideshare, YouTube, etc.) inside a markdown body. */
+  .mesh-prose iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    margin: 32px 0;
+    border-radius: 14px;
+    border: 1px solid #221a3a18;
+    box-shadow: 0 24px 50px -28px #221a3a55;
+    background: #fff;
+  }
+  /* Inline images inside a markdown body (e.g. trail-mix diagrams) — soft
+   * card framing, centered in the column. Full-bleed photos override below. */
+  .mesh-prose img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 32px auto;
+    border-radius: 14px;
+    border: 1px solid #221a3a15;
+    box-shadow: 0 18px 36px -24px #221a3a55;
+  }
+  .mesh-prose .full-bleed img {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  /* Full-bleed inline figure — breaks out of the 720px article column
+   * to span the full viewport. Used for the photos sprinkled through
+   * the sabbatical updates. */
+  .mesh-prose .full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+  .mesh-prose .full-bleed img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 86vh;
+    object-fit: cover;
+  }
+  .mesh-prose .full-bleed figcaption {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #4a3f6e;
+    text-align: center;
+    padding: 16px 24px 0;
+    text-wrap: pretty;
+  }
+</style>

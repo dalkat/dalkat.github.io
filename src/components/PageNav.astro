@@ -1,0 +1,200 @@
+---
+/**
+ * Sticky top nav — frosted-white band with the gradient brand mark,
+ * desktop link row, and a mobile hamburger that toggles a stacked
+ * drawer below the nav at narrow widths.
+ *
+ * Toggle is a tiny vanilla JS script (no React hydration) — clicks
+ * the hamburger or any link inside the drawer to open/close it.
+ */
+import { C, fontDisplay, fontUI } from '@/lib/mesh';
+import { NAV } from '@/data/home';
+
+interface Props {
+  current?: string;
+}
+
+const { current = 'home' } = Astro.props;
+---
+<nav
+  class="mesh-nav"
+  style={{
+    position: 'sticky',
+    top: '0',
+    zIndex: 30,
+    background: `${C.white}b8`,
+    backdropFilter: 'blur(18px) saturate(150%)',
+    WebkitBackdropFilter: 'blur(18px) saturate(150%)',
+    borderBottom: `1px solid ${C.ink}10`,
+    padding: '14px 56px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    fontFamily: fontUI,
+  }}
+>
+  <a
+    href="/"
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      color: C.ink,
+      textDecoration: 'none',
+      fontFamily: fontDisplay,
+      fontWeight: 500,
+      fontSize: '17px',
+      letterSpacing: '-0.01em',
+    }}
+  >
+    {/* DK gradient mark hidden for now — see TODO.md.
+        Keeping just the full name as the brand wordmark. */}
+    Dalia Katan
+  </a>
+
+  {/* Desktop links — hidden under 720px via global.css. */}
+  <div
+    class="mesh-nav-links"
+    style={{ display: 'flex', gap: '28px', alignItems: 'center' }}
+  >
+    {NAV.map((n) => (
+      <a
+        href={n.href}
+        style={{
+          color: C.ink,
+          textDecoration: 'none',
+          fontSize: '14px',
+          opacity: current === n.id ? 1 : 0.65,
+          fontWeight: current === n.id ? 600 : 400,
+        }}
+      >{n.label}</a>
+    ))}
+    {/* "Work with me" CTA pill hidden for now — see TODO.md.
+        Visitors still reach contact via the home page Contact section. */}
+  </div>
+
+  {/* Hamburger button — shown only under 720px. */}
+  <button
+    type="button"
+    class="mesh-nav-toggle"
+    aria-label="Open menu"
+    aria-controls="mesh-mobile-nav"
+    aria-expanded="false"
+    style={{
+      display: 'none',
+      width: '42px',
+      height: '42px',
+      padding: 0,
+      border: 'none',
+      background: 'transparent',
+      color: C.ink,
+      cursor: 'pointer',
+      borderRadius: '999px',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <svg
+      class="mesh-nav-icon-open"
+      width="22" height="22" viewBox="0 0 22 22"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <line x1="3" y1="7" x2="19" y2="7" />
+      <line x1="3" y1="11" x2="19" y2="11" />
+      <line x1="3" y1="15" x2="19" y2="15" />
+    </svg>
+    <svg
+      class="mesh-nav-icon-close"
+      width="22" height="22" viewBox="0 0 22 22"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      style={{ display: 'none' }}
+      aria-hidden="true"
+    >
+      <line x1="5" y1="5" x2="17" y2="17" />
+      <line x1="17" y1="5" x2="5" y2="17" />
+    </svg>
+  </button>
+</nav>
+
+{/* Mobile drawer — sits below the sticky nav, frosted, stacked links.
+    Hidden by default; .mesh-mobile-open on <body> reveals it. */}
+<div
+  id="mesh-mobile-nav"
+  class="mesh-mobile-nav"
+  style={{
+    display: 'none',
+    /* fixed (not sticky) so opening the drawer overlays the hero
+     * instead of pushing the page content down. left/right anchored
+     * so it spans the full viewport width regardless of scroll. */
+    position: 'fixed',
+    top: '60px',
+    left: 0,
+    right: 0,
+    zIndex: 29,
+    background: `${C.white}f2`,
+    backdropFilter: 'blur(18px) saturate(150%)',
+    WebkitBackdropFilter: 'blur(18px) saturate(150%)',
+    borderBottom: `1px solid ${C.ink}10`,
+    padding: '12px 22px 20px',
+    fontFamily: fontUI,
+  }}
+>
+  {NAV.map((n) => (
+    <a
+      href={n.href}
+      class="mesh-mobile-link"
+      data-active={current === n.id ? 'true' : 'false'}
+      style={{
+        display: 'block',
+        padding: '14px 4px',
+        color: C.ink,
+        textDecoration: 'none',
+        fontSize: '17px',
+        fontWeight: current === n.id ? 600 : 400,
+        opacity: current === n.id ? 1 : 0.75,
+        borderBottom: `1px dashed ${C.ink}18`,
+      }}
+    >{n.label}</a>
+  ))}
+  {/* Mobile drawer "Work with me" CTA also hidden — see TODO.md. */}
+</div>
+
+<script is:inline>
+  (function () {
+    const btn = document.querySelector('.mesh-nav-toggle');
+    const drawer = document.getElementById('mesh-mobile-nav');
+    if (!btn || !drawer) return;
+
+    const iconOpen = btn.querySelector('.mesh-nav-icon-open');
+    const iconClose = btn.querySelector('.mesh-nav-icon-close');
+
+    function setOpen(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      drawer.style.display = open ? 'block' : 'none';
+      if (iconOpen) iconOpen.style.display = open ? 'none' : 'block';
+      if (iconClose) iconClose.style.display = open ? 'block' : 'none';
+      document.body.classList.toggle('mesh-mobile-open', open);
+    }
+
+    btn.addEventListener('click', function () {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      setOpen(open);
+    });
+
+    // Close drawer when a link inside it is tapped (so same-page anchors
+    // don't leave the menu hanging open).
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        setOpen(false);
+      });
+    });
+
+    // Close drawer if the viewport grows past the breakpoint.
+    const mq = window.matchMedia('(min-width: 721px)');
+    mq.addEventListener('change', function (e) {
+      if (e.matches) setOpen(false);
+    });
+  })();
+</script>

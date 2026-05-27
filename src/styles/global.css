@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens as CSS variables — for use outside Tailwind utility classes
+ * (e.g. inline gradient-color computations in the meshBg helper).
+ * Mirrors the C object in the original design handoff. */
+:root {
+  /* Global mesh scale — design tokens are sized for a 1280px artboard;
+   * dial this down to soften the visual weight on production viewports.
+   * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
+   * radii, shadows — proportionally). Tune in one place. */
+  --mesh-scale: 0.9;
+  --c-lavender: #dcd0ff;
+  --c-lilac: #cbb8ff;
+  --c-mint: #cdf2d8;
+  --c-sky: #cde4ff;
+  --c-peach: #ffd9c2;
+  --c-butter: #fff2b3;
+  --c-coral: #ff8a7a;
+  --c-plum: #9a7be6;
+  --c-teal: #5ec5c0;
+  --c-rose: #f4a3b8;
+  --c-ink: #221a3a;
+  --c-ink-soft: #4a3f6e;
+  --c-paper: #fbf7ee;
+  --c-paper2: #f3edf9;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    background: var(--c-paper);
+  }
+  body {
+    background: var(--c-paper);
+    color: var(--c-ink);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    /* Scale the whole document proportionally. `zoom` is a real layout
+     * effect (not a transform), so sticky positioning, click targets, and
+     * scroll all behave correctly. Modern WebKit/Chromium/Firefox 126+. */
+    zoom: var(--mesh-scale);
+    /* Prevent horizontal scroll from the full-bleed image trick below. */
+    overflow-x: hidden;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* ─── Mesh responsive shim ───
+ *
+ * The page components use inline styles for everything — sizing, padding,
+ * grid columns. Inline style wins specificity, so we have to use !important
+ * to override at narrow widths.
+ *
+ * The design canvas uses a CSS container query (@container meshpage) because
+ * each page renders inside a fixed-width artboard. In production we use a
+ * normal viewport media query at the same 720px breakpoint.
+ */
+@media (max-width: 720px) {
+  .mesh-root section {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+  .mesh-root h1 {
+    font-size: 48px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.035em !important;
+  }
+  .mesh-root h2 {
+    font-size: 32px !important;
+    line-height: 1.08 !important;
+  }
+  .mesh-root h3 { font-size: 22px !important; }
+  .mesh-root p  { font-size: 16px !important; }
+  .mesh-root blockquote { font-size: 22px !important; }
+
+  /* Collapse every multi-column grid to one column */
+  .mesh-root [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  /* But preserve tight icon/bullet rows where the first column is a small
+     fixed width (more specific selectors with the same specificity win).
+     Note: Astro renders inline styles without a space after the colon
+     (`grid-template-columns:14px 1fr`), so we match by the column-spec
+     substring instead of the property prefix — robust to either format. */
+  .mesh-root [style*="14px 1fr"] { grid-template-columns: 14px 1fr !important; gap: 8px !important; }
+  .mesh-root [style*="22px 1fr"] { grid-template-columns: 22px 1fr !important; gap: 10px !important; }
+  .mesh-root [style*="24px 1fr"] { grid-template-columns: 24px 1fr !important; gap: 10px !important; }
+  .mesh-root [style*="32px 1fr"] { grid-template-columns: 32px 1fr !important; gap: 10px !important; }
+  .mesh-root [style*="36px 1fr"] { grid-template-columns: 36px 1fr !important; gap: 12px !important; }
+  .mesh-root [style*="44px 1fr"] { grid-template-columns: 44px 1fr !important; gap: 12px !important; }
+  .mesh-root [style*="88px 1fr"] { grid-template-columns: 88px 1fr !important; gap: 14px !important; }
+  .mesh-root [style*="92px 1fr"] { grid-template-columns: 92px 1fr !important; gap: 12px !important; }
+  /* Allow specific grids to stay 2-up if explicitly marked */
+  .mesh-root .mesh-keep-2col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Nav: collapse the desktop link row, expose the hamburger. */
+  .mesh-nav-links { display: none !important; }
+  .mesh-nav { padding: 12px 22px !important; }
+  .mesh-nav-toggle { display: inline-flex !important; }
+  .mesh-nav-toggle:hover { background: rgba(34, 26, 58, 0.06); }
+  .mesh-mobile-link:active { background: rgba(34, 26, 58, 0.04); }
+
+  /* Hide the tilted "— hi." caveat */
+  .mesh-root .mesh-photo-caption { display: none !important; }
+
+  /* Hide the small mesh thumb in post tiles when the tile collapses */
+  .mesh-post-tile-thumb { display: none !important; }
+  .mesh-root [style*="88px 1fr"]:has(.mesh-post-tile-thumb) {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Do Now card: shell drops its 64px horizontal padding on mobile so
+     the card spans nearly the full viewport; inner padding shrinks too
+     so big-glyph copy doesn't crowd the edges. */
+  .mesh-root .mesh-donow-shell {
+    padding: 0 12px !important;
+  }
+  .mesh-root .mesh-donow-card {
+    padding: 32px 22px 28px !important;
+  }
+
+  /* Contact form action row stacks vertically */
+  .mesh-root .mesh-form-actions {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Footer rows stack */
+  .mesh-root .mesh-footer { padding: 32px 22px 28px !important; }
+  .mesh-root .mesh-footer-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}

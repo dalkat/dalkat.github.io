@@ -1,0 +1,83 @@
+---
+/**
+ * Row of stylized company wordmarks (no copyrighted glyphs).
+ * variant="inline" sits flush at the end of an About paragraph block.
+ * variant="band" is a pill-shaped strip used on /strategy.
+ */
+import { C, fontUI } from '@/lib/mesh';
+import type { CompanyWordmark } from '@/data/home';
+
+interface Props {
+  variant?: 'inline' | 'band';
+  label?: string;
+  tint?: string;
+  companies: CompanyWordmark[];
+}
+
+const { variant = 'inline', label, tint = C.ink, companies } = Astro.props;
+---
+{variant === 'band' ? (
+  <div
+    class="mesh-logos-band"
+    style={{
+      marginTop: '24px',
+      padding: '22px 28px',
+      background: C.white,
+      borderRadius: '22px',
+      border: `1px solid ${C.ink}10`,
+      boxShadow: `0 14px 30px -22px ${C.ink}44`,
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      gap: '20px 38px',
+    }}
+  >
+    {label && (
+      <div
+        style={{
+          fontFamily: fontUI,
+          fontSize: '11px',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          color: C.inkSoft,
+          fontWeight: 700,
+          borderRight: `1px solid ${C.ink}15`,
+          paddingRight: '24px',
+          marginRight: '4px',
+        }}
+      >{label}</div>
+    )}
+    {companies.map((c) => (
+      <span style={{ color: tint, opacity: 0.78, ...c.style }}>{c.name}</span>
+    ))}
+  </div>
+) : (
+  <div style={{ marginTop: '36px' }}>
+    {label && (
+      <div
+        style={{
+          fontFamily: fontUI,
+          fontSize: '11px',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          color: C.inkSoft,
+          fontWeight: 700,
+          marginBottom: '18px',
+        }}
+      >{label}</div>
+    )}
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '22px 44px',
+      }}
+    >
+      {companies.map((c) => (
+        <span style={{ color: tint, opacity: 0.7, ...c.style }}>{c.name}</span>
+      ))}
+    </div>
+  </div>
+)}

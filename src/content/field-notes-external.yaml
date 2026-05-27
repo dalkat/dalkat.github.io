@@ -1,0 +1,96 @@
+# Externally hosted Field Notes (Substack, Medium, eHandbook, YouTube, etc.)
+# These do not generate Jekyll pages on the site — the archive links straight out.
+# Hosted pieces live in the _for_you/ collection instead.
+#
+# Each entry must include an `id` (slug) — Astro's file() loader uses it.
+
+- id: arch-atmosphere
+  title: "03 Atmosphere: Getting the vibes right"
+  type: framework
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2026
+  read_time: 10            # TODO: confirm
+  blurb: "The emotional baseline of product experience — and how it quietly shapes whether users return."
+  url: https://daliakatan.substack.com/p/arch-atmosphere
+
+- id: atmosphere-case-study-hopper
+  title: "04 How Atmosphere makes or breaks user trust and retention"
+  type: essay
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2026
+  read_time: 12            # TODO: confirm
+  blurb: "Atmosphere in action: Hopper and the Las Vegas effect."
+  url: https://daliakatan.substack.com/p/04-atmosphere-case-study-hopper-how-atmosphere-makes-or-breaks-trust-and-retention
+
+- id: introducing-arch
+  title: "Introducing ARCH: Building Products People Want to Live In"
+  type: framework
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2023
+  read_time: 10
+  blurb: "Every product is a space people inhabit. To build truly great products, we must think like architects."
+  url: https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in
+
+- id: designing-an-app-like-a-home
+  title: "Designing an App Like You Would a Home"
+  type: essay
+  theme: entrepreneurship-product
+  source: Substack
+  year: 2023
+  read_time: 8
+  blurb: "A walk-through of the ARCH framework applied to consumer mobile — rooms, thresholds, light."
+  url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
+
+- id: why-first-gen-founders
+  title: "Why First-Gen Founders Need to Learn to Spend"
+  type: essay
+  theme: entrepreneurship-product
+  source: Medium
+  year: 2022
+  read_time: 8
+  blurb: "“Be scrappy” is the wrong advice for first-gen and minority founders — and one of the hardest things I had to unlearn."
+  url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
+
+- id: inclusive-workplace
+  title: "Unlocking the Benefits of Inclusive Workplace Practices"
+  type: essay
+  theme: workplace-teambuilding
+  source: Medium
+  year: 2021
+  read_time: 8
+  blurb: "Diverse teams, properly managed, are 35% more likely to outperform — here are nine steps to actually getting there."
+  url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
+
+- id: four-life-lessons
+  title: "4 Life Lessons From a 10-Year-Old"
+  type: essay
+  theme: personal-essays
+  source: Medium
+  year: 2021
+  read_time: 5
+  blurb: "A return to childhood wisdom — what I learned watching my niece spend a week noticing everything."
+  url: https://medium.com/@dkatan77/4-life-lessons-from-a-10-year-old-401503c7eb32
+
+# ── My grandmother's cooking show on YouTube ───────────────────────────
+- id: bukharian-plov
+  title: "Bukharian Plov"
+  type: video
+  theme: food
+  source: YouTube
+  year: 2016
+  read_time: 10
+  blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table — layered rice, lamb, carrots, the long patient way."
+  url: https://www.youtube.com/watch?v=-_U_T2r8mBs
+
+- id: stuffed-vegetables
+  title: "Stuffed Vegetables"
+  type: video
+  theme: food
+  source: YouTube
+  year: 2016
+  read_time: 10
+  blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice — a long-afternoon dish that turns kitchen labor into a family ritual."
+  url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s

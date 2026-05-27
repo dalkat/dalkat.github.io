@@ -1,0 +1,63 @@
+---
+/**
+ * Mesh section header: kicker pill (white, accent-color dot + text) +
+ * Fraunces 60 H2 below. Used at the top of every numbered section.
+ */
+import { C, fontDisplay, fontUI } from '@/lib/mesh';
+
+interface Props {
+  /** Section number (1-based). Renders as "01 · …" if provided. */
+  n?: number;
+  /** Eyebrow text after the number, e.g. "About". */
+  sub: string;
+  /** H2 title — string or rich HTML allowed via slot. */
+  title?: string;
+  /** Accent color hex (default plum). */
+  accent?: string;
+}
+
+const { n, sub, title, accent = C.plum } = Astro.props;
+---
+<div style={{ marginBottom: '36px' }}>
+  <div
+    class="mesh-kicker"
+    style={{
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '6px 14px',
+      background: C.white,
+      borderRadius: '999px',
+      fontFamily: fontUI,
+      fontSize: '12px',
+      fontWeight: 700,
+      letterSpacing: '0.12em',
+      textTransform: 'uppercase',
+      color: accent,
+      boxShadow: `0 8px 18px -12px ${C.ink}33`,
+    }}
+  >
+    <span
+      style={{
+        width: '6px',
+        height: '6px',
+        borderRadius: '50%',
+        background: accent,
+      }}
+    ></span>
+    {n != null && <>{String(n).padStart(2, '0')} · </>}{sub}
+  </div>
+  <h2
+    style={{
+      fontFamily: fontDisplay,
+      fontWeight: 400,
+      fontSize: '60px',
+      margin: '14px 0 0',
+      letterSpacing: '-0.03em',
+      color: C.ink,
+      textWrap: 'balance',
+    }}
+  >
+    {title ? <Fragment set:html={title} /> : <slot />}
+  </h2>
+</div>
