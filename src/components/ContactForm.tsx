@@ -10,11 +10,17 @@ interface Props {
  * Mesh contact form. Six fields, mesh-tinted submit button. Success state
  * swaps the form for a card saying "Got it — talk soon."
  *
- * Submit handler is currently a no-op stub (sets `sent` to true). Wire the
- * actual backend in Phase 3/launch.
+ * Submit posts to Formspree (https://formspree.io). The form ID comes
+ * from PUBLIC_FORMSPREE_ID at build time. If it's unset (dev without an
+ * env file), the form falls back to a console-warn no-op so the page
+ * still functions.
  */
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID as string | undefined;
+
 export default function ContactForm({ accent = C.coral, compact = false }: Props) {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const fieldStyle: CSSProperties = {
     width: '100%',
@@ -80,10 +86,45 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     );
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: wire to backend (Formspree /f/<id> or Vercel API route) in Phase 3/launch.
-    setSent(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    if (!FORMSPREE_ID) {
+      // Local dev without an env file — keep the original no-op so the
+      // success state is reachable. Production builds will always have
+      // the env var set via Vercel.
+      if (typeof window !== 'undefined') {
+        console.warn(
+          '[ContactForm] PUBLIC_FORMSPREE_ID not set — submitting is a no-op.',
+        );
+      }
+      setSent(true);
+      return;
+    }
+
+    setError(null);
+    setSubmitting(true);
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setSent(true);
+        form.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        const msg = data?.errors?.[0]?.message || data?.error || 'Something went wrong.';
+        setError(`${msg} Please try again or email Dalia directly.`);
+      }
+    } catch {
+      setError('Network error. Please try again in a moment.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -157,13 +198,28 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
           gap: 16,
         }}
       >
-        {/* "↳ I take on one new engagement per quarter, and answer every
-            note within a week." hidden for now — see TODO.md. Empty
-            spacer keeps the submit button right-aligned via the parent's
-            justify-content: space-between. */}
-        <span />
+        {/* Left slot: inline error message when the Formspree POST
+            fails. Otherwise empty so the submit stays right-aligned
+            via the parent's justify-content: space-between.
+            (The "↳ engagement per quarter" copy that used to live
+            here is hidden for now — see TODO.md.) */}
+        {error ? (
+          <div
+            role="alert"
+            style={{
+              fontFamily: fontUI,
+              fontSize: 13,
+              color: '#a8552a',
+              maxWidth: 360,
+              lineHeight: 1.4,
+            }}
+          >{error}</div>
+        ) : (
+          <span />
+        )}
         <button
           type="submit"
+          disabled={submitting}
           style={{
             padding: '14px 28px',
             background: meshBg({
@@ -177,12 +233,13 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
             fontSize: 14,
             fontWeight: 700,
             letterSpacing: '0.04em',
-            cursor: 'pointer',
+            cursor: submitting ? 'wait' : 'pointer',
             boxShadow: `0 18px 32px -16px ${C.ink}88`,
             whiteSpace: 'nowrap',
+            opacity: submitting ? 0.7 : 1,
           }}
         >
-          Send the note →
+          {submitting ? 'Sending…' : 'Send the note →'}
         </button>
       </div>
     </form>

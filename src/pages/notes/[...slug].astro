@@ -25,10 +25,16 @@ export async function getStaticPaths() {
   const entries = await getCollection('for-you', ({ data }) => !data.draft);
   return entries
     .filter((entry) => !SKIP_IDS.has(entry.id))
-    .map((entry) => ({
-      params: { slug: SLUG_OVERRIDES[entry.id] ?? entry.id },
-      props: { entry },
-    }));
+    .map((entry) => {
+      const slug = SLUG_OVERRIDES[entry.id] ?? entry.id;
+      // Pass the URL slug through to the layout so breadcrumbs reflect
+      // the actual URL (e.g. 'trailmix') rather than the file id (e.g.
+      // 'trail-mix-method').
+      return {
+        params: { slug },
+        props: { entry, slug },
+      };
+    });
 }
 
 const TYPE_LABELS: Record<string, string> = {
@@ -51,7 +57,7 @@ const THEME_LABELS: Record<string, string> = {
   food: 'Food',
 };
 
-const { entry } = Astro.props;
+const { entry, slug } = Astro.props;
 const { Content } = await render(entry);
 
 const typeLabel = TYPE_LABELS[entry.data.type] ?? entry.data.type;
@@ -134,7 +140,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     tagline={recipeCfg.tagline}
     blurb={entry.data.blurb}
     themeLabel={themeLabel}
-    slug={entry.id}
+    slug={slug}
     year={entry.data.year}
     source={entry.data.source}
     stats={recipeCfg.stats}
@@ -150,7 +156,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     source={entry.data.source}
     year={entry.data.year}
     read_time={entry.data.read_time ?? null}
-    slug={entry.id}
+    slug={slug}
     externalUrl={entry.data.external_url}
     tint={tint}
   >
@@ -165,7 +171,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     source={entry.data.source}
     year={entry.data.year}
     read_time={entry.data.read_time ?? null}
-    slug={entry.id}
+    slug={slug}
     tint={tint}
     highlightReel={entry.data.highlight_reel}
     highlightReelTitle={entry.data.highlight_reel ? 'Highlight reel' : undefined}

@@ -69,18 +69,8 @@ const { current = 'home' } = Astro.props;
         }}
       >{n.label}</a>
     ))}
-    <a
-      href="/#contact"
-      style={{
-        padding: '8px 16px',
-        background: C.ink,
-        color: C.paper,
-        borderRadius: '999px',
-        fontSize: '13px',
-        fontWeight: 600,
-        textDecoration: 'none',
-      }}
-    >Work with me</a>
+    {/* "Work with me" CTA pill hidden for now — see TODO.md.
+        Visitors still reach contact via the home page Contact section. */}
   </div>
 
   {/* Hamburger button — shown only under 720px. */}
@@ -162,21 +152,7 @@ const { current = 'home' } = Astro.props;
       }}
     >{n.label}</a>
   ))}
-  <a
-    href="/#contact"
-    class="mesh-mobile-link"
-    style={{
-      display: 'inline-block',
-      marginTop: '16px',
-      padding: '12px 22px',
-      background: C.ink,
-      color: C.paper,
-      borderRadius: '999px',
-      fontSize: '14px',
-      fontWeight: 600,
-      textDecoration: 'none',
-    }}
-  >Work with me</a>
+  {/* Mobile drawer "Work with me" CTA also hidden — see TODO.md. */}
 </div>
 
 <script is:inline>

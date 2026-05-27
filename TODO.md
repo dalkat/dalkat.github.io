@@ -49,6 +49,17 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Nav — "Work with me" CTA pill (hidden 2026-05-27)
+
+The dark "Work with me" pill on the right of the desktop nav (and
+its mobile-drawer counterpart) is hidden. Visitors still reach the
+home Contact section via the bottom of pages and (after launch)
+direct nav.
+
+Restore: in `src/components/PageNav.astro`, bring back both
+`<a href="/#contact">Work with me</a>` blocks from git history
+(commented in place where they used to live).
+
 ## Nav — DK gradient mark (hidden 2026-05-27)
 
 The 26px circular DK gradient brand mark in `src/components/PageNav.astro`
