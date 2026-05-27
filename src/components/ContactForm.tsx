@@ -102,7 +102,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     >
       <div>
         <label style={labelStyle}>Your name</label>
-        <input type="text" name="name" placeholder="Future pen pal" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="text" name="name" placeholder="Hi, I'm…" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Email</label>
