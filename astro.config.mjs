@@ -10,7 +10,10 @@ export default defineConfig({
   site: 'https://daliakatan.com',
   output: 'static',
   adapter: vercel({
-    webAnalytics: { enabled: false },
+    // Privacy-friendly page-view + Core Web Vitals tracking via Vercel
+    // Web Analytics. Free tier covers up to 2.5k events/mo. The adapter
+    // injects the script and ingestion endpoint automatically.
+    webAnalytics: { enabled: true },
   }),
   integrations: [
     react(),
