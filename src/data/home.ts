@@ -6,7 +6,7 @@ import { C, fontDisplay, fontUI } from '@/lib/mesh';
 
 /** Long bio — two paragraphs in the About section. */
 export const BIO_LONG: string[] = [
-  "I'm a product leader who's spent the last 15 years between strategy consulting (independently and with Deloitte/Doblin) and tech (Stripe, Presently, and earlier startups) — most recently leading mobile product at Stripe.",
+  "I'm a product leader who's spent the last 15 years between strategy consulting (independent practice, Deloitte/Doblin) and tech — most recently leading mobile product at Stripe, and before that founding Presently, a startup making group payments easier.",
   "Now I work as a fractional CPO and advisor for early-stage teams, angel-invest in founders I believe in, and write about the intersection of product, the startup journey, and what it means to build a life around what you're actually curious about.",
 ];
 
