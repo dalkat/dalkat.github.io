@@ -14,7 +14,7 @@ interface Props {
  * is just a public URL routed to Dalia's email — no secret, no env var
  * required. Swap the email below if the destination ever changes.
  */
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/dkatan.77@gmail.com';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgoqrvoj';
 
 export default function ContactForm({ accent = C.coral, compact = false }: Props) {
   const [sent, setSent] = useState(false);
