@@ -49,6 +49,16 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Nav — DK gradient mark (hidden 2026-05-27)
+
+The 26px circular DK gradient brand mark in `src/components/PageNav.astro`
+is hidden — the nav brand is now just the wordmark "Dalia Katan."
+Restore by reinstating the `<span style={{ width: 26px, height: 26px,
+borderRadius: '50%', background: linear-gradient(...) }}>DK</span>`
+block from git history. (Favicon, apple-touch-icon, and the OG-card
+DK badge still use the gradient mark — only the nav instance is
+hidden.)
+
 ## ContactForm — "engagement per quarter" line (hidden 2026-05-27)
 
 The italic Fraunces line in the contact form's action row:
