@@ -20,3 +20,4 @@ yarn-error.log*
 
 # Local Claude tooling config
 .claude/
+.design-ref/
