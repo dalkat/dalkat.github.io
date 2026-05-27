@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
 import type { Testimonial } from '@/data/home';
 
@@ -14,10 +14,9 @@ interface Props {
  *   - drag horizontally (mouse or touch) to swipe between quotes
  *     (>= 40px horizontal travel commits the swipe, pauses autoplay)
  *
- * Drag state is `useState` (not `useRef`) so each touchmove re-renders
- * the card and translates with the finger — earlier the ref-based
- * version worked on desktop but sometimes failed to register the first
- * touchmove on iOS Safari.
+ * Drag tracking is split between refs (instant, no re-render lag — used
+ * by the move/end checks) and state (drives the visual transform so
+ * each pointermove paints the card following the cursor/finger).
  */
 export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Props) {
   const [i, setI] = useState(0);
@@ -25,9 +24,10 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
   const [hovering, setHovering] = useState(false);
   const [phase, setPhase] = useState<'in' | 'out'>('in');
   const [direction, setDirection] = useState(1);
-  const [dragStartX, setDragStartX] = useState<number | null>(null);
+  const startXRef = useRef<number | null>(null);
+  const lastOffsetRef = useRef(0);
   const [dragOffset, setDragOffset] = useState(0);
-  const dragging = dragStartX != null;
+  const [dragging, setDragging] = useState(false);
 
   const paused = pausedByClick || hovering || dragging || phase === 'out';
 
@@ -55,19 +55,24 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
   };
 
   const onDragStart = (clientX: number) => {
-    setDragStartX(clientX);
+    startXRef.current = clientX;
+    lastOffsetRef.current = 0;
     setDragOffset(0);
+    setDragging(true);
   };
   const onDragMove = (clientX: number) => {
-    if (dragStartX == null) return;
-    setDragOffset(clientX - dragStartX);
+    if (startXRef.current === null) return;
+    const off = clientX - startXRef.current;
+    lastOffsetRef.current = off;
+    setDragOffset(off);
   };
   const onDragEnd = () => {
-    if (dragStartX == null) return;
-    const delta = dragOffset;
-    setDragStartX(null);
+    if (startXRef.current === null) return;
+    const delta = lastOffsetRef.current;
+    startXRef.current = null;
+    lastOffsetRef.current = 0;
     setDragOffset(0);
-    // Slightly looser threshold (40 vs 50) for mobile-finger comfort.
+    setDragging(false);
     if (Math.abs(delta) >= 40) {
       goto(delta > 0 ? i - 1 : i + 1);
     }

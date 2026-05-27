@@ -34,10 +34,15 @@ const THEME_LABELS: Record<string, string> = {
 const tlabel = (t: string) => TYPE_LABELS[t] ?? t;
 const thlabel = (t: string) => THEME_LABELS[t] ?? t;
 
-// Hide do-now-generator from the archive entirely — it's a Side Quest
-// (lives at /quests/do-now), not a Field Note.
+// Hide a couple of entries from the archive (their pages still build
+// via the [...slug] route, so the URLs remain valid — they just don't
+// surface in the browseable list).
+const HIDE_FROM_ARCHIVE = new Set([
+  'do-now-generator',    // is a Side Quest, not a Field Note
+  'baguette-recipe',     // archived per Dalia
+]);
 const hosted = (await getCollection('for-you', ({ data }) => !data.draft))
-  .filter((entry) => entry.id !== 'do-now-generator');
+  .filter((entry) => !HIDE_FROM_ARCHIVE.has(entry.id));
 const external = await getCollection('for-you-external');
 
 const articles: ArchiveItem[] = [

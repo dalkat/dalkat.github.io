@@ -10,7 +10,7 @@
    * dial this down to soften the visual weight on production viewports.
    * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
    * radii, shadows — proportionally). Tune in one place. */
-  --mesh-scale: 0.9;
+  --mesh-scale: 0.94;
   --c-lavender: #dcd0ff;
   --c-lilac: #cbb8ff;
   --c-mint: #cdf2d8;

@@ -141,6 +141,19 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
         gap: 18,
       }}
     >
+      {/* Honeypot — bots fill this; humans never see it. Formspree
+          drops any submission where `_gotcha` is non-empty. Lets us
+          disable Formspree's reCAPTCHA (which would otherwise block
+          AJAX submissions in their free tier) without flooding the
+          inbox. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+      />
       <div>
         <label style={labelStyle}>Your name</label>
         <input type="text" name="name" placeholder="Hi, I'm…" required style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />

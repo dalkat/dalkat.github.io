@@ -65,7 +65,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Panel',              title: 'Women in Marketing',                                     where: 'Princeton University',                                role: 'Moderator',                 year: 2015 },
       { kind: 'Conference',         title: 'Princeton Marketing Conference',                         where: 'Princeton University',                                role: 'Organizer & moderator',   year: 2015 },
       { kind: 'Workshop',           title: 'An Algorithm for Growth',                                where: 'Princeton Social Entrepreneurship Conference',         role: 'Speaker',                   year: 2015 },
-      { kind: 'Textbook',           title: "Entrepreneurial Finance: Uber's Path to Success",       where: 'MIT Press',                                            role: 'Author',                    year: 2014 },
+      { kind: 'Textbook',           title: "Entrepreneurial Finance: Uber's Path to Success",       where: 'MIT Press',                                            role: 'Co-author',                 year: 2014 },
     ],
   },
   {
