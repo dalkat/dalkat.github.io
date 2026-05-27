@@ -129,21 +129,22 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     >
       <div>
         <label style={labelStyle}>Your name</label>
-        <input type="text" name="name" placeholder="Hi, I'm…" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="text" name="name" placeholder="Hi, I'm…" required style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Email</label>
-        <input type="email" name="email" placeholder="you@somewhere.com" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="email" name="email" placeholder="you@somewhere.com" required style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Company or project</label>
-        <input type="text" name="company" placeholder="Where you spend your time" style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
+        <input type="text" name="company" placeholder="Where you spend your time" required style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
       </div>
       <div>
         <label style={labelStyle}>Topic</label>
         <select
           name="kind"
           defaultValue=""
+          required
           onFocus={onFocus}
           onBlur={onBlur}
           style={{
@@ -168,6 +169,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
           rows={5}
           name="message"
           placeholder="Anything you want to share — half-formed is fine."
+          required
           style={{ ...fieldStyle, minHeight: 130 }}
           onFocus={onFocus}
           onBlur={onBlur}
