@@ -196,5 +196,17 @@ const { current = 'home' } = Astro.props;
     mq.addEventListener('change', function (e) {
       if (e.matches) setOpen(false);
     });
+
+    // Tap/click outside the drawer (and outside the hamburger button)
+    // closes the drawer. Listens at the document level on both
+    // pointerdown (covers touch + click) so the close fires on the
+    // same gesture the user uses to interact with the page.
+    document.addEventListener('pointerdown', function (e) {
+      if (btn.getAttribute('aria-expanded') !== 'true') return;
+      const target = e.target;
+      if (!(target instanceof Node)) return;
+      if (drawer.contains(target) || btn.contains(target)) return;
+      setOpen(false);
+    });
   })();
 </script>
