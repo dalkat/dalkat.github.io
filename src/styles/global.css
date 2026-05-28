@@ -82,6 +82,9 @@
   .mesh-root h3 { font-size: 22px !important; }
   .mesh-root p  { font-size: 16px !important; }
   .mesh-root blockquote { font-size: 22px !important; }
+  /* Praise-carousel quote is smaller still on mobile so a long
+     testimonial doesn't blow the card up vertically. */
+  .mesh-root .mesh-praise-quote { font-size: 18px !important; line-height: 1.45 !important; }
 
   /* Collapse every multi-column grid to one column */
   .mesh-root [style*="grid-template-columns"] {
@@ -106,9 +109,17 @@
     grid-template-columns: 1fr 1fr !important;
   }
 
-  /* Nav: collapse the desktop link row, expose the hamburger. */
+  /* Nav: collapse the desktop link row, expose the hamburger.
+     Keep env(safe-area-inset-top) on padding-top so the nav band
+     extends behind the iOS URL bar — otherwise the !important
+     padding shorthand below would zero out the safe-area inset. */
   .mesh-nav-links { display: none !important; }
-  .mesh-nav { padding: 12px 22px !important; }
+  .mesh-nav {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 12px !important;
+    padding-top: calc(12px + env(safe-area-inset-top, 0px)) !important;
+  }
   .mesh-nav-toggle { display: inline-flex !important; }
   .mesh-nav-toggle:hover { background: rgba(34, 26, 58, 0.06); }
   .mesh-mobile-link:active { background: rgba(34, 26, 58, 0.04); }

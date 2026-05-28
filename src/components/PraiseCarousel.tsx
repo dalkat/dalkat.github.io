@@ -157,6 +157,7 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
         }}
       >
         <blockquote
+          className="mesh-praise-quote"
           style={{
             margin: 0,
             fontFamily: fontDisplay,

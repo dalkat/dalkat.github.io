@@ -30,6 +30,17 @@ comment right where the pill used to live. Copy the original markup
 back from git history (commit message: "Hide hero kicker pills on
 root pages").
 
+## Do Now prompts (deferred 2026-05-28)
+
+The activity prompts pulled by /quests/do-now are still the verbatim
+list carried over from the 2019 Jekyll generator
+(`src/data/do-now-prompts.ts`). Some feel dated or off-voice for the
+current brand. Worth a pass to:
+
+  - cut prompts that no longer resonate
+  - rewrite the ones Dalia keeps in the current voice
+  - maybe add a few new ones that match her present interests
+
 ## Mobile polish (deferred 2026-05-27)
 
 Two visual issues to revisit:
