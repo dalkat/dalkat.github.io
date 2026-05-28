@@ -10,7 +10,7 @@
    * dial this down to soften the visual weight on production viewports.
    * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
    * radii, shadows — proportionally). Tune in one place. */
-  --mesh-scale: 0.94;
+  --mesh-scale: 0.85;
   --c-lavender: #dcd0ff;
   --c-lilac: #cbb8ff;
   --c-mint: #cdf2d8;
@@ -124,12 +124,19 @@
 
   /* Do Now card: shell drops its 64px horizontal padding on mobile so
      the card spans nearly the full viewport; inner padding shrinks too
-     so big-glyph copy doesn't crowd the edges. */
+     so big-glyph copy doesn't crowd the edges. Prompt copy steps down
+     once more for the narrower frame. */
   .mesh-root .mesh-donow-shell {
     padding: 0 12px !important;
   }
   .mesh-root .mesh-donow-card {
-    padding: 32px 22px 28px !important;
+    padding: 44px 22px 28px !important;
+  }
+  .mesh-root .mesh-donow-prompt {
+    font-size: 20px !important;
+  }
+  .mesh-root .mesh-donow-prompt-empty {
+    font-size: 17px !important;
   }
 
   /* Contact form action row stacks vertically */

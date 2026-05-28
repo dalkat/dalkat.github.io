@@ -142,9 +142,11 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
         {String(i + 1).padStart(2, '0')} of {String(testimonials.length).padStart(2, '0')}
       </div>
 
-      {/* Sliding/fading content block — wraps the quote + author footer
-          so they animate together. Drag offset and phase-driven translate
-          are applied here. */}
+      {/* Sliding/fading content block — wraps the quote + author so they
+          animate together. Drag offset + phase-driven translate apply
+          here. The page-indicator dots sit OUTSIDE this block (below)
+          so they stay static during drag — readers track progress
+          against the fixed indicator while the quote scrolls. */}
       <div
         style={{
           opacity: phase === 'out' ? 0 : 1,
@@ -168,57 +170,58 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
         >
           "{t.quote}"
         </blockquote>
-        <div
-          style={{
-            marginTop: 24,
-            paddingTop: 18,
-            borderTop: `1px solid ${C.ink}10`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <div>
-            <div
-              style={{
-                fontFamily: fontDisplay,
-                fontStyle: 'italic',
-                fontSize: 18,
-                color: C.plum,
-              }}
-            >
-              {t.author}
-            </div>
-            <div style={{ fontSize: 13, color: C.inkSoft, fontFamily: fontUI }}>{t.role}</div>
+        <div style={{ marginTop: 24, paddingTop: 18, borderTop: `1px solid ${C.ink}10` }}>
+          <div
+            style={{
+              fontFamily: fontDisplay,
+              fontStyle: 'italic',
+              fontSize: 18,
+              color: C.plum,
+            }}
+          >
+            {t.author}
           </div>
-          <div style={{ display: 'flex', gap: 8 }}>
-            {testimonials.map((_, idx) => (
-              <button
-                key={idx}
-                aria-label={`Go to testimonial ${idx + 1}`}
-                onClick={(e) => {
-                  // Click events fire after mouseup, so stop the click from
-                  // propagating into the drag handler that just fired.
-                  e.stopPropagation();
-                  goto(idx);
-                }}
-                style={{
-                  width: idx === i ? 32 : 10,
-                  height: 10,
-                  padding: 0,
-                  border: 'none',
-                  background:
-                    idx === i
-                      ? `linear-gradient(90deg, ${C.coral}, ${C.plum})`
-                      : `${C.ink}22`,
-                  borderRadius: 5,
-                  cursor: 'pointer',
-                  transition: 'width .3s, background .3s',
-                }}
-              />
-            ))}
-          </div>
+          <div style={{ fontSize: 13, color: C.inkSoft, fontFamily: fontUI }}>{t.role}</div>
         </div>
+      </div>
+
+      {/* Static page indicator — outside the drag-transform block so it
+          doesn't slide with the quote. Sits at the bottom-right of the
+          card. */}
+      <div
+        style={{
+          position: 'absolute',
+          right: 52,
+          bottom: 40,
+          display: 'flex',
+          gap: 8,
+        }}
+      >
+        {testimonials.map((_, idx) => (
+          <button
+            key={idx}
+            aria-label={`Go to testimonial ${idx + 1}`}
+            onMouseDown={(e) => e.stopPropagation()}
+            onTouchStart={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              goto(idx);
+            }}
+            style={{
+              width: idx === i ? 32 : 10,
+              height: 10,
+              padding: 0,
+              border: 'none',
+              background:
+                idx === i
+                  ? `linear-gradient(90deg, ${C.coral}, ${C.plum})`
+                  : `${C.ink}22`,
+              borderRadius: 5,
+              cursor: 'pointer',
+              transition: 'width .3s, background .3s',
+            }}
+          />
+        ))}
       </div>
     </div>
   );

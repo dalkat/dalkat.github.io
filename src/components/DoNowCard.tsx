@@ -32,7 +32,9 @@ export default function DoNowCard({ prompts }: Props) {
         className="mesh-donow-card"
         style={{
           position: 'relative',
-          padding: '48px 48px 40px',
+          // Bumped top padding now that the corner "card · NN" counter
+          // is gone — keeps the card balanced top-to-bottom.
+          padding: '64px 48px 40px',
           background: C.white,
           borderRadius: 28,
           border: `1px solid ${C.ink}10`,
@@ -44,28 +46,14 @@ export default function DoNowCard({ prompts }: Props) {
           overflow: 'hidden',
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: 20,
-            right: 24,
-            fontFamily: '"DM Mono", monospace',
-            fontSize: 11,
-            letterSpacing: '0.16em',
-            color: C.inkSoft,
-            fontWeight: 600,
-          }}
-        >
-          card · {String(history.length + (current ? 1 : 0)).padStart(2, '0')}
-        </div>
-
         <div style={{ position: 'relative' }}>
           {!current && (
             <div
+              className="mesh-donow-prompt-empty"
               style={{
                 fontFamily: fontReader,
                 fontStyle: 'italic',
-                fontSize: 24,
+                fontSize: 20,
                 lineHeight: 1.5,
                 color: C.inkSoft,
                 maxWidth: 600,
@@ -80,11 +68,12 @@ export default function DoNowCard({ prompts }: Props) {
           {current && (
             <div
               key={current}
+              className="mesh-donow-prompt"
               style={{
                 fontFamily: fontDisplay,
                 fontWeight: 400,
-                fontSize: 32,
-                lineHeight: 1.25,
+                fontSize: 26,
+                lineHeight: 1.3,
                 color: C.ink,
                 letterSpacing: '-0.02em',
                 maxWidth: 760,
@@ -96,7 +85,7 @@ export default function DoNowCard({ prompts }: Props) {
                 style={{
                   fontFamily: fontDisplay,
                   fontStyle: 'italic',
-                  fontSize: 32,
+                  fontSize: 26,
                   color: C.coral,
                   marginRight: 8,
                 }}

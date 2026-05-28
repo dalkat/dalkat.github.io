@@ -80,80 +80,33 @@ const gt = gradientText();
     }}
   >
     <DoNowCard client:visible prompts={DO_NOW_PROMPTS} />
-  </section>
 
-  {/* ───────── About this ───────── */}
-  <section
-    id="how"
-    style={{
-      background: meshBg({
-        base: C.paper2,
-        blobs: [[`${C.butter}cc`, 50, 50, 50]],
-      }),
-      padding: '56px 64px 88px',
-      scrollMarginTop: '80px',
-    }}
-  >
-    <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-      <div
+    {/* Single-line "cousin of the trail mix method" hand-off, centered
+        under the card. The previous "About this · Outsource the
+        decision." section is hidden — see TODO.md. */}
+    <p
+      style={{
+        maxWidth: '760px',
+        margin: '28px auto 0',
+        textAlign: 'center',
+        fontFamily: fontReader,
+        fontStyle: 'italic',
+        fontSize: '15px',
+        lineHeight: '1.5',
+        color: C.inkSoft,
+      }}
+    >
+      ↳ a cousin of the{' '}
+      <a
+        href="/notes/trailmix/"
         style={{
-          fontFamily: fontUI,
-          fontSize: '11px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: C.plum,
-          fontWeight: 700,
-          marginBottom: '8px',
+          color: C.coral,
+          textDecoration: 'underline',
+          textUnderlineOffset: '3px',
+          textDecorationColor: `${C.coral}80`,
         }}
-      >About this</div>
-      <h3
-        style={{
-          fontFamily: fontDisplay,
-          fontWeight: 400,
-          fontSize: '32px',
-          margin: '0 0 14px',
-          letterSpacing: '-0.02em',
-          color: C.ink,
-          textWrap: 'balance',
-        }}
-      >Outsource the decision.</h3>
-      <p
-        style={{
-          fontFamily: fontReader,
-          fontSize: '18px',
-          lineHeight: '1.6',
-          color: C.inkSoft,
-          margin: '0 0 14px',
-          textWrap: 'pretty',
-        }}
-      >
-        Sometimes it's easier to outsource decisionmaking. If you have a free
-        moment and infinite things you <em>could</em> do, this generator
-        removes some of the choosing for you — pull a card, do what's on it,
-        move on.
-      </p>
-      <p
-        style={{
-          fontFamily: fontReader,
-          fontSize: '18px',
-          lineHeight: '1.6',
-          color: C.inkSoft,
-          margin: 0,
-          textWrap: 'pretty',
-        }}
-      >
-        It's a cousin of the{' '}
-        <a
-          href="/notes/trailmix/"
-          style={{
-            color: C.coral,
-            textDecoration: 'underline',
-            textUnderlineOffset: '3px',
-            textDecorationColor: `${C.coral}80`,
-          }}
-        >trail mix method</a>.
-      </p>
-    </div>
+      >trail mix method</a>.
+    </p>
   </section>
 
   <Footer tint={C.coral} />

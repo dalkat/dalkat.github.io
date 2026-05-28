@@ -22,11 +22,16 @@ const { current = 'home' } = Astro.props;
     position: 'sticky',
     top: '0',
     zIndex: 30,
-    background: `${C.white}b8`,
-    backdropFilter: 'blur(18px) saturate(150%)',
-    WebkitBackdropFilter: 'blur(18px) saturate(150%)',
+    // Solid white (was translucent rgba) so the iOS Safari URL bar
+    // (which samples theme-color = white) blends with the nav band.
+    background: C.white,
     borderBottom: `1px solid ${C.ink}10`,
     padding: '14px 56px',
+    // Extend the nav into the iOS safe-area inset at the top — the
+    // background color flows behind the URL bar instead of leaving a
+    // paper-colored gap. env() falls back to 0 on desktop, so the
+    // padding is unchanged there.
+    paddingTop: 'calc(14px + env(safe-area-inset-top, 0px))',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
