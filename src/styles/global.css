@@ -10,7 +10,7 @@
    * dial this down to soften the visual weight on production viewports.
    * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
    * radii, shadows — proportionally). Tune in one place. */
-  --mesh-scale: 0.85;
+  --mesh-scale: 0.87;
   --c-lavender: #dcd0ff;
   --c-lilac: #cbb8ff;
   --c-mint: #cdf2d8;
@@ -137,6 +137,21 @@
   }
   .mesh-root .mesh-donow-prompt-empty {
     font-size: 17px !important;
+  }
+  /* Tighter gap between the Do Now hero subtitle and the card on
+     mobile — the global section padding shim leaves ~112px between
+     the two; this drops the second section's top padding. */
+  .mesh-root section.mesh-donow-section {
+    padding-top: 8px !important;
+  }
+
+  /* Praise carousel: on narrow widths the absolute dots overlap with
+     the author/role text. Reflow them to a centered row below the
+     author block. */
+  .mesh-root .mesh-praise-dots {
+    position: static !important;
+    justify-content: center !important;
+    margin-top: 18px !important;
   }
 
   /* Contact form action row stacks vertically */

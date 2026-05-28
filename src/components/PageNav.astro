@@ -22,15 +22,16 @@ const { current = 'home' } = Astro.props;
     position: 'sticky',
     top: '0',
     zIndex: 30,
-    // Solid white (was translucent rgba) so the iOS Safari URL bar
-    // (which samples theme-color = white) blends with the nav band.
-    background: C.white,
+    // Back to the translucent-glass look (94% white) with backdrop
+    // blur — keeps the soft glassy feel over the hero mesh while
+    // reading nearly white so the iOS URL bar (theme-color #fff) still
+    // blends well. safe-area-inset-top padding makes the nav extend
+    // behind the URL bar so there's no gap.
+    background: `${C.white}f0`,
+    backdropFilter: 'blur(18px) saturate(150%)',
+    WebkitBackdropFilter: 'blur(18px) saturate(150%)',
     borderBottom: `1px solid ${C.ink}10`,
     padding: '14px 56px',
-    // Extend the nav into the iOS safe-area inset at the top — the
-    // background color flows behind the URL bar instead of leaving a
-    // paper-colored gap. env() falls back to 0 on desktop, so the
-    // padding is unchanged there.
     paddingTop: 'calc(14px + env(safe-area-inset-top, 0px))',
     display: 'flex',
     alignItems: 'center',

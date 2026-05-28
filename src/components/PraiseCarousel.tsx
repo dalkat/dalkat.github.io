@@ -186,9 +186,11 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
       </div>
 
       {/* Static page indicator — outside the drag-transform block so it
-          doesn't slide with the quote. Sits at the bottom-right of the
-          card. */}
+          doesn't slide with the quote. Desktop: bottom-right corner.
+          Mobile: reflows below the author info, centered (the mobile
+          shim in global.css handles the override). */}
       <div
+        className="mesh-praise-dots"
         style={{
           position: 'absolute',
           right: 52,
