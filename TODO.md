@@ -30,6 +30,19 @@ comment right where the pill used to live. Copy the original markup
 back from git history (commit message: "Hide hero kicker pills on
 root pages").
 
+## About page bio (deferred 2026-05-28)
+
+The longer-form bio in `src/pages/about.astro` (the three prose
+paragraphs about Stripe, Presently, Monitor Deloitte/Doblin, early
+startups, Princeton) is the older version of the same story the
+home page tells in tighter form. Worth a pass to:
+
+  - sync the framing with the new home BIO_LONG ("independent
+    practice, Deloitte/Doblin," "founding Presently…group payments
+    easier," etc.) so the two pages don't drift
+  - decide what extra detail the About version should carry that the
+    home version intentionally drops
+
 ## Do Now prompts (deferred 2026-05-28)
 
 The activity prompts pulled by /quests/do-now are still the verbatim
