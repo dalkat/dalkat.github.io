@@ -24,7 +24,7 @@ const THEMES = [
   'Teambuilding',
   'Productivity',
   'Personal Essays',
-  'Food',
+  'Taste of Home',
 ] as const;
 
 type Theme = (typeof THEMES)[number];
@@ -38,7 +38,7 @@ const themeTints: Record<string, string> = {
   Teambuilding: C.teal,
   Productivity: C.coral,
   'Personal Essays': C.plum,
-  Food: C.coral,
+  'Taste of Home': C.coral,
 };
 
 export default function FieldNotesArchive({ articles }: Props) {
