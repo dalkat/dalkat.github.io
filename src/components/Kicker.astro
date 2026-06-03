@@ -31,7 +31,6 @@ const { category, date, read, tint = C.coral } = Astro.props;
     color: tint,
   }}
 >
-  <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: tint }}></span>
   <span>{category}</span>
   <span class="mesh-kicker-sep" style={{ width: '1px', height: '12px', background: `${C.ink}22` }}></span>
   <span style={{ color: C.inkSoft }}>{date}</span>
