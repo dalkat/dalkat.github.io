@@ -86,6 +86,30 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Eyebrow — possible "REPORT / ESSAY · min read" (deferred 2026-06-04)
+
+The `<Kicker>` pill on essays and reports currently reads
+"ESSAY · 2019 · 14 MIN READ" (category · year · read time). Worth
+considering dropping the middle year token so it reads just
+"ESSAY · 14 MIN READ" — the year still lives elsewhere on the
+page (byline on reports, source line on essays where applicable).
+
+Touchpoint: `src/components/Kicker.astro`. Optional `date` prop
+already exists; the conditional render would be where to hide it.
+
+## HighlightReel — pause on hover (deferred 2026-06-04)
+
+The image carousel that appears at the end of essay pages (e.g.
+the sabbatical-update photo galleries) auto-advances every 5.2s.
+Hovering doesn't pause it, so a reader studying the caption can
+get the image flipped out from under them. Add
+onMouseEnter / onMouseLeave to set `paused: true / false` (the
+state and useEffect dep already exist; just no hover wiring).
+
+Touchpoint: `src/components/HighlightReel.tsx` near the outer
+`<div>` (currently has no hover handlers). The PraiseCarousel
+component already has this pattern as a copy-paste reference.
+
 ## Articles — breadcrumbs row (hidden 2026-05-31)
 
 The `notes / personal-essays / sabbatical-update-2` style

@@ -13,7 +13,8 @@ import { getCollection, render } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import RecipeLayout from '@/layouts/RecipeLayout.astro';
 import ReportLayout from '@/layouts/ReportLayout.astro';
-import { tintForType } from '@/lib/mesh';
+import { tintForType, C } from '@/lib/mesh';
+import TmmCallout from '@/components/TmmCallout.tsx';
 
 export async function getStaticPaths() {
   // Astro processes getStaticPaths in isolation (module-level locals aren't
@@ -178,5 +179,9 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
     highlightReelTitle={entry.data.highlight_reel ? 'Highlight reel' : undefined}
   >
     <Content />
+    {/* Trail Mix Method article gets a name+email callout at the end
+        for the worksheet PDF — same pattern the old Jekyll site used,
+        Formspree-backed. PDF lives at /TMM-Worksheet-v1.pdf. */}
+    {entry.id === 'trail-mix-method' && <TmmCallout client:visible tint={tint} />}
   </ArticleLayout>
 )}
