@@ -53,12 +53,13 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
           [`${C.mint}cc`,     85, 92, 35],
         ],
       }),
-      padding: '72px 64px 56px',
+      padding: '72px 64px 32px',
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <Breadcrumbs theme={themeLabel} slug={slug} />
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Breadcrumbs row hidden for now — see TODO.md.
+          Previously: <Breadcrumbs theme={themeLabel} slug={slug} /> */}
       <Kicker category={type} date={year} read={readLabel ?? undefined} tint={tint} />
       <h1
         style={{
@@ -84,17 +85,9 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
           textWrap: 'pretty',
         }}
       >{blurb}</p>
-      <div
-        style={{
-          marginTop: '20px',
-          fontFamily: fontUI,
-          fontSize: '12px',
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          color: C.inkSoft,
-          fontWeight: 600,
-        }}
-      >↳ Originally published on {source}</div>
+      {/* "↳ Originally published on {source}" hidden for now — see
+          TODO.md. The source prop is still threaded through so the
+          restore is one block. */}
     </div>
   </section>
 
@@ -102,13 +95,13 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
   <section
     style={{
       background: C.paper,
-      padding: '56px 64px 96px',
+      padding: '16px 64px 96px',
       scrollMarginTop: '80px',
     }}
   >
     <article
       class="mesh-prose"
-      style={`max-width:800px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
+      style={`max-width:1080px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
     >
       <slot />
     </article>
@@ -122,7 +115,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
         scrollMarginTop: '80px',
       }}
     >
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
         {highlightReelTitle && (
           <h2
             style={{

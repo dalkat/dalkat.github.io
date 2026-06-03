@@ -86,6 +86,27 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Articles — breadcrumbs row (hidden 2026-05-31)
+
+The `notes / personal-essays / sabbatical-update-2` style
+breadcrumb that used to sit above the kicker on every essay,
+letter, tool, and notes piece (anything routed through
+ArticleLayout) is hidden. The H1 + kicker carry the page identity
+on their own.
+
+Restore: in `src/layouts/ArticleLayout.astro` (above the Kicker),
+re-add `<Breadcrumbs theme={themeLabel} slug={slug} />`. The
+themeLabel + slug props are still threaded through ArticleLayout
+so the restore is one line.
+
+## Articles — "Originally published on …" line (hidden 2026-05-31)
+
+The small uppercase line below the blurb on essay/letter/tool
+pages that read "↳ ORIGINALLY PUBLISHED ON DALIAKATAN.COM" is
+hidden — most pieces are now hosted here so the attribution felt
+redundant. The `source` prop stays threaded through ArticleLayout
+so restoring is one block from git history.
+
 ## Reports — breadcrumbs row (hidden 2026-05-30)
 
 The `notes / teambuilding / report-teams` style breadcrumb that
