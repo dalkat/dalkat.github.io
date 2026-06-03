@@ -86,6 +86,30 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Reports — breadcrumbs row (hidden 2026-05-30)
+
+The `notes / teambuilding / report-teams` style breadcrumb that
+used to sit above the kicker on /notes/report-teams and
+/notes/report-refugee is hidden. The H1 + byline + kicker carry
+the orientation on their own.
+
+Restore: in `src/layouts/ReportLayout.astro` (above the Kicker),
+re-add `<Breadcrumbs theme={themeLabel} slug={slug} />`. The
+themeLabel + slug props are still threaded through ReportLayout
+so the restore is one line.
+
+## Reports — "Read the report ↗" CTA (hidden 2026-05-30)
+
+The dark pill button + "via Source" caption that previously sat
+between the blurb and the embedded Slideshare iframe is hidden.
+The iframe right below the hero is the report itself, so the
+button felt redundant.
+
+Restore: re-instate the `{externalUrl && ( <div … > <a … >Read the
+report ↗</a> <span>via {source}</span> </div> )}` block from git
+history. `externalUrl` + `source` props are still passed into
+ReportLayout, so no data plumbing needed.
+
 ## Nav — "Work with me" CTA pill (hidden 2026-05-27)
 
 The dark "Work with me" pill on the right of the desktop nav (and

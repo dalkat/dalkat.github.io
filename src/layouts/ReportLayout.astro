@@ -1,16 +1,18 @@
 ---
 /**
  * Report template — modeled on the design's MeshReportTeams (content-pages.jsx).
- * Hero with breadcrumbs + kicker + bold gradient-accent headline + lead,
- * then a PDF-frame-styled body with mesh-page placeholders (real PDFs slot
- * in via the body slot).
+ * Hero (kicker + bold gradient-accent headline + byline + lead),
+ * then the embedded Slideshare PDF / iframe via the markdown body slot.
+ *
+ * Two surfaces hidden for now (see TODO.md):
+ *   1. The Breadcrumbs row above the kicker
+ *   2. The "Read the report ↗ via Source" CTA row above the body
  */
 import Base from '@/layouts/Base.astro';
 import PageNav from '@/components/PageNav.astro';
 import Footer from '@/components/Footer.astro';
-import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Kicker from '@/components/Kicker.astro';
-import { C, fontDisplay, fontReader, fontUI, meshBg, gradientText } from '@/lib/mesh';
+import { C, fontDisplay, fontReader, fontUI, meshBg } from '@/lib/mesh';
 
 interface Props {
   title: string;
@@ -22,11 +24,13 @@ interface Props {
   slug: string;
   /** Optional URL for the source PDF / slideshare. */
   externalUrl?: string;
+  /** Optional byline like "Co-author · January 2018 · Via Deloitte
+   *  Center for the Edge". Rendered under the H1, before the blurb. */
+  byline?: string;
   /** Accent tint (defaults to teal for reports). */
   tint?: string;
 }
-const { title, blurb, themeLabel, source, year, read_time, slug, externalUrl, tint = C.teal } = Astro.props;
-const gt = gradientText();
+const { title, blurb, source, year, read_time, externalUrl, byline, tint = C.teal } = Astro.props;
 const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
 ---
 <Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
@@ -48,8 +52,9 @@ const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
       scrollMarginTop: '80px',
     }}
   >
-    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <Breadcrumbs theme={themeLabel} slug={slug} />
+    <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+      {/* Breadcrumbs row hidden for now — see TODO.md.
+          Previously: <Breadcrumbs theme={themeLabel} slug={slug} /> */}
       <Kicker category="Report" date={year} read={readLabel} tint={tint} />
       <h1
         style={{
@@ -64,56 +69,41 @@ const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
           maxWidth: '920px',
         }}
       >{title}</h1>
+      {byline && (
+        <div
+          style={{
+            marginTop: '20px',
+            fontFamily: fontUI,
+            fontSize: '13px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            color: C.inkSoft,
+            fontWeight: 600,
+          }}
+        >{byline}</div>
+      )}
       <p
         style={{
           fontFamily: fontUI,
           fontSize: '20px',
           lineHeight: '1.5',
           color: C.ink,
-          marginTop: '24px',
+          marginTop: byline ? '16px' : '24px',
           maxWidth: '800px',
           textWrap: 'pretty',
         }}
       >{blurb}</p>
-      {externalUrl && (
-        <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a
-            href={externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '12px 22px',
-              background: meshBg({ base: C.ink, blobs: [[C.coral, 0, 100, 70], [C.plum, 100, 0, 70]] }),
-              color: C.paper,
-              border: 'none',
-              borderRadius: '999px',
-              fontFamily: fontUI,
-              fontSize: '14px',
-              fontWeight: 700,
-              textDecoration: 'none',
-              boxShadow: `0 14px 26px -14px ${C.ink}88`,
-            }}
-          >Read the report ↗</a>
-          <span
-            style={{
-              fontFamily: fontUI,
-              fontSize: '12px',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: C.inkSoft,
-              fontWeight: 600,
-            }}
-          >via {source}</span>
-        </div>
-      )}
+      {/* "Read the report ↗" CTA + "via Source" hidden for now — see
+          TODO.md. externalUrl + source are kept on the data side so
+          they're trivial to restore when we bring the button back. */}
     </div>
   </section>
 
-  {/* ───────── Body (markdown content from slot, or embedded preview) ───────── */}
+  {/* ───────── Body (embedded slideshare / markdown content) ───────── */}
   <section style={{ background: C.paper, padding: '40px 64px 80px', scrollMarginTop: '80px' }}>
     <article
       class="mesh-prose"
-      style={`max-width:800px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
+      style={`max-width:1080px;margin:0 auto;font-family:${fontReader};font-size:18px;line-height:1.7;color:${C.inkSoft};--post-tint:${tint};`}
     >
       <slot />
     </article>

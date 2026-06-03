@@ -58,6 +58,12 @@ const forYou = defineCollection({
      * renders a "Read the report ↗" CTA pointing to this URL.
      */
     external_url: z.string().url().optional(),
+    /**
+     * Optional plain-text byline shown under the H1 in ReportLayout —
+     * format like "Co-author · January 2018 · Via Deloitte Center for
+     * the Edge". Free-form so each report can use its own phrasing.
+     */
+    byline: z.string().optional(),
   }),
 });
 
