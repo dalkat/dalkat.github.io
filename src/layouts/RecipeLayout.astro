@@ -248,17 +248,20 @@ const tints = [C.coral, C.plum, C.teal, C.coral];
           </ul>
         </div>
         {/* p.s. note lives below the ingredients card, not inside it —
-            so the sticky card stays tidy and the note reads as an
-            outside aside. */}
+            same white-card treatment, just sits outside the sticky
+            dashed-outline box. */}
         {ingredientsNote && (
           <div
             style={{
               marginTop: '18px',
-              padding: '12px 16px',
+              padding: '10px 14px',
+              background: C.white,
+              borderRadius: '12px',
               fontFamily: 'Caveat, cursive',
               fontSize: '20px',
-              color: C.inkSoft,
+              color: C.ink,
               transform: 'rotate(-1deg)',
+              boxShadow: `0 6px 14px -10px ${C.ink}55`,
               textWrap: 'pretty',
               lineHeight: 1.35,
             }}
