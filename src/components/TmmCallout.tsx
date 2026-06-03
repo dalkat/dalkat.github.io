@@ -117,12 +117,8 @@ export default function TmmCallout({ tint = C.coral }: Props) {
             fontSize: 22,
             color: C.ink,
             letterSpacing: '-0.01em',
-            marginBottom: 6,
           }}
-        >Got it — I'll email it to you.</div>
-        <div style={{ fontFamily: fontUI, fontSize: 14, color: C.inkSoft }}>
-          Usually within a few days.
-        </div>
+        >It's on the way!</div>
       </aside>
     );
   }

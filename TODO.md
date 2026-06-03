@@ -86,6 +86,24 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Field Notes — floating filter bar gap (deferred 2026-06-04)
+
+The filter bar (FILTER ↓ · All · Entrepreneurship & Product · …)
+sits sticky at the top of the archive — that part's good. But
+the strip of content that scrolls behind it (the theme group
+headers like "Entrepreneurship & Product · 5") slips into the
+visible gap above the bar and looks half-clipped / awkward in
+motion. Need a better treatment — options to consider:
+  - Solid background on the sticky bar that fades from the page
+    bg (mask-image or a small drop-shadow) so the content
+    underneath reads as "hidden" rather than "peeking".
+  - Tighten the offset so the section header lands fully on
+    either side, not bisected.
+  - Frosted/blur backdrop on the bar.
+
+Touchpoint: `src/pages/notes.astro` + `FieldNotesArchive.tsx`
+(the sticky filter row + the group-header markup).
+
 ## Eyebrow — possible "REPORT / ESSAY · min read" (deferred 2026-06-04)
 
 The `<Kicker>` pill on essays and reports currently reads
