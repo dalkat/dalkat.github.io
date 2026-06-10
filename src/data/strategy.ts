@@ -22,7 +22,7 @@ export interface Offering {
 
 export const OFFERINGS: Offering[] = [
   {
-    group: 'UX & Product Experience',
+    group: 'Product and UX Strategy',
     tint: C.plum,
     blob: [C.lavender, C.sky],
     services: [
@@ -47,7 +47,7 @@ export const OFFERINGS: Offering[] = [
     tint: C.coral,
     blob: [C.peach, C.butter],
     services: [
-      'Brand & Digital Strategy',
+      'Brand & Digital Redesign',
       'Brand Narrative & Storytelling',
       'Fundraising Pitch',
     ],
@@ -88,7 +88,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['brand narrative', 'fundraising', 'investor deck'],
     year: '2019',
     summary:
-      "Crusoe AI is pioneering sustainable AI infrastructure — Fast Company's 100 Most Innovative in 2026, $1B Series E that same year. But in its early days, they brought me in to design their Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
+      "Crusoe AI is pioneering sustainable AI infrastructure, having raised a $1B Series E and being labeled Fast Company's 100 Most Innovative in 2026. But in its early days, they brought me in to design their Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
     outcome: "Fundraising deck supported Crusoe AI's $30M Series A raise.",
   },
   {
@@ -132,7 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
     year: '2017',
     summary:
-      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands — each with its own consumers and constraints. I was brought in to lead the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
+      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands, each with its own consumers and constraints. I was brought in to lead the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
   },
 ];

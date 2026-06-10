@@ -59,7 +59,7 @@ const gt = gradientText();
           maxWidth: '1020px',
         }}
       >
-        Hi, I'm <span style={gt}>Dalia</span><span style={{ color: C.coral }}>.</span>
+        Hi, I'm Dalia<span style={{ color: C.coral }}>.</span>
       </h1>
       <p
         style={{
@@ -89,7 +89,7 @@ const gt = gradientText();
             textDecoration: 'none',
             boxShadow: `0 14px 28px -14px ${C.ink}88`,
           }}
-        >Work with me →</a>
+        >Work with me</a>
       </div>
     </div>
   </section>
@@ -111,7 +111,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={1} sub="About" title="A bit of background" accent={C.teal} />
+      <SectionHeader sub="About" title="A bit of background" accent={C.teal} />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
         {BIO_LONG.map((p) => (
           <p
@@ -157,8 +157,8 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={2} sub="Writing" accent={C.coral}>
-        A few <span style={gt}>field notes</span>.
+      <SectionHeader sub="Writing" accent={C.coral}>
+        A few field notes
       </SectionHeader>
       <p
         style={{
@@ -217,7 +217,7 @@ const gt = gradientText();
             boxShadow: `0 14px 28px -14px ${C.ink}88`,
           }}
         >
-          Visit the full archive <span style={{ opacity: 0.7 }}>→</span>
+          Visit the full archive
         </a>
       </div>
     </div>
@@ -241,7 +241,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={3} sub="Kind words" title="People saying nice things" accent={C.plum} />
+      <SectionHeader sub="Kind words" title="People saying nice things" accent={C.plum} />
       <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
     </div>
   </section>
@@ -265,7 +265,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={4} sub="Contact" title="Drop a line" accent={C.coral} />
+      <SectionHeader sub="Contact" title="Get in touch" accent={C.coral} />
       {/* Portrait PhotoSlab hidden for now — see TODO.md. The contact
           form spans full width until we bring the photo back. */}
       <ContactForm client:visible accent={C.coral} />

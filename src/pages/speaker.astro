@@ -80,7 +80,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
           maxWidth: '1000px',
         }}
       >
-        Talks &amp; <span style={{ ...gt, paddingRight: '0.08em' }}>Publications</span><span style={{ color: C.coral }}>.</span>
+        Talks &amp; Publications<span style={{ color: C.coral }}>.</span>
       </h1>
       <p
         style={{
@@ -130,8 +130,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
           marginBottom: '28px',
         }}
       >
-        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.plum }}></span>
-        01 · About the work
+        About the work
       </div>
 
       <p
@@ -223,8 +222,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
           marginBottom: '40px',
         }}
       >
-        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: C.coral }}></span>
-        02 · Themes
+        Themes
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '64px' }}>
@@ -350,7 +348,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={3} sub="Invite me" title="Drop a line" accent={C.coral} />
+      <SectionHeader sub="Invite me" title="Get in touch" accent={C.coral} />
       <p
         style={{
           margin: '-18px 0 28px',
@@ -366,7 +364,42 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         If you're putting together a stage, a syllabus, or a session for your
         founders, I'm happy to shape a talk to the room.
       </p>
-      <ContactForm client:visible accent={C.coral} />
+      {/* Two-column layout — speaker photo on the left, contact form
+          on the right. The photo differentiates this contact block
+          from the home + strategy ones, so the page doesn't reuse
+          the same anonymous slab three times. */}
+      <div
+        class="mesh-speaker-contact-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '380px 1fr',
+          gap: '48px',
+          alignItems: 'flex-start',
+        }}
+      >
+        <figure
+          style={{
+            margin: 0,
+            borderRadius: '22px',
+            overflow: 'hidden',
+            boxShadow: `0 24px 48px -28px ${C.ink}66`,
+            border: `1px solid ${C.ink}10`,
+          }}
+        >
+          <img
+            src="/img/speaking5.jpg"
+            alt="Dalia speaking at the front of a room with the audience raising their hands"
+            style={{
+              display: 'block',
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }}
+            loading="lazy"
+          />
+        </figure>
+        <ContactForm client:visible accent={C.coral} />
+      </div>
     </div>
   </section>
 
@@ -397,6 +430,11 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
       gap: 12px !important;
       align-items: center !important;
       font-size: 24px !important;
+    }
+    /* Stack the speaker contact photo + form into one column on mobile. */
+    .mesh-root .mesh-speaker-contact-grid {
+      grid-template-columns: 1fr !important;
+      gap: 28px !important;
     }
   }
 </style>

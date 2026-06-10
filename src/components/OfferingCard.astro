@@ -30,19 +30,8 @@ const { group, tint, blob, services } = offering;
     flexDirection: 'column',
   }}
 >
-  {/* Soft mesh blob, top-right */}
-  <div
-    style={{
-      position: 'absolute',
-      right: '-50px',
-      top: '-50px',
-      width: '140px',
-      height: '140px',
-      borderRadius: '50%',
-      background: meshBg({ base: blob[0], blobs: [[blob[1], 50, 50, 80]] }),
-      opacity: 0.5,
-    }}
-  ></div>
+  {/* Corner blob removed — read as decorative AI-tell. The card carries
+      enough hierarchy with the Practice tint chip + dashed divider. */}
   <div style={{ position: 'relative' }}>
     <div
       style={{
@@ -73,12 +62,11 @@ const { group, tint, blob, services } = offering;
     >{group}</h3>
     <ul
       style={{
-        listStyle: 'none',
+        listStyle: 'disc outside',
         margin: 0,
-        padding: 0,
+        padding: '16px 0 0 18px',
         display: 'grid',
         gap: '6px',
-        paddingTop: '16px',
         borderTop: `1px dashed ${C.ink}22`,
       }}
     >
@@ -89,15 +77,9 @@ const { group, tint, blob, services } = offering;
             fontSize: '14px',
             color: C.ink,
             fontWeight: 500,
-            display: 'grid',
-            gridTemplateColumns: '14px 1fr',
-            gap: '8px',
-            alignItems: 'baseline',
+            paddingLeft: '4px',
           }}
-        >
-          <span style={{ color: tint, fontSize: '11px' }}>●</span>
-          <span>{s}</span>
-        </li>
+        >{s}</li>
       ))}
     </ul>
   </div>

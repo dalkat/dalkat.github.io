@@ -254,7 +254,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
             opacity: submitting ? 0.7 : 1,
           }}
         >
-          {submitting ? 'Sending…' : 'Send the note →'}
+          {submitting ? 'Sending…' : 'Send the note'}
         </button>
       </div>
     </form>
