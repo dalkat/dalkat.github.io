@@ -86,6 +86,27 @@ due for a design pass:
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
+## Speaker contact photo — needs a better treatment (deferred 2026-06-10)
+
+The /speaker contact section uses `/img/speaking5.jpg` (recovered
+from the old Jekyll site, b099df4^) — Dalia at the front of a room
+with the audience raising hands. It's a *landscape* shot, which
+sits awkwardly next to the contact form: scaling to the column
+width makes it short, and aspect-ratio cropping to a portrait
+crops the speaker out of frame (we tried 4:5 and lost her).
+
+Options to revisit later:
+  - Stack two photos vertically in the left column (a portrait
+    + a landscape teaser of the audience), so the column has the
+    height of the form without distorting either image.
+  - Find/source a better single photo — ideally a portrait-orient
+    speaker shot with Dalia + screen in frame.
+  - Use a photo card with a caption / venue note underneath, so
+    the column reads as a richer block rather than a thin image.
+
+Touchpoint: `src/pages/speaker.astro` (mesh-speaker-contact-grid).
+The 380px left column + figure markup is already in place.
+
 ## Field Notes — floating filter bar gap (deferred 2026-06-04)
 
 The filter bar (FILTER ↓ · All · Entrepreneurship & Product · …)
