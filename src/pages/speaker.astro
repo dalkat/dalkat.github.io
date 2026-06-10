@@ -336,12 +336,14 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
       </div>
 
       {/* CTA after the last theme (Culture-building) — same dark-pill
-          style as the home page's "Visit the full archive" button. */}
+          style as the home page's "Visit the full archive" button.
+          Copy clarifies what's behind the link: the themes above are a
+          list of engagements, Field Notes is readable writing. */}
       <div
         style={{
           marginTop: '48px',
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'center',
         }}
       >
         <a
@@ -361,7 +363,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
             boxShadow: `0 14px 28px -14px ${C.ink}88`,
           }}
         >
-          More in Field Notes
+          Read my writing in Field Notes
         </a>
       </div>
     </div>
