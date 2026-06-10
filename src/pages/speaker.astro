@@ -95,7 +95,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
       >
         I've guest lectured at Princeton, spoken on conference stages and
         podcasts, published with MIT Press and Deloitte Insights, and built
-        the conferences and speaker series. A selection is below.
+        several conferences and speaker series.
       </p>
     </div>
   </section>
@@ -156,18 +156,17 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         style={{
           margin: '24px 0 0',
           fontFamily: fontReader,
-          fontStyle: 'italic',
-          fontSize: '18px',
-          lineHeight: '1.6',
-          color: C.inkSoft,
+          fontSize: '24px',
+          lineHeight: '1.45',
+          color: C.ink,
           textWrap: 'pretty',
+          letterSpacing: '-0.005em',
           maxWidth: '880px',
         }}
       >
-        My talks and lectures have lived at Princeton, Stripe, Women Design
-        Talks, and on a handful of podcasts I'm fond of, and my long-form
-        writing has been published by MIT Press, Deloitte Insights,
-        Princeton University, and more.
+        My talks and lectures have lived at Princeton, Stripe, and a handful
+        of events and podcasts, and my long-form writing has been published
+        by MIT Press, Deloitte Insights, and Princeton University.
       </p>
 
       <div
@@ -180,7 +179,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
           textWrap: 'pretty',
         }}
       >
-        ↳ for my short-form writing and blogs, visit my{' '}
+        ↳ For my short-form writing and blogs, visit my{' '}
         <a
           href="/notes"
           style={{
@@ -334,6 +333,36 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
             </div>
           </section>
         ))}
+      </div>
+
+      {/* CTA after the last theme (Culture-building) — same dark-pill
+          style as the home page's "Visit the full archive" button. */}
+      <div
+        style={{
+          marginTop: '48px',
+          display: 'flex',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <a
+          href="/notes"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '14px 24px',
+            background: C.ink,
+            color: C.paper,
+            borderRadius: '999px',
+            fontFamily: fontUI,
+            fontSize: '14px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            boxShadow: `0 14px 28px -14px ${C.ink}88`,
+          }}
+        >
+          More in Field Notes
+        </a>
       </div>
     </div>
   </section>
