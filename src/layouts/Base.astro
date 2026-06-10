@@ -33,7 +33,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 //   /quests                 → quests
 //   /quests/do-now          → quests/do-now
 // Pages with no generated card fall back to the portrait.
-const KNOWN_TOP_LEVEL = new Set(['about', 'strategy', 'speaker', 'notes', 'quests']);
+const KNOWN_TOP_LEVEL = new Set(['about', 'consulting', 'talks', 'notes', 'quests']);
 function ogSlugFromPath(pathname: string): string | null {
   const trimmed = pathname.replace(/^\/+|\/+$/g, '');
   if (trimmed === '') return 'home';

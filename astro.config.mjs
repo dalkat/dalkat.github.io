@@ -22,6 +22,8 @@ export default defineConfig({
   ],
   redirects: {
     // Legacy → canonical (Astro auto-normalizes trailing slashes)
+    '/strategy': '/consulting',
+    '/speaker': '/talks',
     '/for-you': '/notes',
     '/field-notes': '/notes',
     '/side-quests': '/quests',

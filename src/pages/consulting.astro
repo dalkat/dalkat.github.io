@@ -16,14 +16,14 @@ const gt = gradientText();
 const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
 ---
 <Base
-  title="Dalia Katan — Strategy"
+  title="Dalia Katan — Consulting & Advisory"
   description="Strategy & product work for Fortune-10 portfolios and Series A startups. Innovation strategy, fractional CPO, go-to-market, and the case studies behind 15+ years of engagements."
 >
-  <PageNav current="strategy" />
+  <PageNav current="consulting" />
 
   {/* ───────── Hero ───────── */}
   <section
-    id="strategy"
+    id="consulting"
     style={{
       background: meshBg({
         base: C.lavender,
@@ -91,7 +91,7 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={1} sub="Services" title="Ways to work together" accent={C.coral} />
+      <SectionHeader sub="Services" title="Ways to work together" accent={C.coral} />
       <p
         style={{
           fontFamily: fontReader,
@@ -193,7 +193,7 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={2} sub="Portfolio" title="Some of my past projects" accent={C.teal} />
+      <SectionHeader sub="Portfolio" title="Some of my past projects" accent={C.teal} />
       <div
         style={{
           display: 'grid',
@@ -234,7 +234,7 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={3} sub="Kind words" title="What clients say" accent={C.plum} />
+      <SectionHeader sub="Kind words" title="What clients say" accent={C.plum} />
       <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
     </div>
   </section>
@@ -257,7 +257,7 @@ const caseTints = [C.coral, C.plum, C.teal, C.coral, C.plum, C.teal];
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader n={4} sub="Let's work together" title="Get in touch" accent={C.coral} />
+      <SectionHeader sub="Contact" title="Let's work together" accent={C.coral} />
       <ContactForm client:visible accent={C.coral} />
     </div>
   </section>

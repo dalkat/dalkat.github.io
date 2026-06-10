@@ -44,11 +44,11 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
   title="Talks & Publications — Dalia Katan"
   description="Guest lectures at Princeton, conference talks, podcasts, and long-form writing for MIT Press, Deloitte Insights, and more — organized into three points of view."
 >
-  <PageNav current="speaker" />
+  <PageNav current="talks" />
 
   {/* ───────── Hero ───────── */}
   <section
-    id="speaker"
+    id="talks"
     style={{
       background: meshBg({
         base: C.peach,
@@ -100,9 +100,9 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     </div>
   </section>
 
-  {/* ───────── 01 · About the work ───────── */}
+  {/* ───────── Overview ───────── */}
   <section
-    id="about-the-work"
+    id="overview"
     style={{
       background: C.paper,
       padding: '72px 64px 24px',
@@ -110,39 +110,17 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      {/* Just the chip — no H2 title, per design (the body paragraph
-          carries the orientation). */}
-      <div
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          padding: '6px 14px',
-          background: C.white,
-          borderRadius: '999px',
-          fontFamily: fontUI,
-          fontSize: '12px',
-          fontWeight: 700,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          color: C.plum,
-          boxShadow: `0 8px 18px -12px ${C.ink}33`,
-          marginBottom: '28px',
-        }}
-      >
-        About the work
-      </div>
+      <SectionHeader sub="Overview" title="What I speak & write about" accent={C.plum} />
 
       <p
         style={{
-          margin: '0',
+          margin: '-12px 0 0',
           fontFamily: fontReader,
-          fontSize: '24px',
-          lineHeight: '1.45',
-          color: C.ink,
+          fontSize: '19px',
+          lineHeight: '1.65',
+          color: C.inkSoft,
           textWrap: 'pretty',
-          letterSpacing: '-0.005em',
-          maxWidth: '880px',
+          maxWidth: '820px',
         }}
       >
         I speak and write about what it <em>actually</em> takes to build
@@ -154,14 +132,13 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
 
       <p
         style={{
-          margin: '24px 0 0',
+          margin: '16px 0 0',
           fontFamily: fontReader,
-          fontSize: '24px',
-          lineHeight: '1.45',
-          color: C.ink,
+          fontSize: '19px',
+          lineHeight: '1.65',
+          color: C.inkSoft,
           textWrap: 'pretty',
-          letterSpacing: '-0.005em',
-          maxWidth: '880px',
+          maxWidth: '820px',
         }}
       >
         My talks and lectures have lived at Princeton, Stripe, and a handful
@@ -379,7 +356,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader sub="Invite me" title="Get in touch" accent={C.coral} />
+      <SectionHeader sub="Contact" title="Request a talk" accent={C.coral} />
       <p
         style={{
           margin: '-18px 0 28px',

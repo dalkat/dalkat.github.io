@@ -157,8 +157,8 @@ export interface NavLink {
 
 export const NAV: NavLink[] = [
   { id: 'home',     label: 'Home',        href: '/' },
-  { id: 'strategy', label: 'Consulting',  href: '/strategy' },
-  { id: 'speaker',  label: 'Talks',       href: '/speaker' },
+  { id: 'consulting', label: 'Consulting',  href: '/consulting' },
+  { id: 'talks',      label: 'Talks',       href: '/talks' },
   { id: 'notes',    label: 'Field Notes', href: '/notes' },
   { id: 'quests',   label: 'Side Quests', href: '/quests' },
 ];

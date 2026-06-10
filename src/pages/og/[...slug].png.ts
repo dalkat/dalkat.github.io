@@ -92,10 +92,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
-      params: { slug: 'strategy' },
+      params: { slug: 'consulting' },
       props: {
         spec: {
-          title: 'Strategy work',
+          title: 'Consulting & Advisory',
           kicker: 'For teams',
           subtitle: 'Helping leaders find the next move — and the courage to make it.',
           tint: C.teal,
@@ -104,10 +104,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
     },
     {
-      params: { slug: 'speaker' },
+      params: { slug: 'talks' },
       props: {
         spec: {
-          title: 'Speaker',
+          title: 'Talks & Publications',
           kicker: 'On stage',
           subtitle: 'Talks on curiosity, creative practice, and building teams that ship.',
           tint: C.coral,
