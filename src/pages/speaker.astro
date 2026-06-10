@@ -378,6 +378,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         }}
       >
         <figure
+          class="mesh-speaker-contact-photo"
           style={{
             margin: 0,
             borderRadius: '22px',
@@ -392,8 +393,9 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
             style={{
               display: 'block',
               width: '100%',
-              height: 'auto',
+              height: '100%',
               objectFit: 'cover',
+              objectPosition: 'center',
             }}
             loading="lazy"
           />
@@ -407,6 +409,15 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
 </Base>
 
 <style is:global>
+  /* Desktop: give the speaker contact photo a taller portrait aspect
+   * so it reads as a portrait next to the form, not a banner. The
+   * image is naturally landscape (~1.6:1), so object-fit: cover
+   * center-crops the left/right while keeping the speaker + screen
+   * visible. */
+  .mesh-speaker-contact-photo {
+    aspect-ratio: 4 / 5;
+  }
+
   /* Speaker-specific mobile collapse: the global mesh shim doesn't have
    * a 70px grid template, so the row would collapse to a single column.
    * Below 720px, drop the year column to 52px and reflow the kind chip
@@ -435,6 +446,15 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     .mesh-root .mesh-speaker-contact-grid {
       grid-template-columns: 1fr !important;
       gap: 28px !important;
+    }
+    /* Mobile: let the photo keep its natural landscape aspect (driven by
+     * width); the desktop 4/5 portrait crop would look strange when the
+     * column is already full-bleed. */
+    .mesh-root .mesh-speaker-contact-photo {
+      aspect-ratio: auto !important;
+    }
+    .mesh-root .mesh-speaker-contact-photo img {
+      height: auto !important;
     }
   }
 </style>

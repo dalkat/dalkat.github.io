@@ -22,7 +22,7 @@ export interface Offering {
 
 export const OFFERINGS: Offering[] = [
   {
-    group: 'Product and UX Strategy',
+    group: 'Product & UX Strategy',
     tint: C.plum,
     blob: [C.lavender, C.sky],
     services: [
