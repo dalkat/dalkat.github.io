@@ -55,6 +55,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     title: 'Product & business',
     tint: C.coral,
     items: [
+      { kind: 'Workshop',           title: 'Integrating AI into Your Workflows',                    where: 'The Entrepreneur Network',                            role: 'Speaker',                   year: 2026 },
       { kind: 'Newsletter',         title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                                            role: 'Author',                    year: '2025–6' },
       { kind: 'Workshop',           title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                                              role: 'Speaker',                   year: 2024 },
       { kind: 'Education',          title: 'Startup Speaker Series',                                 where: 'Presently',                                           role: 'Organizer & moderator',   year: 2021 },
