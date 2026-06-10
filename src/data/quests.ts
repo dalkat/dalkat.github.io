@@ -74,7 +74,7 @@ export const QUESTS: Quest[] = [
     tint: C.plum,
     href: '/quests/do-now',
     blurb:
-      "Pull a card when you can't decide what to do next. Each one is a small, doable thing — a phone call, a walk, a sketch — sized to fit in the gap between checking your inbox and meaning to start something real.",
+      "Pull a card when you can't decide what to do next. Each one is a small, doable thing: a phone call, a walk, a sketch. Sized to fit in the gap between checking your inbox and meaning to start something real.",
   },
   {
     title: 'Trail Mix Method',
@@ -82,6 +82,6 @@ export const QUESTS: Quest[] = [
     tint: C.teal,
     status: 'coming-soon',
     blurb:
-      "A planning practice for people whose brains don't run on calendars. Sort your week into energy-shaped mixes — focus, social, admin, restore — and build days that fit how you actually work. Interactive version coming soon; read the method in Field Notes.",
+      "A planning practice for people whose brains don't run on calendars. Sort your week into energy-shaped mixes (focus, social, admin, restore) and build days that fit how you actually work. Interactive version coming soon; read the method in Field Notes.",
   },
 ];
