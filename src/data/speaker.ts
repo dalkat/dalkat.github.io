@@ -60,6 +60,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Newsletter',         title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                                            role: 'Author',                    year: '2025–6' },
       { kind: 'Workshop',           title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                                              role: 'Speaker',                   year: 2024 },
       { kind: 'Education',          title: 'Startup Speaker Series',                                 where: 'Presently',                                           role: 'Organizer & moderator',   year: 2021 },
+      { kind: 'Conference',         title: 'What It Means to Be Well-Designed',                      where: 'Princeton Design Conference',                         role: 'Speaker',                   year: 2021 },
       { kind: 'University Lecture', title: 'Digital Networks and Growth',                            where: 'Princeton University',                                role: 'Guest Lecturer',            year: 2020 },
       { kind: 'Podcast',            title: 'Changemakers',                                           where: 'Changemakers',                                        role: 'Guest',                     year: 2020 },
       { kind: 'University Lecture', title: 'Human-Centered Design & Storytelling',                   where: 'Princeton University',                                role: 'Guest Lecturer',            year: 2019 },
