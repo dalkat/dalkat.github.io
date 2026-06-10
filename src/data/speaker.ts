@@ -43,6 +43,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
     tint: C.teal,
     items: [
       { kind: 'Essay',         title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                role: 'Author',           year: 2023 },
+      { kind: 'Panel',         title: 'Fundraising for Your Startup',                                 where: 'Treehouse',                              role: 'Speaker',          year: 2022 },
       { kind: 'Podcast',       title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                            role: 'Guest',            year: 2021 },
       { kind: 'Podcast',       title: 'Startup Journey — 0 to 1, Retention, Virality',               where: 'BRAVE',                                   role: 'Guest',            year: 2021 },
       { kind: 'Q&A',           title: 'Entrepreneurship AMA',                                         where: 'Journal',                                 role: 'Guest',            year: 2021 },
@@ -58,7 +59,6 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Workshop',           title: 'Integrating AI into Your Workflows',                    where: 'The Entrepreneur Network',                            role: 'Speaker',                   year: 2026 },
       { kind: 'Newsletter',         title: 'Interspace: Architectural Thinking for Product Design', where: 'Substack',                                            role: 'Author',                    year: '2025–6' },
       { kind: 'Workshop',           title: 'Mobile: Meet Your Users Where They Are',                where: 'Stripe',                                              role: 'Speaker',                   year: 2024 },
-      { kind: 'Panel',              title: 'Fundraising for Your Startup',                           where: 'Treehouse',                                           role: 'Speaker',                   year: 2022 },
       { kind: 'Education',          title: 'Startup Speaker Series',                                 where: 'Presently',                                           role: 'Organizer & moderator',   year: 2021 },
       { kind: 'University Lecture', title: 'Digital Networks and Growth',                            where: 'Princeton University',                                role: 'Guest Lecturer',            year: 2020 },
       { kind: 'Podcast',            title: 'Changemakers',                                           where: 'Changemakers',                                        role: 'Guest',                     year: 2020 },
