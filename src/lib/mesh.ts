@@ -1,5 +1,5 @@
 /**
- * Mesh — gradient + palette helpers, ported from the design handoff's
+ * Mesh – gradient + palette helpers, ported from the design handoff's
  * `mesh-pages/shared.jsx`. Use these primitives across every page.
  */
 
@@ -35,13 +35,13 @@ export type MeshBlob = [color: string, x: number, y: number, size: number];
  * The v7 implementation naively appends "00" to the blob color string.
  * For 6-digit hex like "#ffd9c2" → "#ffd9c200" (valid: opaque → transparent).
  * For 8-digit alpha hex like "#ff8a7aaa" → "#ff8a7aaa00" (10 digits, INVALID
- * hex — Chrome rejects the whole gradient stop, so that blob silently fails
+ * hex – Chrome rejects the whole gradient stop, so that blob silently fails
  * to render).
  *
  * This is a *deliberate* preservation of the v7 quirk: alpha-suffixed blobs
  * are skipped, which gives the v7 mesh its quieter density. mesh3.html
  * mounts this exact behavior. Do NOT "fix" by normalizing 8-digit hex back
- * — the design depends on those blobs vanishing.
+ * – the design depends on those blobs vanishing.
  */
 export function meshBg({ base, blobs }: { base: string; blobs: MeshBlob[] }): string {
   const stops = blobs
@@ -74,9 +74,9 @@ export const fontReader = 'Newsreader, serif';
  * Tint mapping by Field Note `type`. Mirrors the design source
  * (content-pages.jsx + recipe-donow.jsx), where each template hard-codes
  * a tint based on the *mood* of the content:
- *   plum  — introspective / narrative (letter, essay, notes)
- *   teal  — structured / analytical (report, field-guide)
- *   coral — energetic / actionable (tool, recipe, framework, travelogue)
+ *   plum  – introspective / narrative (letter, essay, notes)
+ *   teal  – structured / analytical (report, field-guide)
+ *   coral – energetic / actionable (tool, recipe, framework, travelogue)
  */
 export function tintForType(type: string): string {
   switch (type) {

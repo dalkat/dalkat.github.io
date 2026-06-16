@@ -1,8 +1,8 @@
 # Externally hosted Field Notes (Substack, Medium, eHandbook, YouTube, etc.)
-# These do not generate Jekyll pages on the site — the archive links straight out.
+# These do not generate Jekyll pages on the site – the archive links straight out.
 # Hosted pieces live in the _for_you/ collection instead.
 #
-# Each entry must include an `id` (slug) — Astro's file() loader uses it.
+# Each entry must include an `id` (slug) – Astro's file() loader uses it.
 
 - id: arch-atmosphere
   title: "03 Atmosphere: Getting the vibes right"
@@ -11,7 +11,7 @@
   source: Substack
   year: 2026
   read_time: 10            # TODO: confirm
-  blurb: "The emotional baseline of product experience — and how it quietly shapes whether users return."
+  blurb: "The emotional baseline of product experience – and how it quietly shapes whether users return."
   url: https://daliakatan.substack.com/p/arch-atmosphere
 
 - id: atmosphere-case-study-hopper
@@ -41,7 +41,7 @@
   source: Substack
   year: 2023
   read_time: 8
-  blurb: "A walk-through of the ARCH framework applied to consumer mobile — rooms, thresholds, light."
+  blurb: "A walk-through of the ARCH framework applied to consumer mobile – rooms, thresholds, light."
   url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
 
 - id: why-first-gen-founders
@@ -51,7 +51,7 @@
   source: Medium
   year: 2022
   read_time: 8
-  blurb: "“Be scrappy” is the wrong advice for first-gen and minority founders — and one of the hardest things I had to unlearn."
+  blurb: "“Be scrappy” is the wrong advice for first-gen and minority founders – and one of the hardest things I had to unlearn."
   url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
 
 - id: inclusive-workplace
@@ -61,7 +61,7 @@
   source: Medium
   year: 2021
   read_time: 8
-  blurb: "Diverse teams, properly managed, are 35% more likely to outperform — here are nine steps to actually getting there."
+  blurb: "Diverse teams, properly managed, are 35% more likely to outperform – here are nine steps to actually getting there."
   url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
 
 - id: four-life-lessons
@@ -71,7 +71,7 @@
   source: Medium
   year: 2021
   read_time: 5
-  blurb: "A return to childhood wisdom — what I learned watching my niece spend a week noticing everything."
+  blurb: "A return to childhood wisdom – what I learned watching my niece spend a week noticing everything."
   url: https://medium.com/@dkatan77/4-life-lessons-from-a-10-year-old-401503c7eb32
 
 # ── My grandmother's cooking show on YouTube ───────────────────────────
@@ -82,7 +82,7 @@
   source: YouTube
   year: 2016
   read_time: 10
-  blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table — layered rice, lamb, carrots, the long patient way."
+  blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table – layered rice, lamb, carrots, the long patient way."
   url: https://www.youtube.com/watch?v=-_U_T2r8mBs
 
 - id: stuffed-vegetables
@@ -92,5 +92,5 @@
   source: YouTube
   year: 2016
   read_time: 10
-  blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice — a long-afternoon dish that turns kitchen labor into a family ritual."
+  blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice – a long-afternoon dish that turns kitchen labor into a family ritual."
   url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s

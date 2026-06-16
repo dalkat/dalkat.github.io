@@ -5,7 +5,7 @@ theme: productivity
 source: daliakatan.com
 year: 2019
 read_time: 10
-blurb: "A productivity tool inspired by my favorite snack — designed to harness energy rather than discipline."
+blurb: "A productivity tool inspired by my favorite snack – designed to harness energy rather than discipline."
 layout: trailmix
 permalink: /for-you/trail-mix-method/
 redirect_from:
@@ -35,15 +35,15 @@ I've been using a metaphoric trail mix bag to manage my energy and unstructured 
 
 In a nutshell (ha), **the Trail Mix Method is a technique that helps structure unstructured time in a flexible way that better understands and manages your energy**, rather than relying on discipline alone. In the same way that literal trail mix (the kind you eat) is a balanced mix of different bite-sized goodies, your Trail Mix Method bag is a mixed pool of different activities, ideas, and goals, each in little bite-size amounts that balance one another. Just as you would create a bag of trail mix before a trek, you build your Trail Mix Bag once at the start of the week, and then reach into it during free moments throughout the week.
 
-What constitutes unstructured time? It's essentially free time without time-sensitive or external commitments — only commitments to yourself and your goals or aspirations. As such, it doesn't matter what you pick out of your bag because anything you draw can be completed today, tomorrow, or end of the week. Structured time, on the other hand, is where you take care of things you *have* to get done, like urgent tasks, doctor's appointments, social obligations, and project deadlines — for me, those tasks live in a calendar and a [to-do app](https://todoist.com/r/daliakatan_nciojm).
+What constitutes unstructured time? It's essentially free time without time-sensitive or external commitments – only commitments to yourself and your goals or aspirations. As such, it doesn't matter what you pick out of your bag because anything you draw can be completed today, tomorrow, or end of the week. Structured time, on the other hand, is where you take care of things you *have* to get done, like urgent tasks, doctor's appointments, social obligations, and project deadlines – for me, those tasks live in a calendar and a [to-do app](https://todoist.com/r/daliakatan_nciojm).
 
 ### Characteristics of your trail mix bag
 
-**Mixed and balanced.** Your bag (or [notebook](https://amzn.to/30ITmBL)) contains tons of things you want to do, and the occasional dreaded things you know are good for you, like meditating. Variety means there isn't too much of any one activity, and you create balance by thinking about how the activities relate to one another and to your excitement — making sure you're feeding all your different energy sources. For example, in the same way that you wouldn't buy trail mix that's all raisins, you balance your Trail Mix Method bag with a mix of activities in different categories such as learning, health & wellness, and organization.
+**Mixed and balanced.** Your bag (or [notebook](https://amzn.to/30ITmBL)) contains tons of things you want to do, and the occasional dreaded things you know are good for you, like meditating. Variety means there isn't too much of any one activity, and you create balance by thinking about how the activities relate to one another and to your excitement – making sure you're feeding all your different energy sources. For example, in the same way that you wouldn't buy trail mix that's all raisins, you balance your Trail Mix Method bag with a mix of activities in different categories such as learning, health & wellness, and organization.
 
-**Bite-sized.** Your bag is made up of little bits of each activity, with each bit being just enough to give you a small burst of energy each time. Rather than being project-based, activities are energy-based and are broken into small time chunks. Not every activity has the same amount of time because not every task has the same amount of excitement behind it, and by weighting each activity with a duration, you're able to make every activity equally attractive. For example, rather than setting a goal of finishing a book, you might set it at 30 minutes. For activities that seem unreachable, you might set only 5 minutes — just enough of a nudge to get you started on an intimidating project when starting is the hardest part.
+**Bite-sized.** Your bag is made up of little bits of each activity, with each bit being just enough to give you a small burst of energy each time. Rather than being project-based, activities are energy-based and are broken into small time chunks. Not every activity has the same amount of time because not every task has the same amount of excitement behind it, and by weighting each activity with a duration, you're able to make every activity equally attractive. For example, rather than setting a goal of finishing a book, you might set it at 30 minutes. For activities that seem unreachable, you might set only 5 minutes – just enough of a nudge to get you started on an intimidating project when starting is the hardest part.
 
-**Build and let go.** Your bag represents a balance between controlling and structuring your container, and then letting go and trusting the bag you've built: whatever you need will show up in every handful. Remember that *you* made the bag, and you were thinking about what you wanted to do — coming from a place of empowerment, clarity, and inspiration. So trust yourself.
+**Build and let go.** Your bag represents a balance between controlling and structuring your container, and then letting go and trusting the bag you've built: whatever you need will show up in every handful. Remember that *you* made the bag, and you were thinking about what you wanted to do – coming from a place of empowerment, clarity, and inspiration. So trust yourself.
 
 > What systems help you manage time-sensitive tasks or external commitments? How might the Trail Mix Method complement those systems for your unstructured time?
 
@@ -51,30 +51,30 @@ What constitutes unstructured time? It's essentially free time without time-sens
 
 This is where the little bit of upfront structure and discipline comes in to help you surrender throughout the week. I schedule an hour chunk every Sunday night that I call "Trail Mix Sunday" where I create my bag for the week. Ideally, you would schedule this for whenever you feel your week starts so that you can plan for the week. I don't usually need the full hour, but I use any extra time to knock off a few items from my Trail Mix bag. For your first Trail Mix Sunday, you'll need the full time to set up your system and create your first bag.
 
-![Sample of my Trail Mix notebook layout — categories down the left, bite-sized activities in the center, time allocations on the right.](/img/content/TMM_sample.jpg)
+![Sample of my Trail Mix notebook layout – categories down the left, bite-sized activities in the center, time allocations on the right.](/img/content/TMM_sample.jpg)
 
 ### Your first time
 
-1. **5 minutes, meditation.** Take a moment to settle your mind — whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
+1. **5 minutes, meditation.** Take a moment to settle your mind – whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
 2. **5 minutes, intentions.** Grab a pen and your notebook or a sheet of paper, and record your intention for this Trail Mix bag: why are you doing this? What do you hope this tool will give you? What do you want more of in your life?
-3. **5 minutes, build your bag.** Determine what your "bag" looks like — any physical form (not digital) will work, such as a zip-lock bag or bowl filled with fortune-cookie-sized paper, a [small notebook](https://amzn.to/30ITmBL), or half-sheet of paper with columns of bullets.
-4. **15 minutes, category goals.** Reflect on the following question: what are the areas in your life that you want to invest your energy? Write down 5–8 categories that resonate with you to start, and keep them in an accessible space — such as your wall or at the front of your notebook — so you can refer to them each week during your Trail Mix ritual.
+3. **5 minutes, build your bag.** Determine what your "bag" looks like – any physical form (not digital) will work, such as a zip-lock bag or bowl filled with fortune-cookie-sized paper, a [small notebook](https://amzn.to/30ITmBL), or half-sheet of paper with columns of bullets.
+4. **15 minutes, category goals.** Reflect on the following question: what are the areas in your life that you want to invest your energy? Write down 5–8 categories that resonate with you to start, and keep them in an accessible space – such as your wall or at the front of your notebook – so you can refer to them each week during your Trail Mix ritual.
 
-![Example categories — learning, body, home, money, relationships, projects, rest.](/img/content/trailmixcategories.png)
+![Example categories – learning, body, home, money, relationships, projects, rest.](/img/content/trailmixcategories.png)
 
 ### Your weekly ritual
 
 *If it's your first week, skip to step 3. Otherwise, start on step 1.*
 
-1. **5-minute meditation.** Take a moment to settle your mind — whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
+1. **5-minute meditation.** Take a moment to settle your mind – whether just by focusing on your breath or by trying a [guided meditation](https://soundcloud.com/diane-yeo/guided-meditation-by-diane-yeo).
 2. **5 minutes, intentions.** Grab a pen and your notebook or a sheet of paper, and set your intention for this week: what do you want to feel, create, or channel? What do you want to give yourself?
 
     ![Example weekly intentions written out before filling the bag.](/img/content/tmm-intent.jpg)
 
-3. **5 minutes, reflection.** Reflect on last week's trail mix bag. What did you easily accomplish? What was harder to accomplish? What was left untouched in the bag? Circle or write down any items that were particularly difficult or remained untouched — ask yourself: why was there resistance? Was the task too daunting? Identify "leftovers" that you want to postpone for a future week, and for those you want to carry over into this week's bag, add them to your new list.
+3. **5 minutes, reflection.** Reflect on last week's trail mix bag. What did you easily accomplish? What was harder to accomplish? What was left untouched in the bag? Circle or write down any items that were particularly difficult or remained untouched – ask yourself: why was there resistance? Was the task too daunting? Identify "leftovers" that you want to postpone for a future week, and for those you want to carry over into this week's bag, add them to your new list.
 4. **20 minutes, fill a new bag.** Go through your Category Goals sheet you created during your first Trail Mix Sunday, and for each category, reflect on your intentions for that category for the week. Then begin filling it with ideas you want to pursue, skills you want to explore, or even inner personas you want to feel into during your unstructured time that week. Make them bite-sized by adding a time allocation between 5 and 60 minutes, depending on how difficult or intimidating a task is (less time) or how easy or enjoyable it is (more time). This allocation makes a small difficult task equally attractive as a long easy task, giving everything in your bag equal weighting (balance). If you want to do it multiple times that week, or if it's a task that will require more time to complete, add multiple bullets with the same activity.
 
-    ![Example filled-out trail mix bag — bite-sized activities with their time allocations.](/img/content/tmm-bag.jpg)
+    ![Example filled-out trail mix bag – bite-sized activities with their time allocations.](/img/content/tmm-bag.jpg)
 
 5. **5 minutes, zoom out.** Take a step back and see whether your bag is mixed, balanced, and achievable this week. You can do a rough add-up of the times to get a general sense of how achievable it is and whether your categories feel generally balanced. For example, you may not want to be "doing stuff" for more than 20 hours of the week, or you may know that 6 hours of your day are already busy with structured commitments or social time.
 
@@ -84,7 +84,7 @@ Throughout the week, when you find yourself in unstructured time, reach into you
 
 I keep mine in a little notebook in my pocket at all times, complementing the tools I use to manage my structured time, for which I use my calendar and [to-do app](https://todoist.com/r/daliakatan_nciojm). I usually complete 2–3 activities in a sitting, but how much or how little you do is up to you as you discover your balance between productive time and plain old down-time. Since it builds on your energy rather than expending it (which is unavoidable when you use discipline to get things done), you'll find you have more discipline available for the things you have to do in your structured time.
 
-Finally, you should not feel guilty about not finishing the bag at the end of the week — we need down time in our weeks too. Having time to do nothing or be [bored](https://www.ted.com/talks/manoush_zomorodi_how_boredom_can_lead_to_your_most_brilliant_ideas) allows your mind to reset and reflect, and is just as important to your growth journey.
+Finally, you should not feel guilty about not finishing the bag at the end of the week – we need down time in our weeks too. Having time to do nothing or be [bored](https://www.ted.com/talks/manoush_zomorodi_how_boredom_can_lead_to_your_most_brilliant_ideas) allows your mind to reset and reflect, and is just as important to your growth journey.
 
 > **Your challenge:** Schedule an hour this Sunday to Trail Mix your week. Try Trail Mixing for four weeks. Reach out if you need help, and write back to let me know how it felt.
 
@@ -92,7 +92,7 @@ Finally, you should not feel guilty about not finishing the bag at the end of th
 
 **Tip on going for longer.** If you find yourself done with the time you set for a task but still with energy to go on or deep in flow: feel out your energy levels. There's a balance between going deep and burning out, and your enthusiasm may pull you for longer than an hour, but doing so can begin to drain you. You can always add another chunk of that activity to your bag for later and move on to your next activity. Flow is beautiful and hyper-productive, but it is not fleeting.
 
-**Tip on handling resistance.** On the flip side, if the activity you draw raises some resistance, ask yourself: why? Is the task too daunting? Try lowering the time allocation — you can do *anything* for just 5 minutes. Is the task still too daunting? Maybe your energy just isn't there right now. Be true to the energetic state that you're in. For example, if you're in a creative mindset, maybe you're better off doing one of your learning or creating tasks; similarly if you're feeling very focused, you could pick one of your organizational or physical tasks. You can put the task back in the bag for a later time when the energy is there, and pick out another — just observe what tasks you're repeatedly avoiding, and ask yourself why.
+**Tip on handling resistance.** On the flip side, if the activity you draw raises some resistance, ask yourself: why? Is the task too daunting? Try lowering the time allocation – you can do *anything* for just 5 minutes. Is the task still too daunting? Maybe your energy just isn't there right now. Be true to the energetic state that you're in. For example, if you're in a creative mindset, maybe you're better off doing one of your learning or creating tasks; similarly if you're feeling very focused, you could pick one of your organizational or physical tasks. You can put the task back in the bag for a later time when the energy is there, and pick out another – just observe what tasks you're repeatedly avoiding, and ask yourself why.
 
 **Tip on graduating your trail mix bag from unstructured to structured.** One of my happiest outcomes of the Trail Mix Method is that certain activities became so easy to accomplish that they'd end up graduating from my unstructured time into my scheduled routine. For example, it was so easy for me to complete income-building activities that I ended up adding one hour at the beginning of every day where I only focused on income-generating activities, thus creating more space in my bag for other goals. I think that's part of the beauty of this method: it's helping me build habits and accountability.
 

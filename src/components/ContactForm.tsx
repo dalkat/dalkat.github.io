@@ -8,10 +8,10 @@ interface Props {
 
 /**
  * Mesh contact form. Six fields, mesh-tinted submit button. Success state
- * swaps the form for a card saying "Got it — talk soon."
+ * swaps the form for a card saying "Got it – talk soon."
  *
  * Submit POSTs directly to Formspree at the endpoint below. The endpoint
- * is just a public URL routed to Dalia's email — no secret, no env var
+ * is just a public URL routed to Dalia's email – no secret, no env var
  * required. Swap the email below if the destination ever changes.
  */
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgoqrvoj';
@@ -76,7 +76,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
             marginBottom: 10,
           }}
         >
-          Got it — talk soon.
+          Got it – talk soon.
         </div>
         <div style={{ fontFamily: fontUI, fontSize: 15, color: C.inkSoft, lineHeight: 1.5 }}>
           I read every note personally. You'll hear back from me within a week.
@@ -97,7 +97,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     for (const field of requiredFields) {
       const v = String(formData.get(field) ?? '').trim();
       if (!v) {
-        setError(`Please fill out every field — “${field}” is empty.`);
+        setError(`Please fill out every field – “${field}” is empty.`);
         const el = form.elements.namedItem(field) as HTMLElement | null;
         el?.focus();
         return;
@@ -141,7 +141,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
         gap: 18,
       }}
     >
-      {/* Honeypot — bots fill this; humans never see it. Formspree
+      {/* Honeypot – bots fill this; humans never see it. Formspree
           drops any submission where `_gotcha` is non-empty. Lets us
           disable Formspree's reCAPTCHA (which would otherwise block
           AJAX submissions in their free tier) without flooding the
@@ -195,7 +195,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
         <textarea
           rows={5}
           name="message"
-          placeholder="Anything you want to share — half-formed is fine."
+          placeholder="Anything you want to share – half-formed is fine."
           required
           style={{ ...fieldStyle, minHeight: 130 }}
           onFocus={onFocus}
@@ -217,7 +217,7 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
             fails. Otherwise empty so the submit stays right-aligned
             via the parent's justify-content: space-between.
             (The "↳ engagement per quarter" copy that used to live
-            here is hidden for now — see TODO.md.) */}
+            here is hidden for now – see TODO.md.) */}
         {error ? (
           <div
             role="alert"

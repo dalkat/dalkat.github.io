@@ -1,10 +1,10 @@
 ---
 /**
- * Sticky top nav — frosted-white band with the gradient brand mark,
+ * Sticky top nav – frosted-white band with the gradient brand mark,
  * desktop link row, and a mobile hamburger that toggles a stacked
  * drawer below the nav at narrow widths.
  *
- * Toggle is a tiny vanilla JS script (no React hydration) — clicks
+ * Toggle is a tiny vanilla JS script (no React hydration) – clicks
  * the hamburger or any link inside the drawer to open/close it.
  */
 import { C, fontDisplay, fontUI } from '@/lib/mesh';
@@ -23,7 +23,7 @@ const { current = 'home' } = Astro.props;
     top: '0',
     zIndex: 30,
     // Back to the translucent-glass look (94% white) with backdrop
-    // blur — keeps the soft glassy feel over the hero mesh while
+    // blur – keeps the soft glassy feel over the hero mesh while
     // reading nearly white so the iOS URL bar (theme-color #fff) still
     // blends well. safe-area-inset-top padding makes the nav extend
     // behind the URL bar so there's no gap.
@@ -53,12 +53,12 @@ const { current = 'home' } = Astro.props;
       letterSpacing: '-0.01em',
     }}
   >
-    {/* DK gradient mark hidden for now — see TODO.md.
+    {/* DK gradient mark hidden for now – see TODO.md.
         Keeping just the full name as the brand wordmark. */}
     Dalia Katan
   </a>
 
-  {/* Desktop links — hidden under 720px via global.css. */}
+  {/* Desktop links – hidden under 720px via global.css. */}
   <div
     class="mesh-nav-links"
     style={{ display: 'flex', gap: '28px', alignItems: 'center' }}
@@ -75,11 +75,11 @@ const { current = 'home' } = Astro.props;
         }}
       >{n.label}</a>
     ))}
-    {/* "Work with me" CTA pill hidden for now — see TODO.md.
+    {/* "Work with me" CTA pill hidden for now – see TODO.md.
         Visitors still reach contact via the home page Contact section. */}
   </div>
 
-  {/* Hamburger button — shown only under 720px. */}
+  {/* Hamburger button – shown only under 720px. */}
   <button
     type="button"
     class="mesh-nav-toggle"
@@ -123,7 +123,7 @@ const { current = 'home' } = Astro.props;
   </button>
 </nav>
 
-{/* Mobile drawer — sits below the sticky nav, frosted, stacked links.
+{/* Mobile drawer – sits below the sticky nav, frosted, stacked links.
     Hidden by default; .mesh-mobile-open on <body> reveals it. */}
 <div
   id="mesh-mobile-nav"
@@ -163,7 +163,7 @@ const { current = 'home' } = Astro.props;
       }}
     >{n.label}</a>
   ))}
-  {/* Mobile drawer "Work with me" CTA also hidden — see TODO.md. */}
+  {/* Mobile drawer "Work with me" CTA also hidden – see TODO.md. */}
 </div>
 
 <script is:inline>

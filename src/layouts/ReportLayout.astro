@@ -1,6 +1,6 @@
 ---
 /**
- * Report template — modeled on the design's MeshReportTeams (content-pages.jsx).
+ * Report template – modeled on the design's MeshReportTeams (content-pages.jsx).
  * Hero (kicker + bold gradient-accent headline + byline + lead),
  * then the embedded Slideshare PDF / iframe via the markdown body slot.
  *
@@ -33,7 +33,7 @@ interface Props {
 const { title, blurb, source, year, read_time, externalUrl, byline, tint = C.teal } = Astro.props;
 const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
 ---
-<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
+<Base title={`${title} – Field Notes – Dalia Katan`} description={blurb} ogType="article">
   <PageNav current="notes" />
 
   {/* ───────── Hero ───────── */}
@@ -53,7 +53,7 @@ const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      {/* Breadcrumbs row hidden for now — see TODO.md.
+      {/* Breadcrumbs row hidden for now – see TODO.md.
           Previously: <Breadcrumbs theme={themeLabel} slug={slug} /> */}
       <Kicker category="Report" date={year} read={readLabel} tint={tint} />
       <h1
@@ -93,7 +93,7 @@ const readLabel = read_time == null ? '15 min read' : `${read_time} min read`;
           textWrap: 'pretty',
         }}
       >{blurb}</p>
-      {/* "Read the report ↗" CTA + "via Source" hidden for now — see
+      {/* "Read the report ↗" CTA + "via Source" hidden for now – see
           TODO.md. externalUrl + source are kept on the data side so
           they're trivial to restore when we bring the button back. */}
     </div>

@@ -4,7 +4,7 @@
  * `type` field (recipe → RecipeLayout, report → ReportLayout, otherwise
  * → ArticleLayout). The markdown body is rendered into the chosen layout.
  *
- * URL = /notes/<slug>/ — `slug` is usually the entry's `id`, except for:
+ * URL = /notes/<slug>/ – `slug` is usually the entry's `id`, except for:
  *   do-now-generator → SKIPPED (it lives at /quests/do-now, not here)
  *   trail-mix-method → URL slug overridden to 'trailmix' (shorter,
  *                      friendlier; still appears in the archive)
@@ -77,7 +77,7 @@ const RECIPE_CONFIG: Record<string, {
 }> = {
   'challah-recipe': {
     displayWord: 'Challah',
-    tagline: 'a friday ritual, in six steps —',
+    tagline: 'a friday ritual, in six steps –',
     stats: [
       { lbl: 'Yields',     val: 'Two challah loaves' },
       { lbl: 'Active',     val: '1 hour' },
@@ -97,18 +97,18 @@ const RECIPE_CONFIG: Record<string, {
       { qty: 'optional',    name: 'sesame or poppy seeds, sprinkles' },
     ],
     steps: [
-      { n: 'I',   title: 'Wake the yeast.',                 body: 'Combine the yeast, sugar, and lukewarm water in a large mixing bowl. Stir and let it stand for 5–10 minutes — it should foam up. If it doesn\'t, the water was too hot or the yeast is past its prime.', note: '10 min' },
-      { n: 'II',  title: 'Bring the dough together.',       body: 'Beat the egg(s) in a small cup, then add to the yeast mixture along with the oil and salt. Mix well with a wooden spoon. Gradually add 3 cups of flour, a ½ cup at a time, mixing thoroughly after each addition (clumps are fine for now — you\'ll knead them out).', note: '8 min' },
-      { n: 'III', title: 'Knead like you mean it.',         body: 'As the dough thickens past spoon-and-bowl, switch to your hands and add another ½ to 1 cup of flour a ¼ cup at a time, until the dough stops being wet and sticky. Knead on a lightly floured counter for 10–15 minutes, adding flour 2 tablespoons at a time as needed, until smooth and soft. (Every batch is different — total flour usually lands between 3 ½ and 4 ½ cups; the dough shouldn\'t feel dense.) Optional: fold in chocolate chips or raisins.', note: '15 min' },
+      { n: 'I',   title: 'Wake the yeast.',                 body: 'Combine the yeast, sugar, and lukewarm water in a large mixing bowl. Stir and let it stand for 5–10 minutes – it should foam up. If it doesn\'t, the water was too hot or the yeast is past its prime.', note: '10 min' },
+      { n: 'II',  title: 'Bring the dough together.',       body: 'Beat the egg(s) in a small cup, then add to the yeast mixture along with the oil and salt. Mix well with a wooden spoon. Gradually add 3 cups of flour, a ½ cup at a time, mixing thoroughly after each addition (clumps are fine for now – you\'ll knead them out).', note: '8 min' },
+      { n: 'III', title: 'Knead like you mean it.',         body: 'As the dough thickens past spoon-and-bowl, switch to your hands and add another ½ to 1 cup of flour a ¼ cup at a time, until the dough stops being wet and sticky. Knead on a lightly floured counter for 10–15 minutes, adding flour 2 tablespoons at a time as needed, until smooth and soft. (Every batch is different – total flour usually lands between 3 ½ and 4 ½ cups; the dough shouldn\'t feel dense.) Optional: fold in chocolate chips or raisins.', note: '15 min' },
       { n: 'IV',  title: 'First rise.',                     body: 'Shape the dough into a ball and place it in a clean, lightly floured bowl. Cover with a slightly damp kitchen towel and let it rise in a warm room for 1–2 hours, until it doubles in size. Punch it down to release the air, re-dampen the towel, and let it rise again for another hour. Don\'t knead between rises.', note: '~3 hr' },
-      { n: 'V',   title: 'Braid.',                          body: 'Divide the dough into equal pieces — four for a four-braid challah, or split in half first for two smaller loaves. (You can also do three or six strands.) Roll each into a rope of equal width on a lightly floured surface and braid. For a six-braid: pinch the tops together, then braid — six over one, two over six, one over five, three over one — repeat until you run out of dough.', note: '15 min' },
-      { n: 'VI',  title: 'Second rise, wash, bake.',        body: 'Transfer the braid to a parchment-lined, lightly floured tray. Let it rest in a warm spot for ~30 minutes, loosely covered. Preheat the oven to 350°F. Brush with egg wash (egg yolk + a teaspoon of water). Optionally sprinkle with sesame, poppy, or sprinkles. Bake for 20–30 minutes, until golden brown — give it at least 3 inches of room on either side to grow.', note: '~60 min' },
+      { n: 'V',   title: 'Braid.',                          body: 'Divide the dough into equal pieces – four for a four-braid challah, or split in half first for two smaller loaves. (You can also do three or six strands.) Roll each into a rope of equal width on a lightly floured surface and braid. For a six-braid: pinch the tops together, then braid – six over one, two over six, one over five, three over one – repeat until you run out of dough.', note: '15 min' },
+      { n: 'VI',  title: 'Second rise, wash, bake.',        body: 'Transfer the braid to a parchment-lined, lightly floured tray. Let it rest in a warm spot for ~30 minutes, loosely covered. Preheat the oven to 350°F. Brush with egg wash (egg yolk + a teaspoon of water). Optionally sprinkle with sesame, poppy, or sprinkles. Bake for 20–30 minutes, until golden brown – give it at least 3 inches of room on either side to grow.', note: '~60 min' },
     ],
-    ingredientsNote: "p.s. — you can start the dough on Thursday evening and leave it in the fridge overnight to have it ready to bake and fully proofed for Shabbat dinner.",
+    ingredientsNote: "p.s. – you can start the dough on Thursday evening and leave it in the fridge overnight to have it ready to bake and fully proofed for Shabbat dinner.",
   },
   'baguette-recipe': {
     displayWord: 'Baguette',
-    tagline: 'crust on the outside, cloud within —',
+    tagline: 'crust on the outside, cloud within –',
     stats: [
       { lbl: 'Yields',     val: 'Two loaves' },
       { lbl: 'Active',     val: '30 min' },
@@ -123,7 +123,7 @@ const RECIPE_CONFIG: Record<string, {
       { qty: 'a small bowl',name: 'flour for shaping', note: 'a couche helps' },
     ],
     steps: [
-      { n: 'I',   title: 'Mix and rest.',          body: 'Combine flour, salt, yeast, and cold water in a large bowl. Mix until no dry spots remain. Cover and rest 30 minutes. The dough will look rough — this is fine.', note: '30 min' },
+      { n: 'I',   title: 'Mix and rest.',          body: 'Combine flour, salt, yeast, and cold water in a large bowl. Mix until no dry spots remain. Cover and rest 30 minutes. The dough will look rough – this is fine.', note: '30 min' },
       { n: 'II',  title: 'Fold (four times).',    body: 'Every 30 minutes, stretch one side of the dough up and fold it over the rest. Rotate the bowl. Repeat four times in total. This builds gluten without kneading.', note: '2 hr' },
       { n: 'III', title: 'Cold ferment overnight.', body: 'Cover and refrigerate 18–24 hours. The slow rise develops flavor. Don\'t skip this.', note: '~24 hr' },
       { n: 'IV',  title: 'Divide and pre-shape.', body: 'Tip onto a floured counter. Divide in two. Gently form each piece into a loose cylinder. Rest 20 minutes seam-side down, covered.', note: '20 min' },
@@ -181,7 +181,7 @@ const recipeCfg = RECIPE_CONFIG[entry.id];
   >
     <Content />
     {/* Trail Mix Method article gets a name+email callout at the end
-        for the worksheet PDF — same pattern the old Jekyll site used,
+        for the worksheet PDF – same pattern the old Jekyll site used,
         Formspree-backed. PDF lives at /TMM-Worksheet-v1.pdf. */}
     {entry.id === 'trail-mix-method' && <TmmCallout client:visible tint={tint} />}
   </ArticleLayout>

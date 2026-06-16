@@ -1,5 +1,5 @@
 /**
- * /strategy page content data — extracted from the design handoff
+ * /strategy page content data – extracted from the design handoff
  * (mesh-pages/strategy.jsx, variations/subpage-data.jsx, and the
  * STRATEGY_CLIENTS list in mesh-pages/shared.jsx).
  */
@@ -7,7 +7,7 @@ import { C, fontDisplay, fontUI } from '@/lib/mesh';
 import type { CompanyWordmark } from '@/data/home';
 
 /* ──────────────────────────────────────────────
- * Offerings — three engagement umbrellas
+ * Offerings – three engagement umbrellas
  * ────────────────────────────────────────────── */
 export interface Offering {
   /** Group title. */
@@ -16,7 +16,7 @@ export interface Offering {
   tint: string;
   /** [baseColor, blobColor] for the mesh blob in the card corner. */
   blob: [string, string];
-  /** Services this umbrella covers — bulleted on the card. */
+  /** Services this umbrella covers – bulleted on the card. */
   services: string[];
 }
 
@@ -55,7 +55,7 @@ export const OFFERINGS: Offering[] = [
 ];
 
 /* ──────────────────────────────────────────────
- * Case studies — six representative engagements
+ * Case studies – six representative engagements
  * ────────────────────────────────────────────── */
 export interface CaseStudy {
   n: string;
@@ -77,18 +77,18 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation strategy', 'growth vision', 'mobility'],
     year: '2018',
     summary:
-      "A Fortune-10 company saw customer behavior shifting around how people move, travel, and pay — and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
+      "A Fortune-10 company saw customer behavior shifting around how people move, travel, and pay – and needed a long-term vision for where to place its growth bets. My team and I helped craft it: grounding the vision in ethnographic research and consumer trends, then working with client leadership to define the principles that would guide execution.",
     outcome: '20 growth opportunities prioritized for near- and long-term.',
   },
   {
     n: '02',
     kicker: 'Narrative & fundraising · Crusoe AI',
-    title: 'A Series A deck — for a company now worth billions',
+    title: 'A Series A deck – for a company now worth billions',
     client: 'Crusoe AI',
     tags: ['brand narrative', 'fundraising', 'investor deck'],
     year: '2019',
     summary:
-      "Crusoe AI is pioneering sustainable AI infrastructure, having raised a $1B Series E and being labeled Fast Company's 100 Most Innovative in 2026. But in its early days, they brought me in to design their Series A deck on a tight timeline — explaining a complex energy-plus-computing business to VCs and making the investment case land.",
+      "Crusoe AI is pioneering sustainable AI infrastructure, having raised a $1B Series E and being labeled Fast Company's 100 Most Innovative in 2026. But in its early days, they brought me in to design their Series A deck on a tight timeline – explaining a complex energy-plus-computing business to VCs and making the investment case land.",
     outcome: "Fundraising deck supported Crusoe AI's $30M Series A raise.",
   },
   {
@@ -99,7 +99,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['go-to-market', 'market expansion', 'pilot sourcing'],
     year: '2019–2020',
     summary:
-      "Zone7's AI predicts injury and fatigue risk in pro sports and military. They brought me in to help identify what industries might become their next growth edge. I led the full go-to-market strategy design — market research and selection, pricing, and sourcing pilot customers — to strengthen the company's position ahead of an ambitious fundraise.",
+      "Zone7's AI predicts injury and fatigue risk in pro sports and military. They brought me in to help identify what industries might become their next growth edge. I led the full go-to-market strategy design – market research and selection, pricing, and sourcing pilot customers – to strengthen the company's position ahead of an ambitious fundraise.",
     outcome: 'Secured pilot at top NYC hospital to validate next market.',
   },
   {
@@ -110,7 +110,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['market entry', 'business model', 'monetization'],
     year: '2016',
     summary:
-      "A Fortune-10 company was expanding into mobility and payments, preparing to launch a new app in Europe and China — two markets with little in common. My team and I designed the launch strategy across three questions: which markets and partners to prioritize, what shape the offering should take in each region, and how it would actually make money.",
+      "A Fortune-10 company was expanding into mobility and payments, preparing to launch a new app in Europe and China – two markets with little in common. My team and I designed the launch strategy across three questions: which markets and partners to prioritize, what shape the offering should take in each region, and how it would actually make money.",
     outcome: 'Strategy greenlit by client leadership; the app went to market that year.',
   },
   {
@@ -121,7 +121,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['brand strategy', 'consumer growth', 'regional playbooks'],
     year: '2016',
     summary:
-      "A global CPG manufacturer needed a multi-year brand and consumer-growth strategy — one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, how marketing and creative would flex to stay locally relevant across channels and segments, and the growth targets each would aim for.",
+      "A global CPG manufacturer needed a multi-year brand and consumer-growth strategy – one that would hold across seven brands and every region they sold in. Working directly with senior leadership, I helped define the brand ambition and the regional playbooks supporting it: how each market would recruit, engage, and keep its consumers, how marketing and creative would flex to stay locally relevant across channels and segments, and the growth targets each would aim for.",
     outcome: 'A three-year strategy adopted by the C-suite.',
   },
   {
@@ -132,15 +132,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['innovation', 'ideation workshops', 'human-centered design'],
     year: '2017',
     summary:
-      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands, each with its own consumers and constraints. I was brought in to lead the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative — without eroding the trust customers already had.",
+      "A billion-dollar manufacturer engaged us to rethink packaging across its portfolio of 10+ brands, each with its own consumers and constraints. I was brought in to lead the innovation workstream: running ideation workshops with every brand team, grounded in consumer research on how people actually shop the category, to surface packaging ideas that were more sustainable and more creative – without eroding the trust customers already had.",
     outcome: 'A prioritized initiative roadmap, scored by impact and speed-to-market.',
   },
 ];
 
 /* ──────────────────────────────────────────────
- * Strategy clients — typographic wordmarks
+ * Strategy clients – typographic wordmarks
  * Used in the "Past clients" logos band.
- * (No copyrighted glyphs — these are styled text.)
+ * (No copyrighted glyphs – these are styled text.)
  * ────────────────────────────────────────────── */
 export const STRATEGY_CLIENTS: CompanyWordmark[] = [
   { name: 'Adobe',          style: { fontFamily: fontUI, fontWeight: 700, fontSize: '24px', letterSpacing: '-0.01em' } },

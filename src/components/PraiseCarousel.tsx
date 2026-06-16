@@ -14,7 +14,7 @@ interface Props {
  *   - drag horizontally (mouse or touch) to swipe between quotes
  *     (>= 40px horizontal travel commits the swipe, pauses autoplay)
  *
- * Drag tracking is split between refs (instant, no re-render lag — used
+ * Drag tracking is split between refs (instant, no re-render lag – used
  * by the move/end checks) and state (drives the visual transform so
  * each pointermove paints the card following the cursor/finger).
  */
@@ -116,7 +116,7 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
       }}
     >
       <div
-        // Block drag/hover handling on the page counter pill — it's a
+        // Block drag/hover handling on the page counter pill – it's a
         // visual label, not a swipe surface. stopPropagation prevents
         // the counter from initiating a drag or pausing the carousel.
         onMouseDown={(e) => e.stopPropagation()}
@@ -142,10 +142,10 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
         {String(i + 1).padStart(2, '0')} of {String(testimonials.length).padStart(2, '0')}
       </div>
 
-      {/* Sliding/fading content block — wraps the quote + author so they
+      {/* Sliding/fading content block – wraps the quote + author so they
           animate together. Drag offset + phase-driven translate apply
           here. The page-indicator dots sit OUTSIDE this block (below)
-          so they stay static during drag — readers track progress
+          so they stay static during drag – readers track progress
           against the fixed indicator while the quote scrolls. */}
       <div
         style={{
@@ -186,7 +186,7 @@ export default function PraiseCarousel({ testimonials, intervalMs = 5400 }: Prop
         </div>
       </div>
 
-      {/* Static page indicator — outside the drag-transform block so it
+      {/* Static page indicator – outside the drag-transform block so it
           doesn't slide with the quote. Desktop: bottom-right corner.
           Mobile: reflows below the author info, centered (the mobile
           shim in global.css handles the override). */}

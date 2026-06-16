@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens as CSS variables — for use outside Tailwind utility classes
+/* Design tokens as CSS variables – for use outside Tailwind utility classes
  * (e.g. inline gradient-color computations in the meshBg helper).
  * Mirrors the C object in the original design handoff. */
 :root {
-  /* Global mesh scale — design tokens are sized for a 1280px artboard;
+  /* Global mesh scale – design tokens are sized for a 1280px artboard;
    * dial this down to soften the visual weight on production viewports.
    * 1.0 = pixel-perfect spec; lower = smaller everything (type, padding,
-   * radii, shadows — proportionally). Tune in one place. */
+   * radii, shadows – proportionally). Tune in one place. */
   --mesh-scale: 0.87;
   --c-lavender: #dcd0ff;
   --c-lilac: #cbb8ff;
@@ -55,7 +55,7 @@
 
 /* ─── Mesh responsive shim ───
  *
- * The page components use inline styles for everything — sizing, padding,
+ * The page components use inline styles for everything – sizing, padding,
  * grid columns. Inline style wins specificity, so we have to use !important
  * to override at narrow widths.
  *
@@ -95,7 +95,7 @@
      fixed width (more specific selectors with the same specificity win).
      Note: Astro renders inline styles without a space after the colon
      (`grid-template-columns:14px 1fr`), so we match by the column-spec
-     substring instead of the property prefix — robust to either format. */
+     substring instead of the property prefix – robust to either format. */
   .mesh-root [style*="14px 1fr"] { grid-template-columns: 14px 1fr !important; gap: 8px !important; }
   .mesh-root [style*="22px 1fr"] { grid-template-columns: 22px 1fr !important; gap: 10px !important; }
   .mesh-root [style*="24px 1fr"] { grid-template-columns: 24px 1fr !important; gap: 10px !important; }
@@ -111,7 +111,7 @@
 
   /* Nav: collapse the desktop link row, expose the hamburger.
      Keep env(safe-area-inset-top) on padding-top so the nav band
-     extends behind the iOS URL bar — otherwise the !important
+     extends behind the iOS URL bar – otherwise the !important
      padding shorthand below would zero out the safe-area inset. */
   .mesh-nav-links { display: none !important; }
   .mesh-nav {
@@ -124,7 +124,7 @@
   .mesh-nav-toggle:hover { background: rgba(34, 26, 58, 0.06); }
   .mesh-mobile-link:active { background: rgba(34, 26, 58, 0.04); }
 
-  /* Hide the tilted "— hi." caveat */
+  /* Hide the tilted "– hi." caveat */
   .mesh-root .mesh-photo-caption { display: none !important; }
 
   /* Hide the small mesh thumb in post tiles when the tile collapses */
@@ -150,7 +150,7 @@
     font-size: 17px !important;
   }
   /* Tighter gap between the Do Now hero subtitle and the card on
-     mobile — the global section padding shim leaves ~112px between
+     mobile – the global section padding shim leaves ~112px between
      the two; this drops the second section's top padding. */
   .mesh-root section.mesh-donow-section {
     padding-top: 8px !important;

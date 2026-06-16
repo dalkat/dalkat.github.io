@@ -1,12 +1,12 @@
 /**
- * /speaker page content data — three POV themes that organize every
+ * /speaker page content data – three POV themes that organize every
  * talk, lecture, podcast, panel, and publication onto one timeline.
  * Each entry renders as a row inside a tinted theme block.
  *
  * Adapted from the design handoff (.design-ref/design_handoff_speaker_page/
  * mesh-pages/speaker-themes-shared.jsx) with content reconciled against
  * the previous Jekyll _data/speaker.yml so nothing from the live site is
- * dropped — including the role context (Speaker, Guest Lecturer,
+ * dropped – including the role context (Speaker, Guest Lecturer,
  * Author, etc.) which the design ref omitted but is important for
  * each entry's framing.
  */
@@ -17,11 +17,11 @@ export interface SpeakerItem {
    *  "Education", "Conference". CSS uppercases at render time. */
   kind: string;
   title: string;
-  /** Institution / venue / publisher — rendered after the role on the
+  /** Institution / venue / publisher – rendered after the role on the
    *  italic sub-line as "Role · Institution". */
   where: string;
   /** Role label (e.g. "Speaker", "Guest Lecturer", "Author",
-   *  "Moderator", "Organizer & moderator"). Required — surfaces
+   *  "Moderator", "Organizer & moderator"). Required – surfaces
    *  on the italic sub-line ahead of the institution. */
   role: string;
   /** Number or range string like "2025–6". */
@@ -31,7 +31,7 @@ export interface SpeakerItem {
 export interface SpeakerTheme {
   id: string;
   title: string;
-  /** Accent color — dot, rule under H3, chip tint. */
+  /** Accent color – dot, rule under H3, chip tint. */
   tint: string;
   items: SpeakerItem[];
 }
@@ -45,7 +45,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Essay',         title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                role: 'Author',           year: 2023 },
       { kind: 'Panel',         title: 'Fundraising for Your Startup',                                 where: 'Treehouse',                              role: 'Speaker',          year: 2022 },
       { kind: 'Podcast',       title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                            role: 'Guest',            year: 2021 },
-      { kind: 'Podcast',       title: 'Startup Journey — 0 to 1, Retention, Virality',               where: 'BRAVE',                                   role: 'Guest',            year: 2021 },
+      { kind: 'Podcast',       title: 'Startup Journey – 0 to 1, Retention, Virality',               where: 'BRAVE',                                   role: 'Guest',            year: 2021 },
       { kind: 'Q&A',           title: 'Entrepreneurship AMA',                                         where: 'Journal',                                 role: 'Guest',            year: 2021 },
       { kind: 'Live Podcast',  title: 'Building Presently',                                           where: 'Journal',                                 role: 'Live Audio Guest', year: 2021 },
       { kind: 'Q&A',           title: 'Creative Sabbaticals',                                         where: 'Princeton Center for Entrepreneurship',   role: 'Interview Guest',  year: 2019 },
@@ -91,7 +91,7 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
 /**
  * Pale palette tints wash out as chip text. Map those tints to darker
  * companions so every kind chip has the same legibility floor. Darker
- * tints (coral, plum, teal) are themselves dark enough — pass through.
+ * tints (coral, plum, teal) are themselves dark enough – pass through.
  *
  * Mirrors `speakerChipInk` in the design handoff.
  */

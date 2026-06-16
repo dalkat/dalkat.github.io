@@ -6,9 +6,9 @@ interface Props {
 }
 
 /**
- * /do-now card — "Deal me a card → " pulls a random activity prompt from the
+ * /do-now card – "Deal me a card → " pulls a random activity prompt from the
  * passed list. Tracks a small history of recent pulls below the card.
- * No AI, no tracking — just a button and a list, per the original generator.
+ * No AI, no tracking – just a button and a list, per the original generator.
  */
 export default function DoNowCard({ prompts }: Props) {
   const [current, setCurrent] = useState<string | null>(null);
@@ -33,7 +33,7 @@ export default function DoNowCard({ prompts }: Props) {
         style={{
           position: 'relative',
           // Bumped top padding now that the corner "card · NN" counter
-          // is gone — keeps the card balanced top-to-bottom.
+          // is gone – keeps the card balanced top-to-bottom.
           padding: '64px 48px 40px',
           background: C.white,
           borderRadius: 28,

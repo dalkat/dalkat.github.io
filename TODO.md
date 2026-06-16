@@ -10,7 +10,7 @@ Search for `see TODO.md` in the codebase to find each hidden spot.
 
 The path-style kicker (e.g. `● /STRATEGY · CONSULTING PORTFOLIO`)
 above each root page's H1. Felt visually heavy under the big
-Fraunces headlines once everything else got polished — pulled for
+Fraunces headlines once everything else got polished – pulled for
 now, kept the slot in the source as a comment so they're easy to
 restore.
 
@@ -58,11 +58,11 @@ current brand. Worth a pass to:
 
 Two visual issues to revisit:
 
-  1. **Article hero ↔ foreword gap** — on mobile, the space between
+  1. **Article hero ↔ foreword gap** – on mobile, the space between
      a Field Notes article title and the first foreword aside is too
      generous. Probably tighten the section padding or the foreword
      `margin-top` for `@media (max-width: 720px)` in `ArticleLayout.astro`.
-  2. **Field Notes archive section titles on mobile** — they "render a
+  2. **Field Notes archive section titles on mobile** – they "render a
      bit weird" per Dalia. Need a closer look. Likely related to
      `FieldNotesArchive.tsx` group headings vs the filter chip row at
      a narrow width.
@@ -72,24 +72,24 @@ Two visual issues to revisit:
 Three article-template surfaces still on Phase-3-level styling and
 due for a design pass:
 
-  1. `/quests/do-now` — the interactive Do Now generator. Card pull
+  1. `/quests/do-now` – the interactive Do Now generator. Card pull
      UX works, but the button + card chrome haven't been tuned to
      match the rest of the mesh design language.
-  2. **Recipes** — `RecipeLayout.astro`. Used by /notes/challah-recipe
+  2. **Recipes** – `RecipeLayout.astro`. Used by /notes/challah-recipe
      and /notes/baguette-recipe. The hero stat-tiles row, ingredients
      aside, and numbered steps work but could use a refinement pass
      for type hierarchy and spacing consistency with the new hero
      pattern.
-  3. **Reports** — `ReportLayout.astro`. Used by the two reports
+  3. **Reports** – `ReportLayout.astro`. Used by the two reports
      under /notes (report-teams, report-refugee). Currently a hero
      + external-link CTA + markdown body. Worth tightening up the
      hero treatment and the "Read the report ↗" CTA shape to match
      the strategy/speaker cards.
 
-## Speaker contact photo — needs a better treatment (deferred 2026-06-10)
+## Speaker contact photo – needs a better treatment (deferred 2026-06-10)
 
 The /speaker contact section uses `/img/speaking5.jpg` (recovered
-from the old Jekyll site, b099df4^) — Dalia at the front of a room
+from the old Jekyll site, b099df4^) – Dalia at the front of a room
 with the audience raising hands. It's a *landscape* shot, which
 sits awkwardly next to the contact form: scaling to the column
 width makes it short, and aspect-ratio cropping to a portrait
@@ -99,7 +99,7 @@ Options to revisit later:
   - Stack two photos vertically in the left column (a portrait
     + a landscape teaser of the audience), so the column has the
     height of the form without distorting either image.
-  - Find/source a better single photo — ideally a portrait-orient
+  - Find/source a better single photo – ideally a portrait-orient
     speaker shot with Dalia + screen in frame.
   - Use a photo card with a caption / venue note underneath, so
     the column reads as a richer block rather than a thin image.
@@ -107,14 +107,14 @@ Options to revisit later:
 Touchpoint: `src/pages/speaker.astro` (mesh-speaker-contact-grid).
 The 380px left column + figure markup is already in place.
 
-## Field Notes — floating filter bar gap (deferred 2026-06-04)
+## Field Notes – floating filter bar gap (deferred 2026-06-04)
 
 The filter bar (FILTER ↓ · All · Entrepreneurship & Product · …)
-sits sticky at the top of the archive — that part's good. But
+sits sticky at the top of the archive – that part's good. But
 the strip of content that scrolls behind it (the theme group
 headers like "Entrepreneurship & Product · 5") slips into the
 visible gap above the bar and looks half-clipped / awkward in
-motion. Need a better treatment — options to consider:
+motion. Need a better treatment – options to consider:
   - Solid background on the sticky bar that fades from the page
     bg (mask-image or a small drop-shadow) so the content
     underneath reads as "hidden" rather than "peeking".
@@ -125,18 +125,18 @@ motion. Need a better treatment — options to consider:
 Touchpoint: `src/pages/notes.astro` + `FieldNotesArchive.tsx`
 (the sticky filter row + the group-header markup).
 
-## Eyebrow — possible "REPORT / ESSAY · min read" (deferred 2026-06-04)
+## Eyebrow – possible "REPORT / ESSAY · min read" (deferred 2026-06-04)
 
 The `<Kicker>` pill on essays and reports currently reads
 "ESSAY · 2019 · 14 MIN READ" (category · year · read time). Worth
 considering dropping the middle year token so it reads just
-"ESSAY · 14 MIN READ" — the year still lives elsewhere on the
+"ESSAY · 14 MIN READ" – the year still lives elsewhere on the
 page (byline on reports, source line on essays where applicable).
 
 Touchpoint: `src/components/Kicker.astro`. Optional `date` prop
 already exists; the conditional render would be where to hide it.
 
-## HighlightReel — pause on hover (deferred 2026-06-04)
+## HighlightReel – pause on hover (deferred 2026-06-04)
 
 The image carousel that appears at the end of essay pages (e.g.
 the sabbatical-update photo galleries) auto-advances every 5.2s.
@@ -149,7 +149,7 @@ Touchpoint: `src/components/HighlightReel.tsx` near the outer
 `<div>` (currently has no hover handlers). The PraiseCarousel
 component already has this pattern as a copy-paste reference.
 
-## Articles — breadcrumbs row (hidden 2026-05-31)
+## Articles – breadcrumbs row (hidden 2026-05-31)
 
 The `notes / personal-essays / sabbatical-update-2` style
 breadcrumb that used to sit above the kicker on every essay,
@@ -162,15 +162,15 @@ re-add `<Breadcrumbs theme={themeLabel} slug={slug} />`. The
 themeLabel + slug props are still threaded through ArticleLayout
 so the restore is one line.
 
-## Articles — "Originally published on …" line (hidden 2026-05-31)
+## Articles – "Originally published on …" line (hidden 2026-05-31)
 
 The small uppercase line below the blurb on essay/letter/tool
 pages that read "↳ ORIGINALLY PUBLISHED ON DALIAKATAN.COM" is
-hidden — most pieces are now hosted here so the attribution felt
+hidden – most pieces are now hosted here so the attribution felt
 redundant. The `source` prop stays threaded through ArticleLayout
 so restoring is one block from git history.
 
-## Reports — breadcrumbs row (hidden 2026-05-30)
+## Reports – breadcrumbs row (hidden 2026-05-30)
 
 The `notes / teambuilding / report-teams` style breadcrumb that
 used to sit above the kicker on /notes/report-teams and
@@ -182,7 +182,7 @@ re-add `<Breadcrumbs theme={themeLabel} slug={slug} />`. The
 themeLabel + slug props are still threaded through ReportLayout
 so the restore is one line.
 
-## Reports — "Read the report ↗" CTA (hidden 2026-05-30)
+## Reports – "Read the report ↗" CTA (hidden 2026-05-30)
 
 The dark pill button + "via Source" caption that previously sat
 between the blurb and the embedded Slideshare iframe is hidden.
@@ -194,7 +194,7 @@ report ↗</a> <span>via {source}</span> </div> )}` block from git
 history. `externalUrl` + `source` props are still passed into
 ReportLayout, so no data plumbing needed.
 
-## Nav — "Work with me" CTA pill (hidden 2026-05-27)
+## Nav – "Work with me" CTA pill (hidden 2026-05-27)
 
 The dark "Work with me" pill on the right of the desktop nav (and
 its mobile-drawer counterpart) is hidden. Visitors still reach the
@@ -205,21 +205,21 @@ Restore: in `src/components/PageNav.astro`, bring back both
 `<a href="/#contact">Work with me</a>` blocks from git history
 (commented in place where they used to live).
 
-## Nav — DK gradient mark (hidden 2026-05-27)
+## Nav – DK gradient mark (hidden 2026-05-27)
 
 The 26px circular DK gradient brand mark in `src/components/PageNav.astro`
-is hidden — the nav brand is now just the wordmark "Dalia Katan."
+is hidden – the nav brand is now just the wordmark "Dalia Katan."
 Restore by reinstating the `<span style={{ width: 26px, height: 26px,
 borderRadius: '50%', background: linear-gradient(...) }}>DK</span>`
 block from git history. (Favicon, apple-touch-icon, and the OG-card
-DK badge still use the gradient mark — only the nav instance is
+DK badge still use the gradient mark – only the nav instance is
 hidden.)
 
-## ContactForm — "engagement per quarter" line (hidden 2026-05-27)
+## ContactForm – "engagement per quarter" line (hidden 2026-05-27)
 
 The italic Fraunces line in the contact form's action row:
 *"↳ I take on one new engagement per quarter, and answer every note
-within a week."* — hidden for now. Replaced with an empty `<span />`
+within a week."* – hidden for now. Replaced with an empty `<span />`
 spacer so the submit button stays right-aligned. Lives in
 `src/components/ContactForm.tsx` near line 160.
 
@@ -230,13 +230,13 @@ To restore: swap the `<span />` back to the original `<div>` block
 
 Two portrait treatments hidden on the home page for now:
 
-  1. **Hero portrait circle + "— hi." Caveat caption** — sat above
+  1. **Hero portrait circle + "– hi." Caveat caption** – sat above
      the H1, redundant with the H1's own "Hi, I'm Dalia." greeting.
      Lives in `src/pages/index.astro` directly above the hero `<h1>`.
      Restore: copy the `<div class="mesh-photo-card">…</div>` block
      back from git history (commit subject: "Home: hide hero
      portrait and contact-section portrait").
-  2. **Contact section PhotoSlab** — left-column portrait next to the
+  2. **Contact section PhotoSlab** – left-column portrait next to the
      ContactForm. Replaced with the form spanning full-width.
      Restore: bring back the 2-column grid wrapper + `<PhotoSlab>`.
      `PhotoSlab` import at the top of `index.astro` is still present

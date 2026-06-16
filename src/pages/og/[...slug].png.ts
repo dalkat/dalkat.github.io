@@ -2,7 +2,7 @@
  * Static OG card endpoint.
  *
  * Generates one 1200×630 PNG per page at build time. The slug becomes the
- * URL path the card is *for* — e.g. `/og/notes/sabbatical-update.png`
+ * URL path the card is *for* – e.g. `/og/notes/sabbatical-update.png`
  * is the preview card for `/notes/sabbatical-update/`. Top-level pages
  * use slugs like `home`, `about`, `strategy`, etc.
  *
@@ -97,7 +97,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         spec: {
           title: 'Consulting & Advisory',
           kicker: 'For teams',
-          subtitle: 'Helping leaders find the next move — and the courage to make it.',
+          subtitle: 'Helping leaders find the next move – and the courage to make it.',
           tint: C.teal,
           base: C.mint,
         },

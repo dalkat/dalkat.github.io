@@ -2,7 +2,7 @@ import { useState, type CSSProperties, type FocusEvent, type FormEvent } from 'r
 import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
 
 /**
- * Small inline callout at the bottom of /notes/trailmix — a name +
+ * Small inline callout at the bottom of /notes/trailmix – a name +
  * email gate for the Trail Mix Method worksheet PDF.
  *
  * Same Formspree endpoint as the main /#contact form
@@ -11,7 +11,7 @@ import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
  * contact ones. On success the form swaps for a quiet
  * "I'll email it to you" line.
  *
- * The PDF itself lives at /TMM-Worksheet-v1.pdf in public/ — Dalia
+ * The PDF itself lives at /TMM-Worksheet-v1.pdf in public/ – Dalia
  * sends it manually from her inbox once a request comes through.
  */
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgoqrvoj';
@@ -170,7 +170,7 @@ export default function TmmCallout({ tint = C.coral }: Props) {
         }}
       >
         Drop your name + email below and I'll send over a digital version
-        of my Trail Mix Bag — categories, weekly intentions, and a
+        of my Trail Mix Bag – categories, weekly intentions, and a
         blank template you can fill in.
       </p>
       <form

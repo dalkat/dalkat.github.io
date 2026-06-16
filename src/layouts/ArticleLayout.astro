@@ -1,6 +1,6 @@
 ---
 /**
- * Generic article shell — used for letters (sabbatical-update*) and the
+ * Generic article shell – used for letters (sabbatical-update*) and the
  * trailmix tool post. Hero w/ breadcrumbs + kicker + headline + lead, then
  * a single reader-friendly markdown body column on paper.
  *
@@ -39,7 +39,7 @@ const {
 } = Astro.props;
 const readLabel = read_time == null ? null : `${read_time} min read`;
 ---
-<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
+<Base title={`${title} – Field Notes – Dalia Katan`} description={blurb} ogType="article">
   <PageNav current="notes" />
 
   {/* ───────── Hero ───────── */}
@@ -58,7 +58,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     }}
   >
     <div style={{ maxWidth: '880px', margin: '0 auto' }}>
-      {/* Breadcrumbs row hidden for now — see TODO.md.
+      {/* Breadcrumbs row hidden for now – see TODO.md.
           Previously: <Breadcrumbs theme={themeLabel} slug={slug} /> */}
       <Kicker category={type} date={year} read={readLabel ?? undefined} tint={tint} />
       <h1
@@ -85,7 +85,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
           textWrap: 'pretty',
         }}
       >{blurb}</p>
-      {/* "↳ Originally published on {source}" hidden for now — see
+      {/* "↳ Originally published on {source}" hidden for now – see
           TODO.md. The source prop is still threaded through so the
           restore is one block. */}
     </div>
@@ -174,7 +174,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     color: var(--post-tint, #ff8a7a);
     font-weight: 600;
   }
-  /* Pull-quote — matches the design's <PullQuote> component
+  /* Pull-quote – matches the design's <PullQuote> component
    * (content-pages.jsx). Slight negative side-margin to break out of the
    * reading column; clean white card with a tinted left border (no
    * gradient backdrop); larger Fraunces italic copy.
@@ -210,7 +210,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
   .mesh-prose blockquote p:last-child {
     margin-bottom: 0;
   }
-  /* Attribution — any paragraph after the first inside a blockquote is
+  /* Attribution – any paragraph after the first inside a blockquote is
    * the citation line. Uppercase Space Grotesk + post-tinted ↳ glyph
    * prefix. Links inside keep their tinted underline. */
   .mesh-prose blockquote p + p {
@@ -230,7 +230,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     color: var(--post-tint, #ff8a7a);
   }
 
-  /* Foreword — matches the design's <Foreword> component. Wrap a paragraph
+  /* Foreword – matches the design's <Foreword> component. Wrap a paragraph
    * in <aside class="mesh-foreword"> in the markdown body to use it. The
    * "FOREWORD" pill is a CSS ::before, no extra markup required. */
   .mesh-prose .mesh-foreword {
@@ -326,7 +326,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     box-shadow: 0 24px 50px -28px #221a3a55;
     background: #fff;
   }
-  /* Inline images inside a markdown body (e.g. trail-mix diagrams) — soft
+  /* Inline images inside a markdown body (e.g. trail-mix diagrams) – soft
    * card framing, centered in the column. Full-bleed photos override below. */
   .mesh-prose img {
     display: block;
@@ -343,7 +343,7 @@ const readLabel = read_time == null ? null : `${read_time} min read`;
     border: none;
     box-shadow: none;
   }
-  /* Full-bleed inline figure — breaks out of the 720px article column
+  /* Full-bleed inline figure – breaks out of the 720px article column
    * to span the full viewport. Used for the photos sprinkled through
    * the sabbatical updates. */
   .mesh-prose .full-bleed {

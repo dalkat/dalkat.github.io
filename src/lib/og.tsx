@@ -1,5 +1,5 @@
 /**
- * Open Graph card generator — satori + resvg.
+ * Open Graph card generator – satori + resvg.
  *
  * Renders a 1200×630 PNG per page, mesh-tinted by the post's accent color
  * (or by a generic palette for non-Field-Note pages). Called from the static
@@ -16,14 +16,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { C } from './mesh';
 
-// Anchor to project root via process.cwd() — Vite rewrites `import.meta.url`
+// Anchor to project root via process.cwd() – Vite rewrites `import.meta.url`
 // after bundling, so a relative path from this file doesn't survive into
 // the build output. `npm run build` and `astro dev` both run from the
 // project root, so this is stable.
 const FONTS_DIR = path.resolve(process.cwd(), 'src/assets/fonts');
 
 // ─── JSX factory ───────────────────────────────────────────────────────────
-// Satori walks a plain `{ type, props }` tree — no React needed. We declare
+// Satori walks a plain `{ type, props }` tree – no React needed. We declare
 // our own factory so this file can use JSX without importing React, while
 // the rest of the codebase keeps its React-via-Astro setup untouched.
 function h(type: any, props: any, ...children: any[]): any {
@@ -68,7 +68,7 @@ export interface OGCardSpec {
 
 /**
  * Auto-shrink the title font size so long headlines still fit in the card.
- * Rough heuristic — works well for 1–10 word titles up to ~100 chars. The
+ * Rough heuristic – works well for 1–10 word titles up to ~100 chars. The
  * title container is `flex-wrap: wrap`, so anything past one line wraps
  * gracefully; this sizing keeps a 2-line headline visually balanced.
  */
@@ -92,7 +92,7 @@ function card(spec: OGCardSpec) {
   const tint = spec.tint ?? C.coral;
   const base = spec.base ?? C.paper;
 
-  // Three accent blobs — one matches the tint, two are palette neighbors.
+  // Three accent blobs – one matches the tint, two are palette neighbors.
   // Position varies slightly so back-to-back cards don't all look identical.
   const blob = (color: string, top: number, left: number, size: number, opacity: number) =>
     h('div', {
@@ -156,7 +156,7 @@ function card(spec: OGCardSpec) {
     blob(C.lavender, 340,  860, 540, 0.40),
     blob(C.mint,     420, -120, 480, 0.40),
 
-    // Top row — site name --------------------------------------------------
+    // Top row – site name --------------------------------------------------
     h(
       'div',
       {
@@ -191,7 +191,7 @@ function card(spec: OGCardSpec) {
       h('div', { style: { display: 'flex' } }, 'Dalia Katan'),
     ),
 
-    // Middle — kicker + title + subtitle -----------------------------------
+    // Middle – kicker + title + subtitle -----------------------------------
     h(
       'div',
       {
@@ -270,7 +270,7 @@ function card(spec: OGCardSpec) {
         : null,
     ),
 
-    // Bottom row — domain --------------------------------------------------
+    // Bottom row – domain --------------------------------------------------
     h(
       'div',
       {
@@ -287,7 +287,7 @@ function card(spec: OGCardSpec) {
         },
       },
       h('div', { style: { display: 'flex' } }, 'daliakatan.com'),
-      // Small accent dot in the bottom-right corner — a real div instead of
+      // Small accent dot in the bottom-right corner – a real div instead of
       // a glyph, so we don't depend on Space Grotesk covering ✺/✦ dingbats.
       h('div', {
         style: {

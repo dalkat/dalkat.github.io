@@ -1,19 +1,19 @@
 ---
 /**
- * /speaker — Talks & Publications.
+ * /speaker – Talks & Publications.
  *
  * Layout per .design-ref/design_handoff_speaker_page (variation N):
- *   1. Hero (peach mesh)            — H1 + lead paragraph.
- *   2. Section 01 · About the work  — Newsreader lead, italic venues
+ *   1. Hero (peach mesh)            – H1 + lead paragraph.
+ *   2. Section 01 · About the work  – Newsreader lead, italic venues
  *                                     summary, ↳ short-form hand-off
  *                                     to /notes.
- *   3. Section 02 · Themes          — three theme blocks (startup
+ *   3. Section 02 · Themes          – three theme blocks (startup
  *                                     journey, product & business,
  *                                     culture-building). Each block
  *                                     is a tinted H3 + 2px tinted
  *                                     rule + white card of rows
  *                                     [year · title+where · kind chip].
- *   4. Section 03 · Invite me       — "Drop a line" + ContactForm.
+ *   4. Section 03 · Invite me       – "Drop a line" + ContactForm.
  *   5. Footer (plum tint).
  *
  * Mobile behavior: the global mobile shim (src/styles/global.css)
@@ -41,8 +41,8 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
 }
 ---
 <Base
-  title="Talks & Publications — Dalia Katan"
-  description="Guest lectures at Princeton, conference talks, podcasts, and long-form writing for MIT Press, Deloitte Insights, and more — organized into three points of view."
+  title="Talks & Publications – Dalia Katan"
+  description="Guest lectures at Princeton, conference talks, podcasts, and long-form writing for MIT Press, Deloitte Insights, and more – organized into three points of view."
 >
   <PageNav current="talks" />
 
@@ -66,7 +66,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto', position: 'relative' }}>
-      {/* Kicker pill hidden for now — see TODO.md ("/speaker · talks, lectures, publications") */}
+      {/* Kicker pill hidden for now – see TODO.md ("/speaker · talks, lectures, publications") */}
       <h1
         style={{
           fontFamily: fontDisplay,
@@ -124,7 +124,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         }}
       >
         I speak and write about what it <em>actually</em> takes to build
-        products and companies with care — how ideas become
+        products and companies with care – how ideas become
         revenue-generating businesses, how the startup journey feels from
         the inside, and why the best products are designed more like good
         architecture than good software.
@@ -312,7 +312,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         ))}
       </div>
 
-      {/* CTA after the last theme (Culture-building) — same dark-pill
+      {/* CTA after the last theme (Culture-building) – same dark-pill
           style as the home page's "Visit the full archive" button.
           Copy clarifies what's behind the link: the themes above are a
           list of engagements, Field Notes is readable writing. */}
@@ -346,7 +346,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
     </div>
   </section>
 
-  {/* ───────── 03 · Invite me — Drop a line ───────── */}
+  {/* ───────── 03 · Invite me – Drop a line ───────── */}
   <section
     id="contact"
     style={{
@@ -372,7 +372,7 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
         If you're putting together a stage, a syllabus, or a session for your
         founders, I'm happy to shape a talk to the room.
       </p>
-      {/* Two-column layout — speaker photo on the left, contact form
+      {/* Two-column layout – speaker photo on the left, contact form
           on the right. The photo differentiates this contact block
           from the home + strategy ones, so the page doesn't reuse
           the same anonymous slab three times. */}

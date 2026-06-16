@@ -1,6 +1,6 @@
 ---
 /**
- * Recipe template — modeled on the design's MeshChallah (recipe-donow.jsx).
+ * Recipe template – modeled on the design's MeshChallah (recipe-donow.jsx).
  * Hero with caveat tagline + huge serif italic display title + stat tiles,
  * then a two-column body (sticky ingredients aside + numbered steps).
  *
@@ -51,7 +51,7 @@ const {
 const gt = gradientText();
 const tints = [C.coral, C.plum, C.teal, C.coral];
 ---
-<Base title={`${title} — Field Notes — Dalia Katan`} description={blurb} ogType="article">
+<Base title={`${title} – Field Notes – Dalia Katan`} description={blurb} ogType="article">
   <PageNav current="notes" />
 
   {/* ───────── Hero ───────── */}
@@ -71,7 +71,7 @@ const tints = [C.coral, C.plum, C.teal, C.coral];
     }}
   >
     <div style={{ maxWidth: '1180px', margin: '0 auto', position: 'relative' }}>
-      {/* Breadcrumbs row hidden for now — see TODO.md.
+      {/* Breadcrumbs row hidden for now – see TODO.md.
           Previously: <Breadcrumbs theme={themeLabel} slug={slug} /> */}
       <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '40px', alignItems: 'flex-end' }}>
         <div>
@@ -181,7 +181,7 @@ const tints = [C.coral, C.plum, C.teal, C.coral];
               color: C.coral,
               marginBottom: '4px',
             }}
-          >what you'll need —</div>
+          >what you'll need –</div>
           <h2
             style={{
               fontFamily: fontDisplay,
@@ -245,7 +245,7 @@ const tints = [C.coral, C.plum, C.teal, C.coral];
             ))}
           </ul>
         </div>
-        {/* p.s. note lives below the ingredients card, not inside it —
+        {/* p.s. note lives below the ingredients card, not inside it –
             same white-card treatment, just sits outside the sticky
             dashed-outline box. */}
         {ingredientsNote && (
@@ -330,7 +330,7 @@ const tints = [C.coral, C.plum, C.teal, C.coral];
           ))}
         </ol>
         {/* "↳ Originally published on {source}, {year}" hidden for now
-            — see TODO.md. The source + year props are still threaded
+            – see TODO.md. The source + year props are still threaded
             through so the restore is one block. */}
       </main>
     </div>

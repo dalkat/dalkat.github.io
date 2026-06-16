@@ -1,6 +1,6 @@
 ---
 /**
- * /quests — side quests index. Things I built outside of paid work.
+ * /quests – side quests index. Things I built outside of paid work.
  *
  * Hero (peach-mesh) over a list of large quest cards. Each card has a
  * mesh-tinted thumb tile or product screenshot on the left and copy on
@@ -43,8 +43,8 @@ function hostFor(href: string | undefined): string | null {
 }
 ---
 <Base
-  title="Side Quests — Dalia Katan"
-  description="Side projects, weekend tools, and small experiments — things I've built outside of paid work."
+  title="Side Quests – Dalia Katan"
+  description="Side projects, weekend tools, and small experiments – things I've built outside of paid work."
 >
   <PageNav current="quests" />
 
@@ -66,7 +66,7 @@ function hostFor(href: string | undefined): string | null {
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      {/* Kicker pill hidden for now — see TODO.md ("/quests · things I've made") */}
+      {/* Kicker pill hidden for now – see TODO.md ("/quests · things I've made") */}
       <h1
         style={{
           fontFamily: fontDisplay,
@@ -121,7 +121,7 @@ function hostFor(href: string | undefined): string | null {
         const isExternal = !!q.href && q.href.startsWith('http');
         const Tag = q.href ? 'a' : 'article';
         const host = hostFor(q.href);
-        // Shared style block for the award sticker — used as both an
+        // Shared style block for the award sticker – used as both an
         // anchor (when q.award.href is set) and a static div otherwise.
         const awardStyle = {
           position: 'absolute' as const,
@@ -151,14 +151,14 @@ function hostFor(href: string | undefined): string | null {
           </>
         );
         return (
-          /* Positioning shell — the badge needs to overhang the card's top
+          /* Positioning shell – the badge needs to overhang the card's top
              edge, but anchors can't legally nest inside each other (the
              card itself is an <a> when q.href is set, and the badge is its
              own <a> when q.award.href is set). Wrapping both as siblings
              inside this <div> gives the badge a real positioning context
              without nesting. */
           <div style={{ position: 'relative' }}>
-            {/* Award badge — overhangs the top edge of the card (TOP PICK
+            {/* Award badge – overhangs the top edge of the card (TOP PICK
                 sticker). Renders as an <a> when it has its own href,
                 otherwise as a plain <div>. */}
             {q.award && (q.award.href ? (
@@ -191,7 +191,7 @@ function hostFor(href: string | undefined): string | null {
                 opacity: isComingSoon ? 0.92 : 1,
               }}
             >
-            {/* Thumb — product screenshot if `image` is set, else mesh tile.
+            {/* Thumb – product screenshot if `image` is set, else mesh tile.
                 The Kind pill sits in the bottom-left corner in both cases. */}
             <div
               style={{
@@ -234,7 +234,7 @@ function hostFor(href: string | undefined): string | null {
                   }}
                 ></div>
               )}
-              {/* Kind pill — small brand mark in the corner */}
+              {/* Kind pill – small brand mark in the corner */}
               <div
                 style={{
                   position: 'absolute',

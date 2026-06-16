@@ -30,7 +30,7 @@ const THEMES = [
 type Theme = (typeof THEMES)[number];
 
 /* Adjacent themes must not share a tint. Sequence: coral, teal, coral,
- * plum, coral — no two neighbors repeat. Productivity is coral
+ * plum, coral – no two neighbors repeat. Productivity is coral
  * (matches the energetic/actionable mood of tools like Do Now and
  * Trail Mix); Personal Essays stays plum (introspective). */
 const themeTints: Record<string, string> = {

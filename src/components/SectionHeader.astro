@@ -10,7 +10,7 @@ interface Props {
   n?: number;
   /** Eyebrow text after the number, e.g. "About". */
   sub: string;
-  /** H2 title — string or rich HTML allowed via slot. */
+  /** H2 title – string or rich HTML allowed via slot. */
   title?: string;
   /** Accent color hex (default plum). */
   accent?: string;
@@ -37,7 +37,7 @@ const { n, sub, title, accent = C.plum } = Astro.props;
       boxShadow: `0 8px 18px -12px ${C.ink}33`,
     }}
   >
-    {/* Leading dot removed — the chip carries enough visual weight on its
+    {/* Leading dot removed – the chip carries enough visual weight on its
         own. (Was a small accent-tinted ● before the number.) */}
     {n != null && <>{String(n).padStart(2, '0')} · </>}{sub}
   </div>

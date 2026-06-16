@@ -35,7 +35,7 @@ const tlabel = (t: string) => TYPE_LABELS[t] ?? t;
 const thlabel = (t: string) => THEME_LABELS[t] ?? t;
 
 // Hide a couple of entries from the archive (their pages still build
-// via the [...slug] route, so the URLs remain valid — they just don't
+// via the [...slug] route, so the URLs remain valid – they just don't
 // surface in the browseable list).
 const HIDE_FROM_ARCHIVE = new Set([
   'do-now-generator',    // is a Side Quest, not a Field Note
@@ -79,8 +79,8 @@ articles.sort((a, b) => b.year - a.year);
 const gt = gradientText();
 ---
 <Base
-  title="Field Notes — Dalia Katan"
-  description="Essays, recipes, tools, and small experiments — filed by what I was actually thinking about when I made them."
+  title="Field Notes – Dalia Katan"
+  description="Essays, recipes, tools, and small experiments – filed by what I was actually thinking about when I made them."
 >
   <PageNav current="notes" />
 
@@ -102,7 +102,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      {/* Kicker pill hidden for now — see TODO.md ("/notes · the archive") */}
+      {/* Kicker pill hidden for now – see TODO.md ("/notes · the archive") */}
       <h1
         style={{
           fontFamily: fontDisplay,
@@ -129,7 +129,7 @@ const gt = gradientText();
           textWrap: 'pretty',
         }}
       >
-        Short essays, blogs, tools, and recipes — the trail of what I've
+        Short essays, blogs, tools, and recipes – the trail of what I've
         been curious about.
       </p>
     </div>

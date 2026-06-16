@@ -1,18 +1,18 @@
 /**
- * Home-page content data — extracted from the design handoff
+ * Home-page content data – extracted from the design handoff
  * (variations/shared.jsx + mesh-pages/home.jsx).
  */
 import { C, fontDisplay, fontUI } from '@/lib/mesh';
 
-/** Long bio — two paragraphs in the About section. */
+/** Long bio – two paragraphs in the About section. */
 export const BIO_LONG: string[] = [
-  "I'm a product leader who's spent the last 15 years between strategy consulting (independent practice, Deloitte/Doblin) and tech — most recently leading mobile product at Stripe, and before that founding Presently, a startup making group payments easier.",
+  "I'm a product leader who's spent the last 15 years between strategy consulting (independent practice, Deloitte/Doblin) and tech – most recently leading mobile product at Stripe, and before that founding Presently, a startup making group payments easier.",
   "Now I work as a fractional CPO and advisor for early-stage teams, angel-invest in founders I believe in, and write about the intersection of product, the startup journey, and what it means to build a life around what you're actually curious about.",
 ];
 
 /** Hero subhead under the "Hi, I'm Dalia." headline. */
 export const HERO_SUBHEAD =
-  "Product leader, fractional CPO, angel investor — I help early-stage teams turn products into companies that can actually scale.";
+  "Product leader, fractional CPO, angel investor – I help early-stage teams turn products into companies that can actually scale.";
 
 /** Testimonials carousel on the Praise section. */
 export interface Testimonial {
@@ -33,12 +33,12 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'VP of Finance, Crusoe AI',
   },
   {
-    quote: "Dalia is one of the best all-around people that I know. Her tremendous background (Ivy League, Big 4 Consulting, startups) is rooted in the foundation of subject expertise/knowledge, integrity, professionalism, heart, pride in her work, and how she treats people at all levels — leaving a lasting impression to those lucky to have worked with her.",
+    quote: "Dalia is one of the best all-around people that I know. Her tremendous background (Ivy League, Big 4 Consulting, startups) is rooted in the foundation of subject expertise/knowledge, integrity, professionalism, heart, pride in her work, and how she treats people at all levels – leaving a lasting impression to those lucky to have worked with her.",
     author: 'John Z.',
     role: 'Director of Marketing, Thuzio (acquired)',
   },
   {
-    quote: "Dalia has incredible strategic thinking, leadership skills — Envisioning, Engaging and Execution skills. She demonstrates great presence, EQ, IQ and drive and took full ownership of our project along with her colleagues. Teamwork between Dalia and various members was outstanding making it seamless for the entire team. She is a great talent to seek out to solve big and complex challenges.",
+    quote: "Dalia has incredible strategic thinking, leadership skills – Envisioning, Engaging and Execution skills. She demonstrates great presence, EQ, IQ and drive and took full ownership of our project along with her colleagues. Teamwork between Dalia and various members was outstanding making it seamless for the entire team. She is a great talent to seek out to solve big and complex challenges.",
     author: 'Akhil S.',
     role: 'Global CFO, Estée Lauder',
   },
@@ -64,7 +64,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-/** Companies row — typographic wordmarks (no copyrighted glyphs). */
+/** Companies row – typographic wordmarks (no copyrighted glyphs). */
 export interface CompanyWordmark {
   name: string;
   style: Record<string, string | number>;
@@ -83,7 +83,7 @@ export const COMPANIES: CompanyWordmark[] = [
   { name: 'Alexandria',  style: { fontFamily: fontDisplay, fontStyle: 'italic', fontWeight: 400, fontSize: '24px', letterSpacing: '-0.01em' } },
 ];
 
-/** Field Notes teaser tiles — four picks on the Home page that link out to
+/** Field Notes teaser tiles – four picks on the Home page that link out to
  *  the actual pieces (Substack/Medium). Mirrors a slice of the archive at
  *  /notes; the CTA underneath sends visitors to the full library. */
 export interface FieldNoteTeaser {
@@ -117,7 +117,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     kind: 'Framework',
     tint: C.teal,
     title: '03 Atmosphere: Getting the vibes right',
-    blurb: 'The emotional baseline of product experience — and how it quietly shapes whether users return.',
+    blurb: 'The emotional baseline of product experience – and how it quietly shapes whether users return.',
     where: 'Substack',
     year: 2026,
     read: '10 min',
@@ -128,7 +128,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
     kind: 'Essay',
     tint: C.plum,
     title: 'Why First-Gen Founders Need to Learn to Spend',
-    blurb: '“Be scrappy” is the wrong advice for first-gen and minority founders — and one of the hardest things I had to unlearn.',
+    blurb: '“Be scrappy” is the wrong advice for first-gen and minority founders – and one of the hardest things I had to unlearn.',
     where: 'Medium',
     year: 2022,
     read: '8 min',

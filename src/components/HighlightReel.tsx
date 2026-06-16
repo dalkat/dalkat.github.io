@@ -49,7 +49,7 @@ export default function HighlightReel({ images, tint = C.coral, intervalMs = 520
         borderBottom: `1px solid ${C.ink}10`,
       }}
     >
-      {/* Frame — inner content recentered within the wide band */}
+      {/* Frame – inner content recentered within the wide band */}
       <div
         style={{
           maxWidth: 1200,
