@@ -6,10 +6,11 @@ import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
  * email gate for the Trail Mix Method worksheet PDF.
  *
  * Same Formspree endpoint as the main /#contact form
- * (/f/mgoqrvoj); the _subject header tags inbound submissions so
- * Dalia can filter "TMM Worksheet Request" notes from regular
- * contact ones. On success the form swaps for a quiet
- * "I'll email it to you" line.
+ * (/f/mgoqrvoj); the _subject header tags inbound submissions
+ * ("Trail Mix Method Worksheet Request") so Dalia can filter them
+ * from regular contact notes (which arrive as
+ * "Dalia Katan - Contact - <topic>"). On success the form swaps
+ * for a quiet "It's on the way!" line.
  *
  * The PDF itself lives at /TMM-Worksheet-v1.pdf in public/ – Dalia
  * sends it manually from her inbox once a request comes through.
@@ -180,7 +181,7 @@ export default function TmmCallout({ tint = C.coral }: Props) {
         <input
           type="text"
           name="_subject"
-          value="Trail Mix Method · Worksheet Request"
+          value="Trail Mix Method Worksheet Request"
           readOnly
           hidden
         />
