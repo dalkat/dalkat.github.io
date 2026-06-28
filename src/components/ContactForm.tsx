@@ -105,8 +105,8 @@ export default function ContactForm({ accent = C.coral, compact = false }: Props
     }
 
     // Tag the email subject with the selected topic so inbound notes are
-    // filterable in the inbox, e.g. "Dalia Katan - Contact - Founder advising".
-    formData.set('_subject', `Dalia Katan - Contact - ${String(formData.get('kind') ?? '').trim()}`);
+    // filterable in the inbox, e.g. "Dalia Katan · Contact: Founder advising".
+    formData.set('_subject', `Dalia Katan · Contact: ${String(formData.get('kind') ?? '').trim()}`);
 
     setError(null);
     setSubmitting(true);
