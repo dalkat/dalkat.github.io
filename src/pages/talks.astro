@@ -216,22 +216,10 @@ function sortItems<T extends { year: number | string }>(items: T[]): T[] {
                 lineHeight: '1.04',
                 textWrap: 'balance',
                 maxWidth: '880px',
-                display: 'flex',
-                alignItems: 'baseline',
-                gap: '18px',
               }}
             >
-              <span
-                style={{
-                  width: '10px',
-                  height: '10px',
-                  borderRadius: '50%',
-                  background: theme.tint,
-                  display: 'inline-block',
-                  alignSelf: 'center',
-                  flexShrink: 0,
-                }}
-              ></span>
+              {/* Leading ● dot removed 2026-09-13 – the tint underline
+                  below already carries the theme color. */}
               {theme.title}
             </h3>
             <div style={{ borderBottom: `2px solid ${theme.tint}` }}></div>

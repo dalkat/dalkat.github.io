@@ -111,7 +111,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader sub="About" title="A bit of background" accent={C.teal} />
+      <SectionHeader title="About me" />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px' }}>
         {BIO_LONG.map((p) => (
           <p
@@ -157,8 +157,8 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader sub="Writing" accent={C.coral}>
-        A few field notes
+      <SectionHeader>
+        Field notes
       </SectionHeader>
       <p
         style={{
@@ -241,7 +241,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader sub="In their own words" title="People saying nice things" accent={C.plum} />
+      <SectionHeader title="People saying nice things" />
       <PraiseCarousel client:visible testimonials={TESTIMONIALS} />
     </div>
   </section>
@@ -265,7 +265,7 @@ const gt = gradientText();
     }}
   >
     <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
-      <SectionHeader sub="Contact" title="Get in touch" accent={C.coral} />
+      <SectionHeader title="Get in touch" />
       {/* Portrait PhotoSlab hidden for now – see TODO.md. The contact
           form spans full width until we bring the photo back. */}
       <ContactForm client:visible accent={C.coral} />

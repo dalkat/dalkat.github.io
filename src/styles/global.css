@@ -53,6 +53,35 @@
   }
 }
 
+/* ─── Card hover lift ───
+ * Clickable cards (post tiles, archive rows, quest cards) rise slightly
+ * on hover so they read as interactive. Transform-only so it composites
+ * on the GPU and never fights each card's inline box-shadow. Guarded by
+ * hover-capable pointers and reduced-motion. */
+.mesh-lift {
+  transition: transform 0.18s ease;
+}
+@media (hover: hover) {
+  .mesh-lift:hover {
+    transform: translateY(-4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesh-lift {
+    transition: none;
+  }
+  .mesh-lift:hover {
+    transform: none;
+  }
+}
+
+/* Field Notes sticky filter bar: sit flush under the desktop nav so no
+ * content peeks through the crack above it. Mobile override (taller
+ * hamburger nav) lives in the responsive shim below. */
+.mesh-root .mesh-notes-filter {
+  top: 52px;
+}
+
 /* ─── Mesh responsive shim ───
  *
  * The page components use inline styles for everything – sizing, padding,
@@ -123,6 +152,10 @@
   .mesh-nav-toggle { display: inline-flex !important; }
   .mesh-nav-toggle:hover { background: rgba(34, 26, 58, 0.06); }
   .mesh-mobile-link:active { background: rgba(34, 26, 58, 0.04); }
+
+  /* Mobile nav is taller (hamburger row) – drop the sticky filter bar to
+     match so it stays flush under the nav with no crack above. */
+  .mesh-root .mesh-notes-filter { top: 70px; }
 
   /* Hide the tilted "– hi." caveat */
   .mesh-root .mesh-photo-caption { display: none !important; }

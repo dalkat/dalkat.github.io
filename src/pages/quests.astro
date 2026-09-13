@@ -173,6 +173,7 @@ function hostFor(href: string | undefined): string | null {
             ))}
             <Tag
               href={q.href}
+              class={q.href ? 'mesh-lift' : undefined}
               target={isExternal ? '_blank' : undefined}
               rel={isExternal ? 'noopener noreferrer' : undefined}
               style={{

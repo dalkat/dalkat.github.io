@@ -20,6 +20,16 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }), // we'll provide our own base styles
     sitemap(),
   ],
+  vite: {
+    // The OG-image endpoint (src/lib/og.tsx) pulls in @resvg/resvg-js, which
+    // ships a native .node binding. esbuild's dev dependency-optimizer can't
+    // load .node files, so `astro dev` would crash with "No loader is
+    // configured for '.node'". Keep it out of the optimizer and let Node
+    // require it directly on the server. The production build already works
+    // and is unaffected by these dev/SSR hints.
+    optimizeDeps: { exclude: ['@resvg/resvg-js'] },
+    ssr: { external: ['@resvg/resvg-js'] },
+  },
   redirects: {
     // Legacy → canonical (Astro auto-normalizes trailing slashes)
     '/strategy': '/consulting',

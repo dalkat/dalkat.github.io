@@ -12,7 +12,7 @@ export const BIO_LONG: string[] = [
 
 /** Hero subhead under the "Hi, I'm Dalia." headline. */
 export const HERO_SUBHEAD =
-  "Product leader, fractional CPO, angel investor – I help early-stage teams turn products into companies that can actually scale.";
+  "Product leader, fractional CPO, angel investor – I help early-stage teams turn products into scalable businesses.";
 
 /** Testimonials carousel on the Praise section. */
 export interface Testimonial {
@@ -116,7 +116,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
   {
     kind: 'Framework',
     tint: C.teal,
-    title: '03 Atmosphere: Getting the vibes right',
+    title: 'Atmosphere: Getting the vibes right',
     blurb: 'The emotional baseline of product experience – and how it quietly shapes whether users return.',
     where: 'Substack',
     year: 2026,
@@ -138,7 +138,7 @@ export const FIELD_NOTE_TEASERS: FieldNoteTeaser[] = [
   {
     kind: 'Essay',
     tint: C.coral,
-    title: '04 How Atmosphere makes or breaks user trust and retention',
+    title: 'How Atmosphere makes or breaks user trust and retention',
     blurb: 'Atmosphere in action: Hopper and the Las Vegas effect.',
     where: 'Substack',
     year: 2026,

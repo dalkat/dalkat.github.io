@@ -63,15 +63,19 @@ export default function FieldNotesArchive({ articles }: Props) {
 
   return (
     <>
-      {/* Sticky filter bar */}
+      {/* Sticky filter bar. `top` is set per-breakpoint in global.css
+          (.mesh-notes-filter) so the bar sits flush under the nav —
+          desktop nav ≈ 52px, mobile nav ≈ 70px — with no crack above
+          it for content to peek through. Background bumped to near-opaque
+          so scrolled content doesn't ghost through the glass. */}
       <div
+        className="mesh-notes-filter"
         style={{
           position: 'sticky',
-          top: 70,
           zIndex: 2,
           margin: '-12px -16px 32px',
           padding: '16px',
-          background: `${C.paper}ee`,
+          background: `${C.paper}f7`,
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
           borderBottom: `1px solid ${C.ink}10`,
@@ -147,7 +151,7 @@ export default function FieldNotesArchive({ articles }: Props) {
             >
               <div
                 style={{
-                  padding: '8px 18px',
+                  padding: '8px 18px 8px 23px',
                   background: C.white,
                   borderRadius: 999,
                   border: `1px solid ${C.ink}10`,
@@ -155,13 +159,21 @@ export default function FieldNotesArchive({ articles }: Props) {
                   display: 'flex',
                   gap: 10,
                   alignItems: 'center',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
               >
+                {/* Theme color lives in the pill's left edge (a 5px band
+                    clipped by the pill's own radius). Replaced the leading
+                    ● dot 2026-09-13. */}
                 <span
+                  aria-hidden
                   style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: '50%',
+                    position: 'absolute',
+                    left: 0,
+                    top: 0,
+                    bottom: 0,
+                    width: 5,
                     background: tint,
                   }}
                 />
@@ -204,6 +216,7 @@ export default function FieldNotesArchive({ articles }: Props) {
                 <li key={a.title}>
                   <a
                     href={a.href}
+                    className="mesh-lift"
                     target={a.href.startsWith('http') ? '_blank' : undefined}
                     rel={a.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     style={{

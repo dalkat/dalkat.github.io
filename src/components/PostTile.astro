@@ -6,7 +6,9 @@
 import { C, fontDisplay, fontUI, meshBg } from '@/lib/mesh';
 
 interface Props {
-  kind: string;
+  /** Unused since the kind chip was removed (2026-09-13); kept so call
+   *  sites don't churn and the chip is trivial to restore. */
+  kind?: string;
   title: string;
   blurb: string;
   where: string;
@@ -19,11 +21,12 @@ interface Props {
   image?: string;
 }
 
-const { kind, title, blurb, where, year, read, tint = C.plum, href, image } = Astro.props;
+const { title, blurb, where, year, read, tint = C.plum, href, image } = Astro.props;
 const Tag = href ? 'a' : 'article';
 ---
 <Tag
   href={href}
+  class={href ? 'mesh-lift' : undefined}
   target={href?.startsWith('http') ? '_blank' : undefined}
   rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
   style={{
@@ -99,19 +102,8 @@ const Tag = href ? 'a' : 'article';
         flexWrap: 'wrap',
       }}
     >
-      <span
-        style={{
-          padding: '3px 10px',
-          background: `${tint}33`,
-          color: tint,
-          borderRadius: '999px',
-          fontFamily: fontUI,
-          fontSize: '11px',
-          fontWeight: 700,
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-        }}
-      >{kind}</span>
+      {/* Kind chip (FRAMEWORK / ESSAY pill) removed 2026-09-13 – the
+          source · year line carries the meta row on its own. */}
       <span style={{ fontFamily: fontUI, fontSize: '11px', color: C.inkSoft, fontWeight: 600 }}>
         {where} · {year}
       </span>
