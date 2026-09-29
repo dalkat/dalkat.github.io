@@ -5,7 +5,7 @@ theme: workplace-teambuilding
 source: Deloitte
 year: 2018
 read_time: 15
-blurb: "How do teams actually get better, faster, in an increasingly fast-changing world? A look at what leaders can learn from top-performing frontline teams, from FDNY Rescue 1 to Royal Caribbean's Newbuilding & Innovation workgroup, to help workgroups better handle exceptions, learn together, and create value."
+blurb: "How can we accelerate group performance improvement in this increasingly unpredictable, fast-changing world? Leaders will need to focus on the practices that help workgroups better handle exceptions, learn together, and create value."
 external_url: https://www.slideshare.net/DaliaKatan/moving-from-best-to-better-and-better-team-performance-in-the-future-of-work
 byline: "Co-author · January 2018 · Via Deloitte Center for the Edge"
 redirect_from:

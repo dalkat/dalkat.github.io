@@ -5,7 +5,7 @@ theme: personal-essays
 source: daliakatan.com
 year: 2019
 read_time: 11
-blurb: "A raw, honest account of leaving a full-time job, embarking on a creative sabbatical, and redesigning life around curiosity."
+blurb: "A raw, honest account of my experience leaving a full-time job, embarking on a creative sabbatical, and redesigning my life around curiosity."
 layout: update-1
 permalink: /for-you/sabbatical-update/
 redirect_from:

@@ -5,7 +5,7 @@ theme: productivity
 source: daliakatan.com
 year: 2019
 read_time: 10
-blurb: "A productivity tool inspired by my favorite snack – designed to harness energy rather than discipline."
+blurb: "Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than discipline to get things done."
 layout: trailmix
 permalink: /for-you/trail-mix-method/
 redirect_from:

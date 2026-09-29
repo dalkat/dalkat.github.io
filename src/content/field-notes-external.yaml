@@ -31,7 +31,7 @@
   source: Substack
   year: 2026
   read_time: 7
-  blurb: "Every product is a space people inhabit. To build truly great products, we must think like architects."
+  blurb: "Why good UX decisions can still add up to bad experiences and how to build “livable” products."
   url: https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in
 
 - id: designing-an-app-like-a-home
@@ -41,7 +41,7 @@
   source: Substack
   year: 2025
   read_time: 8
-  blurb: "Why we experience apps the way we experience rooms, and how Instagram and Calm use design to set very different moods."
+  blurb: "Every product we design is a space that people will inhabit; to build truly great products, we must learn to think like architects and master the ways humans engage with space."
   url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
 
 - id: why-first-gen-founders
@@ -51,17 +51,17 @@
   source: Medium
   year: 2023
   read_time: 6
-  blurb: "“Be scrappy” is often the wrong advice for first-gen and minority founders, and it was one of the hardest things I had to unlearn."
+  blurb: "“Be scrappy” is great advice for most founders, but for first-generation and minority founders, it’s often the wrong advice – and one of the most challenging things I had to unlearn when I built my first company."
   url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
 
 - id: inclusive-workplace
-  title: "Diversity to Inclusion: 9 Steps You Can Take to Unlock Your Company’s Competitive Edge"
+  title: "Unlocking the Benefits of Inclusive Workplace Practices"
   type: essay
   theme: workplace-teambuilding
   source: Medium
   year: 2019
   read_time: 8
-  blurb: "Diversity can create conflict or give a company a real competitive edge. The key to unlocking that edge is inclusion, and here are the first steps to get there."
+  blurb: "Diverse teams, when properly managed, are 35% more likely to outperform the market. This article highlights steps teams can take to unlock the growth potential that diversity can offer."
   url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
 
 - id: four-life-lessons
@@ -71,7 +71,7 @@
   source: Medium
   year: 2019
   read_time: 5
-  blurb: "My 10-year-old brother crossed the country on his own to spend a week with me in San Francisco. I probably learned more from him than he did from me."
+  blurb: "Let's return to our childhood wisdom. Here’s what I learned about living life like a 10-year-old. I hope this little snippet of our week inspires a bit more childish play in yours."
   url: https://medium.com/@dkatan77/4-life-lessons-from-a-10-year-old-401503c7eb32
 
 # ── My grandmother's cooking show on YouTube ───────────────────────────
@@ -92,5 +92,5 @@
   source: YouTube
   year: 2021
   read_time: 10
-  blurb: "My grandmother Sveta's stuffed peppers and grape leaves, which we call \"Packages\" at home. The pot simmers for an hour and a half."
+  blurb: "My grandmother Sveta's stuffed peppers and grape leaves, which we call \"Packages\" at home."
   url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s

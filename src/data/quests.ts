@@ -74,7 +74,7 @@ export const QUESTS: Quest[] = [
     tint: C.plum,
     href: '/quests/do-now',
     blurb:
-      "Pull a card when you have free time and can't decide what to do with it. Each one suggests something to try, from a five-minute stretch or a walk to baking challah. I built it to help with decision paralysis.",
+      "A fun, whimsical generator that helps remove decision paralysis by suggesting an activity for your free time.",
   },
   {
     title: 'Trail Mix Method',
@@ -82,6 +82,6 @@ export const QUESTS: Quest[] = [
     tint: C.teal,
     status: 'coming-soon',
     blurb:
-      "A way to plan unstructured time without a rigid schedule. Once a week, fill a bag with bite-sized activities across the parts of life you want to invest in, then reach into it whenever you have a free moment. Interactive version coming soon; read the method in Field Notes.",
+      "Inspired by my favorite snack, here's a productivity tool that will help you harness your energy rather than discipline to get things done. Interactive version coming soon; read the method in Field Notes.",
   },
 ];
