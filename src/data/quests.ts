@@ -60,7 +60,7 @@ export const QUESTS: Quest[] = [
     href: 'https://giftpicker.io',
     image: '/img/giftpicker-quiz.png',
     blurb:
-      "Stuck on what to get someone? Answer a handful of questions about the person – vibe, budget, last thing that made them smile – and get a curated shortlist in under a minute. A weekend project that picked up a quiet following around the holidays.",
+      "Stuck on what to get someone? Answer a few quick questions about them, like the occasion, their interests, and your budget, and get a shortlist of hand-picked gift ideas. We built it at Presently.",
     award: {
       icon: '🏆',
       text: '#3 Product of the Day on ProductHunt',
@@ -70,11 +70,11 @@ export const QUESTS: Quest[] = [
   {
     title: 'Do Now',
     kind: 'Tool',
-    year: 2019,
+    year: 2018,
     tint: C.plum,
     href: '/quests/do-now',
     blurb:
-      "Pull a card when you can't decide what to do next. Each one is a small, doable thing: a phone call, a walk, a sketch. Sized to fit in the gap between checking your inbox and meaning to start something real.",
+      "Pull a card when you have free time and can't decide what to do with it. Each one suggests something to try, from a five-minute stretch or a walk to baking challah. I built it to help with decision paralysis.",
   },
   {
     title: 'Trail Mix Method',
@@ -82,6 +82,6 @@ export const QUESTS: Quest[] = [
     tint: C.teal,
     status: 'coming-soon',
     blurb:
-      "A planning practice for people whose brains don't run on calendars. Sort your week into energy-shaped mixes (focus, social, admin, restore) and build days that fit how you actually work. Interactive version coming soon; read the method in Field Notes.",
+      "A way to plan unstructured time without a rigid schedule. Once a week, fill a bag with bite-sized activities across the parts of life you want to invest in, then reach into it whenever you have a free moment. Interactive version coming soon; read the method in Field Notes.",
   },
 ];

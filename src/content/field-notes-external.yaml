@@ -10,7 +10,7 @@
   theme: entrepreneurship-product
   source: Substack
   year: 2026
-  read_time: 10            # TODO: confirm
+  read_time: 7
   blurb: "The emotional baseline of product experience – and how it quietly shapes whether users return."
   url: https://daliakatan.substack.com/p/arch-atmosphere
 
@@ -20,7 +20,7 @@
   theme: entrepreneurship-product
   source: Substack
   year: 2026
-  read_time: 12            # TODO: confirm
+  read_time: 7
   blurb: "Atmosphere in action: Hopper and the Las Vegas effect."
   url: https://daliakatan.substack.com/p/04-atmosphere-case-study-hopper-how-atmosphere-makes-or-breaks-trust-and-retention
 
@@ -29,8 +29,8 @@
   type: framework
   theme: entrepreneurship-product
   source: Substack
-  year: 2023
-  read_time: 10
+  year: 2026
+  read_time: 7
   blurb: "Every product is a space people inhabit. To build truly great products, we must think like architects."
   url: https://daliakatan.substack.com/p/introducing-arch-building-products-people-want-to-live-in
 
@@ -39,9 +39,9 @@
   type: essay
   theme: entrepreneurship-product
   source: Substack
-  year: 2023
+  year: 2025
   read_time: 8
-  blurb: "A walk-through of the ARCH framework applied to consumer mobile – rooms, thresholds, light."
+  blurb: "Why we experience apps the way we experience rooms, and how Instagram and Calm use design to set very different moods."
   url: https://daliakatan.substack.com/p/designing-an-app-like-you-would-a-home
 
 - id: why-first-gen-founders
@@ -49,19 +49,19 @@
   type: essay
   theme: entrepreneurship-product
   source: Medium
-  year: 2022
-  read_time: 8
-  blurb: "“Be scrappy” is the wrong advice for first-gen and minority founders – and one of the hardest things I had to unlearn."
+  year: 2023
+  read_time: 6
+  blurb: "“Be scrappy” is often the wrong advice for first-gen and minority founders, and it was one of the hardest things I had to unlearn."
   url: https://ehandbook.com/the-paradox-of-being-scrappy-why-first-gen-founders-need-to-learn-to-spend-6d989abdc9c6
 
 - id: inclusive-workplace
-  title: "Unlocking the Benefits of Inclusive Workplace Practices"
+  title: "Diversity to Inclusion: 9 Steps You Can Take to Unlock Your Company’s Competitive Edge"
   type: essay
   theme: workplace-teambuilding
   source: Medium
-  year: 2021
+  year: 2019
   read_time: 8
-  blurb: "Diverse teams, properly managed, are 35% more likely to outperform – here are nine steps to actually getting there."
+  blurb: "Diversity can create conflict or give a company a real competitive edge. The key to unlocking that edge is inclusion, and here are the first steps to get there."
   url: https://medium.com/@dkatan77/diversity-to-inclusion-9-steps-to-unlock-competitive-edge-pt-1-c5954c113a49
 
 - id: four-life-lessons
@@ -80,9 +80,9 @@
   type: video
   theme: food
   source: YouTube
-  year: 2016
+  year: 2015
   read_time: 10
-  blurb: "My grandmother's recipe for the Bukharian rice dish at the heart of our table – layered rice, lamb, carrots, the long patient way."
+  blurb: "My grandmother Sveta's plov, the traditional Uzbek rice dish from Tashkent, where she was born and raised. She walks through her recipe step by step."
   url: https://www.youtube.com/watch?v=-_U_T2r8mBs
 
 - id: stuffed-vegetables
@@ -90,7 +90,7 @@
   type: video
   theme: food
   source: YouTube
-  year: 2016
+  year: 2021
   read_time: 10
-  blurb: "Tomatoes, peppers, and cabbage stuffed with spiced rice – a long-afternoon dish that turns kitchen labor into a family ritual."
+  blurb: "My grandmother Sveta's stuffed peppers and grape leaves, which we call \"Packages\" at home. The pot simmers for an hour and a half."
   url: https://www.youtube.com/watch?v=E1tchwEVxCQ&t=75s
