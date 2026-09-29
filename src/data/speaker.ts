@@ -38,20 +38,6 @@ export interface SpeakerTheme {
 
 export const SPEAKER_THEMES: SpeakerTheme[] = [
   {
-    id: 'entrepreneurship',
-    title: 'The startup journey',
-    tint: C.teal,
-    items: [
-      { kind: 'Essay',         title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                role: 'Author',           year: 2023 },
-      { kind: 'Panel',         title: 'Fundraising for Your Startup',                                 where: 'Treehouse',                              role: 'Speaker',          year: 2022 },
-      { kind: 'Podcast',       title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                            role: 'Guest',            year: 2021 },
-      { kind: 'Podcast',       title: 'Startup Journey – 0 to 1, Retention, Virality',               where: 'BRAVE',                                   role: 'Guest',            year: 2021 },
-      { kind: 'Q&A',           title: 'Entrepreneurship AMA',                                         where: 'Journal',                                 role: 'Guest',            year: 2021 },
-      { kind: 'Live Podcast',  title: 'Building Presently',                                           where: 'Journal',                                 role: 'Live Audio Guest', year: 2021 },
-      { kind: 'Q&A',           title: 'Creative Sabbaticals',                                         where: 'Princeton Center for Entrepreneurship',   role: 'Interview Guest',  year: 2019 },
-    ],
-  },
-  {
     id: 'product',
     title: 'Product & business',
     tint: C.coral,
@@ -70,6 +56,20 @@ export const SPEAKER_THEMES: SpeakerTheme[] = [
       { kind: 'Conference',         title: 'Princeton Marketing Conference',                         where: 'Princeton University',                                role: 'Organizer & moderator',   year: 2015 },
       { kind: 'Workshop',           title: 'An Algorithm for Growth',                                where: 'Princeton Social Entrepreneurship Conference',         role: 'Speaker',                   year: 2015 },
       { kind: 'Textbook',           title: "Entrepreneurial Finance: Uber's Path to Success",       where: 'MIT Press',                                            role: 'Co-author',                 year: 2014 },
+    ],
+  },
+  {
+    id: 'entrepreneurship',
+    title: 'The startup journey',
+    tint: C.teal,
+    items: [
+      { kind: 'Essay',         title: 'Why First-Gen Founders Need to Learn to Spend',                where: "Entrepreneur's Handbook",                role: 'Author',           year: 2023 },
+      { kind: 'Panel',         title: 'Fundraising for Your Startup',                                 where: 'Treehouse',                              role: 'Speaker',          year: 2022 },
+      { kind: 'Podcast',       title: 'Building Early-stage Startups & Adjusting to Market Signals', where: 'The Prodcast',                            role: 'Guest',            year: 2021 },
+      { kind: 'Podcast',       title: 'Startup Journey – 0 to 1, Retention, Virality',               where: 'BRAVE',                                   role: 'Guest',            year: 2021 },
+      { kind: 'Q&A',           title: 'Entrepreneurship AMA',                                         where: 'Journal',                                 role: 'Guest',            year: 2021 },
+      { kind: 'Live Podcast',  title: 'Building Presently',                                           where: 'Journal',                                 role: 'Live Audio Guest', year: 2021 },
+      { kind: 'Q&A',           title: 'Creative Sabbaticals',                                         where: 'Princeton Center for Entrepreneurship',   role: 'Interview Guest',  year: 2019 },
     ],
   },
   {
